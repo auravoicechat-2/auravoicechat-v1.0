@@ -1,23 +1,278 @@
 # Admin Panel
 
-Complete documentation for the Admin Panel in Aura Voice Chat. Admins are staff members with elevated privileges to manage users, content, and app operations.
+Complete documentation for the Admin Panel in Aura Voice Chat. The admin system is hierarchical with Owner at the top, Country Admins managing each country, Regular Admins handling daily operations, and Customer Support staff helping users.
 
 ## Overview
 
-The Admin Panel provides tools for day-to-day app management including user moderation, content review, support tickets, and basic analytics.
+The Admin Panel provides tools for day-to-day app management including user moderation, content review, support tickets, and basic analytics. Users escalate issues from Customer Support → Regular Admin → Country Admin → Owner.
+
+---
+
+## Admin Hierarchy
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                         OWNER                                │
+│           (Single owner with full app control)               │
+│    Tag: 👑 Owner | Frame: Exclusive Owner Frame              │
+│    Access: Owner Panel - Edit/Add/Remove ANYTHING            │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│                    COUNTRY ADMINS                            │
+│         (ONE per country - unique authority)                 │
+│    Tag: 🌍 Country Admin [PK/IN/US/etc.]                     │
+│    Frame: Exclusive Country Admin Frame                      │
+│    Powers: Ban users, manage all admins in their country     │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│                    REGULAR ADMINS                            │
+│           (Multiple per country - limited powers)            │
+│    Tag: ⚡ Admin | Frame: Admin Frame                        │
+│    Powers: Manage guides, handle reports, basic moderation   │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│                   CUSTOMER SUPPORT                           │
+│        (Team members in Customer Support Room)               │
+│    Tag: 💬 Support | Frame: Support Frame                    │
+│    Role: Help users with issues, escalate to admins          │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Owner
+
+The Owner is the single highest authority in the app with complete control.
+
+### Owner Identification
+
+| Attribute | Value |
+|-----------|-------|
+| Profile Tag | 👑 Owner |
+| Profile Frame | Exclusive Owner Frame (animated, unique) |
+| Owner ID | Single designated account |
+| Panel Access | Full Owner Panel in-app |
+
+### Owner Powers
+
+- **Full App Control:** Edit, add, remove ANY feature, user, content, setting
+- **Economy Control:** Set all prices, rewards, multipliers, balances
+- **User Management:** Grant/revoke any role, tag, frame, VIP
+- **Admin Management:** Appoint/remove Country Admins and Regular Admins
+- **CMS Access:** Complete Owner CMS with versioning and rollback
+- **Financial Access:** All transactions, payouts, reseller management
+- **Feature Flags:** Enable/disable any feature globally
+- **Security:** IP bans, device bans, fraud investigation
+
+### Owner Panel Access
+
+The Owner Panel is accessible in-app only to the designated Owner ID. See [Owner Panel](./owner-panel.md) for complete documentation.
+
+---
+
+## Country Admin
+
+**ONE Country Admin per country** - They are the highest authority within their country's user base.
+
+### Country Admin Identification
+
+| Attribute | Value |
+|-----------|-------|
+| Profile Tag | 🌍 Country Admin [XX] (where XX = country code) |
+| Profile Frame | Exclusive Country Admin Frame (unique per country) |
+| Limit | Only 1 per country |
+| Assignment | Owner appoints via Owner Panel |
+
+### Country Admin Powers
+
+| Action | Description |
+|--------|-------------|
+| Ban Users | Permanent or temporary bans in their country |
+| Manage Admins | Appoint/remove Regular Admins in their country |
+| Manage Guides | Oversee all guides in their country |
+| Escalation | Receive escalations from Regular Admins |
+| Report to Owner | Direct communication channel to Owner |
+| Country Stats | View analytics for their country |
+| Room Oversight | Close/ban rooms in their country |
+| Coin Limits | Higher coin adjustment limits (up to 50M) |
+
+### Country Admin Panel
+
+Country Admins have a dedicated panel showing:
+- All Regular Admins in their country
+- All Guides in their country
+- Escalated reports
+- Country-specific statistics
+- User ban management
+- Room management
+
+---
+
+## Regular Admin
+
+Multiple Regular Admins can exist per country. They handle day-to-day operations and manage Guides.
+
+### Regular Admin Identification
+
+| Attribute | Value |
+|-----------|-------|
+| Profile Tag | ⚡ Admin |
+| Profile Frame | Admin Frame |
+| Limit | Multiple per country |
+| Assignment | Country Admin appoints |
+
+### Regular Admin Powers
+
+| Action | Description |
+|--------|-------------|
+| Guide Management | Add/remove guide tags, monitor guide tasks |
+| Handle Reports | Review and act on user reports |
+| Mute Users | Temporary mutes (up to 7 days) |
+| Warn Users | Issue warnings |
+| Room Moderation | Monitor rooms, remove inappropriate content |
+| Escalate | Escalate ban requests to Country Admin |
+| Support Tickets | Handle tier-2 support issues |
+| Coin Limits | Lower coin adjustment limits (up to 5M) |
+
+### Regular Admin Panel
+
+Regular Admins have a panel showing:
+- Guides they manage
+- Pending reports
+- User moderation queue
+- Room monitoring
+- Escalation interface to Country Admin
+
+### Cannot Do (Must Escalate)
+
+- Permanent bans → Escalate to Country Admin
+- Large coin adjustments (>5M) → Escalate to Country Admin
+- Admin role management → Country Admin only
+- App-wide changes → Owner only
+
+---
+
+## Customer Support
+
+Customer Support staff are team members who help users with issues directly.
+
+### Customer Support Identification
+
+| Attribute | Value |
+|-----------|-------|
+| Profile Tag | 💬 Support |
+| Profile Frame | Support Frame |
+| Limit | Multiple team members |
+| Assignment | Owner or Country Admin |
+| Room | Customer Support Room (official) |
+
+### Customer Support Room
+
+A dedicated room for user support:
+
+| Attribute | Value |
+|-----------|-------|
+| Room Name | 🎧 Aura Customer Support |
+| Type | Official Support Room (cannot be deleted) |
+| Visibility | Always visible in room list |
+| Staff | Customer Support role holders |
+| Access | All users can join |
+
+### Customer Support Powers
+
+| Action | Description |
+|--------|-------------|
+| Help Users | Answer questions, guide users |
+| Create Tickets | Log issues for admins |
+| Escalate | Send issues to Regular Admin |
+| View User Info | Basic user profile access |
+| FAQ Response | Provide standard answers |
+
+### Cannot Do (Must Escalate)
+
+- Mute/ban users → Escalate to Regular Admin
+- Coin adjustments → Escalate to Regular Admin
+- Account modifications → Escalate to Regular Admin
+
+---
+
+## Escalation Flow
+
+```
+User has issue
+      │
+      ▼
+┌─────────────────────┐
+│  Customer Support   │ ← User goes to Support Room
+│  (Help & Log)       │
+└─────────────────────┘
+      │ Cannot resolve
+      ▼
+┌─────────────────────┐
+│   Regular Admin     │ ← Mute, warn, investigate
+│  (Moderate & Act)   │
+└─────────────────────┘
+      │ Needs ban/higher action
+      ▼
+┌─────────────────────┐
+│   Country Admin     │ ← Ban, manage admins
+│  (Ban & Manage)     │
+└─────────────────────┘
+      │ App-wide issue
+      ▼
+┌─────────────────────┐
+│       Owner         │ ← Full control
+│  (Final Decision)   │
+└─────────────────────┘
+```
+
+---
+
+## Tags and Frames
+
+### Exclusive Tags
+
+| Role | Tag | Display |
+|------|-----|---------|
+| Owner | 👑 Owner | Gold badge, always visible |
+| Country Admin | 🌍 Country Admin [PK] | Country flag, unique |
+| Regular Admin | ⚡ Admin | Blue badge |
+| Customer Support | 💬 Support | Green badge |
+
+### Exclusive Frames
+
+| Role | Frame | Description |
+|------|-------|-------------|
+| Owner | Owner Crown | Animated gold crown frame, only one exists |
+| Country Admin | Country Crest | Unique frame per country with flag elements |
+| Regular Admin | Admin Shield | Professional blue shield frame |
+| Customer Support | Support Aura | Friendly green aura frame |
 
 ---
 
 ## Access Levels
 
-### Admin Roles
+### Admin Permission Matrix
 
-| Role | Access Level | Permissions |
-|------|--------------|-------------|
-| Support Admin | Level 1 | View users, handle tickets, basic moderation |
-| Content Admin | Level 2 | Manage gifts, events, announcements |
-| Senior Admin | Level 3 | User bans, coin adjustments, advanced moderation |
-| Lead Admin | Level 4 | All admin functions, admin management |
+| Permission | Support | Regular Admin | Country Admin | Owner |
+|------------|---------|---------------|---------------|-------|
+| View user profiles | ✓ | ✓ | ✓ | ✓ |
+| Create tickets | ✓ | ✓ | ✓ | ✓ |
+| Mute users | ✗ | ✓ (7d max) | ✓ (30d max) | ✓ |
+| Warn users | ✗ | ✓ | ✓ | ✓ |
+| Temporary ban | ✗ | ✗ | ✓ | ✓ |
+| Permanent ban | ✗ | ✗ | ✓ | ✓ |
+| Coin adjustment | ✗ | ✓ (5M max) | ✓ (50M max) | ✓ |
+| Manage guides | ✗ | ✓ | ✓ | ✓ |
+| Manage admins | ✗ | ✗ | ✓ (own country) | ✓ |
+| App settings | ✗ | ✗ | ✗ | ✓ |
+| Financial access | ✗ | ✗ | ✗ | ✓ |
 
 ---
 

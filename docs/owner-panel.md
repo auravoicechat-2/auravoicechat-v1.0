@@ -1,10 +1,31 @@
 # Owner Panel
 
-Complete documentation for the Owner Panel in Aura Voice Chat. The Owner Panel provides full control over all app operations, economy, and business management.
+Complete documentation for the Owner Panel in Aura Voice Chat. The Owner Panel provides full control over all app operations, economy, and business management. **Only the designated Owner ID can access this panel.**
 
 ## Overview
 
-The Owner Panel is the highest-level administrative interface with complete control over the app including financial management, economy settings, feature configuration, and staff management.
+The Owner Panel is the highest-level administrative interface with **COMPLETE and UNRESTRICTED** control over the app. There is only **ONE Owner** in the entire app hierarchy.
+
+---
+
+## Owner Identity
+
+### Owner Profile
+
+| Attribute | Value |
+|-----------|-------|
+| Profile Tag | 👑 Owner |
+| Profile Frame | Exclusive Owner Crown Frame (animated) |
+| Owner ID | Single designated account |
+| In-App Access | Owner Panel button visible only to Owner ID |
+
+### Owner Recognition
+
+The Owner is instantly recognizable in the app:
+- **Gold Crown Tag** visible in all rooms and profiles
+- **Exclusive Owner Frame** (cannot be obtained any other way)
+- **Priority display** in all user lists
+- **Special entrance effect** when joining rooms
 
 ---
 
@@ -12,19 +33,11 @@ The Owner Panel is the highest-level administrative interface with complete cont
 
 ### Owner Credentials
 
-- Separate login portal
-- Hardware security key required
-- Biometric verification
-- IP whitelist enforced
-- All actions logged with video capture
-
-### Owner Roles
-
-| Role | Description |
-|------|-------------|
-| Super Owner | Full unrestricted access |
-| Co-Owner | All access except owner management |
-| Finance Owner | Financial and economy access only |
+- Single designated Owner ID
+- In-app Owner Panel access
+- 2FA + Biometric verification
+- All actions logged permanently
+- Hardware security key (optional)
 
 ---
 
@@ -229,15 +242,48 @@ Automatically hold payouts when:
 
 ## Staff Management
 
-### Admin Management
+### Country Admin Management
+
+Only the Owner can appoint Country Admins:
 
 | Action | Description |
 |--------|-------------|
-| Create Admin | Add new admin account |
+| Appoint Country Admin | Designate ONE user per country |
+| Remove Country Admin | Revoke country admin status |
+| View Country Stats | See each country's metrics |
+| Country Admin List | View all country admins |
+
+**Country Admin Appointments:**
+
+| Country | Country Admin Slot | Status |
+|---------|-------------------|--------|
+| Pakistan (PK) | 1 slot | Assigned/Vacant |
+| India (IN) | 1 slot | Assigned/Vacant |
+| Bangladesh (BD) | 1 slot | Assigned/Vacant |
+| UAE (AE) | 1 slot | Assigned/Vacant |
+| USA (US) | 1 slot | Assigned/Vacant |
+| UK (GB) | 1 slot | Assigned/Vacant |
+| (Add more countries as needed) | 1 slot each | Assigned/Vacant |
+
+### Regular Admin Management
+
+| Action | Description |
+|--------|-------------|
+| Create Admin | Add new admin account directly |
 | Edit Permissions | Modify access level |
 | Suspend Admin | Temporarily disable |
 | Remove Admin | Delete admin account |
 | View Logs | See admin activity |
+| Assign to Country | Link admin to country admin |
+
+### Customer Support Management
+
+| Action | Description |
+|--------|-------------|
+| Add Support Staff | Grant Support tag and frame |
+| Remove Support Staff | Revoke support privileges |
+| Manage Support Room | Configure official support room |
+| View Support Metrics | Tickets handled, response times |
 
 ### Admin Roles Configuration
 
