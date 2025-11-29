@@ -393,8 +393,11 @@ export const initializeSocket = (httpServer: HttpServer): Server => {
       if (!socket.userId || !socket.roomId) return;
       
       try {
-        // Get gift info
-        const giftResult = await query('SELECT * FROM gifts WHERE id = $1', [data.giftId]);
+        // Get gift info - select only needed columns
+        const giftResult = await query(
+          'SELECT id, name, price_coins, diamond_value, animation_url FROM gifts WHERE id = $1',
+          [data.giftId]
+        );
         
         if (giftResult.rows.length === 0) {
           socket.emit(SOCKET_EVENTS.ERROR, { message: 'Gift not found' });

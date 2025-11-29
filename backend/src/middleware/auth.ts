@@ -142,6 +142,7 @@ export const authenticate = async (
       const user = await getUserByCognitoSub(cognitoSub, decoded.email, decoded.phone_number);
       
       if (!user) {
+        logger.warn('Cognito user not found in database', { cognitoSub });
         throw new AppError('User not found', 401, 'USER_NOT_FOUND');
       }
       

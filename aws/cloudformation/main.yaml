@@ -28,6 +28,13 @@ Parameters:
     MinLength: 8
     Description: PostgreSQL database master password
 
+  JWTSecret:
+    Type: String
+    NoEcho: true
+    MinLength: 32
+    Default: ''
+    Description: JWT secret for token signing (leave empty to auto-generate)
+
   AdminEmail:
     Type: String
     Description: Admin email for Cognito and notifications
@@ -531,8 +538,18 @@ Resources:
           # SNS
           SNS_TOPIC_ARN=${PushNotificationTopic}
           
-          # JWT
-          JWT_SECRET=$(openssl rand -hex 32)
+          # JWT - Use parameter if provided, otherwise generate once
+          # Note: This is generated ONCE during initial deployment
+          JWT_SECRET=${JWTSecret}
+          EOF
+          
+          # Generate JWT secret if not provided
+          if [ -z "$(grep 'JWT_SECRET=' /opt/aura-voice-chat/.env | cut -d= -f2)" ] || [ "$(grep 'JWT_SECRET=' /opt/aura-voice-chat/.env | cut -d= -f2)" = "" ]; then
+            sed -i "s/^JWT_SECRET=.*/JWT_SECRET=$(openssl rand -hex 32)/" /opt/aura-voice-chat/.env
+          fi
+          
+          # Add remaining env vars
+          cat >> /opt/aura-voice-chat/.env << 'EOF'
           JWT_EXPIRES_IN=7d
           
           # Redis

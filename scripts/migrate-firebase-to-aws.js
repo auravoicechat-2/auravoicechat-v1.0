@@ -103,6 +103,8 @@ function initClients() {
   if (config.postgres.connectionString) {
     pool = new Pool({ connectionString: config.postgres.connectionString });
     log('PostgreSQL pool initialized');
+  } else {
+    log('Warning: PostgreSQL connection string not provided, database operations will be skipped');
   }
   
   // Initialize S3
