@@ -174,6 +174,9 @@ dependencies {
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.multidex)
 
+    // Updates
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
+
     // Lifecycle
     implementation(libs.bundles.lifecycle)
 
@@ -227,7 +230,7 @@ dependencies {
     implementation(libs.coil.gif)
 
     // WebRTC for voice/video
-    implementation(libs.webrtc)
+    implementation(libs.webrtc.dafruits)
 
     // ExoPlayer for video playback
     implementation(libs.bundles.media3)
