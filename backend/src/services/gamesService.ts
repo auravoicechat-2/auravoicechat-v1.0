@@ -248,15 +248,33 @@ const GAME_CONFIGS = {
   }
 };
 
-// In-memory storage (use Redis in production for scalability)
-// TODO: Replace with Redis/Database for production deployment
-// Example: const redis = new Redis(process.env.REDIS_URL);
+// Game session storage
+// In production with multiple servers: Use Redis for session storage
+// For single server: In-memory is fine with database backup
 const gameSessions = new Map<string, GameSession>();
 const giftWheelHistory = new Map<string, GiftWheelRecord[]>(); // userId -> draw records
-const jackpots: Record<string, number> = {
-  lucky_777_pro: LUCKY_777_PRO_JACKPOT_RESET, // Starting jackpot for Lucky 777 Pro
-  lucky_77_pro: LUCKY_77_PRO_JACKPOT_RESET    // Starting jackpot for Lucky 77 Pro
+
+// Jackpot values (loaded from database on startup)
+let jackpots: Record<string, number> = {
+  lucky_777_pro: LUCKY_777_PRO_JACKPOT_RESET,
+  lucky_77_pro: LUCKY_77_PRO_JACKPOT_RESET
 };
+
+// Initialize jackpots from database
+async function initJackpots() {
+  try {
+    const result = await query(
+      'SELECT game_type, current_amount FROM game_jackpots'
+    );
+    result.rows.forEach(row => {
+      jackpots[row.game_type] = Number(row.current_amount);
+    });
+    logger.info('Jackpots loaded from database', { jackpots });
+  } catch (error) {
+    logger.warn('Failed to load jackpots from database, using defaults', { error });
+  }
+}
+initJackpots().catch(err => logger.error('Init jackpots error', { err }));
 
 interface GiftWheelRecord {
   id: string;
@@ -384,7 +402,26 @@ export const startGameSession = async (params: StartGameParams) => {
     }
   }
   
-  // TODO: Check user balance and deduct bet
+  // Check user balance and deduct bet
+  const balanceResult = await query(
+    'SELECT coins FROM users WHERE id = $1',
+    [userId]
+  );
+  
+  if (balanceResult.rows.length === 0) {
+    throw new Error('User not found');
+  }
+  
+  const userCoins = Number(balanceResult.rows[0].coins);
+  if (userCoins < betAmount) {
+    throw new Error('Insufficient balance');
+  }
+  
+  // Deduct bet amount
+  await query(
+    'UPDATE users SET coins = coins - $1 WHERE id = $2',
+    [betAmount, userId]
+  );
   
   const sessionId = uuidv4();
   const session: GameSession = {
@@ -399,6 +436,17 @@ export const startGameSession = async (params: StartGameParams) => {
   };
   
   gameSessions.set(sessionId, session);
+  
+  // Record session in database
+  try {
+    await query(
+      `INSERT INTO game_sessions (id, user_id, game_type, room_id, bet_amount, status, created_at)
+       VALUES ($1, $2, $3, $4, $5, 'active', NOW())`,
+      [sessionId, userId, gameType, roomId, betAmount]
+    );
+  } catch (err) {
+    logger.error('Failed to record game session', { sessionId, err });
+  }
   
   return {
     sessionId,
