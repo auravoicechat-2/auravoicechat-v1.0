@@ -177,6 +177,7 @@ dependencies {
 
     // Updates
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
+    coreLibraryDesugaring(libs.android.desugar.jdk.libs)
 
     // Lifecycle
     implementation(libs.bundles.lifecycle)
