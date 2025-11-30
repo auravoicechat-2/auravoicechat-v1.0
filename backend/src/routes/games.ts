@@ -5,7 +5,7 @@
  * Endpoints for all game types:
  * - Lucky 777 Pro (5-line slot machine)
  * - Lucky 77 Pro (Single-line slot machine)
- * - Greedy Baby (Food wheel selection game)
+ * - Greedy Baby (Circular betting wheel game)
  * - Lucky Fruit (3x3 grid fruit selection)
  * - Gift Wheel System (Gift wheel with draw records)
  */
@@ -41,5 +41,19 @@ router.get('/:gameType/history', gamesController.getGameHistory);
 
 // Gift Wheel specific endpoints
 router.get('/gift-wheel/draw-records', gamesController.getGiftWheelRecords);
+
+// ================== GREEDY BABY SPECIFIC ENDPOINTS ==================
+// Rankings (daily/weekly)
+router.get('/greedy-baby/rankings/:type', gamesController.getGreedyBabyRankings);
+
+// Owner panel - Configuration
+router.get('/greedy-baby/config', gamesController.getGreedyBabyConfig);
+router.put('/greedy-baby/config', gamesController.updateGreedyBabyConfig);
+
+// Owner panel - Pool stats
+router.get('/greedy-baby/pool-stats', gamesController.getGreedyBabyPoolStats);
+
+// Owner panel - Reset rankings
+router.post('/greedy-baby/rankings/reset', gamesController.resetGreedyBabyRankings);
 
 export default router;

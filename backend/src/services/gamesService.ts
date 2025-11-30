@@ -47,18 +47,106 @@ const LUCKY_77_PRO_PAYOUTS: Record<string, number> = {
   'bar': 3
 };
 
-// Greedy Baby food items with multipliers (based on screenshot)
+// Greedy Baby food items with multipliers (8 items arranged in circular wheel)
+// Position: clockwise from top (12 o'clock)
 const GREEDY_BABY_ITEMS = [
-  { id: 'chicken', name: 'Chicken', multiplier: 45, probability: 2 },
-  { id: 'apple', name: 'Apple', multiplier: 5, probability: 20 },
-  { id: 'lemon', name: 'Lemon', multiplier: 5, probability: 20 },
-  { id: 'strawberry', name: 'Strawberry', multiplier: 5, probability: 20 },
-  { id: 'pizza', name: 'Pizza', multiplier: 25, probability: 5 },
-  { id: 'burger', name: 'Burger', multiplier: 25, probability: 5 },
-  { id: 'fish', name: 'Fish', multiplier: 10, probability: 12 },
-  { id: 'orange', name: 'Orange', multiplier: 15, probability: 8 },
-  { id: 'fruit_bowl', name: 'Fruit Bowl', multiplier: 5, probability: 8 }
+  { id: 'apple', name: 'Apple', emoji: '🍎', multiplier: 5, isFruit: true },
+  { id: 'lemon', name: 'Lemon', emoji: '🍋', multiplier: 5, isFruit: true },
+  { id: 'strawberry', name: 'Strawberry', emoji: '🍓', multiplier: 5, isFruit: true },
+  { id: 'mango', name: 'Mango', emoji: '🥭', multiplier: 5, isFruit: true },
+  { id: 'fish', name: 'Fish', emoji: '🐟', multiplier: 10, isFruit: false },
+  { id: 'burger', name: 'Burger', emoji: '🍔', multiplier: 15, isFruit: false },
+  { id: 'pizza', name: 'Pizza', emoji: '🍕', multiplier: 25, isFruit: false },
+  { id: 'chicken', name: 'Chicken', emoji: '🍗', multiplier: 45, isFruit: false }
 ];
+
+// Greedy Baby configurable win rates (can be adjusted in owner panel)
+interface GreedyBabyConfig {
+  houseEdge: number;          // Default 8%
+  maxWinPerRound: number;     // Maximum payout cap
+  winRates: {
+    apple: number;            // 17% (combined fruits = 68%)
+    lemon: number;            // 17%
+    strawberry: number;       // 17%
+    mango: number;            // 17%
+    fish: number;             // 12%
+    burger: number;           // 8%
+    pizza: number;            // 5%
+    chicken: number;          // 2%
+  };
+  fruitBasketTriggerRate: number;  // 3%
+  fullPizzaTriggerRate: number;    // 2%
+  poolRebalanceThreshold: number;  // When to adjust rates
+}
+
+// Default configuration
+const DEFAULT_GREEDY_BABY_CONFIG: GreedyBabyConfig = {
+  houseEdge: 8,
+  maxWinPerRound: 100_000_000,
+  winRates: {
+    apple: 17,
+    lemon: 17,
+    strawberry: 17,
+    mango: 17,
+    fish: 12,
+    burger: 8,
+    pizza: 5,
+    chicken: 2
+  },
+  fruitBasketTriggerRate: 3,
+  fullPizzaTriggerRate: 2,
+  poolRebalanceThreshold: 1_000_000
+};
+
+// In-memory config (in production, store in database)
+let greedyBabyConfig: GreedyBabyConfig = { ...DEFAULT_GREEDY_BABY_CONFIG };
+
+// Greedy Baby round management
+interface GreedyBabyRound {
+  roundId: string;
+  roomId: string;
+  startTime: Date;
+  endTime?: Date;
+  bets: GreedyBabyBet[];
+  result?: string;
+  specialResult?: 'fruit_basket' | 'full_pizza' | null;
+  totalBets: number;
+  totalPayouts: number;
+}
+
+interface GreedyBabyBet {
+  oddsId: string;
+  oddsName: string;
+  oddsNum: number;
+  betAmount: number;
+  isWin?: boolean;
+  payout?: number;
+}
+
+// Active rounds per room
+const activeGreedyBabyRounds = new Map<string, GreedyBabyRound>();
+const greedyBabyRoundHistory: GreedyBabyRound[] = [];
+
+// Pool tracking for dynamic rate adjustment
+interface GreedyBabyPool {
+  totalBets: number;
+  totalPayouts: number;
+  profitLoss: number;
+  roundCount: number;
+}
+
+const greedyBabyPool: GreedyBabyPool = {
+  totalBets: 0,
+  totalPayouts: 0,
+  profitLoss: 0,
+  roundCount: 0
+};
+
+// Rankings storage
+const greedyBabyRankings = {
+  daily: new Map<string, number>(),   // userId -> winnings
+  weekly: new Map<string, number>()   // userId -> winnings
+};
 
 // Lucky Fruit items with multipliers (based on screenshot)
 const LUCKY_FRUIT_ITEMS = [
@@ -106,9 +194,12 @@ const GAME_CONFIGS = {
   greedy_baby: {
     name: 'Greedy Baby',
     minBet: 100,
-    maxBet: 100000,
-    betOptions: [100, 1000, 5000, 10000, 50000, 100000],
-    items: GREEDY_BABY_ITEMS
+    maxBet: 50000000,
+    betOptions: [100, 1000, 5000, 10000, 50000, 100000, 1000000, 2000000, 5000000, 10000000, 50000000],
+    items: GREEDY_BABY_ITEMS,
+    roundDuration: 15, // seconds for betting phase
+    showDuration: 7,   // seconds for show/spin phase
+    resultDuration: 5  // seconds for result phase
   },
   lucky_fruit: {
     name: 'Lucky Fruit',
@@ -337,7 +428,8 @@ export const performGameAction = async (params: GameActionParams) => {
     case 'lucky_77_pro':
       return spinLucky77Pro(session);
     case 'greedy_baby':
-      return playGreedyBaby(session, data?.selectedItem);
+      // New format: data should contain { bets: [...], roomId?: string }
+      return playGreedyBaby(session, data);
     case 'lucky_fruit':
       return playLuckyFruit(session, data?.selectedFruit);
     case 'gift_wheel':
@@ -463,51 +555,261 @@ const spinLucky77Pro = (session: GameSession) => {
   };
 };
 
-// Greedy Baby - Food wheel selection game
-const playGreedyBaby = (session: GameSession, selectedItemId: string) => {
+// Greedy Baby - Circular betting wheel game with configurable algorithm
+const playGreedyBaby = (session: GameSession, data: GreedyBabyBetData) => {
   const config = GAME_CONFIGS.greedy_baby;
+  const { bets, roomId } = data;
   
-  if (!selectedItemId) {
-    throw new Error('Must select an item');
+  if (!bets || bets.length === 0) {
+    throw new Error('Must place at least one bet');
   }
   
-  const selectedItem = config.items.find(item => item.id === selectedItemId);
-  if (!selectedItem) {
-    throw new Error('Invalid item selected');
-  }
-  
-  // Determine winning item based on probability
-  const random = Math.random() * 100;
-  let cumulative = 0;
-  let winningItem = config.items[0];
-  
-  for (const item of config.items) {
-    cumulative += item.probability;
-    if (random <= cumulative) {
-      winningItem = item;
-      break;
+  // Validate all bets
+  for (const bet of bets) {
+    const item = config.items.find(i => i.id === bet.itemId);
+    if (!item) {
+      throw new Error(`Invalid item: ${bet.itemId}`);
+    }
+    if (bet.chipValue < config.minBet || bet.chipValue > config.maxBet) {
+      throw new Error(`Invalid bet amount: ${bet.chipValue}`);
     }
   }
   
-  const won = selectedItem.id === winningItem.id;
-  const winAmount = won ? Math.floor(session.betAmount * selectedItem.multiplier) : 0;
+  // Calculate total bet
+  const totalBet = bets.reduce((sum, bet) => sum + (bet.chipValue * bet.chipCount), 0);
   
+  // Determine winning item using configurable algorithm
+  const { winningItem, specialResult } = determineGreedyBabyWinner(totalBet);
+  
+  // Process bets and calculate payouts
+  let totalPayout = 0;
+  const betResults: GreedyBabyBetResult[] = [];
+  
+  // Check for special combo results
+  const fruitIds = config.items.filter(i => i.isFruit).map(i => i.id);
+  const nonFruitIds = config.items.filter(i => !i.isFruit).map(i => i.id);
+  const userBetItemIds = [...new Set(bets.map(b => b.itemId))];
+  
+  const betOnAllFruits = fruitIds.every(id => userBetItemIds.includes(id));
+  const betOnAllNonFruits = nonFruitIds.every(id => userBetItemIds.includes(id));
+  
+  for (const bet of bets) {
+    const item = config.items.find(i => i.id === bet.itemId)!;
+    const betAmount = bet.chipValue * bet.chipCount;
+    let won = false;
+    let payout = 0;
+    
+    // Check win conditions
+    if (specialResult === 'fruit_basket' && item.isFruit && betOnAllFruits) {
+      // Fruit Basket special win - all fruits win
+      won = true;
+      payout = betAmount * item.multiplier;
+    } else if (specialResult === 'full_pizza' && !item.isFruit && betOnAllNonFruits) {
+      // Full Pizza special win - all non-fruits win
+      won = true;
+      payout = betAmount * item.multiplier;
+    } else if (bet.itemId === winningItem.id) {
+      // Regular win
+      won = true;
+      payout = betAmount * item.multiplier;
+    }
+    
+    // Apply max win cap
+    if (payout > greedyBabyConfig.maxWinPerRound) {
+      payout = greedyBabyConfig.maxWinPerRound;
+    }
+    
+    totalPayout += payout;
+    
+    betResults.push({
+      itemId: bet.itemId,
+      itemName: item.name,
+      betAmount,
+      won,
+      payout,
+      multiplier: won ? item.multiplier : 0
+    });
+  }
+  
+  // Update pool tracking
+  greedyBabyPool.totalBets += totalBet;
+  greedyBabyPool.totalPayouts += totalPayout;
+  greedyBabyPool.profitLoss = greedyBabyPool.totalBets - greedyBabyPool.totalPayouts;
+  greedyBabyPool.roundCount++;
+  
+  // Update rankings
+  const userId = session.userId;
+  if (totalPayout > 0) {
+    // Update daily rankings
+    const currentDaily = greedyBabyRankings.daily.get(userId) || 0;
+    greedyBabyRankings.daily.set(userId, currentDaily + totalPayout);
+    
+    // Update weekly rankings
+    const currentWeekly = greedyBabyRankings.weekly.get(userId) || 0;
+    greedyBabyRankings.weekly.set(userId, currentWeekly + totalPayout);
+  }
+  
+  // Complete session
   session.status = 'completed';
   session.completedAt = new Date();
-  session.result = { selectedItem, winningItem, won };
-  session.winAmount = winAmount;
-  session.data.todaysWin += winAmount;
+  session.result = {
+    winningItem,
+    specialResult,
+    bets: betResults,
+    totalBet,
+    totalPayout
+  };
+  session.winAmount = totalPayout;
+  session.data.todaysWin = (session.data.todaysWin || 0) + totalPayout;
   
   return {
-    selectedItem: selectedItemId,
     winningItem: winningItem.id,
     winningItemName: winningItem.name,
-    won,
-    multiplier: won ? selectedItem.multiplier : 0,
-    winAmount,
+    winningItemEmoji: winningItem.emoji,
+    winningItemMultiplier: winningItem.multiplier,
+    specialResult,
+    bets: betResults,
+    totalBet,
+    totalPayout,
+    netWin: totalPayout - totalBet,
     todaysWin: session.data.todaysWin,
-    expEarned: won ? 25 : 10
+    expEarned: totalPayout > 0 ? Math.min(100, Math.floor(totalPayout / 10000) + 10) : 5
   };
+};
+
+// Greedy Baby winner determination with configurable algorithm
+function determineGreedyBabyWinner(totalBet: number): { 
+  winningItem: typeof GREEDY_BABY_ITEMS[0]; 
+  specialResult: 'fruit_basket' | 'full_pizza' | null 
+} {
+  const config = greedyBabyConfig;
+  
+  // Check for special results first
+  let specialResult: 'fruit_basket' | 'full_pizza' | null = null;
+  const specialRandom = Math.random() * 100;
+  
+  if (specialRandom < config.fruitBasketTriggerRate) {
+    specialResult = 'fruit_basket';
+  } else if (specialRandom < config.fruitBasketTriggerRate + config.fullPizzaTriggerRate) {
+    specialResult = 'full_pizza';
+  }
+  
+  // Apply house edge adjustment based on pool status
+  let adjustedRates = { ...config.winRates };
+  
+  // If pool is losing money, slightly reduce high multiplier win rates
+  if (greedyBabyPool.profitLoss < -config.poolRebalanceThreshold) {
+    const reductionFactor = 0.9; // Reduce by 10%
+    adjustedRates.chicken = Math.max(1, adjustedRates.chicken * reductionFactor);
+    adjustedRates.pizza = Math.max(3, adjustedRates.pizza * reductionFactor);
+    adjustedRates.burger = Math.max(5, adjustedRates.burger * reductionFactor);
+    
+    // Increase fruit rates to compensate
+    const extraProb = (config.winRates.chicken - adjustedRates.chicken) +
+                      (config.winRates.pizza - adjustedRates.pizza) +
+                      (config.winRates.burger - adjustedRates.burger);
+    adjustedRates.apple += extraProb / 4;
+    adjustedRates.lemon += extraProb / 4;
+    adjustedRates.strawberry += extraProb / 4;
+    adjustedRates.mango += extraProb / 4;
+  }
+  // If pool is winning too much, slightly increase high multiplier win rates
+  else if (greedyBabyPool.profitLoss > config.poolRebalanceThreshold * 2) {
+    const increaseFactor = 1.1; // Increase by 10%
+    adjustedRates.chicken = Math.min(4, adjustedRates.chicken * increaseFactor);
+    adjustedRates.pizza = Math.min(8, adjustedRates.pizza * increaseFactor);
+    adjustedRates.burger = Math.min(12, adjustedRates.burger * increaseFactor);
+    
+    // Reduce fruit rates to compensate
+    const extraProb = (adjustedRates.chicken - config.winRates.chicken) +
+                      (adjustedRates.pizza - config.winRates.pizza) +
+                      (adjustedRates.burger - config.winRates.burger);
+    adjustedRates.apple = Math.max(10, adjustedRates.apple - extraProb / 4);
+    adjustedRates.lemon = Math.max(10, adjustedRates.lemon - extraProb / 4);
+    adjustedRates.strawberry = Math.max(10, adjustedRates.strawberry - extraProb / 4);
+    adjustedRates.mango = Math.max(10, adjustedRates.mango - extraProb / 4);
+  }
+  
+  // Determine winner based on adjusted rates
+  const random = Math.random() * 100;
+  let cumulative = 0;
+  
+  const rateOrder: Array<keyof typeof adjustedRates> = [
+    'apple', 'lemon', 'strawberry', 'mango', 'fish', 'burger', 'pizza', 'chicken'
+  ];
+  
+  for (const itemId of rateOrder) {
+    cumulative += adjustedRates[itemId];
+    if (random < cumulative) {
+      const winningItem = GREEDY_BABY_ITEMS.find(i => i.id === itemId)!;
+      return { winningItem, specialResult };
+    }
+  }
+  
+  // Fallback to apple
+  return { 
+    winningItem: GREEDY_BABY_ITEMS.find(i => i.id === 'apple')!,
+    specialResult 
+  };
+}
+
+// Data types for Greedy Baby
+interface GreedyBabyBetData {
+  bets: Array<{
+    itemId: string;
+    chipValue: number;
+    chipCount: number;
+  }>;
+  roomId?: string;
+}
+
+interface GreedyBabyBetResult {
+  itemId: string;
+  itemName: string;
+  betAmount: number;
+  won: boolean;
+  payout: number;
+  multiplier: number;
+}
+
+// Get Greedy Baby rankings
+export const getGreedyBabyRankings = async (type: 'daily' | 'weekly', limit: number = 50) => {
+  const rankings = type === 'daily' ? greedyBabyRankings.daily : greedyBabyRankings.weekly;
+  
+  const sortedRankings = Array.from(rankings.entries())
+    .map(([userId, winnings]) => ({ userId, winnings }))
+    .sort((a, b) => b.winnings - a.winnings)
+    .slice(0, limit);
+  
+  return sortedRankings;
+};
+
+// Get Greedy Baby configuration (for owner panel)
+export const getGreedyBabyConfig = () => {
+  return { ...greedyBabyConfig };
+};
+
+// Update Greedy Baby configuration (for owner panel)
+export const updateGreedyBabyConfig = (updates: Partial<GreedyBabyConfig>) => {
+  greedyBabyConfig = { ...greedyBabyConfig, ...updates };
+  logger.info('Greedy Baby config updated', { config: greedyBabyConfig });
+  return greedyBabyConfig;
+};
+
+// Reset Greedy Baby rankings (for daily/weekly reset)
+export const resetGreedyBabyRankings = (type: 'daily' | 'weekly' | 'both') => {
+  if (type === 'daily' || type === 'both') {
+    greedyBabyRankings.daily.clear();
+  }
+  if (type === 'weekly' || type === 'both') {
+    greedyBabyRankings.weekly.clear();
+  }
+  logger.info('Greedy Baby rankings reset', { type });
+};
+
+// Get Greedy Baby pool stats (for owner panel)
+export const getGreedyBabyPoolStats = () => {
+  return { ...greedyBabyPool };
 };
 
 // Lucky Fruit - 3x3 grid fruit selection

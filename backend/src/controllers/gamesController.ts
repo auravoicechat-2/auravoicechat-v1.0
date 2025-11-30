@@ -5,7 +5,7 @@
  * Controllers for all game types:
  * - Lucky 777 Pro (5-line slot machine)
  * - Lucky 77 Pro (Single-line slot machine)
- * - Greedy Baby (Food wheel selection game)
+ * - Greedy Baby (Circular betting wheel game)
  * - Lucky Fruit (3x3 grid fruit selection)
  * - Gift Wheel System (Gift wheel with draw records)
  */
@@ -173,6 +173,78 @@ export const getGiftWheelRecords = async (req: Request, res: Response, next: Nex
     );
 
     res.json(records);
+  } catch (error) {
+    next(error);
+  }
+};
+
+// ================== GREEDY BABY SPECIFIC ENDPOINTS ==================
+
+// Get Greedy Baby rankings (daily/weekly)
+export const getGreedyBabyRankings = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  try {
+    const { type } = req.params;
+    const { limit = 50 } = req.query;
+
+    if (type !== 'daily' && type !== 'weekly') {
+      res.status(400).json({ error: { code: 'INVALID_TYPE', message: 'Type must be daily or weekly' } });
+      return;
+    }
+
+    const rankings = await gamesService.getGreedyBabyRankings(type, Number(limit));
+    res.json({ rankings, type });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// Get Greedy Baby configuration (owner panel)
+export const getGreedyBabyConfig = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  try {
+    // TODO: Add owner authorization check
+    const config = gamesService.getGreedyBabyConfig();
+    res.json({ config });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// Update Greedy Baby configuration (owner panel)
+export const updateGreedyBabyConfig = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  try {
+    // TODO: Add owner authorization check
+    const updates = req.body;
+    const config = gamesService.updateGreedyBabyConfig(updates);
+    res.json({ config, message: 'Configuration updated successfully' });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// Get Greedy Baby pool statistics (owner panel)
+export const getGreedyBabyPoolStats = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  try {
+    // TODO: Add owner authorization check
+    const stats = gamesService.getGreedyBabyPoolStats();
+    res.json({ stats });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// Reset Greedy Baby rankings (owner panel - for scheduled tasks)
+export const resetGreedyBabyRankings = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  try {
+    // TODO: Add owner authorization check
+    const { type } = req.body;
+    
+    if (!type || !['daily', 'weekly', 'both'].includes(type)) {
+      res.status(400).json({ error: { code: 'INVALID_TYPE', message: 'Type must be daily, weekly, or both' } });
+      return;
+    }
+
+    gamesService.resetGreedyBabyRankings(type);
+    res.json({ message: `${type} rankings reset successfully` });
   } catch (error) {
     next(error);
   }
