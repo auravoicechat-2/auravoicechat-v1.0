@@ -27,6 +27,10 @@
 
 set -o pipefail
 
+# Note: We use pipefail but not -e (errexit) to allow the script to handle
+# errors gracefully with custom error messages. Undefined variables would 
+# cause issues with optional parameters.
+
 # =============================================================================
 # CONFIGURATION
 # =============================================================================
@@ -292,9 +296,23 @@ setup_backend() {
             print_info "Creating .env from .env.example..."
             cp .env.example .env
             
-            # Generate JWT secrets
-            local jwt_secret=$(openssl rand -hex 32 2>/dev/null || echo "change-this-jwt-secret-key")
-            local jwt_refresh_secret=$(openssl rand -hex 32 2>/dev/null || echo "change-this-refresh-secret-key")
+            # Generate JWT secrets using secure random sources
+            local jwt_secret
+            local jwt_refresh_secret
+            
+            # Try openssl first, then /dev/urandom as fallback for secure generation
+            if command -v openssl &> /dev/null; then
+                jwt_secret=$(openssl rand -hex 32)
+                jwt_refresh_secret=$(openssl rand -hex 32)
+            elif [ -r /dev/urandom ]; then
+                jwt_secret=$(head -c 32 /dev/urandom | xxd -p)
+                jwt_refresh_secret=$(head -c 32 /dev/urandom | xxd -p)
+            else
+                print_error "Cannot generate secure JWT secrets - neither openssl nor /dev/urandom available"
+                print_warning "You MUST manually set JWT_SECRET and JWT_REFRESH_SECRET in .env before production use"
+                jwt_secret="CHANGE-THIS-INSECURE-JWT-SECRET-BEFORE-PRODUCTION"
+                jwt_refresh_secret="CHANGE-THIS-INSECURE-REFRESH-SECRET-BEFORE-PRODUCTION"
+            fi
             
             # Update .env with generated values
             sed -i "s|JWT_SECRET=.*|JWT_SECRET=$jwt_secret|g" .env 2>/dev/null || true
@@ -541,8 +559,10 @@ setup_aws() {
         return 1
     fi
     
-    # Get database password
+    # Get database password - prefer environment variable for automated/CI use
     if [ -z "$DB_PASSWORD" ]; then
+        print_info "DB_PASSWORD not set in environment. Prompting for input..."
+        print_info "Tip: For automated use, set DB_PASSWORD environment variable"
         read -sp "Enter database password (min 8 characters): " DB_PASSWORD
         echo ""
         
@@ -550,6 +570,8 @@ setup_aws() {
             print_error "Password must be at least 8 characters"
             return 1
         fi
+    else
+        print_info "Using DB_PASSWORD from environment"
     fi
     
     # Get admin email
@@ -626,8 +648,10 @@ teardown_aws() {
         return 0
     fi
     
-    read -p "Type 'DELETE' to confirm: " confirm
-    if [ "$confirm" != "DELETE" ]; then
+    read -p "Type 'DELETE' to confirm (case-insensitive): " confirm
+    # Convert to uppercase for case-insensitive comparison
+    confirm_upper=$(echo "$confirm" | tr '[:lower:]' '[:upper:]')
+    if [ "$confirm_upper" != "DELETE" ]; then
         print_info "Teardown cancelled"
         return 0
     fi
@@ -696,10 +720,15 @@ deploy_to_ec2() {
     
     print_info "Connecting to EC2: $ec2_ip"
     
+    # Security warning for host key checking
+    print_warning "⚠️  SSH host key verification is disabled for initial deployment."
+    print_warning "For production, add the EC2 host key to ~/.ssh/known_hosts"
+    print_info "To add manually: ssh-keyscan $ec2_ip >> ~/.ssh/known_hosts"
+    
     # Copy backend files
     print_info "Copying backend files..."
     rsync -avz --progress \
-        -e "ssh -i $key_file -o StrictHostKeyChecking=no" \
+        -e "ssh -i $key_file -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/tmp/known_hosts" \
         --exclude 'node_modules' \
         --exclude '.git' \
         --exclude 'dist' \
@@ -709,7 +738,7 @@ deploy_to_ec2() {
     
     # Run setup on EC2
     print_info "Running setup on EC2..."
-    ssh -i "$key_file" -o StrictHostKeyChecking=no "${ssh_user}@${ec2_ip}" << 'REMOTE_SCRIPT'
+    ssh -i "$key_file" -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/tmp/known_hosts "${ssh_user}@${ec2_ip}" << 'REMOTE_SCRIPT'
         cd /opt/aura-voice-chat/backend
         
         # Install Node.js if not present
