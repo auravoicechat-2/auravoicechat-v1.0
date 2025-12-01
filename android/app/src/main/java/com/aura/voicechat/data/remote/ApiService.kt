@@ -7,6 +7,8 @@ import retrofit2.http.*
 /**
  * API Service interface for Retrofit
  * Developer: Hawkaye Visions LTD — Pakistan
+ * 
+ * All endpoints use the /api/v1/ prefix to match the backend routes.
  */
 interface ApiService {
     
@@ -30,99 +32,99 @@ interface ApiService {
     suspend fun signInWithFacebook(@Body request: FacebookSignInRequest): Response<SocialSignInResponse>
     
     // Daily Rewards
-    @GET("rewards/daily/status")
+    @GET("api/v1/rewards/daily/status")
     suspend fun getDailyRewardStatus(): Response<DailyRewardStatusResponse>
     
-    @POST("rewards/daily/claim")
+    @POST("api/v1/rewards/daily/claim")
     suspend fun claimDailyReward(): Response<ClaimRewardResponse>
     
     // VIP
-    @GET("vip/tier")
+    @GET("api/v1/vip/tier")
     suspend fun getVipTier(): Response<VipTierResponse>
     
-    @POST("vip/purchase")
+    @POST("api/v1/vip/purchase")
     suspend fun purchaseVip(@Body request: PurchaseVipRequest): Response<Unit>
     
     // Medals
-    @GET("profile/medals")
+    @GET("api/v1/profile/medals")
     suspend fun getUserMedals(): Response<MedalsResponse>
     
-    @POST("profile/medals/display")
+    @POST("api/v1/profile/medals/display")
     suspend fun updateMedalDisplay(@Body request: UpdateMedalDisplayRequest): Response<Unit>
     
-    @GET("users/{userId}/medals")
+    @GET("api/v1/users/{userId}/medals")
     suspend fun getOtherUserMedals(@Path("userId") userId: String): Response<MedalsResponse>
     
     // Wallet
-    @GET("wallet/balances")
+    @GET("api/v1/wallet/balances")
     suspend fun getWalletBalances(): Response<WalletBalancesResponse>
     
-    @POST("wallet/exchange")
+    @POST("api/v1/wallet/exchange")
     suspend fun exchangeDiamondsToCoins(@Body request: ExchangeRequest): Response<ExchangeResponse>
     
     // Referrals - Get Coins
-    @POST("referrals/bind")
+    @POST("api/v1/referrals/bind")
     suspend fun bindReferralCode(@Body request: BindReferralRequest): Response<Unit>
     
-    @GET("referrals/coins/summary")
+    @GET("api/v1/referrals/coins/summary")
     suspend fun getReferralCoinsSummary(): Response<ReferralCoinsSummaryResponse>
     
-    @POST("referrals/coins/withdraw")
+    @POST("api/v1/referrals/coins/withdraw")
     suspend fun withdrawReferralCoins(@Body request: WithdrawCoinsRequest): Response<Unit>
     
-    @GET("referrals/records")
+    @GET("api/v1/referrals/records")
     suspend fun getReferralRecords(
         @Query("page") page: Int,
         @Query("pageSize") pageSize: Int
     ): Response<ReferralRecordsResponse>
     
     // Referrals - Get Cash
-    @GET("referrals/cash/summary")
+    @GET("api/v1/referrals/cash/summary")
     suspend fun getReferralCashSummary(): Response<ReferralCashSummaryResponse>
     
-    @POST("referrals/cash/withdraw")
+    @POST("api/v1/referrals/cash/withdraw")
     suspend fun withdrawReferralCash(@Body request: WithdrawCashRequest): Response<Unit>
     
-    @GET("referrals/cash/invite-record")
+    @GET("api/v1/referrals/cash/invite-record")
     suspend fun getCashInviteRecords(
         @Query("weekStart") weekStart: String,
         @Query("page") page: Int
     ): Response<InviteRecordsResponse>
     
-    @GET("referrals/cash/ranking")
+    @GET("api/v1/referrals/cash/ranking")
     suspend fun getCashRanking(@Query("page") page: Int): Response<RankingResponse>
     
     // Rooms
-    @GET("rooms/popular")
+    @GET("api/v1/rooms/popular")
     suspend fun getPopularRooms(): Response<RoomsResponse>
     
-    @GET("rooms/mine")
+    @GET("api/v1/rooms/mine")
     suspend fun getMyRooms(): Response<RoomsResponse>
     
-    @GET("rooms/{roomId}")
+    @GET("api/v1/rooms/{roomId}")
     suspend fun getRoom(@Path("roomId") roomId: String): Response<RoomResponse>
     
-    @POST("rooms/{roomId}/video/playlist")
+    @POST("api/v1/rooms/{roomId}/video/playlist")
     suspend fun addToPlaylist(
         @Path("roomId") roomId: String,
         @Body request: AddToPlaylistRequest
     ): Response<Unit>
     
-    @POST("rooms/{roomId}/video/exit")
+    @POST("api/v1/rooms/{roomId}/video/exit")
     suspend fun exitVideo(@Path("roomId") roomId: String): Response<Unit>
     
     // User Profile
-    @GET("users/{userId}")
+    @GET("api/v1/users/{userId}")
     suspend fun getUser(@Path("userId") userId: String): Response<UserResponse>
     
-    @PUT("users/me")
+    @PUT("api/v1/users/me")
     suspend fun updateProfile(@Body request: UpdateProfileRequest): Response<Unit>
     
     // KYC
-    @GET("kyc/status")
+    @GET("api/v1/kyc/status")
     suspend fun getKycStatus(): Response<KycStatusResponse>
     
-    @POST("kyc/submit")
+    @POST("api/v1/kyc/submit")
     suspend fun submitKyc(@Body request: SubmitKycRequest): Response<Unit>
     
     // ============================================
@@ -130,36 +132,36 @@ interface ApiService {
     // ============================================
     
     // Get available games
-    @GET("games")
+    @GET("api/v1/games")
     suspend fun getAvailableGames(): Response<GamesListResponse>
     
     // Get game stats
-    @GET("games/stats")
+    @GET("api/v1/games/stats")
     suspend fun getGameStats(): Response<GameStatsResponse>
     
     // Get jackpots
-    @GET("games/jackpots")
+    @GET("api/v1/games/jackpots")
     suspend fun getJackpots(): Response<JackpotsResponse>
     
-    @GET("games/jackpots/{gameType}")
+    @GET("api/v1/games/jackpots/{gameType}")
     suspend fun getJackpot(@Path("gameType") gameType: String): Response<JackpotDto>
     
     // Start game session
-    @POST("games/{gameType}/start")
+    @POST("api/v1/games/{gameType}/start")
     suspend fun startGame(
         @Path("gameType") gameType: String,
         @Body request: StartGameRequest
     ): Response<GameSessionResponse>
     
     // Perform game action
-    @POST("games/{gameType}/action")
+    @POST("api/v1/games/{gameType}/action")
     suspend fun gameAction(
         @Path("gameType") gameType: String,
         @Body request: GameActionRequest
     ): Response<GameResultResponse>
     
     // Get game history
-    @GET("games/{gameType}/history")
+    @GET("api/v1/games/{gameType}/history")
     suspend fun getGameHistory(
         @Path("gameType") gameType: String,
         @Query("page") page: Int,
@@ -167,7 +169,7 @@ interface ApiService {
     ): Response<GiftWheelRecordsResponse>
     
     // Get Gift Wheel draw records
-    @GET("games/gift-wheel/draw-records")
+    @GET("api/v1/games/gift-wheel/draw-records")
     suspend fun getGiftWheelRecords(
         @Query("page") page: Int,
         @Query("limit") limit: Int
@@ -178,22 +180,22 @@ interface ApiService {
     // ============================================
     
     // Get gift catalog
-    @GET("gifts/catalog")
+    @GET("api/v1/gifts/catalog")
     suspend fun getGiftCatalog(
         @Query("region") region: String? = null,
         @Query("category") category: String? = null
     ): Response<GiftCatalogResponse>
     
     // Send gift
-    @POST("gifts/send")
+    @POST("api/v1/gifts/send")
     suspend fun sendGift(@Body request: GiftSendRequestDto): Response<GiftSendResponseDto>
     
     // Send baggage gift (free)
-    @POST("gifts/send/baggage")
+    @POST("api/v1/gifts/send/baggage")
     suspend fun sendBaggageGift(@Body request: BaggageSendRequestDto): Response<GiftSendResponseDto>
     
     // Get gift transaction history
-    @GET("gifts/history")
+    @GET("api/v1/gifts/history")
     suspend fun getGiftHistory(
         @Query("type") type: String, // "sent" or "received"
         @Query("page") page: Int,
@@ -205,25 +207,25 @@ interface ApiService {
     // ============================================
     
     // Get user inventory
-    @GET("profile/inventory")
+    @GET("api/v1/profile/inventory")
     suspend fun getInventory(
         @Query("category") category: String? = null
     ): Response<InventoryResponse>
     
     // Get equipped items
-    @GET("profile/inventory/equipped")
+    @GET("api/v1/profile/inventory/equipped")
     suspend fun getEquippedItems(): Response<EquippedItemsResponse>
     
     // Equip item
-    @POST("profile/inventory/equip")
+    @POST("api/v1/profile/inventory/equip")
     suspend fun equipItem(@Body request: EquipItemRequest): Response<Unit>
     
     // Unequip item
-    @POST("profile/inventory/unequip")
+    @POST("api/v1/profile/inventory/unequip")
     suspend fun unequipItem(@Body request: UnequipItemRequest): Response<Unit>
     
     // Get baggage (free gifts to send)
-    @GET("profile/baggage")
+    @GET("api/v1/profile/baggage")
     suspend fun getBaggage(): Response<BaggageResponse>
     
     // ============================================
@@ -231,20 +233,68 @@ interface ApiService {
     // ============================================
     
     // Get store catalog
-    @GET("store/catalog")
+    @GET("api/v1/store/catalog")
     suspend fun getStoreCatalog(
         @Query("category") category: String? = null
     ): Response<StoreCatalogResponse>
     
     // Get featured items
-    @GET("store/featured")
+    @GET("api/v1/store/featured")
     suspend fun getFeaturedItems(): Response<StoreCatalogResponse>
     
     // Purchase item
-    @POST("store/purchase")
+    @POST("api/v1/store/purchase")
     suspend fun purchaseItem(@Body request: PurchaseItemRequest): Response<PurchaseItemResponse>
     
     // Get item details
-    @GET("store/items/{itemId}")
+    @GET("api/v1/store/items/{itemId}")
     suspend fun getStoreItem(@Path("itemId") itemId: String): Response<StoreItemDto>
+    
+    // ============================================
+    // Messages & Notifications
+    // ============================================
+    
+    // Get conversations
+    @GET("api/v1/messages/conversations")
+    suspend fun getConversations(
+        @Query("page") page: Int = 1,
+        @Query("limit") limit: Int = 20
+    ): Response<ConversationsResponse>
+    
+    // Get messages in a conversation
+    @GET("api/v1/messages/conversations/{conversationId}")
+    suspend fun getMessages(
+        @Path("conversationId") conversationId: String,
+        @Query("page") page: Int = 1,
+        @Query("limit") limit: Int = 50
+    ): Response<MessagesListResponse>
+    
+    // Send a message
+    @POST("api/v1/messages/send")
+    suspend fun sendMessage(@Body request: SendMessageRequest): Response<MessageResponse>
+    
+    // Get notifications
+    @GET("api/v1/notifications")
+    suspend fun getNotifications(
+        @Query("page") page: Int = 1,
+        @Query("limit") limit: Int = 20,
+        @Query("type") type: String? = null
+    ): Response<NotificationsResponse>
+    
+    // Mark notification as read
+    @POST("api/v1/notifications/{notificationId}/read")
+    suspend fun markNotificationAsRead(
+        @Path("notificationId") notificationId: String
+    ): Response<Unit>
+    
+    // Mark all notifications as read
+    @POST("api/v1/notifications/read-all")
+    suspend fun markAllNotificationsAsRead(): Response<Unit>
+    
+    // Get system messages
+    @GET("api/v1/notifications/system")
+    suspend fun getSystemMessages(
+        @Query("page") page: Int = 1,
+        @Query("limit") limit: Int = 20
+    ): Response<SystemMessagesResponse>
 }

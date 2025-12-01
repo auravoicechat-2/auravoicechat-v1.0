@@ -32,6 +32,8 @@ import eventsRoutes from './routes/events';
 import levelsRoutes from './routes/levels';
 import adminRoutes from './routes/admin';
 import ownerRoutes from './routes/owner';
+import messagesRoutes from './routes/messages';
+import notificationsRoutes from './routes/notifications';
 
 const app = express();
 
@@ -82,6 +84,8 @@ app.use('/api/v1/events', eventsRoutes);
 app.use('/api/v1/levels', levelsRoutes);
 app.use('/api/v1/admin', adminRoutes);
 app.use('/api/v1/owner', ownerRoutes);
+app.use('/api/v1/messages', messagesRoutes);
+app.use('/api/v1/notifications', notificationsRoutes);
 
 // 404 handler
 app.use(notFoundHandler);

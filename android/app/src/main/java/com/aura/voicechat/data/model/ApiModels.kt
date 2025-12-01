@@ -723,3 +723,84 @@ data class PurchaseItemResponse(
     @SerializedName("newBalance") val newBalance: Long,
     @SerializedName("inventoryItemId") val inventoryItemId: String?
 )
+
+// ============================================
+// Messages & Notifications
+// ============================================
+
+// Conversations
+data class ConversationsResponse(
+    @SerializedName("conversations") val conversations: List<ConversationDto>,
+    @SerializedName("pagination") val pagination: PaginationDto
+)
+
+data class ConversationDto(
+    @SerializedName("id") val id: String,
+    @SerializedName("name") val name: String,
+    @SerializedName("avatar") val avatar: String?,
+    @SerializedName("lastMessage") val lastMessage: String,
+    @SerializedName("lastMessageAt") val lastMessageAt: String,
+    @SerializedName("unreadCount") val unreadCount: Int,
+    @SerializedName("isOnline") val isOnline: Boolean,
+    @SerializedName("userId") val userId: String?
+)
+
+// Messages
+data class MessagesListResponse(
+    @SerializedName("messages") val messages: List<MessageDto>,
+    @SerializedName("pagination") val pagination: PaginationDto
+)
+
+data class MessageDto(
+    @SerializedName("id") val id: String,
+    @SerializedName("conversationId") val conversationId: String,
+    @SerializedName("senderId") val senderId: String,
+    @SerializedName("senderName") val senderName: String,
+    @SerializedName("senderAvatar") val senderAvatar: String?,
+    @SerializedName("content") val content: String,
+    @SerializedName("type") val type: String,
+    @SerializedName("createdAt") val createdAt: String,
+    @SerializedName("isRead") val isRead: Boolean
+)
+
+data class SendMessageRequest(
+    @SerializedName("recipientId") val recipientId: String,
+    @SerializedName("content") val content: String,
+    @SerializedName("type") val type: String = "text"
+)
+
+data class MessageResponse(
+    @SerializedName("success") val success: Boolean,
+    @SerializedName("message") val message: MessageDto?
+)
+
+// Notifications
+data class NotificationsResponse(
+    @SerializedName("notifications") val notifications: List<NotificationDto>,
+    @SerializedName("unreadCount") val unreadCount: Int,
+    @SerializedName("pagination") val pagination: PaginationDto
+)
+
+data class NotificationDto(
+    @SerializedName("id") val id: String,
+    @SerializedName("type") val type: String,
+    @SerializedName("title") val title: String,
+    @SerializedName("message") val message: String,
+    @SerializedName("data") val data: Map<String, String>?,
+    @SerializedName("createdAt") val createdAt: String,
+    @SerializedName("isRead") val isRead: Boolean
+)
+
+// System Messages
+data class SystemMessagesResponse(
+    @SerializedName("messages") val messages: List<SystemMessageDto>,
+    @SerializedName("pagination") val pagination: PaginationDto
+)
+
+data class SystemMessageDto(
+    @SerializedName("id") val id: String,
+    @SerializedName("title") val title: String,
+    @SerializedName("content") val content: String,
+    @SerializedName("createdAt") val createdAt: String,
+    @SerializedName("priority") val priority: String?
+)
