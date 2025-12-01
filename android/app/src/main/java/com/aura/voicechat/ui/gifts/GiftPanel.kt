@@ -527,7 +527,8 @@ data class Gift(
     val isAnimated: Boolean = false,
     val isFullScreen: Boolean = false,
     val isCustom: Boolean = false,
-    val isLegendary: Boolean = false
+    val isLegendary: Boolean = false,
+    val isPremium: Boolean = false
 )
 
 private fun formatNumber(number: Long): String {

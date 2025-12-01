@@ -1095,3 +1095,118 @@ INSERT INTO payment_providers (name, code, type, country_codes, supports_purchas
 ON CONFLICT (code) DO NOTHING;
 
 COMMIT;
+
+-- ============================================================================
+-- GUIDE SYSTEM TABLES (New)
+-- ============================================================================
+
+-- Guides table
+CREATE TABLE IF NOT EXISTS guides (
+    user_id UUID PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+    status VARCHAR(20) DEFAULT 'active' CHECK (status IN ('pending', 'active', 'suspended', 'revoked')),
+    level VARCHAR(20) DEFAULT 'starter' CHECK (level IN ('starter', 'rising', 'star', 'elite', 'legend')),
+    joined_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    months_active INTEGER DEFAULT 0,
+    sheets_completed INTEGER DEFAULT 0,
+    total_earned DECIMAL(10,2) DEFAULT 0,
+    current_frame VARCHAR(50) DEFAULT 'guide_starter_frame',
+    application_notes TEXT,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Guide targets table (monthly sheets)
+CREATE TABLE IF NOT EXISTS guide_targets (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+    year_month VARCHAR(7) NOT NULL, -- '2025-12'
+    targets JSONB NOT NULL DEFAULT '[]',
+    earnings DECIMAL(10,2) DEFAULT 0,
+    status VARCHAR(20) DEFAULT 'in_progress' CHECK (status IN ('in_progress', 'completed', 'expired')),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(user_id, year_month)
+);
+
+-- Guide daily tracking table
+CREATE TABLE IF NOT EXISTS guide_daily (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+    date DATE NOT NULL,
+    jar_completed BOOLEAN DEFAULT FALSE,
+    jar_points INTEGER DEFAULT 0,
+    room_hours DECIMAL(5,2) DEFAULT 0,
+    mic_hours DECIMAL(5,2) DEFAULT 0,
+    coins_received BIGINT DEFAULT 0,
+    messages_received INTEGER DEFAULT 0,
+    unique_visitors INTEGER DEFAULT 0,
+    games_hosted INTEGER DEFAULT 0,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(user_id, date)
+);
+
+-- Guide earnings wallet table
+CREATE TABLE IF NOT EXISTS guide_earnings (
+    user_id UUID PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+    pending_usd DECIMAL(10,2) DEFAULT 0,
+    available_usd DECIMAL(10,2) DEFAULT 0,
+    total_earned DECIMAL(10,2) DEFAULT 0,
+    total_withdrawn DECIMAL(10,2) DEFAULT 0,
+    total_converted DECIMAL(10,2) DEFAULT 0,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Guide applications table
+CREATE TABLE IF NOT EXISTS guide_applications (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+    status VARCHAR(20) DEFAULT 'pending' CHECK (status IN ('pending', 'approved', 'rejected')),
+    documents JSONB,
+    rejection_reason TEXT,
+    reviewed_by UUID REFERENCES users(id),
+    reviewed_at TIMESTAMP WITH TIME ZONE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(user_id)
+);
+
+CREATE INDEX idx_guides_status ON guides(status);
+CREATE INDEX idx_guides_level ON guides(level);
+CREATE INDEX idx_guide_targets_user ON guide_targets(user_id);
+CREATE INDEX idx_guide_daily_user_date ON guide_daily(user_id, date);
+
+-- ============================================================================
+-- RECEIVER-BASED EARNING TARGETS (5-day clearance)
+-- ============================================================================
+
+-- Update earning_targets to support receiver-based targets
+ALTER TABLE earning_targets ADD COLUMN IF NOT EXISTS target_type VARCHAR(20) DEFAULT 'send' CHECK (target_type IN ('send', 'receive'));
+ALTER TABLE earning_targets ADD COLUMN IF NOT EXISTS clearance_days INTEGER DEFAULT 5;
+
+-- User pending earnings (for 5-day clearance)
+CREATE TABLE IF NOT EXISTS user_pending_earnings (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    amount DECIMAL(15, 2) NOT NULL,
+    source_type VARCHAR(50) NOT NULL, -- 'gift', 'target_reward', etc.
+    source_id UUID,
+    from_user_id UUID REFERENCES users(id),
+    clearance_at TIMESTAMP WITH TIME ZONE NOT NULL, -- When it becomes available
+    status VARCHAR(20) DEFAULT 'pending' CHECK (status IN ('pending', 'cleared', 'cancelled')),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_user_pending_earnings_user ON user_pending_earnings(user_id);
+CREATE INDEX idx_user_pending_earnings_clearance ON user_pending_earnings(clearance_at);
+
+-- Insert receiver-based earning targets
+INSERT INTO earning_targets (name, description, type, target_type, target_amount, reward_coins, period, tier, clearance_days) VALUES
+    ('Gift Receiver I', 'Receive gifts worth 10,000 diamonds', 'gift', 'receive', 10000, 5000, 'weekly', 1, 5),
+    ('Gift Receiver II', 'Receive gifts worth 50,000 diamonds', 'gift', 'receive', 50000, 30000, 'weekly', 2, 5),
+    ('Gift Receiver III', 'Receive gifts worth 200,000 diamonds', 'gift', 'receive', 200000, 150000, 'weekly', 3, 5),
+    ('Room Host I', 'Receive 5,000 diamonds while hosting', 'hosting', 'receive', 5000, 2500, 'weekly', 1, 5),
+    ('Room Host II', 'Receive 25,000 diamonds while hosting', 'hosting', 'receive', 25000, 15000, 'weekly', 2, 5),
+    ('Room Host III', 'Receive 100,000 diamonds while hosting', 'hosting', 'receive', 100000, 70000, 'weekly', 3, 5)
+ON CONFLICT DO NOTHING;
+
+COMMIT;

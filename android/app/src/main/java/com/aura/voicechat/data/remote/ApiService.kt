@@ -352,4 +352,73 @@ interface ApiService {
     // Add payment method
     @POST("api/v1/earnings/payment-methods")
     suspend fun addPaymentMethod(@Body request: AddPaymentMethodRequest): Response<PaymentMethodResponse>
+    
+    // ============================================
+    // Guide System
+    // ============================================
+    
+    // Check guide status
+    @GET("api/v1/guide/status")
+    suspend fun getGuideStatus(): Response<GuideStatusResponse>
+    
+    // Check eligibility
+    @GET("api/v1/guide/eligibility")
+    suspend fun checkGuideEligibility(): Response<GuideEligibilityResponse>
+    
+    // Apply to become a guide
+    @POST("api/v1/guide/apply")
+    suspend fun applyForGuide(@Body request: GuideApplicationRequest): Response<GuideApplicationResponse>
+    
+    // Get guide dashboard
+    @GET("api/v1/guide/dashboard")
+    suspend fun getGuideDashboard(): Response<GuideDashboardResponse>
+    
+    // Get guide targets for a month
+    @GET("api/v1/guide/targets/{yearMonth}")
+    suspend fun getGuideTargets(@Path("yearMonth") yearMonth: String): Response<GuideTargetsResponse>
+    
+    // Get daily tracking
+    @GET("api/v1/guide/daily/{date}")
+    suspend fun getGuideDailyTracking(@Path("date") date: String): Response<GuideDailyResponse>
+    
+    // Get guide earnings
+    @GET("api/v1/guide/earnings")
+    suspend fun getGuideEarnings(): Response<GuideEarningsResponse>
+    
+    // Request guide withdrawal
+    @POST("api/v1/guide/earnings/withdraw")
+    suspend fun requestGuideWithdrawal(@Body request: GuideWithdrawalRequest): Response<GuideWithdrawalResponse>
+    
+    // Convert USD to coins
+    @POST("api/v1/guide/earnings/convert")
+    suspend fun convertGuideEarningsToCoins(@Body request: GuideConvertRequest): Response<GuideConvertResponse>
+    
+    // Get guide earnings history
+    @GET("api/v1/guide/earnings/history")
+    suspend fun getGuideEarningsHistory(
+        @Query("page") page: Int = 1,
+        @Query("limit") limit: Int = 20
+    ): Response<GuideEarningsHistoryResponse>
+    
+    // Get monthly leaderboard
+    @GET("api/v1/guide/leaderboard/monthly")
+    suspend fun getGuideMonthlyLeaderboard(): Response<GuideLeaderboardResponse>
+    
+    // Get weekly leaderboard
+    @GET("api/v1/guide/leaderboard/weekly")
+    suspend fun getGuideWeeklyLeaderboard(): Response<GuideLeaderboardResponse>
+    
+    // ============================================
+    // Gifts (from backend)
+    // ============================================
+    
+    // Get all gifts
+    @GET("api/v1/gifts")
+    suspend fun getGifts(
+        @Query("category") category: String? = null
+    ): Response<GiftsResponse>
+    
+    // Send a gift
+    @POST("api/v1/gifts/send")
+    suspend fun sendGift(@Body request: SendGiftRequest): Response<SendGiftResponse>
 }

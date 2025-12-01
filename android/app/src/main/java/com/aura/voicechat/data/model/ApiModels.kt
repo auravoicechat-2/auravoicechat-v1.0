@@ -925,3 +925,213 @@ data class PaymentMethodResponse(
     @SerializedName("success") val success: Boolean,
     @SerializedName("method") val method: PaymentMethodDto?
 )
+
+// ============================================
+// Guide System Models
+// ============================================
+
+data class GuideStatusResponse(
+    @SerializedName("isGuide") val isGuide: Boolean,
+    @SerializedName("guide") val guide: GuideDto?
+)
+
+data class GuideDto(
+    @SerializedName("user_id") val userId: String,
+    @SerializedName("status") val status: String,
+    @SerializedName("level") val level: String,
+    @SerializedName("joined_at") val joinedAt: String,
+    @SerializedName("months_active") val monthsActive: Int,
+    @SerializedName("sheets_completed") val sheetsCompleted: Int,
+    @SerializedName("total_earned") val totalEarned: Double,
+    @SerializedName("current_frame") val currentFrame: String
+)
+
+data class GuideEligibilityResponse(
+    @SerializedName("isEligible") val isEligible: Boolean,
+    @SerializedName("eligibility") val eligibility: EligibilityDetailsDto,
+    @SerializedName("message") val message: String
+)
+
+data class EligibilityDetailsDto(
+    @SerializedName("level") val level: EligibilityItemDto,
+    @SerializedName("accountAge") val accountAge: EligibilityItemDto,
+    @SerializedName("roomOwnership") val roomOwnership: EligibilityItemDto,
+    @SerializedName("kycVerified") val kycVerified: EligibilityItemDto
+)
+
+data class EligibilityItemDto(
+    @SerializedName("required") val required: Any,
+    @SerializedName("current") val current: Any,
+    @SerializedName("met") val met: Boolean
+)
+
+data class GuideApplicationRequest(
+    @SerializedName("documents") val documents: Map<String, String>?
+)
+
+data class GuideApplicationResponse(
+    @SerializedName("success") val success: Boolean,
+    @SerializedName("application") val application: Any?,
+    @SerializedName("message") val message: String
+)
+
+data class GuideDashboardResponse(
+    @SerializedName("guide") val guide: GuideDto,
+    @SerializedName("currentMonth") val currentMonth: String,
+    @SerializedName("monthlyTargets") val monthlyTargets: GuideMonthlyTargetsDto?,
+    @SerializedName("monthlyStats") val monthlyStats: GuideMonthlyStatsDto,
+    @SerializedName("earnings") val earnings: GuideEarningsDto,
+    @SerializedName("daysRemaining") val daysRemaining: Int
+)
+
+data class GuideMonthlyTargetsDto(
+    @SerializedName("year_month") val yearMonth: String,
+    @SerializedName("targets") val targets: List<GuideTargetDto>,
+    @SerializedName("earnings") val earnings: Double,
+    @SerializedName("status") val status: String
+)
+
+data class GuideTargetDto(
+    @SerializedName("id") val id: Int,
+    @SerializedName("name") val name: String,
+    @SerializedName("requirement") val requirement: String,
+    @SerializedName("progress") val progress: Long,
+    @SerializedName("required") val required: Long,
+    @SerializedName("reward") val reward: Double,
+    @SerializedName("status") val status: String
+)
+
+data class GuideMonthlyStatsDto(
+    @SerializedName("days_completed") val daysCompleted: Int?,
+    @SerializedName("total_room_hours") val totalRoomHours: Double?,
+    @SerializedName("total_mic_hours") val totalMicHours: Double?,
+    @SerializedName("total_coins_received") val totalCoinsReceived: Long?,
+    @SerializedName("total_messages") val totalMessages: Int?,
+    @SerializedName("total_visitors") val totalVisitors: Int?,
+    @SerializedName("total_games") val totalGames: Int?
+)
+
+data class GuideEarningsDto(
+    @SerializedName("pending_usd") val pendingUsd: Double,
+    @SerializedName("available_usd") val availableUsd: Double,
+    @SerializedName("total_earned") val totalEarned: Double,
+    @SerializedName("total_withdrawn") val totalWithdrawn: Double?,
+    @SerializedName("total_converted") val totalConverted: Double?
+)
+
+data class GuideTargetsResponse(
+    @SerializedName("targets") val targets: GuideMonthlyTargetsDto
+)
+
+data class GuideDailyResponse(
+    @SerializedName("daily") val daily: GuideDailyDto?,
+    @SerializedName("message") val message: String?
+)
+
+data class GuideDailyDto(
+    @SerializedName("date") val date: String,
+    @SerializedName("jar_completed") val jarCompleted: Boolean,
+    @SerializedName("jar_points") val jarPoints: Int,
+    @SerializedName("room_hours") val roomHours: Double,
+    @SerializedName("mic_hours") val micHours: Double,
+    @SerializedName("coins_received") val coinsReceived: Long,
+    @SerializedName("messages_received") val messagesReceived: Int,
+    @SerializedName("unique_visitors") val uniqueVisitors: Int,
+    @SerializedName("games_hosted") val gamesHosted: Int
+)
+
+data class GuideEarningsResponse(
+    @SerializedName("earnings") val earnings: GuideEarningsDto
+)
+
+data class GuideWithdrawalRequest(
+    @SerializedName("amount") val amount: Double,
+    @SerializedName("method") val method: String,
+    @SerializedName("account_details") val accountDetails: Map<String, String>
+)
+
+data class GuideWithdrawalResponse(
+    @SerializedName("success") val success: Boolean,
+    @SerializedName("withdrawal") val withdrawal: Any?,
+    @SerializedName("message") val message: String
+)
+
+data class GuideConvertRequest(
+    @SerializedName("usdAmount") val usdAmount: Double
+)
+
+data class GuideConvertResponse(
+    @SerializedName("success") val success: Boolean,
+    @SerializedName("usdConverted") val usdConverted: Double,
+    @SerializedName("coinsReceived") val coinsReceived: Long,
+    @SerializedName("bonusCoins") val bonusCoins: Long,
+    @SerializedName("message") val message: String
+)
+
+data class GuideEarningsHistoryResponse(
+    @SerializedName("history") val history: List<GuideMonthlyTargetsDto>,
+    @SerializedName("total") val total: Int,
+    @SerializedName("page") val page: Int,
+    @SerializedName("totalPages") val totalPages: Int
+)
+
+data class GuideLeaderboardResponse(
+    @SerializedName("leaderboard") val leaderboard: List<GuideLeaderboardEntryDto>
+)
+
+data class GuideLeaderboardEntryDto(
+    @SerializedName("user_id") val userId: String,
+    @SerializedName("level") val level: String,
+    @SerializedName("display_name") val displayName: String,
+    @SerializedName("avatar_url") val avatarUrl: String?,
+    @SerializedName("earnings") val earnings: Double?,
+    @SerializedName("targets_completed") val targetsCompleted: Int?,
+    @SerializedName("weekly_coins") val weeklyCoins: Long?,
+    @SerializedName("weekly_hours") val weeklyHours: Double?,
+    @SerializedName("days_completed") val daysCompleted: Int?
+)
+
+// ============================================
+// Gifts Models
+// ============================================
+
+data class GiftsResponse(
+    @SerializedName("gifts") val gifts: List<GiftDto>
+)
+
+data class GiftDto(
+    @SerializedName("id") val id: String,
+    @SerializedName("name") val name: String,
+    @SerializedName("description") val description: String?,
+    @SerializedName("price_coins") val priceCoins: Long,
+    @SerializedName("diamond_value") val diamondValue: Long,
+    @SerializedName("category") val category: String,
+    @SerializedName("animation_url") val animationUrl: String?,
+    @SerializedName("thumbnail_url") val thumbnailUrl: String?,
+    @SerializedName("is_premium") val isPremium: Boolean,
+    @SerializedName("is_active") val isActive: Boolean
+)
+
+data class SendGiftRequest(
+    @SerializedName("giftId") val giftId: String,
+    @SerializedName("receiverId") val receiverId: String,
+    @SerializedName("roomId") val roomId: String?,
+    @SerializedName("quantity") val quantity: Int
+)
+
+data class SendGiftResponse(
+    @SerializedName("success") val success: Boolean,
+    @SerializedName("transaction") val transaction: GiftTransactionDto?,
+    @SerializedName("message") val message: String?
+)
+
+data class GiftTransactionDto(
+    @SerializedName("id") val id: String,
+    @SerializedName("gift_id") val giftId: String,
+    @SerializedName("sender_id") val senderId: String,
+    @SerializedName("receiver_id") val receiverId: String,
+    @SerializedName("quantity") val quantity: Int,
+    @SerializedName("coins_spent") val coinsSpent: Long,
+    @SerializedName("diamonds_earned") val diamondsEarned: Long,
+    @SerializedName("created_at") val createdAt: String
+)
