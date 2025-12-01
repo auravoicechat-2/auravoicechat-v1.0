@@ -421,4 +421,184 @@ interface ApiService {
     // Send a gift
     @POST("api/v1/gifts/send")
     suspend fun sendGift(@Body request: SendGiftRequest): Response<SendGiftResponse>
+    
+    // ============================================
+    // Room Operations (Live API)
+    // ============================================
+    
+    // Get room details with all data (settings, jar, rankings, video, activities)
+    @GET("api/v1/rooms/{roomId}/details")
+    suspend fun getRoomDetails(@Path("roomId") roomId: String): Response<RoomDetailsResponse>
+    
+    // Get room settings
+    @GET("api/v1/rooms/{roomId}/settings")
+    suspend fun getRoomSettings(@Path("roomId") roomId: String): Response<RoomSettingsDto>
+    
+    // Update room settings (owner only)
+    @PUT("api/v1/rooms/{roomId}/settings")
+    suspend fun updateRoomSettings(
+        @Path("roomId") roomId: String,
+        @Body request: UpdateRoomSettingsRequest
+    ): Response<RoomSettingsDto>
+    
+    // Get room jar
+    @GET("api/v1/rooms/{roomId}/jar")
+    suspend fun getRoomJar(@Path("roomId") roomId: String): Response<RoomJarDto>
+    
+    // Contribute to room jar
+    @POST("api/v1/rooms/{roomId}/jar/contribute")
+    suspend fun contributeToJar(
+        @Path("roomId") roomId: String,
+        @Body request: ContributeToJarRequest
+    ): Response<RoomJarDto>
+    
+    // Claim room jar reward
+    @POST("api/v1/rooms/{roomId}/jar/claim")
+    suspend fun claimJarReward(
+        @Path("roomId") roomId: String,
+        @Body request: ClaimJarRequest
+    ): Response<JarClaimResponse>
+    
+    // Get room rankings (daily/weekly/monthly)
+    @GET("api/v1/rooms/{roomId}/rankings")
+    suspend fun getRoomRankings(
+        @Path("roomId") roomId: String,
+        @Query("type") type: String = "daily"
+    ): Response<RoomRankingsDto>
+    
+    // Get room messages (live chat)
+    @GET("api/v1/rooms/{roomId}/messages")
+    suspend fun getRoomMessages(
+        @Path("roomId") roomId: String,
+        @Query("page") page: Int = 1,
+        @Query("limit") limit: Int = 50
+    ): Response<RoomMessagesResponse>
+    
+    // Send room message
+    @POST("api/v1/rooms/{roomId}/messages")
+    suspend fun sendRoomMessage(
+        @Path("roomId") roomId: String,
+        @Body request: SendRoomMessageRequest
+    ): Response<RoomMessageDto>
+    
+    // Clear chat (owner/admin only)
+    @POST("api/v1/rooms/{roomId}/messages/clear")
+    suspend fun clearRoomChat(
+        @Path("roomId") roomId: String,
+        @Body request: ClearChatRequest
+    ): Response<Unit>
+    
+    // Join a seat
+    @POST("api/v1/rooms/{roomId}/seats/join")
+    suspend fun joinSeat(
+        @Path("roomId") roomId: String,
+        @Body request: JoinSeatRequest
+    ): Response<SeatActionResponse>
+    
+    // Leave seat
+    @POST("api/v1/rooms/{roomId}/seats/leave")
+    suspend fun leaveSeat(
+        @Path("roomId") roomId: String,
+        @Body request: LeaveSeatRequest
+    ): Response<SeatActionResponse>
+    
+    // Seat action (lock/unlock/kick/invite/mute/unmute/drag)
+    @POST("api/v1/rooms/{roomId}/seats/action")
+    suspend fun seatAction(
+        @Path("roomId") roomId: String,
+        @Body request: SeatActionRequest
+    ): Response<SeatActionResponse>
+    
+    // Toggle mute self
+    @POST("api/v1/rooms/{roomId}/mute")
+    suspend fun toggleMuteSelf(@Path("roomId") roomId: String): Response<SeatActionResponse>
+    
+    // Kick user from room
+    @POST("api/v1/rooms/{roomId}/kick")
+    suspend fun kickUser(
+        @Path("roomId") roomId: String,
+        @Body request: KickUserRequest
+    ): Response<SeatActionResponse>
+    
+    // Ban user from room
+    @POST("api/v1/rooms/{roomId}/ban")
+    suspend fun banUser(
+        @Path("roomId") roomId: String,
+        @Body request: BanUserRequest
+    ): Response<SeatActionResponse>
+    
+    // Mute user
+    @POST("api/v1/rooms/{roomId}/mute-user")
+    suspend fun muteUser(
+        @Path("roomId") roomId: String,
+        @Body request: MuteUserRequest
+    ): Response<SeatActionResponse>
+    
+    // Get video player state
+    @GET("api/v1/rooms/{roomId}/video")
+    suspend fun getVideoPlayer(@Path("roomId") roomId: String): Response<VideoPlayerDto>
+    
+    // Play video (YouTube URL)
+    @POST("api/v1/rooms/{roomId}/video/play")
+    suspend fun playVideo(
+        @Path("roomId") roomId: String,
+        @Body request: PlayVideoRequest
+    ): Response<VideoPlayerDto>
+    
+    // Stop video
+    @POST("api/v1/rooms/{roomId}/video/stop")
+    suspend fun stopVideo(@Path("roomId") roomId: String): Response<Unit>
+    
+    // Toggle cinema mode
+    @POST("api/v1/rooms/{roomId}/video/cinema")
+    suspend fun toggleCinemaMode(@Path("roomId") roomId: String): Response<VideoPlayerDto>
+    
+    // Get room activities settings
+    @GET("api/v1/rooms/{roomId}/activities")
+    suspend fun getRoomActivities(@Path("roomId") roomId: String): Response<RoomActivitiesDto>
+    
+    // Update room activities settings
+    @PUT("api/v1/rooms/{roomId}/activities")
+    suspend fun updateRoomActivities(
+        @Path("roomId") roomId: String,
+        @Body request: UpdateActivitiesRequest
+    ): Response<RoomActivitiesDto>
+    
+    // Get room events slider
+    @GET("api/v1/rooms/{roomId}/events")
+    suspend fun getRoomEvents(@Path("roomId") roomId: String): Response<RoomEventsResponse>
+    
+    // Get room games slider
+    @GET("api/v1/rooms/{roomId}/games")
+    suspend fun getRoomGames(@Path("roomId") roomId: String): Response<RoomGamesResponse>
+    
+    // Get lucky bags in room
+    @GET("api/v1/rooms/{roomId}/lucky-bags")
+    suspend fun getLuckyBags(@Path("roomId") roomId: String): Response<LuckyBagResponse>
+    
+    // Send lucky bag
+    @POST("api/v1/rooms/{roomId}/lucky-bags")
+    suspend fun sendLuckyBag(
+        @Path("roomId") roomId: String,
+        @Body request: SendLuckyBagRequest
+    ): Response<LuckyBagDto>
+    
+    // Grab lucky bag
+    @POST("api/v1/rooms/{roomId}/lucky-bags/{bagId}/grab")
+    suspend fun grabLuckyBag(
+        @Path("roomId") roomId: String,
+        @Path("bagId") bagId: String
+    ): Response<GrabLuckyBagResponse>
+    
+    // Create room
+    @POST("api/v1/rooms/create")
+    suspend fun createRoom(@Body request: CreateRoomRequest): Response<CreateRoomResponse>
+    
+    // Join room
+    @POST("api/v1/rooms/{roomId}/join")
+    suspend fun joinRoom(@Path("roomId") roomId: String): Response<Unit>
+    
+    // Leave room
+    @POST("api/v1/rooms/{roomId}/leave")
+    suspend fun leaveRoom(@Path("roomId") roomId: String): Response<Unit>
 }

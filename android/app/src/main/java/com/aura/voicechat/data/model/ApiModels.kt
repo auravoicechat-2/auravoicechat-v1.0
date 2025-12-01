@@ -1135,3 +1135,301 @@ data class GiftTransactionDto(
     @SerializedName("diamonds_earned") val diamondsEarned: Long,
     @SerializedName("created_at") val createdAt: String
 )
+
+// ============================================
+// Room System Models (Live API)
+// ============================================
+
+// Room details response (extended)
+data class RoomDetailsResponse(
+    @SerializedName("id") val id: String,
+    @SerializedName("name") val name: String,
+    @SerializedName("coverImage") val coverImage: String?,
+    @SerializedName("ownerId") val ownerId: String,
+    @SerializedName("ownerName") val ownerName: String,
+    @SerializedName("ownerAvatar") val ownerAvatar: String?,
+    @SerializedName("type") val type: String,
+    @SerializedName("mode") val mode: String,
+    @SerializedName("capacity") val capacity: Int,
+    @SerializedName("currentUsers") val currentUsers: Int,
+    @SerializedName("isLocked") val isLocked: Boolean,
+    @SerializedName("tags") val tags: List<String>,
+    @SerializedName("seats") val seats: List<SeatDto>,
+    @SerializedName("settings") val settings: RoomSettingsDto?,
+    @SerializedName("jar") val jar: RoomJarDto?,
+    @SerializedName("rankings") val rankings: RoomRankingsDto?,
+    @SerializedName("videoPlayer") val videoPlayer: VideoPlayerDto?,
+    @SerializedName("activities") val activities: RoomActivitiesDto?,
+    @SerializedName("createdAt") val createdAt: Long
+)
+
+// Room settings
+data class RoomSettingsDto(
+    @SerializedName("welcomeMessage") val welcomeMessage: String?,
+    @SerializedName("announcement") val announcement: String?,
+    @SerializedName("backgroundUrl") val backgroundUrl: String?,
+    @SerializedName("theme") val theme: String?,
+    @SerializedName("autoMuteOnJoin") val autoMuteOnJoin: Boolean,
+    @SerializedName("allowGifts") val allowGifts: Boolean,
+    @SerializedName("allowGames") val allowGames: Boolean,
+    @SerializedName("minLevelToSpeak") val minLevelToSpeak: Int,
+    @SerializedName("isPrivate") val isPrivate: Boolean,
+    @SerializedName("password") val password: String?
+)
+
+data class UpdateRoomSettingsRequest(
+    @SerializedName("welcomeMessage") val welcomeMessage: String? = null,
+    @SerializedName("announcement") val announcement: String? = null,
+    @SerializedName("backgroundUrl") val backgroundUrl: String? = null,
+    @SerializedName("theme") val theme: String? = null,
+    @SerializedName("autoMuteOnJoin") val autoMuteOnJoin: Boolean? = null,
+    @SerializedName("allowGifts") val allowGifts: Boolean? = null,
+    @SerializedName("allowGames") val allowGames: Boolean? = null,
+    @SerializedName("minLevelToSpeak") val minLevelToSpeak: Int? = null,
+    @SerializedName("isPrivate") val isPrivate: Boolean? = null,
+    @SerializedName("password") val password: String? = null
+)
+
+// Room Jar
+data class RoomJarDto(
+    @SerializedName("id") val id: String,
+    @SerializedName("currentAmount") val currentAmount: Long,
+    @SerializedName("targetAmount") val targetAmount: Long,
+    @SerializedName("isReady") val isReady: Boolean,
+    @SerializedName("slots") val slots: List<JarSlotDto>,
+    @SerializedName("topContributors") val topContributors: List<JarContributorDto>
+)
+
+data class JarSlotDto(
+    @SerializedName("id") val id: String,
+    @SerializedName("isUnlocked") val isUnlocked: Boolean,
+    @SerializedName("currentAmount") val currentAmount: Long,
+    @SerializedName("targetAmount") val targetAmount: Long,
+    @SerializedName("unlockCost") val unlockCost: Long,
+    @SerializedName("isReady") val isReady: Boolean
+)
+
+data class JarContributorDto(
+    @SerializedName("userId") val userId: String,
+    @SerializedName("name") val name: String,
+    @SerializedName("avatar") val avatar: String?,
+    @SerializedName("amount") val amount: Long
+)
+
+data class ContributeToJarRequest(
+    @SerializedName("amount") val amount: Long
+)
+
+data class ClaimJarRequest(
+    @SerializedName("slotIndex") val slotIndex: Int
+)
+
+data class JarClaimResponse(
+    @SerializedName("success") val success: Boolean,
+    @SerializedName("reward") val reward: Long,
+    @SerializedName("rewardType") val rewardType: String,
+    @SerializedName("message") val message: String
+)
+
+// Room Rankings (Daily/Weekly/Monthly Trophy)
+data class RoomRankingsDto(
+    @SerializedName("daily") val daily: List<RoomRankingEntryDto>,
+    @SerializedName("weekly") val weekly: List<RoomRankingEntryDto>,
+    @SerializedName("monthly") val monthly: List<RoomRankingEntryDto>
+)
+
+data class RoomRankingEntryDto(
+    @SerializedName("rank") val rank: Int,
+    @SerializedName("userId") val userId: String,
+    @SerializedName("userName") val userName: String,
+    @SerializedName("userAvatar") val userAvatar: String?,
+    @SerializedName("giftsValue") val giftsValue: Long,
+    @SerializedName("level") val level: Int?,
+    @SerializedName("vipTier") val vipTier: Int?
+)
+
+// Video Player (YouTube)
+data class VideoPlayerDto(
+    @SerializedName("isPlaying") val isPlaying: Boolean,
+    @SerializedName("currentVideo") val currentVideo: VideoDto?,
+    @SerializedName("playlist") val playlist: List<VideoDto>,
+    @SerializedName("isCinemaMode") val isCinemaMode: Boolean
+)
+
+data class VideoDto(
+    @SerializedName("id") val id: String,
+    @SerializedName("url") val url: String,
+    @SerializedName("title") val title: String,
+    @SerializedName("thumbnail") val thumbnail: String?,
+    @SerializedName("duration") val duration: Int?,
+    @SerializedName("addedBy") val addedBy: String?,
+    @SerializedName("addedAt") val addedAt: Long?
+)
+
+data class PlayVideoRequest(
+    @SerializedName("url") val url: String
+)
+
+// Room Activities (notifications toggle)
+data class RoomActivitiesDto(
+    @SerializedName("gameNotifications") val gameNotifications: Boolean,
+    @SerializedName("cpNotifications") val cpNotifications: Boolean,
+    @SerializedName("friendshipNotifications") val friendshipNotifications: Boolean,
+    @SerializedName("rocketNotifications") val rocketNotifications: Boolean,
+    @SerializedName("luckyBagNotifications") val luckyBagNotifications: Boolean
+)
+
+data class UpdateActivitiesRequest(
+    @SerializedName("gameNotifications") val gameNotifications: Boolean? = null,
+    @SerializedName("cpNotifications") val cpNotifications: Boolean? = null,
+    @SerializedName("friendshipNotifications") val friendshipNotifications: Boolean? = null,
+    @SerializedName("rocketNotifications") val rocketNotifications: Boolean? = null,
+    @SerializedName("luckyBagNotifications") val luckyBagNotifications: Boolean? = null
+)
+
+// Room Messages (Live Chat)
+data class RoomMessagesResponse(
+    @SerializedName("messages") val messages: List<RoomMessageDto>,
+    @SerializedName("pagination") val pagination: PaginationDto
+)
+
+data class RoomMessageDto(
+    @SerializedName("id") val id: String,
+    @SerializedName("type") val type: String, // "user", "system", "gift", "join", "leave"
+    @SerializedName("userId") val userId: String?,
+    @SerializedName("userName") val userName: String?,
+    @SerializedName("userAvatar") val userAvatar: String?,
+    @SerializedName("userLevel") val userLevel: Int?,
+    @SerializedName("userVip") val userVip: Int?,
+    @SerializedName("role") val role: String?, // "owner", "admin", "moderator", "member"
+    @SerializedName("content") val content: String,
+    @SerializedName("giftName") val giftName: String?,
+    @SerializedName("giftCount") val giftCount: Int?,
+    @SerializedName("receiverName") val receiverName: String?,
+    @SerializedName("timestamp") val timestamp: Long
+)
+
+data class SendRoomMessageRequest(
+    @SerializedName("content") val content: String,
+    @SerializedName("type") val type: String = "text"
+)
+
+// Seat Management
+data class SeatActionRequest(
+    @SerializedName("seatPosition") val seatPosition: Int,
+    @SerializedName("action") val action: String, // "lock", "unlock", "kick", "invite", "mute", "unmute", "drag"
+    @SerializedName("targetUserId") val targetUserId: String? = null,
+    @SerializedName("targetSeatPosition") val targetSeatPosition: Int? = null
+)
+
+data class SeatActionResponse(
+    @SerializedName("success") val success: Boolean,
+    @SerializedName("message") val message: String
+)
+
+data class JoinSeatRequest(
+    @SerializedName("seatPosition") val seatPosition: Int
+)
+
+data class LeaveSeatRequest(
+    @SerializedName("seatPosition") val seatPosition: Int
+)
+
+// Room Admin Actions
+data class KickUserRequest(
+    @SerializedName("userId") val userId: String,
+    @SerializedName("reason") val reason: String? = null
+)
+
+data class BanUserRequest(
+    @SerializedName("userId") val userId: String,
+    @SerializedName("reason") val reason: String? = null,
+    @SerializedName("duration") val duration: Int? = null // Minutes, null = permanent
+)
+
+data class MuteUserRequest(
+    @SerializedName("userId") val userId: String,
+    @SerializedName("duration") val duration: Int? = null // Seconds, null = until unmuted
+)
+
+data class ClearChatRequest(
+    @SerializedName("beforeTimestamp") val beforeTimestamp: Long? = null
+)
+
+// Room Events Slider
+data class RoomEventsResponse(
+    @SerializedName("events") val events: List<RoomEventDto>
+)
+
+data class RoomEventDto(
+    @SerializedName("id") val id: String,
+    @SerializedName("type") val type: String, // "recharge", "offline_recharge", "cp_ranking", "custom_gift", "vip_spin", "room_support"
+    @SerializedName("name") val name: String,
+    @SerializedName("description") val description: String?,
+    @SerializedName("bannerUrl") val bannerUrl: String?,
+    @SerializedName("startAt") val startAt: Long,
+    @SerializedName("endAt") val endAt: Long,
+    @SerializedName("isActive") val isActive: Boolean
+)
+
+// Room Games Slider
+data class RoomGamesResponse(
+    @SerializedName("games") val games: List<RoomGameDto>
+)
+
+data class RoomGameDto(
+    @SerializedName("id") val id: String,
+    @SerializedName("type") val type: String, // "lucky_77_pro", "lucky_777", "lucky_fruit", "greedy_baby", "lucky_wheel", "rocket"
+    @SerializedName("name") val name: String,
+    @SerializedName("iconUrl") val iconUrl: String?,
+    @SerializedName("isAvailable") val isAvailable: Boolean,
+    @SerializedName("minBet") val minBet: Long?,
+    @SerializedName("maxBet") val maxBet: Long?
+)
+
+// Lucky Bag
+data class LuckyBagResponse(
+    @SerializedName("bags") val bags: List<LuckyBagDto>
+)
+
+data class LuckyBagDto(
+    @SerializedName("id") val id: String,
+    @SerializedName("senderName") val senderName: String,
+    @SerializedName("senderAvatar") val senderAvatar: String?,
+    @SerializedName("totalAmount") val totalAmount: Long,
+    @SerializedName("remainingAmount") val remainingAmount: Long,
+    @SerializedName("totalSlots") val totalSlots: Int,
+    @SerializedName("remainingSlots") val remainingSlots: Int,
+    @SerializedName("expiresAt") val expiresAt: Long
+)
+
+data class GrabLuckyBagRequest(
+    @SerializedName("bagId") val bagId: String
+)
+
+data class GrabLuckyBagResponse(
+    @SerializedName("success") val success: Boolean,
+    @SerializedName("amount") val amount: Long?,
+    @SerializedName("message") val message: String
+)
+
+data class SendLuckyBagRequest(
+    @SerializedName("totalAmount") val totalAmount: Long,
+    @SerializedName("slots") val slots: Int,
+    @SerializedName("message") val message: String?
+)
+
+// Room Create
+data class CreateRoomRequest(
+    @SerializedName("name") val name: String,
+    @SerializedName("type") val type: String,
+    @SerializedName("capacity") val capacity: Int,
+    @SerializedName("coverImage") val coverImage: String? = null,
+    @SerializedName("tags") val tags: List<String>? = null
+)
+
+data class CreateRoomResponse(
+    @SerializedName("success") val success: Boolean,
+    @SerializedName("room") val room: RoomDetailsResponse?,
+    @SerializedName("message") val message: String?
+)
