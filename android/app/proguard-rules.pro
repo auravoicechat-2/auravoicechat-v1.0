@@ -11,7 +11,7 @@
 # Keep annotations
 -keepattributes *Annotation*
 
-# Keep generic signatures
+# Keep generic signatures and inner class info
 -keepattributes Signature
 -keepattributes InnerClasses
 -keepattributes EnclosingMethod
@@ -24,13 +24,13 @@
 -keep class com.aura.voicechat.data.model.** { *; }
 -keep class com.aura.voicechat.domain.model.** { *; }
 
-# Keep data classes
+# Keep fields annotated with @SerializedName
 -keepclassmembers class * {
     @com.google.gson.annotations.SerializedName <fields>;
 }
 
 # ========================
-# AWS Amplify
+# AWS Amplify / AWS SDK
 # ========================
 
 -keep class com.amplifyframework.** { *; }
@@ -60,10 +60,9 @@
 -keep class com.amazonaws.mobileconnectors.pinpoint.** { *; }
 
 # ========================
-# Reactor / Netty BlockHound
+# Reactor / Netty BlockHound (optional)
 # ========================
 
-# BlockHound integration is optional and not included
 -dontwarn reactor.blockhound.**
 -dontwarn io.netty.util.internal.Hidden$NettyBlockHoundIntegration
 
@@ -102,6 +101,22 @@
 -dontwarn org.conscrypt.**
 
 # ========================
+# Netty native / tcnative (not available on Android)
+# ========================
+-dontwarn io.netty.internal.tcnative.**
+
+# Log4J 1.x and 2.x (Netty logging integration; not used directly on Android)
+-dontwarn org.apache.log4j.**
+-dontwarn org.apache.logging.log4j.**
+
+# Jetty ALPN / NPN (only present on desktop/server JVMs)
+-dontwarn org.eclipse.jetty.alpn.**
+-dontwarn org.eclipse.jetty.npn.**
+
+# JGSS / Kerberos (Apache HttpClient optional auth; not on Android)
+-dontwarn org.ietf.jgss.**
+
+# ========================
 # Gson
 # ========================
 
@@ -112,7 +127,7 @@
 
 # Prevent R8 from removing fields that Gson uses
 -keepclassmembers,allowobfuscation class * {
-  @com.google.gson.annotations.SerializedName <fields>;
+    @com.google.gson.annotations.SerializedName <fields>;
 }
 
 # ========================
@@ -141,7 +156,7 @@
 -keep class kotlin.reflect.jvm.internal.** { *; }
 
 # ========================
-# Jetpack Compose
+# Jetpack Compose / Lifecycle
 # ========================
 
 -keep class androidx.compose.** { *; }
@@ -152,10 +167,20 @@
 # Hilt / Dagger
 # ========================
 
+# Keep Hilt ViewModels annotated with @HiltViewModel
 -keepnames @dagger.hilt.android.lifecycle.HiltViewModel class * extends androidx.lifecycle.ViewModel
--keep class dagger.hilt.** { *; }
+
+# Keep Hilt Android managers and key internal components (narrower than dagger.hilt.**)
+-keep class dagger.hilt.android.internal.managers.** { *; }
+-keep class dagger.hilt.android.internal.lifecycle.HiltViewModelFactory { *; }
+-keep class dagger.hilt.EntryPoints { *; }
+-keep class dagger.hilt.internal.GeneratedComponent { *; }
+
+# Keep javax.inject annotations and types
 -keep class javax.inject.** { *; }
--keep class * extends dagger.hilt.android.internal.managers.ViewComponentManager.FragmentContextWrapper { *; }
+
+# Keep FragmentContextWrapper inner class
+-keep class dagger.hilt.android.internal.managers.ViewComponentManager$FragmentContextWrapper { *; }
 
 # ========================
 # WebRTC
@@ -277,7 +302,7 @@
 }
 
 # ========================
-# Views with onClick
+# Views with setters/getters
 # ========================
 
 -keepclassmembers class * extends android.view.View {
