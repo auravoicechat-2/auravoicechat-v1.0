@@ -37,7 +37,7 @@ android {
         // Build config fields
         // TODO: For production, update to domain with HTTPS (e.g., https://api.auravoice.chat)
         buildConfigField("String", "API_BASE_URL", "\"http://43.204.130.237\"")
-        buildConfigField("String", "AGORA_APP_ID", "\"YOUR_AGORA_APP_ID\"")
+        buildConfigField("String", "AGORA_APP_ID", "\"f4da0e66ab6944cd953ff76a99c9d7c3\"")
         buildConfigField("String", "AWS_REGION", "\"ap-south-1\"")
         // Google Sign-In Web Client ID - obtain from Google Cloud Console
         buildConfigField("String", "GOOGLE_WEB_CLIENT_ID", "\"YOUR_GOOGLE_WEB_CLIENT_ID\"")
