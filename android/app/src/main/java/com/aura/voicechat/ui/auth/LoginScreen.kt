@@ -32,6 +32,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.aura.voicechat.BuildConfig
 import com.aura.voicechat.R
 import com.aura.voicechat.ui.theme.GradientPurpleEnd
 import com.aura.voicechat.ui.theme.GradientPurpleStart
@@ -232,10 +233,10 @@ fun LoginScreen(
     val context = LocalContext.current
     val snackbarHostState = remember { SnackbarHostState() }
     
-    // Google Sign-In configuration
+    // Google Sign-In configuration using BuildConfig
     val googleSignInClient = remember {
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken("YOUR_GOOGLE_WEB_CLIENT_ID") // TODO: Replace with actual Web Client ID from Google Console
+            .requestIdToken(com.aura.voicechat.BuildConfig.GOOGLE_WEB_CLIENT_ID)
             .requestEmail()
             .build()
         GoogleSignIn.getClient(context, gso)
@@ -259,7 +260,7 @@ fun LoginScreen(
                     )
                 } else {
                     Log.e(TAG, "Google Sign-In: ID token is null")
-                    viewModel.clearError()
+                    // Cannot proceed without ID token
                 }
             } catch (e: ApiException) {
                 Log.e(TAG, "Google Sign-In failed: ${e.statusCode}", e)
@@ -500,11 +501,16 @@ fun LoginScreen(
                 Button(
                     onClick = {
                         Log.d(TAG, "Launching Facebook Sign-In")
-                        LoginManager.getInstance().logInWithReadPermissions(
-                            context as Activity,
-                            facebookCallbackManager,
-                            listOf("email", "public_profile")
-                        )
+                        // Safe cast with null check
+                        (context as? Activity)?.let { activity ->
+                            LoginManager.getInstance().logInWithReadPermissions(
+                                activity,
+                                facebookCallbackManager,
+                                listOf("email", "public_profile")
+                            )
+                        } ?: run {
+                            Log.e(TAG, "Context is not an Activity, cannot launch Facebook login")
+                        }
                     },
                     modifier = Modifier
                         .fillMaxWidth()
