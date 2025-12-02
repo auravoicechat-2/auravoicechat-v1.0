@@ -147,6 +147,7 @@ android {
             excludes += "/META-INF/NOTICE*"
             excludes += "/META-INF/INDEX.LIST"
             excludes += "/META-INF/io.netty.versions.properties"
+            excludes += "/META-INF/services/reactor.blockhound.integration.BlockHoundIntegration"
         }
     }
 

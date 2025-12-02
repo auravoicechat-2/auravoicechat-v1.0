@@ -693,6 +693,35 @@ Update `android/gradle.properties`:
 org.gradle.jvmargs=-Xmx4g -XX:+UseParallelGC
 ```
 
+#### BlockHound Integration Warning
+
+**Issue:** `Unexpected reference to missing service class: META-INF/services/reactor.blockhound.integration.BlockHoundIntegration`
+
+**Cause:** This warning occurs due to the reactor-blockhound integration library reference being present in dependencies (like AWS SDK v2) but the actual BlockHound library not being included.
+
+**Resolution:** This is handled in `build.gradle.kts` by excluding the service file in the packaging section:
+```kotlin
+packaging {
+    resources {
+        excludes += "/META-INF/services/reactor.blockhound.integration.BlockHoundIntegration"
+    }
+}
+```
+
+#### Deprecation Warnings During Compilation
+
+During compilation, you may see deprecation warnings for:
+
+1. **Material Icons:** Icons like `Icons.Filled.ArrowBack`, `Icons.Filled.Send`, etc. are deprecated in favor of AutoMirrored versions (e.g., `Icons.AutoMirrored.Filled.ArrowBack`). These warnings do not affect functionality.
+
+2. **Google Sign-In API:** `GoogleSignIn` and `GoogleSignInOptions` classes are deprecated. Consider migrating to the new Credential Manager API in future versions.
+
+3. **Compose Components:** Some components like `Divider` are renamed (now `HorizontalDivider`).
+
+4. **Window APIs:** `statusBarColor` on Window is deprecated in newer Android versions.
+
+These are warnings, not errors, and do not prevent successful builds. They indicate APIs that may be removed in future library versions.
+
 ### Getting Help
 
 1. Check the documentation in `docs/`
