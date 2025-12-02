@@ -16,6 +16,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.*
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -347,7 +348,7 @@ private fun RoomTopBar(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 IconButton(onClick = onNavigateBack) {
-                    Icon(Icons.Default.ArrowBack, contentDescription = "Leave", tint = TextPrimary)
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Leave", tint = TextPrimary)
                 }
                 
                 Column(modifier = Modifier.weight(1f)) {
@@ -679,7 +680,7 @@ private fun LiveChatPreview(
                     }
                 ) {
                     Icon(
-                        Icons.Default.Send,
+                        Icons.AutoMirrored.Filled.Send,
                         contentDescription = "Send",
                         tint = if (messageText.isNotBlank()) AccentMagenta else TextTertiary
                     )
@@ -1295,7 +1296,7 @@ private fun SeatActionSheet(
             OptionItem(Icons.Default.LockOpen, "Unlock Seat", onUnlock)
             
             if (userId != null) {
-                OptionItem(Icons.Default.ExitToApp, "Kick from Seat", onKick)
+                OptionItem(Icons.AutoMirrored.Filled.ExitToApp, "Kick from Seat", onKick)
                 OptionItem(Icons.Default.MicOff, "Mute User", onMute)
                 OptionItem(Icons.Default.Mic, "Unmute User", onUnmute)
             }

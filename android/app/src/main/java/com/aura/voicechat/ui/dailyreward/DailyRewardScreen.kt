@@ -10,6 +10,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.*
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -45,7 +46,7 @@ fun DailyRewardScreen(
                 title = { Text("Daily Rewards") },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = DarkCanvas)
@@ -144,7 +145,7 @@ private fun StreakCard(currentStreak: Int, longestStreak: Int) {
                 Text("$currentStreak", style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.Bold, color = AccentMagenta)
                 Text("Current Streak", style = MaterialTheme.typography.labelSmall, color = TextSecondary)
             }
-            Divider(modifier = Modifier.height(80.dp).width(1.dp), color = DarkSurface)
+            VerticalDivider(modifier = Modifier.height(80.dp), color = DarkSurface)
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Text("🏆", style = MaterialTheme.typography.headlineMedium)
                 Text("$longestStreak", style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.Bold, color = VipGold)

@@ -10,6 +10,7 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
@@ -22,6 +23,9 @@ import androidx.core.view.WindowCompat
  * Theme: Purple (#c9a8f1) → White gradient
  * Dark Canvas: #12141a
  * Accent Magenta: #d958ff, Accent Cyan: #35e8ff
+ * 
+ * Uses modern edge-to-edge setup with WindowCompat APIs for proper
+ * status bar handling on all Android versions.
  */
 
 private val DarkColorScheme = darkColorScheme(
@@ -101,7 +105,19 @@ fun AuraVoiceChatTheme(
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
-            window.statusBarColor = colorScheme.background.toArgb()
+            
+            // Modern edge-to-edge setup
+            // Enable edge-to-edge content that draws behind system bars
+            WindowCompat.setDecorFitsSystemWindows(window, false)
+            
+            // Set transparent status bar for edge-to-edge effect
+            // Note: statusBarColor is deprecated but still needed for transparent status bar
+            // on API < 35. The @Suppress is targeted only at this specific usage.
+            @Suppress("DEPRECATION")
+            window.statusBarColor = Color.Transparent.toArgb()
+            
+            // Control status bar icon appearance based on theme
+            // Light status bar icons for dark theme, dark icons for light theme
             WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !darkTheme
         }
     }
