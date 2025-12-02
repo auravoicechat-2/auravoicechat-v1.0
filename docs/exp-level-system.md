@@ -241,13 +241,21 @@ import { APIGatewayProxyHandler } from 'aws-lambda';
 const dynamodb = new DynamoDB.DocumentClient();
 
 export const awardExp: APIGatewayProxyHandler = async (event) => {
-  const { userId, amount, source, description } = JSON.parse(event.body || '{}');
+  const { amount, source, description } = JSON.parse(event.body || '{}');
   
   // Validate authentication via Cognito
   const cognitoUserId = event.requestContext.authorizer?.claims?.sub;
   if (!cognitoUserId) {
     return { statusCode: 401, body: JSON.stringify({ error: 'Unauthenticated' }) };
   }
+  
+  // Validate input
+  if (!amount || typeof amount !== 'number' || amount <= 0) {
+    return { statusCode: 400, body: JSON.stringify({ error: 'Invalid amount' }) };
+  }
+  
+  // Use authenticated user's ID (not from request body for security)
+  const userId = cognitoUserId;
   
   // Get current level data
   const userData = await dynamodb.get({

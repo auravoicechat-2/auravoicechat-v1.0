@@ -235,7 +235,7 @@ events
 # Event Participation Table
 event_participation
   - eventId (PK)
-  - oderId (SK)
+  - userId (SK)
   - joined: timestamp
   - progress: number
   - milestones: array
