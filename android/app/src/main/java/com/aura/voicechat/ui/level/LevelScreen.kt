@@ -7,6 +7,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.*
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -40,7 +41,7 @@ fun LevelScreen(
                 title = { Text("Level") },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = DarkCanvas)
@@ -225,7 +226,7 @@ private fun EarnExpCard() {
             
             ExpSourceRow(icon = Icons.Default.CardGiftcard, text = "Send gifts", exp = "+1 EXP per coin")
             ExpSourceRow(icon = Icons.Default.Mic, text = "Speak in rooms", exp = "+5 EXP per minute")
-            ExpSourceRow(icon = Icons.Default.Login, text = "Daily login", exp = "+100 EXP")
+            ExpSourceRow(icon = Icons.AutoMirrored.Filled.Login, text = "Daily login", exp = "+100 EXP")
             ExpSourceRow(icon = Icons.Default.EmojiEvents, text = "Complete tasks", exp = "Varies")
         }
     }

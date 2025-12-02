@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.*
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -41,7 +42,7 @@ fun SettingsScreen(
                 title = { Text("Settings") },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = DarkCanvas)
@@ -96,7 +97,7 @@ fun SettingsScreen(
                         onToggle = { viewModel.toggleGiftNotifications() }
                     )
                     SettingsToggle(
-                        icon = Icons.Default.Message,
+                        icon = Icons.AutoMirrored.Filled.Message,
                         title = "Message Notifications",
                         isChecked = uiState.messageNotifications,
                         onToggle = { viewModel.toggleMessageNotifications() }
@@ -166,7 +167,7 @@ fun SettingsScreen(
             item {
                 SettingsSection(title = "Account Actions") {
                     SettingsItem(
-                        icon = Icons.Default.Logout,
+                        icon = Icons.AutoMirrored.Filled.Logout,
                         title = "Log Out",
                         titleColor = WarningOrange,
                         onClick = { showLogoutDialog = true }

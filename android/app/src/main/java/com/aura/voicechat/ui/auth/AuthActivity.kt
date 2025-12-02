@@ -1,19 +1,23 @@
 package com.aura.voicechat.ui.auth
 
 import android.content.Intent
+import android.content.IntentSender
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import com.aura.voicechat.BuildConfig
 import com.aura.voicechat.ui.theme.AuraVoiceChatTheme
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.auth.api.identity.BeginSignInRequest
+import com.google.android.gms.auth.api.identity.Identity
+import com.google.android.gms.auth.api.identity.SignInClient
 import com.google.android.gms.common.api.ApiException
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -23,21 +27,31 @@ import dagger.hilt.android.AndroidEntryPoint
  * 
  * Handles user authentication via:
  * - AWS Cognito (Phone OTP)
- * - Google Sign-In
+ * - Google Identity Services (GIS) - Modern Google Sign-In
  * - Facebook Login
+ * 
+ * Uses Google Identity Services (GIS) instead of deprecated GoogleSignIn APIs
+ * for better security and user experience.
  */
 @AndroidEntryPoint
 class AuthActivity : ComponentActivity() {
     
+    private lateinit var oneTapClient: SignInClient
+    private lateinit var signInRequest: BeginSignInRequest
+    
     private val googleSignInLauncher = registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()
+        ActivityResultContracts.StartIntentSenderForResult()
     ) { result ->
-        val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
         try {
-            val account = task.getResult(ApiException::class.java)
-            // Handle Google Sign-In success
-            account?.idToken?.let { idToken ->
-                handleGoogleSignIn(idToken)
+            val credential = oneTapClient.getSignInCredentialFromIntent(result.data)
+            val idToken = credential.googleIdToken
+            val email = credential.id
+            val displayName = credential.displayName
+            
+            if (idToken != null) {
+                handleGoogleSignIn(idToken, email, displayName)
+            } else {
+                Log.e(TAG, "Google Sign-In: ID token is null")
             }
         } catch (e: ApiException) {
             Log.e(TAG, "Google Sign-In failed: ${e.statusCode}", e)
@@ -47,6 +61,19 @@ class AuthActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        
+        // Initialize Google Identity Services One Tap client
+        oneTapClient = Identity.getSignInClient(this)
+        signInRequest = BeginSignInRequest.builder()
+            .setGoogleIdTokenRequestOptions(
+                BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
+                    .setSupported(true)
+                    .setServerClientId(BuildConfig.GOOGLE_WEB_CLIENT_ID)
+                    .setFilterByAuthorizedAccounts(false)
+                    .build()
+            )
+            .setAutoSelectEnabled(true)
+            .build()
         
         setContent {
             AuraVoiceChatTheme {
@@ -67,25 +94,34 @@ class AuthActivity : ComponentActivity() {
     }
     
     /**
-     * Initiates Google Sign-In flow
+     * Initiates Google Sign-In flow using Google Identity Services (GIS)
+     * Uses One Tap sign-in for a seamless user experience
      */
     fun initiateGoogleSignIn() {
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(GOOGLE_WEB_CLIENT_ID)
-            .requestEmail()
-            .build()
-        
-        val googleSignInClient = GoogleSignIn.getClient(this, gso)
-        val signInIntent = googleSignInClient.signInIntent
-        googleSignInLauncher.launch(signInIntent)
+        oneTapClient.beginSignIn(signInRequest)
+            .addOnSuccessListener(this) { result ->
+                try {
+                    val intentSenderRequest = IntentSenderRequest.Builder(result.pendingIntent.intentSender).build()
+                    googleSignInLauncher.launch(intentSenderRequest)
+                } catch (e: IntentSender.SendIntentException) {
+                    Log.e(TAG, "Couldn't start One Tap UI: ${e.localizedMessage}")
+                }
+            }
+            .addOnFailureListener(this) { e ->
+                Log.e(TAG, "Google Sign-In failed to begin: ${e.localizedMessage}")
+            }
     }
     
     /**
      * Handles successful Google Sign-In
+     * @param idToken The Google ID token for backend authentication
+     * @param email The user's email address
+     * @param displayName The user's display name
      */
-    private fun handleGoogleSignIn(idToken: String) {
+    private fun handleGoogleSignIn(idToken: String, email: String?, displayName: String?) {
         // Use AWS Cognito to federate Google identity
         Log.i(TAG, "Google Sign-In successful, federating with Cognito")
+        // Note: User information is not logged for privacy/security reasons
         // Implementation handled by ViewModel/Repository
     }
     
@@ -119,7 +155,5 @@ class AuthActivity : ComponentActivity() {
     companion object {
         private const val TAG = "AuthActivity"
         const val EXTRA_AUTH_SUCCESS = "auth_success"
-        // Replace with your actual Google Web Client ID
-        private const val GOOGLE_WEB_CLIENT_ID = "YOUR_GOOGLE_WEB_CLIENT_ID"
     }
 }

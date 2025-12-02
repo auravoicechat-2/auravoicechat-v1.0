@@ -10,6 +10,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.*
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -56,7 +57,7 @@ fun FamilyScreen(
                 title = { Text(uiState.familyName.ifEmpty { "Family" }) },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                     }
                 },
                 actions = {
@@ -553,7 +554,7 @@ private fun FamilyActivityTab(activities: List<FamilyActivity>) {
                             when (activity.type) {
                                 "gift" -> Icons.Default.CardGiftcard
                                 "join" -> Icons.Default.PersonAdd
-                                "leave" -> Icons.Default.ExitToApp
+                                "leave" -> Icons.AutoMirrored.Filled.ExitToApp
                                 "levelup" -> Icons.Default.TrendingUp
                                 else -> Icons.Default.Info
                             },
