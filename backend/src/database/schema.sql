@@ -1095,3 +1095,220 @@ INSERT INTO payment_providers (name, code, type, country_codes, supports_purchas
 ON CONFLICT (code) DO NOTHING;
 
 COMMIT;
+
+-- ============================================================================
+-- GUIDE SYSTEM TABLES (New)
+-- ============================================================================
+
+-- Guides table
+CREATE TABLE IF NOT EXISTS guides (
+    user_id UUID PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+    status VARCHAR(20) DEFAULT 'active' CHECK (status IN ('pending', 'active', 'suspended', 'revoked')),
+    level VARCHAR(20) DEFAULT 'starter' CHECK (level IN ('starter', 'rising', 'star', 'elite', 'legend')),
+    joined_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    months_active INTEGER DEFAULT 0,
+    sheets_completed INTEGER DEFAULT 0,
+    total_earned DECIMAL(10,2) DEFAULT 0,
+    current_frame VARCHAR(50) DEFAULT 'guide_starter_frame',
+    application_notes TEXT,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Guide targets table (monthly sheets)
+CREATE TABLE IF NOT EXISTS guide_targets (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+    year_month VARCHAR(7) NOT NULL, -- '2025-12'
+    targets JSONB NOT NULL DEFAULT '[]',
+    earnings DECIMAL(10,2) DEFAULT 0,
+    status VARCHAR(20) DEFAULT 'in_progress' CHECK (status IN ('in_progress', 'completed', 'expired')),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(user_id, year_month)
+);
+
+-- Guide daily tracking table
+CREATE TABLE IF NOT EXISTS guide_daily (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+    date DATE NOT NULL,
+    jar_completed BOOLEAN DEFAULT FALSE,
+    jar_points INTEGER DEFAULT 0,
+    room_hours DECIMAL(5,2) DEFAULT 0,
+    mic_hours DECIMAL(5,2) DEFAULT 0,
+    coins_received BIGINT DEFAULT 0,
+    messages_received INTEGER DEFAULT 0,
+    unique_visitors INTEGER DEFAULT 0,
+    games_hosted INTEGER DEFAULT 0,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(user_id, date)
+);
+
+-- Guide earnings wallet table
+CREATE TABLE IF NOT EXISTS guide_earnings (
+    user_id UUID PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+    pending_usd DECIMAL(10,2) DEFAULT 0,
+    available_usd DECIMAL(10,2) DEFAULT 0,
+    total_earned DECIMAL(10,2) DEFAULT 0,
+    total_withdrawn DECIMAL(10,2) DEFAULT 0,
+    total_converted DECIMAL(10,2) DEFAULT 0,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Guide applications table
+CREATE TABLE IF NOT EXISTS guide_applications (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+    status VARCHAR(20) DEFAULT 'pending' CHECK (status IN ('pending', 'approved', 'rejected')),
+    documents JSONB,
+    rejection_reason TEXT,
+    reviewed_by UUID REFERENCES users(id),
+    reviewed_at TIMESTAMP WITH TIME ZONE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(user_id)
+);
+
+CREATE INDEX idx_guides_status ON guides(status);
+CREATE INDEX idx_guides_level ON guides(level);
+CREATE INDEX idx_guide_targets_user ON guide_targets(user_id);
+CREATE INDEX idx_guide_daily_user_date ON guide_daily(user_id, date);
+
+-- ============================================================================
+-- RECEIVER-BASED EARNING TARGETS (5-day clearance)
+-- ============================================================================
+
+-- Update earning_targets to support receiver-based targets
+ALTER TABLE earning_targets ADD COLUMN IF NOT EXISTS target_type VARCHAR(20) DEFAULT 'send' CHECK (target_type IN ('send', 'receive'));
+ALTER TABLE earning_targets ADD COLUMN IF NOT EXISTS clearance_days INTEGER DEFAULT 5;
+
+-- User pending earnings (for 5-day clearance)
+CREATE TABLE IF NOT EXISTS user_pending_earnings (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    amount DECIMAL(15, 2) NOT NULL,
+    source_type VARCHAR(50) NOT NULL, -- 'gift', 'target_reward', etc.
+    source_id UUID,
+    from_user_id UUID REFERENCES users(id),
+    clearance_at TIMESTAMP WITH TIME ZONE NOT NULL, -- When it becomes available
+    status VARCHAR(20) DEFAULT 'pending' CHECK (status IN ('pending', 'cleared', 'cancelled')),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_user_pending_earnings_user ON user_pending_earnings(user_id);
+CREATE INDEX idx_user_pending_earnings_clearance ON user_pending_earnings(clearance_at);
+
+-- ============================================================================
+-- CONTENT MODERATION SYSTEM
+-- ============================================================================
+
+-- User violations/warnings
+CREATE TABLE IF NOT EXISTS user_violations (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    violation_type VARCHAR(50) NOT NULL CHECK (violation_type IN ('abusive_language', 'vulgar_image', 'spam', 'harassment', 'scam', 'impersonation', 'other')),
+    severity VARCHAR(20) NOT NULL CHECK (severity IN ('low', 'medium', 'high', 'critical')),
+    content TEXT,
+    image_url TEXT,
+    room_id UUID REFERENCES rooms(id) ON DELETE SET NULL,
+    action_taken VARCHAR(50) NOT NULL CHECK (action_taken IN ('warn', 'ban_5min', 'ban_10min', 'ban_1hour', 'ban_24hour', 'ban_permanent', 'mute', 'kick')),
+    ban_expiry TIMESTAMP WITH TIME ZONE,
+    reported_by UUID REFERENCES users(id) ON DELETE SET NULL,
+    reviewed_by UUID REFERENCES users(id) ON DELETE SET NULL,
+    reviewed_at TIMESTAMP WITH TIME ZONE,
+    notes TEXT,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_user_violations_user ON user_violations(user_id);
+CREATE INDEX idx_user_violations_type ON user_violations(violation_type);
+CREATE INDEX idx_user_violations_created ON user_violations(created_at DESC);
+CREATE INDEX idx_user_violations_severity ON user_violations(severity);
+
+-- Image review queue for manual moderation
+CREATE TABLE IF NOT EXISTS image_review_queue (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    image_url TEXT NOT NULL,
+    context VARCHAR(50) NOT NULL CHECK (context IN ('profile', 'room_cover', 'chat', 'gift', 'other')),
+    status VARCHAR(20) DEFAULT 'pending' CHECK (status IN ('pending', 'approved', 'rejected')),
+    reviewed_by UUID REFERENCES users(id) ON DELETE SET NULL,
+    reviewed_at TIMESTAMP WITH TIME ZONE,
+    rejection_reason TEXT,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(user_id, image_url)
+);
+
+CREATE INDEX idx_image_review_status ON image_review_queue(status);
+CREATE INDEX idx_image_review_created ON image_review_queue(created_at);
+
+-- Admin notifications for violations
+CREATE TABLE IF NOT EXISTS admin_notifications (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    type VARCHAR(50) NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    message TEXT NOT NULL,
+    user_id UUID REFERENCES users(id) ON DELETE SET NULL,
+    room_id UUID REFERENCES rooms(id) ON DELETE SET NULL,
+    severity VARCHAR(20) DEFAULT 'medium' CHECK (severity IN ('low', 'medium', 'high', 'critical')),
+    is_read BOOLEAN DEFAULT FALSE,
+    read_by UUID REFERENCES users(id) ON DELETE SET NULL,
+    read_at TIMESTAMP WITH TIME ZONE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_admin_notifications_read ON admin_notifications(is_read);
+CREATE INDEX idx_admin_notifications_created ON admin_notifications(created_at DESC);
+CREATE INDEX idx_admin_notifications_severity ON admin_notifications(severity);
+
+-- Banned words list (customizable)
+CREATE TABLE IF NOT EXISTS banned_words (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    word VARCHAR(100) NOT NULL UNIQUE,
+    category VARCHAR(50) DEFAULT 'profanity' CHECK (category IN ('profanity', 'slur', 'spam', 'scam', 'other')),
+    language VARCHAR(10) DEFAULT 'en',
+    severity VARCHAR(20) DEFAULT 'medium',
+    is_active BOOLEAN DEFAULT TRUE,
+    added_by UUID REFERENCES users(id) ON DELETE SET NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_banned_words_active ON banned_words(is_active);
+CREATE INDEX idx_banned_words_category ON banned_words(category);
+
+-- User ban history
+CREATE TABLE IF NOT EXISTS ban_history (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    ban_type VARCHAR(50) NOT NULL,
+    reason TEXT NOT NULL,
+    banned_by UUID REFERENCES users(id) ON DELETE SET NULL,
+    ban_start TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    ban_end TIMESTAMP WITH TIME ZONE,
+    is_permanent BOOLEAN DEFAULT FALSE,
+    is_active BOOLEAN DEFAULT TRUE,
+    unbanned_by UUID REFERENCES users(id) ON DELETE SET NULL,
+    unbanned_at TIMESTAMP WITH TIME ZONE,
+    unban_reason TEXT
+);
+
+CREATE INDEX idx_ban_history_user ON ban_history(user_id);
+CREATE INDEX idx_ban_history_active ON ban_history(is_active);
+
+-- Add ban columns to users table if not exists
+ALTER TABLE users ADD COLUMN IF NOT EXISTS ban_reason TEXT;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS ban_expiry TIMESTAMP WITH TIME ZONE;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS ban_type VARCHAR(50);
+
+-- Insert receiver-based earning targets
+INSERT INTO earning_targets (name, description, type, target_type, target_amount, reward_coins, period, tier, clearance_days) VALUES
+    ('Gift Receiver I', 'Receive gifts worth 10,000 diamonds', 'gift', 'receive', 10000, 5000, 'weekly', 1, 5),
+    ('Gift Receiver II', 'Receive gifts worth 50,000 diamonds', 'gift', 'receive', 50000, 30000, 'weekly', 2, 5),
+    ('Gift Receiver III', 'Receive gifts worth 200,000 diamonds', 'gift', 'receive', 200000, 150000, 'weekly', 3, 5),
+    ('Room Host I', 'Receive 5,000 diamonds while hosting', 'hosting', 'receive', 5000, 2500, 'weekly', 1, 5),
+    ('Room Host II', 'Receive 25,000 diamonds while hosting', 'hosting', 'receive', 25000, 15000, 'weekly', 2, 5),
+    ('Room Host III', 'Receive 100,000 diamonds while hosting', 'hosting', 'receive', 100000, 70000, 'weekly', 3, 5)
+ON CONFLICT DO NOTHING;
+
+COMMIT;

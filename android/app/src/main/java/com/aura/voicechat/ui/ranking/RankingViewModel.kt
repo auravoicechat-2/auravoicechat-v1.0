@@ -1,7 +1,9 @@
 package com.aura.voicechat.ui.ranking
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.aura.voicechat.data.remote.ApiService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -10,11 +12,17 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 /**
- * Ranking ViewModel
+ * Ranking ViewModel (Live API Connected)
  * Developer: Hawkaye Visions LTD — Pakistan
  */
 @HiltViewModel
-class RankingViewModel @Inject constructor() : ViewModel() {
+class RankingViewModel @Inject constructor(
+    private val apiService: ApiService
+) : ViewModel() {
+    
+    companion object {
+        private const val TAG = "RankingViewModel"
+    }
     
     private val _uiState = MutableStateFlow(RankingUiState())
     val uiState: StateFlow<RankingUiState> = _uiState.asStateFlow()
@@ -22,55 +30,195 @@ class RankingViewModel @Inject constructor() : ViewModel() {
     fun loadRanking(type: String, period: String) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true)
-            
-            // Sample data
-            val rankings = when (type) {
-                "sender" -> listOf(
-                    RankingItemData("user1", "DragonKing", null, 60, 125000000),
-                    RankingItemData("user2", "PhoenixQueen", null, 55, 98000000),
-                    RankingItemData("user3", "StarLord", null, 48, 75000000),
-                    RankingItemData("user4", "MoonWalker", null, 45, 62000000),
-                    RankingItemData("user5", "SunWarrior", null, 42, 55000000),
-                    RankingItemData("user6", "IceKnight", null, 40, 48000000),
-                    RankingItemData("user7", "FireMage", null, 38, 42000000),
-                    RankingItemData("user8", "ThunderBolt", null, 35, 38000000),
-                    RankingItemData("user9", "ShadowNinja", null, 32, 32000000),
-                    RankingItemData("user10", "LightAngel", null, 30, 28000000)
+            try {
+                when (type) {
+                    "sender" -> loadGiftSenderRankings(period)
+                    "receiver" -> loadGiftReceiverRankings(period)
+                    "family" -> loadFamilyRankings(period)
+                    "level" -> loadLevelRankings()
+                    "wealth" -> loadWealthRankings()
+                    "charm" -> loadCharmRankings(period)
+                    "cp" -> loadCpRankings(period)
+                    else -> loadGiftSenderRankings(period)
+                }
+            } catch (e: Exception) {
+                Log.e(TAG, "Error loading rankings", e)
+                _uiState.value = _uiState.value.copy(
+                    isLoading = false,
+                    error = e.message
                 )
-                "receiver" -> listOf(
-                    RankingItemData("user11", "DiamondsQueen", null, 58, 200000000),
-                    RankingItemData("user12", "GoldPrincess", null, 52, 165000000),
-                    RankingItemData("user13", "SilverStar", null, 47, 142000000),
-                    RankingItemData("user14", "RubyHeart", null, 44, 125000000),
-                    RankingItemData("user15", "EmeraldEyes", null, 41, 108000000),
-                    RankingItemData("user16", "SapphireDream", null, 38, 95000000),
-                    RankingItemData("user17", "PearlGlow", null, 35, 82000000),
-                    RankingItemData("user18", "OpalShine", null, 33, 70000000),
-                    RankingItemData("user19", "AmethystMist", null, 30, 58000000),
-                    RankingItemData("user20", "TopazFlare", null, 28, 48000000)
-                )
-                "family" -> listOf(
-                    RankingItemData("fam1", "Dragon Warriors", null, 0, 850000000),
-                    RankingItemData("fam2", "Phoenix Rising", null, 0, 720000000),
-                    RankingItemData("fam3", "Star Alliance", null, 0, 650000000),
-                    RankingItemData("fam4", "Moon Clan", null, 0, 580000000),
-                    RankingItemData("fam5", "Sun Dynasty", null, 0, 520000000),
-                    RankingItemData("fam6", "Ice Kingdom", null, 0, 465000000),
-                    RankingItemData("fam7", "Fire Legion", null, 0, 410000000),
-                    RankingItemData("fam8", "Thunder Guild", null, 0, 365000000),
-                    RankingItemData("fam9", "Shadow Order", null, 0, 320000000),
-                    RankingItemData("fam10", "Light Brigade", null, 0, 280000000)
-                )
-                else -> emptyList()
             }
-            
-            _uiState.value = RankingUiState(
+        }
+    }
+    
+    private suspend fun loadGiftSenderRankings(period: String) {
+        val response = apiService.getGiftRankings(type = period, category = "sender")
+        if (response.isSuccessful && response.body() != null) {
+            val data = response.body()!!
+            val rankings = data.rankings.map { r ->
+                RankingItemData(
+                    id = r.userId,
+                    name = r.userName,
+                    avatar = r.userAvatar,
+                    level = r.userLevel,
+                    value = r.value
+                )
+            }
+            _uiState.value = _uiState.value.copy(
                 isLoading = false,
                 rankings = rankings,
-                myRank = 156,
-                myRankingItem = RankingItemData("me", "MyUsername", null, 15, 250000)
+                myRank = data.myRank ?: 0
             )
+            Log.d(TAG, "Loaded ${rankings.size} sender rankings")
+        } else {
+            _uiState.value = _uiState.value.copy(isLoading = false, rankings = emptyList())
         }
+    }
+    
+    private suspend fun loadGiftReceiverRankings(period: String) {
+        val response = apiService.getGiftRankings(type = period, category = "receiver")
+        if (response.isSuccessful && response.body() != null) {
+            val data = response.body()!!
+            val rankings = data.rankings.map { r ->
+                RankingItemData(
+                    id = r.userId,
+                    name = r.userName,
+                    avatar = r.userAvatar,
+                    level = r.userLevel,
+                    value = r.value
+                )
+            }
+            _uiState.value = _uiState.value.copy(
+                isLoading = false,
+                rankings = rankings,
+                myRank = data.myRank ?: 0
+            )
+            Log.d(TAG, "Loaded ${rankings.size} receiver rankings")
+        } else {
+            _uiState.value = _uiState.value.copy(isLoading = false, rankings = emptyList())
+        }
+    }
+    
+    private suspend fun loadFamilyRankings(period: String) {
+        val response = apiService.getFamilyRankings(type = period)
+        if (response.isSuccessful && response.body() != null) {
+            val data = response.body()!!
+            val rankings = data.rankings.map { r ->
+                RankingItemData(
+                    id = r.familyId,
+                    name = r.familyName,
+                    avatar = r.badge,
+                    level = r.level,
+                    value = r.weeklyGifts
+                )
+            }
+            _uiState.value = _uiState.value.copy(
+                isLoading = false,
+                rankings = rankings
+            )
+            Log.d(TAG, "Loaded ${rankings.size} family rankings")
+        } else {
+            _uiState.value = _uiState.value.copy(isLoading = false, rankings = emptyList())
+        }
+    }
+    
+    private suspend fun loadLevelRankings() {
+        val response = apiService.getLevelRankings()
+        if (response.isSuccessful && response.body() != null) {
+            val data = response.body()!!
+            val rankings = data.rankings.map { r ->
+                RankingItemData(
+                    id = r.userId,
+                    name = r.userName,
+                    avatar = r.userAvatar,
+                    level = r.userLevel,
+                    value = r.value
+                )
+            }
+            _uiState.value = _uiState.value.copy(
+                isLoading = false,
+                rankings = rankings,
+                myRank = data.myRank ?: 0
+            )
+            Log.d(TAG, "Loaded ${rankings.size} level rankings")
+        } else {
+            _uiState.value = _uiState.value.copy(isLoading = false, rankings = emptyList())
+        }
+    }
+    
+    private suspend fun loadWealthRankings() {
+        val response = apiService.getWealthRankings()
+        if (response.isSuccessful && response.body() != null) {
+            val data = response.body()!!
+            val rankings = data.rankings.map { r ->
+                RankingItemData(
+                    id = r.userId,
+                    name = r.userName,
+                    avatar = r.userAvatar,
+                    level = r.userLevel,
+                    value = r.value
+                )
+            }
+            _uiState.value = _uiState.value.copy(
+                isLoading = false,
+                rankings = rankings,
+                myRank = data.myRank ?: 0
+            )
+            Log.d(TAG, "Loaded ${rankings.size} wealth rankings")
+        } else {
+            _uiState.value = _uiState.value.copy(isLoading = false, rankings = emptyList())
+        }
+    }
+    
+    private suspend fun loadCharmRankings(period: String) {
+        val response = apiService.getCharmRankings(type = period)
+        if (response.isSuccessful && response.body() != null) {
+            val data = response.body()!!
+            val rankings = data.rankings.map { r ->
+                RankingItemData(
+                    id = r.userId,
+                    name = r.userName,
+                    avatar = r.userAvatar,
+                    level = r.userLevel,
+                    value = r.value
+                )
+            }
+            _uiState.value = _uiState.value.copy(
+                isLoading = false,
+                rankings = rankings,
+                myRank = data.myRank ?: 0
+            )
+            Log.d(TAG, "Loaded ${rankings.size} charm rankings")
+        } else {
+            _uiState.value = _uiState.value.copy(isLoading = false, rankings = emptyList())
+        }
+    }
+    
+    private suspend fun loadCpRankings(period: String) {
+        val response = apiService.getCpRankings(type = period)
+        if (response.isSuccessful && response.body() != null) {
+            val data = response.body()!!
+            val rankings = data.rankings.map { r ->
+                RankingItemData(
+                    id = "${r.user1.userId}_${r.user2.userId}",
+                    name = "${r.user1.name} ❤ ${r.user2.name}",
+                    avatar = r.user1.avatar,
+                    level = r.level,
+                    value = r.points
+                )
+            }
+            _uiState.value = _uiState.value.copy(
+                isLoading = false,
+                rankings = rankings
+            )
+            Log.d(TAG, "Loaded ${rankings.size} CP rankings")
+        } else {
+            _uiState.value = _uiState.value.copy(isLoading = false, rankings = emptyList())
+        }
+    }
+    
+    fun dismissError() {
+        _uiState.value = _uiState.value.copy(error = null)
     }
 }
 
@@ -78,5 +226,6 @@ data class RankingUiState(
     val isLoading: Boolean = false,
     val rankings: List<RankingItemData> = emptyList(),
     val myRank: Int = 0,
-    val myRankingItem: RankingItemData? = null
+    val myRankingItem: RankingItemData? = null,
+    val error: String? = null
 )

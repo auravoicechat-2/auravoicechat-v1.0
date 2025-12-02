@@ -63,20 +63,35 @@ export const getEarningsHistory = async (req: Request, res: Response, next: Next
   }
 };
 
-// Get earnings targets
+// Get earnings targets (supports both send and receive types)
 export const getEarningsTargets = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {
     const userId = req.user?.id;
+    const { targetType = 'receive' } = req.query; // Default to receiver-based targets
 
+    // For receiver-based targets, calculate progress from gifts received
     const result = await query(
       `SELECT et.*, 
-              COALESCE(SUM(e.amount), 0) as current_progress
+              CASE 
+                WHEN et.target_type = 'receive' THEN 
+                  COALESCE((SELECT SUM(gt.diamonds_earned) 
+                           FROM gift_transactions gt 
+                           WHERE gt.receiver_id = $1 
+                           AND gt.created_at > NOW() - 
+                             CASE WHEN et.period = 'weekly' THEN INTERVAL '7 days'
+                                  WHEN et.period = 'monthly' THEN INTERVAL '30 days'
+                                  ELSE INTERVAL '365 days' END), 0)
+                ELSE 
+                  COALESCE(SUM(e.amount), 0)
+              END as current_progress,
+              et.clearance_days
        FROM earning_targets et
-       LEFT JOIN earnings e ON e.user_id = $1 AND e.type = et.type AND e.created_at > NOW() - INTERVAL '30 days'
-       WHERE et.is_active = true
+       LEFT JOIN earnings e ON e.user_id = $1 AND e.type = et.type 
+         AND e.created_at > NOW() - INTERVAL '30 days'
+       WHERE et.is_active = true AND et.target_type = $2
        GROUP BY et.id
-       ORDER BY et.target_amount ASC`,
-      [userId]
+       ORDER BY et.tier ASC, et.target_amount ASC`,
+      [userId, targetType]
     );
 
     res.json({ targets: result.rows });
@@ -85,20 +100,31 @@ export const getEarningsTargets = async (req: Request, res: Response, next: Next
   }
 };
 
-// Claim earnings reward
+// Claim earnings reward (with 5-day clearance for receiver-based targets)
 export const claimReward = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {
     const userId = req.user?.id;
     const { targetId } = req.params;
 
-    // Check if target is reached and not claimed
+    // Get target details
     const targetResult = await query(
       `SELECT et.*, 
-              COALESCE(SUM(e.amount), 0) as current_progress
+              CASE 
+                WHEN et.target_type = 'receive' THEN 
+                  COALESCE((SELECT SUM(gt.diamonds_earned) 
+                           FROM gift_transactions gt 
+                           WHERE gt.receiver_id = $1 
+                           AND gt.created_at > NOW() - 
+                             CASE WHEN et.period = 'weekly' THEN INTERVAL '7 days'
+                                  WHEN et.period = 'monthly' THEN INTERVAL '30 days'
+                                  ELSE INTERVAL '365 days' END), 0)
+                ELSE 
+                  COALESCE((SELECT SUM(e.amount) FROM earnings e 
+                           WHERE e.user_id = $1 AND e.type = et.type 
+                           AND e.created_at > NOW() - INTERVAL '30 days'), 0)
+              END as current_progress
        FROM earning_targets et
-       LEFT JOIN earnings e ON e.user_id = $1 AND e.type = et.type AND e.created_at > NOW() - INTERVAL '30 days'
-       WHERE et.id = $2 AND et.is_active = true
-       GROUP BY et.id`,
+       WHERE et.id = $2 AND et.is_active = true`,
       [userId, targetId]
     );
 
@@ -112,29 +138,92 @@ export const claimReward = async (req: Request, res: Response, next: NextFunctio
       throw new AppError('Target not reached', 400, 'TARGET_NOT_REACHED');
     }
 
-    // Check if already claimed
+    // Check if already claimed (use parameterized interval to avoid SQL injection)
+    let periodDays: number;
+    switch (target.period) {
+      case 'weekly':
+        periodDays = 7;
+        break;
+      case 'monthly':
+        periodDays = 30;
+        break;
+      default:
+        periodDays = 365;
+    }
+    
     const claimResult = await query(
-      'SELECT * FROM earning_claims WHERE user_id = $1 AND target_id = $2 AND created_at > NOW() - INTERVAL \'30 days\'',
-      [userId, targetId]
+      `SELECT * FROM earning_claims WHERE user_id = $1 AND target_id = $2 AND created_at > NOW() - INTERVAL '1 day' * $3`,
+      [userId, targetId, periodDays]
     );
 
     if (claimResult.rows.length > 0) {
-      throw new AppError('Reward already claimed', 400, 'ALREADY_CLAIMED');
+      throw new AppError('Reward already claimed this period', 400, 'ALREADY_CLAIMED');
     }
 
-    // Add reward to user
-    await query(
-      'UPDATE users SET coins = coins + $1 WHERE id = $2',
-      [target.reward_coins, userId]
+    const clearanceDays = target.clearance_days || 5;
+
+    // For receiver-based targets, create pending earning with clearance period
+    if (target.target_type === 'receive') {
+      const clearanceDate = new Date();
+      clearanceDate.setDate(clearanceDate.getDate() + clearanceDays);
+
+      await query(
+        `INSERT INTO user_pending_earnings (user_id, amount, source_type, source_id, clearance_at, status, created_at)
+         VALUES ($1, $2, 'target_reward', $3, $4, 'pending', NOW())`,
+        [userId, target.reward_coins, targetId, clearanceDate]
+      );
+
+      // Record claim
+      await query(
+        'INSERT INTO earning_claims (user_id, target_id, reward_coins, created_at) VALUES ($1, $2, $3, NOW())',
+        [userId, targetId, target.reward_coins]
+      );
+
+      res.json({ 
+        success: true, 
+        rewardCoins: target.reward_coins,
+        clearanceDays,
+        clearanceDate: clearanceDate.toISOString(),
+        message: `Reward claimed! Coins will be available after ${clearanceDays}-day clearance period.`
+      });
+    } else {
+      // For send-based targets, add coins immediately
+      await query(
+        'UPDATE users SET coins = coins + $1 WHERE id = $2',
+        [target.reward_coins, userId]
+      );
+
+      await query(
+        'INSERT INTO earning_claims (user_id, target_id, reward_coins, created_at) VALUES ($1, $2, $3, NOW())',
+        [userId, targetId, target.reward_coins]
+      );
+
+      res.json({ success: true, rewardCoins: target.reward_coins });
+    }
+  } catch (error) {
+    next(error);
+  }
+};
+
+// Get pending earnings (in clearance)
+export const getPendingEarnings = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  try {
+    const userId = req.user?.id;
+
+    const result = await query(
+      `SELECT * FROM user_pending_earnings 
+       WHERE user_id = $1 AND status = 'pending'
+       ORDER BY clearance_at ASC`,
+      [userId]
     );
 
-    // Record claim
-    await query(
-      'INSERT INTO earning_claims (user_id, target_id, reward_coins, created_at) VALUES ($1, $2, $3, NOW())',
-      [userId, targetId, target.reward_coins]
-    );
+    const totalPending = result.rows.reduce((sum: number, row: any) => sum + parseFloat(row.amount), 0);
 
-    res.json({ success: true, rewardCoins: target.reward_coins });
+    res.json({ 
+      pending: result.rows,
+      totalPending,
+      message: 'Pending earnings will be available after clearance period'
+    });
   } catch (error) {
     next(error);
   }

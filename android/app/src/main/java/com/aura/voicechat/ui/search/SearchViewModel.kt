@@ -1,7 +1,11 @@
 package com.aura.voicechat.ui.search
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.aura.voicechat.data.remote.ApiService
+import com.aura.voicechat.domain.model.RoomCard
+import com.aura.voicechat.domain.model.RoomType
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -10,24 +14,20 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 /**
- * Search ViewModel
+ * Search ViewModel (Live API Connected)
  * Developer: Hawkaye Visions LTD — Pakistan
  */
 @HiltViewModel
-class SearchViewModel @Inject constructor() : ViewModel() {
+class SearchViewModel @Inject constructor(
+    private val apiService: ApiService
+) : ViewModel() {
+    
+    companion object {
+        private const val TAG = "SearchViewModel"
+    }
     
     private val _uiState = MutableStateFlow(SearchUiState())
     val uiState: StateFlow<SearchUiState> = _uiState.asStateFlow()
-    
-    init {
-        loadRecentSearches()
-    }
-    
-    private fun loadRecentSearches() {
-        _uiState.value = _uiState.value.copy(
-            recentSearches = listOf("StarLight", "Dragon Room", "12345678", "Phoenix")
-        )
-    }
     
     fun search(query: String, tabIndex: Int) {
         _uiState.value = _uiState.value.copy(
@@ -35,12 +35,12 @@ class SearchViewModel @Inject constructor() : ViewModel() {
             isLoading = query.isNotEmpty()
         )
         
-        if (query.isEmpty()) return
+        if (query.isEmpty()) {
+            clearSearch()
+            return
+        }
         
         viewModelScope.launch {
-            // Simulate API call
-            kotlinx.coroutines.delay(500)
-            
             when (tabIndex) {
                 0 -> searchUsers(query)
                 1 -> searchRooms(query)
@@ -49,46 +49,110 @@ class SearchViewModel @Inject constructor() : ViewModel() {
         }
     }
     
-    private fun searchUsers(query: String) {
-        // Sample results
-        val results = listOf(
-            SearchUser("12345678", "StarLight", null, 25, true),
-            SearchUser("12345679", "StarDust", null, 18, false),
-            SearchUser("12345680", "StarGazer", null, 42, true)
-        ).filter { it.name.contains(query, ignoreCase = true) }
-        
-        _uiState.value = _uiState.value.copy(
-            userResults = results,
-            isLoading = false
-        )
-    }
-    
-    private fun searchRooms(query: String) {
-        // Sample results
-        val results = listOf(
-            SearchRoom("room1", "Dragon Warriors", null, "DragonKing", 45),
-            SearchRoom("room2", "Music Paradise", null, "DJ Storm", 128),
-            SearchRoom("room3", "Chill Zone", null, "ChillMaster", 23)
-        ).filter { it.name.contains(query, ignoreCase = true) }
-        
-        _uiState.value = _uiState.value.copy(
-            roomResults = results,
-            isLoading = false
-        )
-    }
-    
-    private fun searchById(query: String) {
-        // Check if ID exists
-        val result = when {
-            query == "12345678" -> IdSearchResult("12345678", "StarLight", "user")
-            query == "room1" -> IdSearchResult("room1", "Dragon Warriors", "room")
-            else -> null
+    private suspend fun searchUsers(query: String) {
+        try {
+            val response = apiService.searchUsers(query)
+            if (response.isSuccessful && response.body() != null) {
+                val results = response.body()!!.users.map { user ->
+                    SearchUser(
+                        id = user.id,
+                        name = user.name,
+                        avatar = user.avatar,
+                        level = user.level,
+                        isOnline = user.isOnline
+                    )
+                }
+                _uiState.value = _uiState.value.copy(
+                    userResults = results,
+                    isLoading = false
+                )
+                Log.d(TAG, "Found ${results.size} users")
+            } else {
+                _uiState.value = _uiState.value.copy(
+                    userResults = emptyList(),
+                    isLoading = false
+                )
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "Error searching users", e)
+            _uiState.value = _uiState.value.copy(
+                userResults = emptyList(),
+                isLoading = false,
+                error = e.message
+            )
         }
-        
-        _uiState.value = _uiState.value.copy(
-            idSearchResult = result,
-            isLoading = false
-        )
+    }
+    
+    private suspend fun searchRooms(query: String) {
+        try {
+            val response = apiService.searchRooms(query)
+            if (response.isSuccessful && response.body() != null) {
+                val results = response.body()!!.data.map { room ->
+                    SearchRoom(
+                        id = room.id,
+                        name = room.name,
+                        coverImage = room.coverImage,
+                        ownerName = room.ownerName,
+                        userCount = room.userCount
+                    )
+                }
+                _uiState.value = _uiState.value.copy(
+                    roomResults = results,
+                    isLoading = false
+                )
+                Log.d(TAG, "Found ${results.size} rooms")
+            } else {
+                _uiState.value = _uiState.value.copy(
+                    roomResults = emptyList(),
+                    isLoading = false
+                )
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "Error searching rooms", e)
+            _uiState.value = _uiState.value.copy(
+                roomResults = emptyList(),
+                isLoading = false,
+                error = e.message
+            )
+        }
+    }
+    
+    private suspend fun searchById(query: String) {
+        try {
+            // First try to find user by ID
+            val userResponse = apiService.getUser(query)
+            if (userResponse.isSuccessful && userResponse.body() != null) {
+                val user = userResponse.body()!!
+                _uiState.value = _uiState.value.copy(
+                    idSearchResult = IdSearchResult(user.id, user.name, "user"),
+                    isLoading = false
+                )
+                return
+            }
+            
+            // Then try to find room by ID
+            val roomResponse = apiService.getRoom(query)
+            if (roomResponse.isSuccessful && roomResponse.body() != null) {
+                val room = roomResponse.body()!!
+                _uiState.value = _uiState.value.copy(
+                    idSearchResult = IdSearchResult(room.id, room.name, "room"),
+                    isLoading = false
+                )
+                return
+            }
+            
+            // Not found
+            _uiState.value = _uiState.value.copy(
+                idSearchResult = null,
+                isLoading = false
+            )
+        } catch (e: Exception) {
+            Log.e(TAG, "Error searching by ID", e)
+            _uiState.value = _uiState.value.copy(
+                idSearchResult = null,
+                isLoading = false
+            )
+        }
     }
     
     fun clearSearch() {
@@ -100,16 +164,16 @@ class SearchViewModel @Inject constructor() : ViewModel() {
         )
     }
     
-    fun clearRecentSearches() {
-        _uiState.value = _uiState.value.copy(recentSearches = emptyList())
+    fun dismissError() {
+        _uiState.value = _uiState.value.copy(error = null)
     }
 }
 
 data class SearchUiState(
     val isLoading: Boolean = false,
     val searchQuery: String = "",
-    val recentSearches: List<String> = emptyList(),
     val userResults: List<SearchUser> = emptyList(),
     val roomResults: List<SearchRoom> = emptyList(),
-    val idSearchResult: IdSearchResult? = null
+    val idSearchResult: IdSearchResult? = null,
+    val error: String? = null
 )

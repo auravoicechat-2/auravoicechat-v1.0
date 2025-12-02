@@ -2,7 +2,10 @@
  * Authentication Service
  * Developer: Hawkaye Visions LTD — Pakistan
  * 
- * OTP-based authentication with Twilio SMS support
+ * Supports:
+ * - OTP-based authentication with Twilio SMS
+ * - Google Sign-In
+ * - Facebook Sign-In
  */
 
 import { v4 as uuidv4 } from 'uuid';
@@ -22,6 +25,24 @@ interface VerifyResult {
   userId: string;
   userName: string;
   isNewUser: boolean;
+}
+
+interface SocialSignInResult {
+  success: boolean;
+  userId: string;
+  userName: string;
+  userAvatar?: string;
+  userLevel: number;
+  userVipTier: number;
+  isNewUser: boolean;
+}
+
+interface SocialSignInData {
+  token: string;
+  socialUserId?: string;
+  email?: string;
+  displayName?: string;
+  avatarUrl?: string;
 }
 
 // In-memory OTP storage with rate limiting
@@ -227,6 +248,165 @@ export const verifyOtp = async (phone: string, otp: string): Promise<VerifyResul
       success: false,
       userId: '',
       userName: '',
+      isNewUser: false
+    };
+  }
+};
+
+/**
+ * Sign in with social provider (Google or Facebook).
+ * Creates a new user if not exists, or returns existing user.
+ * 
+ * IMPORTANT: Token verification is required in production!
+ * The token parameter should be verified with the provider's API before proceeding.
+ */
+export const signInWithSocial = async (
+  provider: 'google' | 'facebook',
+  data: SocialSignInData
+): Promise<SocialSignInResult> => {
+  try {
+    const { token, socialUserId, email, displayName, avatarUrl } = data;
+    
+    // Validate provider to prevent SQL injection
+    const validProviders = ['google', 'facebook'] as const;
+    if (!validProviders.includes(provider)) {
+      logger.error(`Invalid provider: ${provider}`);
+      return {
+        success: false,
+        userId: '',
+        userName: '',
+        userLevel: 0,
+        userVipTier: 0,
+        isNewUser: false
+      };
+    }
+    
+    // Validate token is present
+    if (!token || token.trim() === '') {
+      logger.error('Social sign-in attempted without valid token');
+      return {
+        success: false,
+        userId: '',
+        userName: '',
+        userLevel: 0,
+        userVipTier: 0,
+        isNewUser: false
+      };
+    }
+    
+    // TODO: In production, verify the token with the provider's API:
+    // - Google: https://oauth2.googleapis.com/tokeninfo?id_token=...
+    //   Use: const googleTicket = await googleClient.verifyIdToken({idToken: token, audience: CLIENT_ID});
+    // - Facebook: https://graph.facebook.com/debug_token?input_token=...
+    //   Use: const fbResponse = await fetch(`https://graph.facebook.com/me?access_token=${token}`);
+    // 
+    // For development purposes, we're allowing the token through after basic validation.
+    // In production, ALWAYS verify the token with the provider before proceeding!
+    
+    logger.info(`Social sign-in attempt with ${provider}`, { email, hasToken: !!token });
+    
+    // Create a unique identifier for the social login
+    const socialId = socialUserId || `${provider}_${email || uuidv4()}`;
+    
+    // Use separate queries for each provider to avoid SQL injection
+    // The provider is validated above, so this is safe
+    let userResult;
+    if (provider === 'google') {
+      userResult = await query(
+        `SELECT id, username, display_name, avatar_url, level, vip_tier 
+         FROM users 
+         WHERE google_id = $1 OR (email = $2 AND email IS NOT NULL)`,
+        [socialId, email]
+      );
+    } else {
+      userResult = await query(
+        `SELECT id, username, display_name, avatar_url, level, vip_tier 
+         FROM users 
+         WHERE facebook_id = $1 OR (email = $2 AND email IS NOT NULL)`,
+        [socialId, email]
+      );
+    }
+    
+    if (userResult.rows.length > 0) {
+      const user = userResult.rows[0];
+      
+      // Update last login and social ID if not set - use separate queries for each provider
+      if (provider === 'google') {
+        await query(
+          `UPDATE users 
+           SET last_login_at = NOW(), 
+               login_streak = login_streak + 1,
+               google_id = COALESCE(google_id, $2)
+           WHERE id = $1`,
+          [user.id, socialId]
+        );
+      } else {
+        await query(
+          `UPDATE users 
+           SET last_login_at = NOW(), 
+               login_streak = login_streak + 1,
+               facebook_id = COALESCE(facebook_id, $2)
+           WHERE id = $1`,
+          [user.id, socialId]
+        );
+      }
+      
+      logger.info(`Existing user signed in via ${provider}`, { userId: user.id });
+      
+      return {
+        success: true,
+        userId: user.id,
+        userName: user.username || user.display_name,
+        userAvatar: user.avatar_url,
+        userLevel: user.level || 1,
+        userVipTier: user.vip_tier || 0,
+        isNewUser: false
+      };
+    }
+    
+    // Create new user - use separate queries for each provider
+    const userId = uuidv4();
+    const username = displayName || email?.split('@')[0] || `User_${userId.slice(0, 8)}`;
+    
+    if (provider === 'google') {
+      await query(
+        `INSERT INTO users (
+          id, email, username, display_name, avatar_url, 
+          google_id, coins, diamonds, level, vip_tier,
+          created_at, last_login_at
+        ) VALUES ($1, $2, $3, $3, $4, $5, 1000, 100, 1, 0, NOW(), NOW())`,
+        [userId, email, username, avatarUrl, socialId]
+      );
+    } else {
+      await query(
+        `INSERT INTO users (
+          id, email, username, display_name, avatar_url, 
+          facebook_id, coins, diamonds, level, vip_tier,
+          created_at, last_login_at
+        ) VALUES ($1, $2, $3, $3, $4, $5, 1000, 100, 1, 0, NOW(), NOW())`,
+        [userId, email, username, avatarUrl, socialId]
+      );
+    }
+    
+    logger.info(`New user created via ${provider}`, { userId, email });
+    
+    return {
+      success: true,
+      userId,
+      userName: username,
+      userAvatar: avatarUrl,
+      userLevel: 1,
+      userVipTier: 0,
+      isNewUser: true
+    };
+  } catch (error) {
+    logger.error(`Failed to sign in with ${provider}`, { error });
+    return {
+      success: false,
+      userId: '',
+      userName: '',
+      userLevel: 0,
+      userVipTier: 0,
       isNewUser: false
     };
   }
