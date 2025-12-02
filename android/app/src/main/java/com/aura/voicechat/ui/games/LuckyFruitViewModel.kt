@@ -190,6 +190,8 @@ class LuckyFruitViewModel @Inject constructor(
                     val winner = gameResult?.result ?: getWeightedRandomFruit()
                     val winAmount = gameResult?.winAmount ?: 0L
                     
+                    // Use backend balance if available
+                    val newBalance = gameResult?.newBalance ?: (state.balance + winAmount)
                     val newTodaysWin = state.todaysWin + winAmount
                     val newResults = listOf(winner) + state.recentResults.take(9)
                     
@@ -198,7 +200,7 @@ class LuckyFruitViewModel @Inject constructor(
                         winningItem = winner,
                         lastWin = winAmount,
                         todaysWin = newTodaysWin,
-                        balance = state.balance + winAmount,
+                        balance = newBalance,
                         bets = emptyMap(), // Clear bets
                         recentResults = newResults
                     )

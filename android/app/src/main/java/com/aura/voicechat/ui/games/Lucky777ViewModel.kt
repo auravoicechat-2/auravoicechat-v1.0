@@ -194,6 +194,8 @@ class Lucky777ViewModel @Inject constructor(
                     val winAmount = gameResult?.winAmount ?: 0L
                     val winLines = gameResult?.winLines ?: emptyList()
                     
+                    // Use backend balance if available, otherwise calculate locally
+                    val newBalance = gameResult?.newBalance ?: (_uiState.value.balance + winAmount)
                     val newTodaysWin = _uiState.value.todaysWin + winAmount
                     
                     _uiState.value = _uiState.value.copy(
@@ -201,7 +203,7 @@ class Lucky777ViewModel @Inject constructor(
                         reels = result,
                         lastWin = winAmount,
                         todaysWin = newTodaysWin,
-                        balance = _uiState.value.balance + winAmount,
+                        balance = newBalance,
                         winLines = winLines.map { it.toInt() }
                     )
                 } else {

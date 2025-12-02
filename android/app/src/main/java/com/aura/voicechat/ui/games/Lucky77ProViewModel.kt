@@ -143,13 +143,15 @@ class Lucky77ProViewModel @Inject constructor(
 
                     delay(300)
 
-                    if (winAmount > 0) {
+                    // Update balance from backend response if available
+                    val newBalance = result?.newBalance?.toInt()
+                    if (winAmount > 0 || newBalance != null) {
                         _uiState.update { state ->
                             state.copy(
                                 lastWinAmount = winAmount,
                                 isJackpot = isJackpot,
-                                showWinDialog = true,
-                                userDiamonds = state.userDiamonds + winAmount
+                                showWinDialog = winAmount > 0,
+                                userDiamonds = newBalance ?: (state.userDiamonds + winAmount)
                             )
                         }
                     }
