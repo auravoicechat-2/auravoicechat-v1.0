@@ -1,5 +1,6 @@
 package com.aura.voicechat.ui.room.components
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -15,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -132,22 +134,16 @@ private fun SeatItem(
                             }
                         }
                         
-                        // Mute indicator
+                        // Mute indicator - using Yari mic_mute.png
                         if (seat.isMuted) {
-                            Box(
+                            Image(
+                                painter = painterResource(id = com.aura.voicechat.R.drawable.mic_mute),
+                                contentDescription = "Muted",
                                 modifier = Modifier
                                     .align(Alignment.BottomEnd)
-                                    .size(20.dp)
-                                    .background(ErrorRed, CircleShape),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Icon(
-                                    Icons.Default.MicOff,
-                                    contentDescription = "Muted",
-                                    tint = Color.White,
-                                    modifier = Modifier.size(12.dp)
-                                )
-                            }
+                                    .size(20.dp),
+                                contentScale = ContentScale.Fit
+                            )
                         }
                         
                         // Level badge
@@ -203,12 +199,23 @@ private fun SeatItem(
                     ),
                 contentAlignment = Alignment.Center
             ) {
-                Icon(
-                    if (seat.isLocked) Icons.Default.Lock else Icons.Default.Add,
-                    contentDescription = if (seat.isLocked) "Locked" else "Join seat",
-                    tint = if (seat.isLocked) TextTertiary else AccentMagenta,
-                    modifier = Modifier.size(24.dp)
-                )
+                if (seat.isLocked) {
+                    // Locked seat - using Yari microphone_lock.png
+                    Image(
+                        painter = painterResource(id = com.aura.voicechat.R.drawable.microphone_lock),
+                        contentDescription = "Locked",
+                        modifier = Modifier.size(24.dp),
+                        contentScale = ContentScale.Fit
+                    )
+                } else {
+                    // Empty seat - add icon
+                    Icon(
+                        Icons.Default.Add,
+                        contentDescription = "Join seat",
+                        tint = AccentMagenta,
+                        modifier = Modifier.size(24.dp)
+                    )
+                }
             }
             
             Spacer(modifier = Modifier.height(4.dp))

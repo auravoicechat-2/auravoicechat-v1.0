@@ -1,5 +1,6 @@
 package com.aura.voicechat.ui.room.components
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
@@ -11,7 +12,10 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.aura.voicechat.R
 import com.aura.voicechat.ui.theme.*
 
 /**
@@ -115,7 +119,7 @@ fun RoomBottomBar(
                 )
             }
             
-            // Mic toggle button
+            // Mic toggle button - using Yari mic assets
             IconButton(
                 onClick = onMicToggle,
                 modifier = Modifier
@@ -125,10 +129,13 @@ fun RoomBottomBar(
                         CircleShape
                     )
             ) {
-                Icon(
-                    if (isMuted) Icons.Default.MicOff else Icons.Default.Mic,
+                Image(
+                    painter = painterResource(
+                        id = if (isMuted) R.drawable.mic_close else R.drawable.mic_open
+                    ),
                     contentDescription = if (isMuted) "Unmute" else "Mute",
-                    tint = Color.White
+                    modifier = Modifier.size(24.dp),
+                    contentScale = ContentScale.Fit
                 )
             }
         }

@@ -1,27 +1,21 @@
 package com.aura.voicechat.ui.components
 
-import androidx.compose.foundation.background
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Star
-import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.aura.voicechat.R
 import com.aura.voicechat.domain.model.VipTier
-import com.aura.voicechat.ui.theme.AccentGold
-import com.aura.voicechat.ui.theme.Purple80
 
 /**
  * VipBadge Component
  * Developer: Hawkaye Visions LTD — Pakistan
  * 
- * VIP crown badge with different colors for VIP and SVIP
+ * VIP badge using authentic Yari clone assets
+ * VIP uses vip_im_header.png, SVIP uses svip_1.png
  */
 @Composable
 fun VipBadge(
@@ -31,38 +25,16 @@ fun VipBadge(
 ) {
     if (vipTier == VipTier.NONE) return
     
-    val (backgroundColor, iconColor, hasShadow) = when (vipTier) {
-        VipTier.VIP -> Triple(
-            Brush.radialGradient(listOf(Purple80, Purple80.copy(alpha = 0.7f))),
-            Color.White,
-            false
-        )
-        VipTier.SVIP -> Triple(
-            Brush.radialGradient(listOf(AccentGold, AccentGold.copy(alpha = 0.7f))),
-            Color.White,
-            true
-        )
+    val drawableRes = when (vipTier) {
+        VipTier.VIP -> R.drawable.vip_im_header // Purple VIP badge from Yari
+        VipTier.SVIP -> R.drawable.svip_1 // Gold SVIP badge from Yari
         else -> return
     }
     
-    Box(
-        modifier = modifier
-            .size(size)
-            .then(
-                if (hasShadow) {
-                    Modifier.shadow(4.dp, CircleShape)
-                } else {
-                    Modifier
-                }
-            )
-            .background(backgroundColor, CircleShape),
-        contentAlignment = Alignment.Center
-    ) {
-        Icon(
-            imageVector = Icons.Default.Star,
-            contentDescription = vipTier.displayName,
-            tint = iconColor,
-            modifier = Modifier.size(size * 0.6f)
-        )
-    }
+    Image(
+        painter = painterResource(id = drawableRes),
+        contentDescription = vipTier.displayName,
+        modifier = modifier.size(size),
+        contentScale = ContentScale.Fit
+    )
 }
