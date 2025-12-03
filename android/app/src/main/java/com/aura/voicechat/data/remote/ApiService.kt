@@ -935,4 +935,13 @@ interface ApiService {
     // Unban a user (admin)
     @POST("api/v1/moderation/unban/{userId}")
     suspend fun unbanUser(@Path("userId") userId: String): Response<Unit>
+    
+    // ================== GAMES ==================
+    
+    // Get Greedy Baby Rankings
+    @GET("api/v1/games/greedy-baby/rankings/{type}")
+    suspend fun getGreedyBabyRankings(
+        @Path("type") type: String, // "daily" or "weekly"
+        @Query("limit") limit: Int = 10
+    ): Response<GreedyBabyRankingsResponse>
 }

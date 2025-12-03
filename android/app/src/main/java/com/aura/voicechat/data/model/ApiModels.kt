@@ -1991,3 +1991,22 @@ data class ImageReviewDto(
 data class ReviewImageRequest(
     @SerializedName("approved") val approved: Boolean
 )
+
+// ================== GAMES ==================
+
+// Greedy Baby Rankings
+data class GreedyBabyRankingsResponse(
+    @SerializedName("success") val success: Boolean,
+    @SerializedName("rankings") val rankings: List<GreedyBabyRankingDto>,
+    @SerializedName("type") val type: String, // "daily" or "weekly"
+    @SerializedName("total") val total: Int
+)
+
+data class GreedyBabyRankingDto(
+    @SerializedName("userId") val userId: String,
+    @SerializedName("userName") val userName: String,
+    @SerializedName("userAvatar") val userAvatar: String?,
+    @SerializedName("totalWinnings") val totalWinnings: Long,
+    @SerializedName("gamesPlayed") val gamesPlayed: Int,
+    @SerializedName("rank") val rank: Int
+)
