@@ -40,4 +40,32 @@ abstract class RepositoryModule {
     @Binds
     @Singleton
     abstract fun bindKycRepository(impl: KycRepositoryImpl): KycRepository
+    
+    @Binds
+    @Singleton
+    abstract fun bindVipRepository(impl: VipRepositoryImpl): VipRepository
+    
+    @Binds
+    @Singleton
+    abstract fun bindGameRepository(impl: GameRepositoryImpl): GameRepository
+    
+    @Binds
+    @Singleton
+    abstract fun bindEventRepository(impl: EventRepositoryImpl): EventRepository
+    
+    @Binds
+    @Singleton
+    abstract fun bindReferralRepository(impl: ReferralRepositoryImpl): ReferralRepository
+    
+    @Binds
+    @Singleton
+    abstract fun bindStoreRepository(impl: StoreRepositoryImpl): com.aura.voicechat.domain.repository.StoreRepository
+    
+    @Binds
+    @Singleton
+    abstract fun bindGiftRepository(impl: GiftRepositoryImpl): com.aura.voicechat.domain.repository.GiftRepository
+    
+    @Binds
+    @Singleton
+    abstract fun bindInventoryRepository(impl: InventoryRepositoryImpl): com.aura.voicechat.domain.repository.InventoryRepository
 }
