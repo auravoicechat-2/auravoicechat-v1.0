@@ -10,6 +10,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -17,6 +18,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material.icons.filled.Search
@@ -37,9 +39,19 @@ import androidx.compose.ui.window.Dialog
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.aura.voicechat.BuildConfig
 import com.aura.voicechat.R
+import AuraButton
+import AuraCard
+import AccentCyan
+import com.aura.voicechat.ui.theme.AccentMagenta
+import DarkCanvas
+import com.aura.voicechat.ui.theme.DarkCard
+import DarkSurface
 import com.aura.voicechat.ui.theme.GradientPurpleEnd
 import com.aura.voicechat.ui.theme.GradientPurpleStart
-import com.aura.voicechat.ui.theme.Purple80
+import Purple80
+import TextPrimary
+import TextSecondary
+import com.aura.voicechat.ui.theme.TextTertiary
 import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import com.google.android.gms.auth.api.identity.Identity
 import com.google.android.gms.common.api.ApiException
@@ -349,213 +361,253 @@ fun LoginScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
-                .background(
-                    brush = Brush.verticalGradient(
-                        colors = listOf(GradientPurpleStart, GradientPurpleEnd)
-                    )
-                )
+                .background(color = DarkCanvas)
         ) {
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(24.dp),
+                    .padding(horizontal = 16.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
+                verticalArrangement = Arrangement.SpaceBetween
             ) {
-                // Logo - Using actual Aura Voice Chat logo
-                Image(
-                    painter = painterResource(id = R.drawable.ic_aura_logo),
-                    contentDescription = "Aura Voice Chat Logo",
-                    modifier = Modifier
-                        .size(120.dp)
-                        .clip(RoundedCornerShape(24.dp)),
-                    contentScale = ContentScale.Fit
-                )
+                Spacer(modifier = Modifier.height(60.dp))
+                
+                // Top section with logo and title
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    modifier = Modifier.weight(1f),
+                    verticalArrangement = Arrangement.Center
+                ) {
+                    // Logo - Using actual Aura Voice Chat logo
+                    Image(
+                        painter = painterResource(id = R.drawable.ic_aura_logo),
+                        contentDescription = "Aura Voice Chat Logo",
+                        modifier = Modifier
+                            .size(100.dp)
+                            .clip(RoundedCornerShape(20.dp)),
+                        contentScale = ContentScale.Fit
+                    )
+                    
+                    Spacer(modifier = Modifier.height(16.dp))
+                    
+                    // App Name
+                    Text(
+                        text = "Aura Voice Chat",
+                        style = MaterialTheme.typography.headlineMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = TextPrimary
+                    )
+                    
+                    Spacer(modifier = Modifier.height(8.dp))
+                    
+                    Text(
+                        text = "Connect with people around the world",
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = TextSecondary,
+                        textAlign = TextAlign.Center
+                    )
+                }
                 
                 Spacer(modifier = Modifier.height(24.dp))
                 
-                // App Name
-                Text(
-                    text = "Aura Voice Chat",
-                    style = MaterialTheme.typography.headlineLarge,
-                    fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.onBackground
-                )
-                
-                Text(
-                    text = "Connect with people around the world",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f),
-                    textAlign = TextAlign.Center
-                )
-                
-                Spacer(modifier = Modifier.height(48.dp))
-                
-                // Phone Number Input with Country Code Picker
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    verticalAlignment = Alignment.CenterVertically
+                // Bottom section with login options
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 24.dp)
                 ) {
-                    // Country Code Picker Button
-                    OutlinedButton(
-                        onClick = { showCountryPicker = true },
-                        modifier = Modifier.height(56.dp),
-                        shape = RoundedCornerShape(12.dp),
-                        contentPadding = PaddingValues(horizontal = 12.dp)
+                    // Phone Number Input with Country Code Picker
+                    AuraCard(
+                        modifier = Modifier.fillMaxWidth()
                     ) {
-                        Text(
-                            text = selectedCountry.flag,
-                            style = MaterialTheme.typography.titleLarge
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            // Country Code Picker Button
+                            OutlinedButton(
+                                onClick = { showCountryPicker = true },
+                                modifier = Modifier.height(48.dp),
+                                shape = RoundedCornerShape(8.dp),
+                                colors = ButtonDefaults.outlinedButtonColors(
+                                    containerColor = DarkSurface,
+                                    contentColor = TextPrimary
+                                ),
+                                border = BorderStroke(1.dp, Purple80),
+                                contentPadding = PaddingValues(horizontal = 8.dp)
+                            ) {
+                                Text(
+                                    text = selectedCountry.flag,
+                                    style = MaterialTheme.typography.titleMedium
+                                )
+                                Spacer(modifier = Modifier.width(4.dp))
+                                Text(
+                                    text = selectedCountry.dialCode,
+                                    style = MaterialTheme.typography.bodySmall
+                                )
+                                Icon(
+                                    imageVector = Icons.Default.ArrowDropDown,
+                                    contentDescription = "Select country",
+                                    modifier = Modifier.size(20.dp)
+                                )
+                            }
+                            
+                            Spacer(modifier = Modifier.width(8.dp))
+                            
+                            // Phone Number Field
+                            OutlinedTextField(
+                                value = phoneNumber,
+                                onValueChange = { phoneNumber = it.filter { char -> char.isDigit() } },
+                                label = { Text("Phone Number") },
+                                placeholder = { Text("234 567 8900") },
+                                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone),
+                                singleLine = true,
+                                modifier = Modifier.weight(1f),
+                                colors = OutlinedTextFieldDefaults.colors(
+                                    focusedBorderColor = AccentCyan,
+                                    focusedLabelColor = AccentCyan,
+                                    unfocusedBorderColor = Purple80,
+                                    focusedContainerColor = DarkSurface,
+                                    unfocusedContainerColor = DarkSurface
+                                ),
+                                shape = RoundedCornerShape(8.dp)
+                            )
+                        }
+                    }
+                    
+                    Spacer(modifier = Modifier.height(16.dp))
+                    
+                    // Continue with Phone Button
+                    AuraButton(
+                        text = "Continue with Phone",
+                        onClick = {
+                            if (phoneNumber.isNotBlank()) {
+                                val fullPhoneNumber = "${selectedCountry.dialCode}$phoneNumber"
+                                viewModel.sendOtp(fullPhoneNumber)
+                                onNavigateToOtp(fullPhoneNumber)
+                            }
+                        },
+                        modifier = Modifier.fillMaxWidth(),
+                        enabled = phoneNumber.isNotBlank() && !uiState.isLoading
+                    )
+                    
+                    Spacer(modifier = Modifier.height(16.dp))
+                    
+                    // OR Divider
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        HorizontalDivider(
+                            modifier = Modifier.weight(1f),
+                            color = TextSecondary
                         )
-                        Spacer(modifier = Modifier.width(4.dp))
                         Text(
-                            text = selectedCountry.dialCode,
-                            style = MaterialTheme.typography.bodyMedium
+                            text = "  OR  ",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = TextSecondary
                         )
-                        Icon(
-                            imageVector = Icons.Default.ArrowDropDown,
-                            contentDescription = "Select country"
+                        HorizontalDivider(
+                            modifier = Modifier.weight(1f),
+                            color = TextSecondary
                         )
                     }
                     
-                    Spacer(modifier = Modifier.width(8.dp))
+                    Spacer(modifier = Modifier.height(16.dp))
                     
-                    // Phone Number Field
-                    OutlinedTextField(
-                        value = phoneNumber,
-                        onValueChange = { phoneNumber = it.filter { char -> char.isDigit() } },
-                        label = { Text("Phone Number") },
-                        placeholder = { Text("234 567 8900") },
-                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone),
-                        singleLine = true,
-                        modifier = Modifier.weight(1f),
-                        colors = OutlinedTextFieldDefaults.colors(
-                            focusedBorderColor = Purple80,
-                            focusedLabelColor = Purple80
-                        )
-                    )
-                }
-                
-                Spacer(modifier = Modifier.height(16.dp))
-                
-                // Continue with Phone Button
-                Button(
-                    onClick = {
-                        if (phoneNumber.isNotBlank()) {
-                            val fullPhoneNumber = "${selectedCountry.dialCode}$phoneNumber"
-                            viewModel.sendOtp(fullPhoneNumber)
-                            onNavigateToOtp(fullPhoneNumber)
-                        }
-                    },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(56.dp),
-                    shape = RoundedCornerShape(12.dp),
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = Purple80
-                    ),
-                    enabled = phoneNumber.isNotBlank() && !uiState.isLoading
-                ) {
-                    Text(
-                        text = "Continue with Phone",
-                        style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.SemiBold
-                    )
-                }
-                
-                Spacer(modifier = Modifier.height(24.dp))
-                
-                // OR Divider
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    HorizontalDivider(modifier = Modifier.weight(1f))
-                    Text(
-                        text = "  OR  ",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.5f)
-                    )
-                    HorizontalDivider(modifier = Modifier.weight(1f))
-                }
-                
-                Spacer(modifier = Modifier.height(24.dp))
-                
-                // Google Sign In - Uses Google Identity Services (GIS)
-                Button(
-                    onClick = {
-                        Log.d(TAG, "Launching Google Sign-In with GIS One Tap")
-                        oneTapClient.beginSignIn(signInRequest)
-                            .addOnSuccessListener { result ->
-                                try {
-                                    val intentSenderRequest = IntentSenderRequest.Builder(result.pendingIntent.intentSender).build()
-                                    googleSignInLauncher.launch(intentSenderRequest)
-                                } catch (e: IntentSender.SendIntentException) {
-                                    Log.e(TAG, "Couldn't start One Tap UI: ${e.localizedMessage}")
+                    // Google Sign In - Uses Google Identity Services (GIS)
+                    OutlinedButton(
+                        onClick = {
+                            Log.d(TAG, "Launching Google Sign-In with GIS One Tap")
+                            oneTapClient.beginSignIn(signInRequest)
+                                .addOnSuccessListener { result ->
+                                    try {
+                                        val intentSenderRequest = IntentSenderRequest.Builder(result.pendingIntent.intentSender).build()
+                                        googleSignInLauncher.launch(intentSenderRequest)
+                                    } catch (e: IntentSender.SendIntentException) {
+                                        Log.e(TAG, "Couldn't start One Tap UI: ${e.localizedMessage}")
+                                    }
                                 }
+                                .addOnFailureListener { e ->
+                                    Log.e(TAG, "Google Sign-In failed to begin: ${e.localizedMessage}")
+                                }
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(48.dp),
+                        shape = RoundedCornerShape(12.dp),
+                        colors = ButtonDefaults.outlinedButtonColors(
+                            containerColor = com.aura.voicechat.ui.theme.DarkCard,
+                            contentColor = TextPrimary
+                        ),
+                        border = BorderStroke(1.dp, Purple80),
+                        enabled = !uiState.isLoading
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.AccountCircle,
+                            contentDescription = "Google",
+                            tint = AccentCyan
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(
+                            text = "Continue with Google",
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.Medium
+                        )
+                    }
+                    
+                    Spacer(modifier = Modifier.height(12.dp))
+                    
+                    // Facebook Sign In - Uses Facebook Login SDK
+                    OutlinedButton(
+                        onClick = {
+                            Log.d(TAG, "Launching Facebook Sign-In")
+                            val activity = context as? ComponentActivity
+                            if (activity != null) {
+                                LoginManager.getInstance().logInWithReadPermissions(
+                                    activity,
+                                    facebookCallbackManager,
+                                    listOf("email", "public_profile")
+                                )
+                            } else {
+                                Log.e(TAG, "Context is not a ComponentActivity, cannot launch Facebook login")
                             }
-                            .addOnFailureListener { e ->
-                                Log.e(TAG, "Google Sign-In failed to begin: ${e.localizedMessage}")
-                            }
-                    },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(56.dp),
-                    shape = RoundedCornerShape(12.dp),
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = MaterialTheme.colorScheme.surface,
-                        contentColor = MaterialTheme.colorScheme.onSurface
-                    ),
-                    enabled = !uiState.isLoading
-                ) {
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(48.dp),
+                        shape = RoundedCornerShape(12.dp),
+                        colors = ButtonDefaults.outlinedButtonColors(
+                            containerColor = com.aura.voicechat.ui.theme.DarkCard,
+                            contentColor = TextPrimary
+                        ),
+                        border = BorderStroke(1.dp, Purple80),
+                        enabled = !uiState.isLoading
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.AccountCircle,
+                            contentDescription = "Facebook",
+                            tint = com.aura.voicechat.ui.theme.AccentMagenta
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(
+                            text = "Continue with Facebook",
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.Medium
+                        )
+                    }
+                    
+                    Spacer(modifier = Modifier.height(24.dp))
+                    
+                    // Terms and Privacy
                     Text(
-                        text = "Continue with Google",
-                        style = MaterialTheme.typography.titleMedium
+                        text = "By continuing, you agree to our Terms of Service and Privacy Policy",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = com.aura.voicechat.ui.theme.TextTertiary,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth()
                     )
                 }
-                
-                Spacer(modifier = Modifier.height(12.dp))
-                
-                // Facebook Sign In - Uses Facebook Login SDK
-                Button(
-                    onClick = {
-                        Log.d(TAG, "Launching Facebook Sign-In")
-                        val activity = context as? ComponentActivity
-                        if (activity != null) {
-                            LoginManager.getInstance().logInWithReadPermissions(
-                                activity,
-                                facebookCallbackManager,
-                                listOf("email", "public_profile")
-                            )
-                        } else {
-                            Log.e(TAG, "Context is not a ComponentActivity, cannot launch Facebook login")
-                        }
-                    },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(56.dp),
-                    shape = RoundedCornerShape(12.dp),
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = MaterialTheme.colorScheme.surface,
-                        contentColor = MaterialTheme.colorScheme.onSurface
-                    ),
-                    enabled = !uiState.isLoading
-                ) {
-                    Text(
-                        text = "Continue with Facebook",
-                        style = MaterialTheme.typography.titleMedium
-                    )
-                }
-                
-                Spacer(modifier = Modifier.height(32.dp))
-                
-                // Terms and Privacy
-                Text(
-                    text = "By continuing, you agree to our Terms of Service and Privacy Policy",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.5f),
-                    textAlign = TextAlign.Center
-                )
             }
             
             // Loading overlay
@@ -563,7 +615,7 @@ fun LoginScreen(
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(MaterialTheme.colorScheme.background.copy(alpha = 0.7f)),
+                        .background(DarkCanvas.copy(alpha = 0.8f)),
                     contentAlignment = Alignment.Center
                 ) {
                     CircularProgressIndicator(color = Purple80)
