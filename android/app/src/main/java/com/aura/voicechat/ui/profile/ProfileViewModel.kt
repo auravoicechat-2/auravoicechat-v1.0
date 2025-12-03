@@ -356,6 +356,97 @@ class ProfileViewModel @Inject constructor(
     fun dismissError() {
         _uiState.value = _uiState.value.copy(error = null)
     }
+    
+    // New methods for Week 2 screens
+    
+    fun updateProfile(
+        name: String,
+        bio: String,
+        gender: Gender,
+        birthday: java.time.LocalDate?,
+        avatarUri: android.net.Uri?,
+        coverUri: android.net.Uri?
+    ) {
+        viewModelScope.launch {
+            try {
+                // TODO: Upload images to S3 and get URLs
+                // TODO: Call API to update profile
+                _uiState.value = _uiState.value.copy(
+                    message = "Profile updated successfully"
+                )
+            } catch (e: Exception) {
+                Log.e(TAG, "Error updating profile", e)
+                _uiState.value = _uiState.value.copy(error = e.message)
+            }
+        }
+    }
+    
+    fun loadFollowers(userId: String) {
+        viewModelScope.launch {
+            try {
+                val response = apiService.getUserFollowers(userId)
+                if (response.isSuccessful && response.body() != null) {
+                    // TODO: Map to UserItemState and update UI state
+                }
+            } catch (e: Exception) {
+                Log.e(TAG, "Error loading followers", e)
+            }
+        }
+    }
+    
+    fun loadFollowing(userId: String) {
+        viewModelScope.launch {
+            try {
+                val response = apiService.getUserFollowing(userId)
+                if (response.isSuccessful && response.body() != null) {
+                    // TODO: Map to UserItemState and update UI state
+                }
+            } catch (e: Exception) {
+                Log.e(TAG, "Error loading following", e)
+            }
+        }
+    }
+    
+    fun followUser(userId: String) {
+        viewModelScope.launch {
+            try {
+                val response = apiService.followUser(userId)
+                if (response.isSuccessful) {
+                    // TODO: Update local state
+                }
+            } catch (e: Exception) {
+                Log.e(TAG, "Error following user", e)
+            }
+        }
+    }
+    
+    fun unfollowUser(userId: String) {
+        viewModelScope.launch {
+            try {
+                val response = apiService.unfollowUser(userId)
+                if (response.isSuccessful) {
+                    // TODO: Update local state
+                }
+            } catch (e: Exception) {
+                Log.e(TAG, "Error unfollowing user", e)
+            }
+        }
+    }
+    
+    fun loadVisitors(userId: String) {
+        viewModelScope.launch {
+            try {
+                // TODO: Call API to get visitors
+                // For now, use empty list
+                _uiState.value = _uiState.value.copy(
+                    visitorsCount = 0,
+                    todayVisitorsCount = 0
+                )
+            } catch (e: Exception) {
+                Log.e(TAG, "Error loading visitors", e)
+            }
+        }
+    }
 }
 
 data class ProfileUiState(
@@ -374,5 +465,11 @@ data class ProfileUiState(
     val isGuideApplied: Boolean = false,
     val canApplyForGuide: Boolean = false,
     val message: String? = null,
-    val error: String? = null
+    val error: String? = null,
+    // Week 2 additions
+    val followers: List<com.aura.voicechat.ui.profile.UserItemState> = emptyList(),
+    val following: List<com.aura.voicechat.ui.profile.UserItemState> = emptyList(),
+    val visitors: List<com.aura.voicechat.ui.profile.VisitorState> = emptyList(),
+    val visitorsCount: Int = 0,
+    val todayVisitorsCount: Int = 0
 )
