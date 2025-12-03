@@ -38,6 +38,8 @@ fun AuraAvatar(
     showFrame: Boolean = false,
     frameBrush: Brush = AuraGradient
 ) {
+    val avatarSize = if (showFrame) size - 4.dp else size
+    
     Box(
         modifier = modifier.size(size),
         contentAlignment = Alignment.Center
@@ -58,7 +60,7 @@ fun AuraAvatar(
         // Avatar content
         Box(
             modifier = Modifier
-                .size(if (showFrame) size - 4.dp else size)
+                .size(avatarSize)
                 .clip(CircleShape)
                 .background(DarkCard),
             contentAlignment = Alignment.Center
@@ -76,7 +78,7 @@ fun AuraAvatar(
                 Image(
                     painter = rememberAsyncImagePainter(imageUrl),
                     contentDescription = "Avatar",
-                    modifier = Modifier.size(if (showFrame) size - 4.dp else size),
+                    modifier = Modifier.size(avatarSize),
                     contentScale = ContentScale.Crop
                 )
             }

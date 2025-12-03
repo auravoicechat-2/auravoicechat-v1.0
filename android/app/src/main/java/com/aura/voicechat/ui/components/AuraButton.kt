@@ -1,8 +1,10 @@
 package com.aura.voicechat.ui.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.matchParentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -31,24 +33,28 @@ fun AuraButton(
     gradient: Brush = AuraGradient,
     contentPadding: PaddingValues = ButtonDefaults.ContentPadding
 ) {
-    Button(
-        onClick = onClick,
+    Box(
         modifier = modifier
             .height(48.dp)
             .background(
                 brush = gradient,
                 shape = RoundedCornerShape(12.dp)
-            ),
-        enabled = enabled,
-        colors = ButtonDefaults.buttonColors(
-            containerColor = Color.Transparent,
-            contentColor = TextPrimary,
-            disabledContainerColor = Color.Transparent,
-            disabledContentColor = TextPrimary.copy(alpha = 0.5f)
-        ),
-        shape = RoundedCornerShape(12.dp),
-        contentPadding = contentPadding
+            )
     ) {
-        Text(text = text)
+        Button(
+            onClick = onClick,
+            modifier = Modifier.matchParentSize(),
+            enabled = enabled,
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color.Transparent,
+                contentColor = TextPrimary,
+                disabledContainerColor = Color.Transparent,
+                disabledContentColor = TextPrimary.copy(alpha = 0.5f)
+            ),
+            shape = RoundedCornerShape(12.dp),
+            contentPadding = contentPadding
+        ) {
+            Text(text = text)
+        }
     }
 }
