@@ -24,7 +24,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.aura.voicechat.ui.components.AuraButton
-import com.aura.voicechat.ui.theme.*
+import com.aura.voicechat.ui.theme.AccentCyan
+import com.aura.voicechat.ui.theme.DarkCanvas
+import com.aura.voicechat.ui.theme.DarkCard
+import com.aura.voicechat.ui.theme.Purple80
+import com.aura.voicechat.ui.theme.TextPrimary
+import com.aura.voicechat.ui.theme.TextSecondary
+import com.aura.voicechat.ui.theme.TextTertiary
 
 /**
  * Phone Login Screen
@@ -73,7 +79,7 @@ fun PhoneLoginScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
-                .background(color = com.aura.voicechat.ui.theme.DarkCanvas)
+                .background(color = DarkCanvas)
         ) {
             Column(
                 modifier = Modifier
@@ -91,7 +97,7 @@ fun PhoneLoginScreen(
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Back",
-                            tint = com.aura.voicechat.ui.theme.TextPrimary
+                            tint = TextPrimary
                         )
                     }
                 }
@@ -103,7 +109,7 @@ fun PhoneLoginScreen(
                     text = "Enter Phone Number",
                     style = MaterialTheme.typography.headlineMedium,
                     fontWeight = FontWeight.Bold,
-                    color = com.aura.voicechat.ui.theme.TextPrimary
+                    color = TextPrimary
                 )
                 
                 Spacer(modifier = Modifier.height(8.dp))
@@ -111,7 +117,7 @@ fun PhoneLoginScreen(
                 Text(
                     text = "We'll send you a verification code",
                     style = MaterialTheme.typography.bodyMedium,
-                    color = com.aura.voicechat.ui.theme.TextSecondary
+                    color = TextSecondary
                 )
                 
                 Spacer(modifier = Modifier.height(48.dp))
@@ -122,15 +128,16 @@ fun PhoneLoginScreen(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     // Country Code Display (fixed to US for standalone version)
+                    // TODO: Add full country picker like in LoginScreen for production use
                     OutlinedButton(
                         onClick = { /* Country picker disabled in standalone version */ },
                         modifier = Modifier.height(56.dp),
                         shape = RoundedCornerShape(12.dp),
                         colors = ButtonDefaults.outlinedButtonColors(
-                            containerColor = com.aura.voicechat.ui.theme.DarkCard,
-                            contentColor = com.aura.voicechat.ui.theme.TextPrimary
+                            containerColor = DarkCard,
+                            contentColor = TextPrimary
                         ),
-                        border = BorderStroke(1.dp, com.aura.voicechat.ui.theme.Purple80),
+                        border = BorderStroke(1.dp, Purple80),
                         contentPadding = PaddingValues(horizontal = 12.dp),
                         enabled = false
                     ) {

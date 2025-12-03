@@ -39,9 +39,19 @@ import androidx.compose.ui.window.Dialog
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.aura.voicechat.BuildConfig
 import com.aura.voicechat.R
+import AuraButton
+import AuraCard
+import AccentCyan
+import com.aura.voicechat.ui.theme.AccentMagenta
+import DarkCanvas
+import com.aura.voicechat.ui.theme.DarkCard
+import DarkSurface
 import com.aura.voicechat.ui.theme.GradientPurpleEnd
 import com.aura.voicechat.ui.theme.GradientPurpleStart
-import com.aura.voicechat.ui.theme.Purple80
+import Purple80
+import TextPrimary
+import TextSecondary
+import com.aura.voicechat.ui.theme.TextTertiary
 import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import com.google.android.gms.auth.api.identity.Identity
 import com.google.android.gms.common.api.ApiException
@@ -351,7 +361,7 @@ fun LoginScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
-                .background(color = com.aura.voicechat.ui.theme.DarkCanvas)
+                .background(color = DarkCanvas)
         ) {
             Column(
                 modifier = Modifier
@@ -385,7 +395,7 @@ fun LoginScreen(
                         text = "Aura Voice Chat",
                         style = MaterialTheme.typography.headlineMedium,
                         fontWeight = FontWeight.Bold,
-                        color = com.aura.voicechat.ui.theme.TextPrimary
+                        color = TextPrimary
                     )
                     
                     Spacer(modifier = Modifier.height(8.dp))
@@ -393,7 +403,7 @@ fun LoginScreen(
                     Text(
                         text = "Connect with people around the world",
                         style = MaterialTheme.typography.bodyMedium,
-                        color = com.aura.voicechat.ui.theme.TextSecondary,
+                        color = TextSecondary,
                         textAlign = TextAlign.Center
                     )
                 }
@@ -407,7 +417,7 @@ fun LoginScreen(
                         .padding(bottom = 24.dp)
                 ) {
                     // Phone Number Input with Country Code Picker
-                    com.aura.voicechat.ui.components.AuraCard(
+                    AuraCard(
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Row(
@@ -420,10 +430,10 @@ fun LoginScreen(
                                 modifier = Modifier.height(48.dp),
                                 shape = RoundedCornerShape(8.dp),
                                 colors = ButtonDefaults.outlinedButtonColors(
-                                    containerColor = com.aura.voicechat.ui.theme.DarkSurface,
-                                    contentColor = com.aura.voicechat.ui.theme.TextPrimary
+                                    containerColor = DarkSurface,
+                                    contentColor = TextPrimary
                                 ),
-                                border = BorderStroke(1.dp, com.aura.voicechat.ui.theme.Purple80),
+                                border = BorderStroke(1.dp, Purple80),
                                 contentPadding = PaddingValues(horizontal = 8.dp)
                             ) {
                                 Text(
@@ -454,11 +464,11 @@ fun LoginScreen(
                                 singleLine = true,
                                 modifier = Modifier.weight(1f),
                                 colors = OutlinedTextFieldDefaults.colors(
-                                    focusedBorderColor = com.aura.voicechat.ui.theme.AccentCyan,
-                                    focusedLabelColor = com.aura.voicechat.ui.theme.AccentCyan,
-                                    unfocusedBorderColor = com.aura.voicechat.ui.theme.Purple80,
-                                    focusedContainerColor = com.aura.voicechat.ui.theme.DarkSurface,
-                                    unfocusedContainerColor = com.aura.voicechat.ui.theme.DarkSurface
+                                    focusedBorderColor = AccentCyan,
+                                    focusedLabelColor = AccentCyan,
+                                    unfocusedBorderColor = Purple80,
+                                    focusedContainerColor = DarkSurface,
+                                    unfocusedContainerColor = DarkSurface
                                 ),
                                 shape = RoundedCornerShape(8.dp)
                             )
@@ -468,7 +478,7 @@ fun LoginScreen(
                     Spacer(modifier = Modifier.height(16.dp))
                     
                     // Continue with Phone Button
-                    com.aura.voicechat.ui.components.AuraButton(
+                    AuraButton(
                         text = "Continue with Phone",
                         onClick = {
                             if (phoneNumber.isNotBlank()) {
@@ -490,16 +500,16 @@ fun LoginScreen(
                     ) {
                         HorizontalDivider(
                             modifier = Modifier.weight(1f),
-                            color = com.aura.voicechat.ui.theme.TextSecondary
+                            color = TextSecondary
                         )
                         Text(
                             text = "  OR  ",
                             style = MaterialTheme.typography.bodySmall,
-                            color = com.aura.voicechat.ui.theme.TextSecondary
+                            color = TextSecondary
                         )
                         HorizontalDivider(
                             modifier = Modifier.weight(1f),
-                            color = com.aura.voicechat.ui.theme.TextSecondary
+                            color = TextSecondary
                         )
                     }
                     
@@ -528,15 +538,15 @@ fun LoginScreen(
                         shape = RoundedCornerShape(12.dp),
                         colors = ButtonDefaults.outlinedButtonColors(
                             containerColor = com.aura.voicechat.ui.theme.DarkCard,
-                            contentColor = com.aura.voicechat.ui.theme.TextPrimary
+                            contentColor = TextPrimary
                         ),
-                        border = BorderStroke(1.dp, com.aura.voicechat.ui.theme.Purple80),
+                        border = BorderStroke(1.dp, Purple80),
                         enabled = !uiState.isLoading
                     ) {
                         Icon(
                             imageVector = Icons.Default.AccountCircle,
                             contentDescription = "Google",
-                            tint = com.aura.voicechat.ui.theme.AccentCyan
+                            tint = AccentCyan
                         )
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(
@@ -569,9 +579,9 @@ fun LoginScreen(
                         shape = RoundedCornerShape(12.dp),
                         colors = ButtonDefaults.outlinedButtonColors(
                             containerColor = com.aura.voicechat.ui.theme.DarkCard,
-                            contentColor = com.aura.voicechat.ui.theme.TextPrimary
+                            contentColor = TextPrimary
                         ),
-                        border = BorderStroke(1.dp, com.aura.voicechat.ui.theme.Purple80),
+                        border = BorderStroke(1.dp, Purple80),
                         enabled = !uiState.isLoading
                     ) {
                         Icon(
@@ -605,10 +615,10 @@ fun LoginScreen(
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(com.aura.voicechat.ui.theme.DarkCanvas.copy(alpha = 0.8f)),
+                        .background(DarkCanvas.copy(alpha = 0.8f)),
                     contentAlignment = Alignment.Center
                 ) {
-                    CircularProgressIndicator(color = com.aura.voicechat.ui.theme.Purple80)
+                    CircularProgressIndicator(color = Purple80)
                 }
             }
         }

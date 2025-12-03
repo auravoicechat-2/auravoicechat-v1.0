@@ -170,7 +170,7 @@ fun OtpVerificationScreen(
                 Spacer(modifier = Modifier.height(32.dp))
                 
                 // Verify Button
-                com.aura.voicechat.ui.components.AuraButton(
+                AuraButton(
                     text = if (uiState.isLoading) "Verifying..." else "Verify Code",
                     onClick = {
                         val otp = otpDigits.joinToString("")
