@@ -282,7 +282,7 @@ class GreedyBabyViewModel @Inject constructor(
                 userCoins = state.userCoins + totalWinnings,
                 roundWinnings = totalWinnings,
                 todaysWin = state.todaysWin + totalWinnings,
-                topWinners = generateMockTopWinners(totalWinnings) // In production, get from server
+                topWinners = emptyList() // Will be loaded from backend API
             )
         }
         
@@ -313,19 +313,35 @@ class GreedyBabyViewModel @Inject constructor(
     }
 
     /**
-     * Generate top winners list for the result popup.
-     * In a live multiplayer environment, this data would come from:
-     * - WebSocket event: "greedy_baby:result" with topWinners array
-     * - Or fetched from GET /games/greedy-baby/rankings/daily
-     * 
-     * This mock implementation is for offline/development testing.
+     * Load top winners from backend API.
+     * Backend endpoint: GET /games/greedy-baby/rankings/daily
+     * WebSocket event: "greedy_baby:result" with topWinners array
      */
-    private fun generateMockTopWinners(userWinnings: Long): List<TopWinner> {
-        return listOf(
-            TopWinner("user_1", "Player1", Random.nextLong(1_000_000, 5_000_000)),
-            TopWinner("user_2", "Player2", Random.nextLong(500_000, 2_000_000)),
-            TopWinner("user_3", "Player3", Random.nextLong(100_000, 1_000_000))
-        ).sortedByDescending { it.winnings }
+    private fun loadTopWinners() {
+        viewModelScope.launch {
+            try {
+                // Call backend API to load rankings
+                val response = apiService.getGreedyBabyRankings("daily", limit = 10)
+                if (response.isSuccessful) {
+                    val rankingsData = response.body()
+                    if (rankingsData?.success == true) {
+                        val topWinners = rankingsData.rankings.map { dto ->
+                            TopWinner(
+                                userId = dto.userId,
+                                userName = dto.userName,
+                                winnings = dto.totalWinnings
+                            )
+                        }
+                        _uiState.update { it.copy(topWinners = topWinners) }
+                        Log.d(TAG, "Loaded ${topWinners.size} top winners from backend")
+                    }
+                } else {
+                    Log.e(TAG, "Failed to load rankings: ${response.code()}")
+                }
+            } catch (e: Exception) {
+                Log.e(TAG, "Error loading top winners", e)
+            }
+        }
     }
 
     private fun updateResultHistory(winner: WheelItem, specialResult: SpecialResult?) {

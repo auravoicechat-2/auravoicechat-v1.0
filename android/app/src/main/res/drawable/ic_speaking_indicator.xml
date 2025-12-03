@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Speaking Indicator - Pulsing Ring -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="80"
+    android:viewportHeight="80">
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#35E8FF"
+        android:strokeWidth="2"
+        android:pathData="M40,40m-30,0a30,30 0,1,1 60,0a30,30 0,1,1 -60,0"/>
+</vector>
