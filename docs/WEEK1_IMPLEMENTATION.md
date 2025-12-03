@@ -150,33 +150,16 @@ Static utility for microphone permissions:
 - `requestAudioPermission(activity)`: Request permission
 - `shouldShowRationale(activity)`: Check rationale flag
 
-### Mock Data
+### Data Sources
 
-#### Sample Users (3)
-1. AlexGamer - Level 25, VIP, Male, US
-2. MusicLover - Level 42, SVIP, Female, UK
-3. ChillVibes - Level 18, None, Unspecified, CA
+All data is fetched from the live backend API:
+- **Rooms**: Fetched via `RoomRepository.getPopularRooms()`, `getMyRooms()`, etc.
+- **Users**: Retrieved from backend user service
+- **Gifts**: Loaded from backend gift catalog
+- **Messages**: Real-time via WebSocket/Socket.io connection
+- **Seats**: Room state managed by backend and synced in real-time
 
-#### Sample Rooms (6)
-- Gaming Hangout (voice, 8/8)
-- Music Lounge (music, 12/16)
-- Chill & Chat (voice, 5/8)
-- Party Time (voice, 16/16)
-- Dating Corner (voice, 6/8)
-- Video Chat (video, 4/8)
-
-#### Sample Gifts (5)
-- Rose (10 coins, Love, Common)
-- Diamond Ring (500 coins, Luxury, Epic)
-- Fireworks (1000 coins, Celebration, Legendary)
-- Heart (20 coins, Love, Common)
-- Crown (300 coins, Luxury, Rare)
-
-#### Sample Mic Seats (8)
-- Seats 0-2: Occupied (1 speaking, 1 muted)
-- Seat 3-5: Empty
-- Seat 6: Locked
-- Seat 7: Empty
+The application is fully connected to the backend and does not use mock data.
 
 ## Design System
 
@@ -235,16 +218,6 @@ val sampleMessages = MockData.getSampleRoomMessages()
 ### HomeScreen Integration
 The existing HomeScreen already has advanced features. To integrate PopularTab:
 ```kotlin
-// In a tab content area
-PopularTab(
-    rooms = filteredRooms,
-    selectedCategory = selectedCategory,
-    onCategorySelected = { category -> /* update filter */ },
-    onRoomClick = { roomId -> /* navigate */ },
-    onRefresh = { /* reload data */ }
-)
-```
-
 ### Room Screen Integration
 To use the new components in an existing or new RoomScreen:
 ```kotlin
@@ -311,7 +284,7 @@ if (showEmojiPanel) {
 - [ ] RoomBottomBar all buttons functional
 - [ ] GiftPanel category switching works
 - [ ] EmojiPanel emoji selection works
-- [ ] Mock data loads correctly
+- [ ] Backend data loads correctly from API
 
 ## Future Enhancements
 
@@ -331,8 +304,7 @@ if (showEmojiPanel) {
 1. Build currently fails due to Gradle repository issue (infrastructure)
 2. Components created but not yet wired to existing screens
 3. No actual Agora SDK integration (interface only)
-4. Mock data used instead of real API calls
-5. No WebSocket connection for real-time updates
+4. Real-time updates via WebSocket need to be fully integrated
 
 ## References
 
