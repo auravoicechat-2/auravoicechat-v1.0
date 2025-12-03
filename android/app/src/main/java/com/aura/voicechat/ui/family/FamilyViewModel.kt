@@ -279,6 +279,47 @@ class FamilyViewModel @Inject constructor(
     fun dismissError() {
         _uiState.value = _uiState.value.copy(error = null)
     }
+    
+    // Week 2 additions for JoinFamilyScreen
+    
+    fun loadRecommendedFamilies() {
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isLoading = true)
+            try {
+                // TODO: Call API to get recommended families
+                _uiState.value = _uiState.value.copy(
+                    availableFamilies = emptyList(),
+                    isLoading = false
+                )
+            } catch (e: Exception) {
+                Log.e(TAG, "Error loading recommended families", e)
+                _uiState.value = _uiState.value.copy(isLoading = false)
+            }
+        }
+    }
+    
+    fun loadTopFamilies() {
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isLoading = true)
+            try {
+                val response = apiService.getFamilyRankings("weekly", 1)
+                if (response.isSuccessful && response.body() != null) {
+                    // TODO: Map to FamilyItemState
+                    _uiState.value = _uiState.value.copy(
+                        availableFamilies = emptyList(),
+                        isLoading = false
+                    )
+                }
+            } catch (e: Exception) {
+                Log.e(TAG, "Error loading top families", e)
+                _uiState.value = _uiState.value.copy(isLoading = false)
+            }
+        }
+    }
+    
+    fun clearSearch() {
+        _uiState.value = _uiState.value.copy(searchResults = emptyList())
+    }
 }
 
 data class FamilyUiState(
@@ -306,7 +347,9 @@ data class FamilyUiState(
     val showCreateDialog: Boolean = false,
     val showJoinDialog: Boolean = false,
     val showSettingsDialog: Boolean = false,
-    val error: String? = null
+    val error: String? = null,
+    // Week 2 additions
+    val availableFamilies: List<com.aura.voicechat.ui.family.FamilyItemState> = emptyList()
 )
 
 data class FamilySearchResult(

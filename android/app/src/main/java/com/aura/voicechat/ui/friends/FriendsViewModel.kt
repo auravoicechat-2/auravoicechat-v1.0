@@ -99,6 +99,35 @@ class FriendsViewModel @Inject constructor() : ViewModel() {
             )
         }
     }
+    
+    // Week 2 additions for BlockListScreen
+    
+    fun loadBlockedUsers() {
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isLoading = true)
+            try {
+                // TODO: Call API to get blocked users
+                _uiState.value = _uiState.value.copy(
+                    blockedUsers = emptyList(),
+                    isLoading = false
+                )
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(isLoading = false)
+            }
+        }
+    }
+    
+    fun unblockUser(userId: String) {
+        viewModelScope.launch {
+            try {
+                // TODO: Call API to unblock user
+                val blockedUsers = _uiState.value.blockedUsers.filter { it.id != userId }
+                _uiState.value = _uiState.value.copy(blockedUsers = blockedUsers)
+            } catch (e: Exception) {
+                // Handle error
+            }
+        }
+    }
 }
 
 data class FriendsUiState(
@@ -107,5 +136,7 @@ data class FriendsUiState(
     val friends: List<Friend> = emptyList(),
     val filteredFriends: List<Friend> = emptyList(),
     val requests: List<FriendRequest> = emptyList(),
-    val sentRequests: List<FriendRequest> = emptyList()
+    val sentRequests: List<FriendRequest> = emptyList(),
+    // Week 2 additions
+    val blockedUsers: List<com.aura.voicechat.ui.friends.BlockedUser> = emptyList()
 )
