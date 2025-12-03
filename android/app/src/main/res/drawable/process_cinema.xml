@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true">
+        <rotate
+            android:fromDegrees="0"
+            android:toDegrees="360"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <bitmap android:src="@drawable/progress_ring"/>
+        </rotate>
+    </item>
+    <item>
+        <bitmap android:src="@drawable/progress_ring"/>
+    </item>
+</selector>
