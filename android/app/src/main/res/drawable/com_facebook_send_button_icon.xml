@@ -3,6 +3,6 @@
     <item
         android:state_focused="true"
         android:state_enabled="true"
-        android:drawable="0x7f08013b"/>
-    <item android:drawable="0x7f08013c"/>
+        android:drawable="@drawable/com_facebook_favicon_blue"/>
+    <item android:drawable="@drawable/com_facebook_favicon_blue"/>
 </selector>
