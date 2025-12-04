@@ -321,6 +321,9 @@ interface AdminDao {
     suspend fun updateAdmin(admin: AdminEntity)
     
     @Query("DELETE FROM admins WHERE cachedAt < :timestamp")
+    suspend fun deleteOldCache(timestamp: Long)
+}
+
 // ============================================
 // Week 4: Advanced Features DAOs
 // ============================================
@@ -449,6 +452,9 @@ interface CashoutRequestDao {
     
     @Query("DELETE FROM cashout_requests WHERE cachedAt < :timestamp")
     suspend fun deleteOldCache(timestamp: Long)
+}
+
+@Dao
 interface PlaylistDao {
     @Query("SELECT * FROM playlists WHERE createdBy = :userId ORDER BY createdAt DESC")
     fun getUserPlaylists(userId: String): Flow<List<PlaylistEntity>>

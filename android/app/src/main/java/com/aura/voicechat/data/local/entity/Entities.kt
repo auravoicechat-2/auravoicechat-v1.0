@@ -275,6 +275,9 @@ data class GuideApplicationEntity(
     val appliedAt: Long,
     val reviewedAt: Long?,
     val rejectionReason: String?,
+    val cachedAt: Long = System.currentTimeMillis()
+)
+
 // ============================================
 // Week 4: Advanced Features Entities
 // ============================================
@@ -344,6 +347,9 @@ data class CashoutRequestEntity(
     val rejectionReason: String?,
     val paymentMethod: String,
     val cachedAt: Long = System.currentTimeMillis()
+)
+
+@Entity(
     tableName = "playlists",
     indices = [Index(value = ["createdBy"])]
 )

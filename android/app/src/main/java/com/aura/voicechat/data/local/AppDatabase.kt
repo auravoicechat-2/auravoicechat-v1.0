@@ -32,16 +32,14 @@ import com.aura.voicechat.data.local.entity.*
         AdminEntity::class,
         GuideApplicationEntity::class,
         EarningTargetEntity::class,
-        CashoutRequestEntity::class
-    ],
-    version = 3,
+        CashoutRequestEntity::class,
         // Week 4 entities
         NotificationEntity::class,
         SongEntity::class,
         PlaylistEntity::class,
         PlaylistSongEntity::class
     ],
-    version = 2,
+    version = 3,
     exportSchema = true
 )
 @TypeConverters(Converters::class)
@@ -60,13 +58,17 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun eventDao(): EventDao
     abstract fun faqDao(): FaqDao
     abstract fun adminDao(): AdminDao
-    abstract fun guideApplicationDao(): GuideApplicationDao
-    abstract fun earningTargetDao(): EarningTargetDao
-    abstract fun cashoutRequestDao(): CashoutRequestDao
     
     // Week 4 DAOs
     abstract fun notificationDao(): NotificationDao
     abstract fun songDao(): SongDao
+    
+    // Admin system DAOs
+    abstract fun guideApplicationDao(): GuideApplicationDao
+    abstract fun earningTargetDao(): EarningTargetDao
+    abstract fun cashoutRequestDao(): CashoutRequestDao
+    
+    // Music DAOs
     abstract fun playlistDao(): PlaylistDao
     abstract fun playlistSongDao(): PlaylistSongDao
     
