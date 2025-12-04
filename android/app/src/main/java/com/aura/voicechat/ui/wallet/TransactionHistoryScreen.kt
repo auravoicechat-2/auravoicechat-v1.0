@@ -167,7 +167,7 @@ fun TransactionItem(transaction: Transaction) {
         TransactionType.DAILY_REWARD -> 
             Icons.Default.Stars to Color(0xFFFFD700)
         TransactionType.VIP_PURCHASE -> 
-            Icons.Default.Workspace Premium to PurplePrimary
+            Icons.Default.WorkspacePremium to PurplePrimary
         TransactionType.STORE_PURCHASE -> 
             Icons.Default.ShoppingCart to AccentCyan
         TransactionType.EXCHANGE -> 

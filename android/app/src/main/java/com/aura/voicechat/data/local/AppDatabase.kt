@@ -32,16 +32,14 @@ import com.aura.voicechat.data.local.entity.*
         AdminEntity::class,
         GuideApplicationEntity::class,
         EarningTargetEntity::class,
-        CashoutRequestEntity::class
-    ],
-    version = 3,
+        CashoutRequestEntity::class,
         // Week 4 entities
         NotificationEntity::class,
         SongEntity::class,
         PlaylistEntity::class,
         PlaylistSongEntity::class
     ],
-    version = 2,
+    version = 3,
     exportSchema = true
 )
 @TypeConverters(Converters::class)
