@@ -6,6 +6,9 @@ import androidx.work.Configuration
 import com.amplifyframework.AmplifyException
 import com.amplifyframework.auth.cognito.AWSCognitoAuthPlugin
 import com.amplifyframework.core.Amplify
+import com.amplifyframework.notifications.pushnotifications.PushNotificationsCategoryBehavior
+import com.amplifyframework.notifications.pushnotifications.PushNotificationsException
+import com.amplifyframework.pushnotifications.pinpoint.AWSPinpointPushNotificationsPlugin
 import com.amplifyframework.storage.s3.AWSS3StoragePlugin
 import dagger.hilt.android.HiltAndroidApp
 
@@ -44,12 +47,17 @@ class AuraApplication : Application(), Configuration.Provider {
             // Add S3 Storage plugin
             Amplify.addPlugin(AWSS3StoragePlugin())
 
+            // Add Pinpoint Push Notifications plugin
+            Amplify.addPlugin(AWSPinpointPushNotificationsPlugin())
+
             // Configure Amplify
             Amplify.configure(applicationContext)
 
             Log.i(TAG, "AWS Amplify initialized successfully")
         } catch (error: AmplifyException) {
             Log.e(TAG, "Could not initialize Amplify", error)
+        } catch (error: PushNotificationsException) {
+            Log.e(TAG, "Could not initialize Push Notifications", error)
         }
     }
 
