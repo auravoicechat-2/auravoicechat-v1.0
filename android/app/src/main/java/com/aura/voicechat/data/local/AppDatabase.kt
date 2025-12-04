@@ -9,10 +9,7 @@ import com.aura.voicechat.data.local.entity.*
 /**
  * Aura Voice Chat Room Database
  * Developer: Hawkaye Visions LTD — Pakistan
- * 
  * Local database for caching and offline support
- * Version 3 - Added admin hierarchy, guide system, and earning system
- * Version 2 - Added Week 4 features: Notifications, Music, Playlists
  */
 @Database(
     entities = [
@@ -33,7 +30,6 @@ import com.aura.voicechat.data.local.entity.*
         GuideApplicationEntity::class,
         EarningTargetEntity::class,
         CashoutRequestEntity::class,
-        // Week 4 entities
         NotificationEntity::class,
         SongEntity::class,
         PlaylistEntity::class,
@@ -44,7 +40,7 @@ import com.aura.voicechat.data.local.entity.*
 )
 @TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
-    
+
     // DAOs
     abstract fun userDao(): UserDao
     abstract fun conversationDao(): ConversationDao
@@ -58,21 +54,15 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun eventDao(): EventDao
     abstract fun faqDao(): FaqDao
     abstract fun adminDao(): AdminDao
-    
-    // Week 4 DAOs
     abstract fun notificationDao(): NotificationDao
     abstract fun songDao(): SongDao
-    
-    // Admin system DAOs
+    abstract fun playlistDao(): PlaylistDao
+    abstract fun playlistSongDao(): PlaylistSongDao
     abstract fun guideApplicationDao(): GuideApplicationDao
     abstract fun earningTargetDao(): EarningTargetDao
     abstract fun cashoutRequestDao(): CashoutRequestDao
-    
-    // Music DAOs
-    abstract fun playlistDao(): PlaylistDao
-    abstract fun playlistSongDao(): PlaylistSongDao
-    
+
     companion object {
-        const val DATABASE_NAME = "aura_voice_chat.db"
+        const val DATABASE_NAME = "auravoicechat"
     }
 }
