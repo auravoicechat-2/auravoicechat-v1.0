@@ -12,6 +12,13 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
+    // The Room plugin is now included via the version catalog alias
+    // but the configuration moves inside the android block.
+}
+
+// Top-level KSP configuration for passing arguments
+ksp {
+    arg("room.schemaLocation", "$projectDir/schemas")
 }
 
 android {
@@ -69,7 +76,7 @@ android {
 
     buildTypes {
         debug {
-           // applicationIdSuffix = ".debug"
+            // applicationIdSuffix = ".debug"
             versionNameSuffix = "-debug"
             isDebuggable = true
             isMinifyEnabled = false
@@ -151,15 +158,14 @@ android {
         }
     }
 
+
     // Lint options
     lint {
         abortOnError = false
         checkReleaseBuilds = true
         disable += listOf("MissingTranslation", "ExtraTranslation")
 
-
     }
-
     // Test options
     testOptions {
         unitTests {
@@ -230,11 +236,6 @@ dependencies {
     // AWS SDK (for direct S3 operations if needed)
     implementation(libs.aws.sdk.kotlin.s3)
     implementation(libs.aws.sdk.kotlin.cognitoidentityprovider)
-
-    // AWS SDK v2 (for Cognito, S3, SNS operations)
-    implementation("software.amazon.awssdk:cognitoidentityprovider:2.25.0")
-    implementation("software.amazon.awssdk:s3:2.25.0")
-    implementation("software.amazon.awssdk:sns:2.25.0")
 
     // Google Sign-In
     implementation(libs.play.services.auth)
@@ -325,4 +326,3 @@ dependencies {
     androidTestImplementation(libs.hilt.android.testing)
     kspAndroidTest(libs.hilt.compiler)
 }
-
