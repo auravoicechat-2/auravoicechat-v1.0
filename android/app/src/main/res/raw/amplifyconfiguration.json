@@ -92,7 +92,7 @@
     "notifications": {
         "plugins": {
             "awsPinpointPushNotificationsPlugin": {
-                "appId": "REPLACE_WITH_PINPOINT_APP_ID",
+                "appId": "3c3f5ef30be44766acff1814aab08511",
                 "region": "ap-south-1"
             }
         }
