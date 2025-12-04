@@ -195,3 +195,55 @@ data class ProfileVisitorEntity(
     val visitedAt: Long,
     val visitCount: Int = 1
 )
+
+@Entity(
+    tableName = "medals",
+    indices = [Index(value = ["category"])]
+)
+data class MedalEntity(
+    @PrimaryKey val id: String,
+    val name: String,
+    val description: String,
+    val iconUrl: String,
+    val category: String, // ACHIEVEMENT, LEVEL, VIP, EVENT, SPECIAL
+    val rarity: String, // COMMON, RARE, EPIC, LEGENDARY
+    val isUnlocked: Boolean,
+    val progress: Float?,
+    val progressTarget: Int?,
+    val unlockedAt: Long?,
+    val howToEarn: String,
+    val cachedAt: Long = System.currentTimeMillis()
+)
+
+@Entity(
+    tableName = "events",
+    indices = [
+        Index(value = ["status"]),
+        Index(value = ["type"])
+    ]
+)
+data class EventEntity(
+    @PrimaryKey val id: String,
+    val title: String,
+    val description: String,
+    val bannerUrl: String,
+    val startTime: Long,
+    val endTime: Long,
+    val type: String, // "RECHARGE", "LUCKY_DRAW", "ROOM_SUPPORT"
+    val status: String, // "UPCOMING", "ACTIVE", "ENDED"
+    val isParticipating: Boolean,
+    val cachedAt: Long = System.currentTimeMillis()
+)
+
+@Entity(
+    tableName = "faqs",
+    indices = [Index(value = ["category"])]
+)
+data class FaqEntity(
+    @PrimaryKey val id: String,
+    val question: String,
+    val answer: String,
+    val category: String,
+    val order: Int,
+    val cachedAt: Long = System.currentTimeMillis()
+)

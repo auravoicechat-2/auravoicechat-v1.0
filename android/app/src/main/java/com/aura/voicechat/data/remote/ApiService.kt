@@ -944,4 +944,136 @@ interface ApiService {
         @Path("type") type: String, // "daily" or "weekly"
         @Query("limit") limit: Int = 10
     ): Response<GreedyBabyRankingsResponse>
+    
+    // ============================================
+    // Cinema - Together Watch Mode
+    // ============================================
+    
+    // Start cinema session
+    @POST("api/v1/rooms/{roomId}/cinema/start")
+    suspend fun startCinema(
+        @Path("roomId") roomId: String,
+        @Body request: StartCinemaRequest
+    ): Response<CinemaSession>
+    
+    // Get cinema session
+    @GET("api/v1/rooms/{roomId}/cinema")
+    suspend fun getCinemaSession(
+        @Path("roomId") roomId: String
+    ): Response<CinemaSession>
+    
+    // Sync cinema playback
+    @POST("api/v1/rooms/{roomId}/cinema/sync")
+    suspend fun syncCinema(
+        @Path("roomId") roomId: String,
+        @Body request: SyncCinemaRequest
+    ): Response<Unit>
+    
+    // Stop cinema session
+    @POST("api/v1/rooms/{roomId}/cinema/stop")
+    suspend fun stopCinema(
+        @Path("roomId") roomId: String
+    ): Response<Unit>
+    
+    // ============================================
+    // Medals - Enhanced
+    // ============================================
+    
+    // Get all available medals
+    @GET("api/v1/medals")
+    suspend fun getAllMedals(): Response<AllMedalsResponse>
+    
+    // Get my medals
+    @GET("api/v1/medals/my")
+    suspend fun getMyMedals(): Response<AllMedalsResponse>
+    
+    // Get medal details
+    @GET("api/v1/medals/{medalId}")
+    suspend fun getMedalDetails(
+        @Path("medalId") medalId: String
+    ): Response<MedalDetailDto>
+    
+    // Equip medal
+    @POST("api/v1/medals/{medalId}/equip")
+    suspend fun equipMedal(
+        @Path("medalId") medalId: String
+    ): Response<Unit>
+    
+    // Unequip medal
+    @POST("api/v1/medals/{medalId}/unequip")
+    suspend fun unequipMedal(
+        @Path("medalId") medalId: String
+    ): Response<Unit>
+    
+    // ============================================
+    // Events - Detailed
+    // ============================================
+    
+    // Get event details
+    @GET("api/v1/events/{eventId}")
+    suspend fun getEventDetails(
+        @Path("eventId") eventId: String
+    ): Response<EventDetailResponse>
+    
+    // Get active events
+    @GET("api/v1/events/active")
+    suspend fun getActiveEvents(): Response<List<EventDetailResponse>>
+    
+    // Participate in event
+    @POST("api/v1/events/{eventId}/participate")
+    suspend fun participateEvent(
+        @Path("eventId") eventId: String
+    ): Response<Unit>
+    
+    // Claim event reward
+    @POST("api/v1/events/{eventId}/rewards/claim")
+    suspend fun claimEventReward(
+        @Path("eventId") eventId: String,
+        @Body request: ClaimEventRewardRequest
+    ): Response<ClaimEventRewardResponse>
+    
+    // Lucky draw
+    @POST("api/v1/events/lucky-draw")
+    suspend fun luckyDraw(
+        @Body request: LuckyDrawRequest
+    ): Response<LuckyDrawResult>
+    
+    // Get lucky draw history
+    @GET("api/v1/events/lucky-draw/history")
+    suspend fun getLuckyDrawHistory(
+        @Query("page") page: Int = 1,
+        @Query("limit") limit: Int = 20
+    ): Response<LuckyDrawHistoryResponse>
+    
+    // Get event banners
+    @GET("api/v1/events/banners")
+    suspend fun getEventBanners(): Response<EventBannersResponse>
+    
+    // ============================================
+    // Settings - Help & Support
+    // ============================================
+    
+    // Get FAQs
+    @GET("api/v1/help/faqs")
+    suspend fun getFaqs(
+        @Query("category") category: String? = null
+    ): Response<FaqResponse>
+    
+    // Submit feedback
+    @POST("api/v1/feedback")
+    suspend fun submitFeedback(
+        @Body request: SubmitFeedbackRequest
+    ): Response<SubmitFeedbackResponse>
+    
+    // Check for app updates
+    @GET("api/v1/app/version")
+    suspend fun checkUpdate(): Response<AppVersionResponse>
+    
+    // Get cache size
+    @GET("api/v1/app/cache-size")
+    suspend fun getCacheSize(): Response<CacheSizeResponse>
+    
+    // Clear app cache (server-side tracking)
+    @POST("api/v1/app/clear-cache")
+    suspend fun clearCache(): Response<Unit>
 }

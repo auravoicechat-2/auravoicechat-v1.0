@@ -218,3 +218,81 @@ interface VisitorDao {
     @Query("DELETE FROM profile_visitors WHERE visitedAt < :timestamp")
     suspend fun deleteOldVisitors(timestamp: Long)
 }
+
+@Dao
+interface MedalDao {
+    @Query("SELECT * FROM medals ORDER BY category, rarity, name")
+    fun getAllMedals(): Flow<List<MedalEntity>>
+    
+    @Query("SELECT * FROM medals WHERE isUnlocked = 1 ORDER BY unlockedAt DESC")
+    fun getUnlockedMedals(): Flow<List<MedalEntity>>
+    
+    @Query("SELECT * FROM medals WHERE category = :category ORDER BY rarity, name")
+    fun getMedalsByCategory(category: String): Flow<List<MedalEntity>>
+    
+    @Query("SELECT * FROM medals WHERE id = :medalId")
+    suspend fun getMedal(medalId: String): MedalEntity?
+    
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertMedal(medal: MedalEntity)
+    
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertMedals(medals: List<MedalEntity>)
+    
+    @Update
+    suspend fun updateMedal(medal: MedalEntity)
+    
+    @Query("DELETE FROM medals WHERE cachedAt < :timestamp")
+    suspend fun deleteOldCache(timestamp: Long)
+}
+
+@Dao
+interface EventDao {
+    @Query("SELECT * FROM events ORDER BY startTime DESC")
+    fun getAllEvents(): Flow<List<EventEntity>>
+    
+    @Query("SELECT * FROM events WHERE status = 'ACTIVE' ORDER BY endTime ASC")
+    fun getActiveEvents(): Flow<List<EventEntity>>
+    
+    @Query("SELECT * FROM events WHERE id = :eventId")
+    suspend fun getEvent(eventId: String): EventEntity?
+    
+    @Query("SELECT * FROM events WHERE type = :type ORDER BY startTime DESC")
+    fun getEventsByType(type: String): Flow<List<EventEntity>>
+    
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertEvent(event: EventEntity)
+    
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertEvents(events: List<EventEntity>)
+    
+    @Update
+    suspend fun updateEvent(event: EventEntity)
+    
+    @Query("DELETE FROM events WHERE cachedAt < :timestamp")
+    suspend fun deleteOldCache(timestamp: Long)
+}
+
+@Dao
+interface FaqDao {
+    @Query("SELECT * FROM faqs ORDER BY category, `order`")
+    fun getAllFaqs(): Flow<List<FaqEntity>>
+    
+    @Query("SELECT * FROM faqs WHERE category = :category ORDER BY `order`")
+    fun getFaqsByCategory(category: String): Flow<List<FaqEntity>>
+    
+    @Query("SELECT * FROM faqs WHERE id = :faqId")
+    suspend fun getFaq(faqId: String): FaqEntity?
+    
+    @Query("SELECT * FROM faqs WHERE question LIKE '%' || :query || '%' OR answer LIKE '%' || :query || '%'")
+    fun searchFaqs(query: String): Flow<List<FaqEntity>>
+    
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertFaq(faq: FaqEntity)
+    
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertFaqs(faqs: List<FaqEntity>)
+    
+    @Query("DELETE FROM faqs WHERE cachedAt < :timestamp")
+    suspend fun deleteOldCache(timestamp: Long)
+}

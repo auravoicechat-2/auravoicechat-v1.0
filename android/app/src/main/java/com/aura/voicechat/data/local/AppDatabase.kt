@@ -11,7 +11,7 @@ import com.aura.voicechat.data.local.entity.*
  * Developer: Hawkaye Visions LTD — Pakistan
  * 
  * Local database for caching and offline support
- * Version 1 - Initial schema for Week 2 features
+ * Version 2 - Added medals, events, and FAQs entities
  */
 @Database(
     entities = [
@@ -24,9 +24,12 @@ import com.aura.voicechat.data.local.entity.*
         FamilyEntity::class,
         FamilyMemberEntity::class,
         CpPartnershipEntity::class,
-        ProfileVisitorEntity::class
+        ProfileVisitorEntity::class,
+        MedalEntity::class,
+        EventEntity::class,
+        FaqEntity::class
     ],
-    version = 1,
+    version = 2,
     exportSchema = true
 )
 @TypeConverters(Converters::class)
@@ -41,6 +44,9 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun familyDao(): FamilyDao
     abstract fun cpDao(): CpDao
     abstract fun visitorDao(): VisitorDao
+    abstract fun medalDao(): MedalDao
+    abstract fun eventDao(): EventDao
+    abstract fun faqDao(): FaqDao
     
     companion object {
         const val DATABASE_NAME = "aura_voice_chat.db"
