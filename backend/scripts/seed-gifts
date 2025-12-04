@@ -1,0 +1,152 @@
+import { query } from "../config/database. config";
+import { logger } from "../utils/logger";
+import giftsConfig from "../config/gifts-config.json";
+import * as fs from "fs";
+import * as path from "path";
+
+interface GiftData {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  price_coins: number;
+  diamond_value: number;
+  is_premium: boolean;
+  rarity: string;
+  animation_url: string;
+  thumbnail_url: string;
+}
+
+async function seedGiftsFromS3Urls(s3Urls: Map<string, string>) {
+  logger.info("Starting gift database seeding...");
+
+  const giftDataArray: GiftData[] = [];
+
+  for (const gift of giftsConfig.gifts) {
+    const s3Url = s3Urls.get(gift.id);
+    
+    if (!s3Url) {
+      logger.warn(`No S3 URL found for gift ${gift.id}, skipping...`);
+      continue;
+    }
+
+    giftDataArray.push({
+      id: gift.id,
+      name: gift.name,
+      description: gift.description,
+      category: gift.category,
+      price_coins: gift. price_coins,
+      diamond_value: gift.diamond_value,
+      is_premium: gift. is_premium,
+      rarity: gift.rarity,
+      animation_url: s3Url,
+      thumbnail_url: s3Url // Use animation URL as thumbnail for now
+    });
+  }
+
+  // Batch insert
+  for (const giftData of giftDataArray) {
+    try {
+      const result = await query(
+        `INSERT INTO gifts (id, name, description, price_coins, diamond_value, category, animation_url, thumbnail_url, is_premium, is_active, created_at)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, true, NOW())
+         ON CONFLICT (id) DO UPDATE SET
+           name = $2,
+           description = $3,
+           animation_url = $7,
+           thumbnail_url = $8,
+           updated_at = NOW()
+         RETURNING *`,
+        [
+          giftData.id,
+          giftData.name,
+          giftData.description,
+          giftData.price_coins,
+          giftData.diamond_value,
+          giftData.category,
+          giftData.animation_url,
+          giftData.thumbnail_url,
+          giftData.is_premium
+        ]
+      );
+
+      logger.info(`✓ Inserted gift: ${giftData.name}`, { giftId: giftData.id });
+    } catch (error) {
+      logger.error(`✗ Failed to insert gift ${giftData.id}`, { error });
+      throw error;
+    }
+  }
+
+  logger.info(`✓ Successfully seeded ${giftDataArray.length} gifts to database`);
+}
+
+async function seedGiftsFromSqlFile(sqlFilePath: string) {
+  logger.info(`Seeding gifts from SQL file: ${sqlFilePath}`);
+
+  if (!fs.existsSync(sqlFilePath)) {
+    throw new Error(`SQL file not found: ${sqlFilePath}`);
+  }
+
+  const sqlContent = fs.readFileSync(sqlFilePath, "utf-8");
+
+  try {
+    await query(sqlContent);
+    logger.info("✓ SQL file executed successfully");
+  } catch (error) {
+    logger.error("✗ Failed to execute SQL file", { error });
+    throw error;
+  }
+}
+
+async function verifyGiftsInDatabase() {
+  logger.info("Verifying gifts in database...");
+
+  const result = await query("SELECT COUNT(*) as count FROM gifts WHERE is_active = true");
+  const count = result.rows[0]?.count || 0;
+
+  logger.info(`✓ Found ${count} active gifts in database`);
+
+  if (count > 0) {
+    const giftsResult = await query(
+      "SELECT id, name, price_coins, diamond_value, is_premium FROM gifts WHERE is_active = true ORDER BY price_coins ASC"
+    );
+
+    console.log("\n=== Gifts in Database ===");
+    giftsResult.rows.forEach((gift: any) => {
+      console. log(`${gift.name} (${gift.id}): ${gift.price_coins} coins → ${gift.diamond_value} diamonds ${gift.is_premium ? "[PREMIUM]" : ""}`);
+    });
+  }
+
+  return count;
+}
+
+async function main() {
+  try {
+    logger. info("================================");
+    logger. info("Gift Database Seeding Script");
+    logger.info("================================\n");
+
+    // Check if SQL file exists (from upload script)
+    const sqlFilePath = path.join(__dirname, "../database/seeds/gifts-insert. sql");
+
+    if (fs.existsSync(sqlFilePath)) {
+      logger.info("Found SQL file from upload script, using that.. .\n");
+      await seedGiftsFromSqlFile(sqlFilePath);
+    } else {
+      logger.warn("SQL file not found, you must run upload-gifts-to-s3.ts first");
+      logger.info("Usage: npm run script:upload-gifts");
+      process.exit(1);
+    }
+
+    // Verify
+    await verifyGiftsInDatabase();
+
+    logger.info("\n✓ Seeding completed successfully!");
+
+  } catch (error) {
+    logger.error("Seeding failed", { error });
+    process.exit(1);
+  }
+}
+
+main();
