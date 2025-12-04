@@ -569,3 +569,246 @@ model AdminLog {
   
   @@map("admin_logs")
 }
+
+// ============================================
+// Admin Hierarchy System
+// ============================================
+
+model Admin {
+  id                String   @id @default(uuid())
+  userId            String   @map("user_id")
+  adminLevel        String   @map("admin_level") // OWNER, COUNTRY_ADMIN, ADMIN_L1, ADMIN_L2, ADMIN_L3, SUPPORT
+  country           String?  // For country admins
+  
+  // Permissions
+  canBanUsers       Boolean  @default(false) @map("can_ban_users")
+  canKickUsers      Boolean  @default(false) @map("can_kick_users")
+  canDeleteMessages Boolean  @default(false) @map("can_delete_messages")
+  canManageRooms    Boolean  @default(false) @map("can_manage_rooms")
+  canManageEvents   Boolean  @default(false) @map("can_manage_events")
+  canManageEconomy  Boolean  @default(false) @map("can_manage_economy")
+  canApproveGuides  Boolean  @default(false) @map("can_approve_guides")
+  canApproveCashout Boolean  @default(false) @map("can_approve_cashout")
+  
+  isActive          Boolean  @default(true) @map("is_active")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+  
+  @@unique([userId])
+  @@index([adminLevel])
+  @@index([country])
+  @@map("admins")
+}
+
+// ============================================
+// Guide System
+// ============================================
+
+model GuideApplication {
+  id                String   @id @default(uuid())
+  userId            String   @map("user_id")
+  fullName          String   @map("full_name")
+  age               Int
+  country           String
+  languages         String[] // Array of language codes
+  experience        String   // Brief description
+  motivation        String   // Why they want to be a guide
+  hoursPerWeek      Int      @map("hours_per_week")
+  
+  status            String   @default("pending") // pending, approved, rejected
+  reviewedBy        String?  @map("reviewed_by")
+  reviewedAt        DateTime? @map("reviewed_at")
+  rejectionReason   String?  @map("rejection_reason")
+  
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+  
+  @@unique([userId])
+  @@index([status])
+  @@map("guide_applications")
+}
+
+model GuideProfile {
+  id                String   @id @default(uuid())
+  userId            String   @unique @map("user_id")
+  level             Int      @default(1)
+  
+  // Statistics
+  totalSessions     Int      @default(0) @map("total_sessions")
+  totalHours        Decimal  @default(0) @map("total_hours") @db.Decimal(10, 2)
+  totalEarnings     BigInt   @default(0) @map("total_earnings")
+  monthlyDiamonds   BigInt   @default(0) @map("monthly_diamonds")
+  rating            Decimal  @default(5.0) @map("rating") @db.Decimal(3, 2)
+  totalReviews      Int      @default(0) @map("total_reviews")
+  
+  isActive          Boolean  @default(true) @map("is_active")
+  lastSessionAt     DateTime? @map("last_session_at")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+  
+  @@map("guide_profiles")
+}
+
+// ============================================
+// Earning Target System
+// ============================================
+
+model EarningTarget {
+  id                String   @id @default(uuid())
+  tier              Int      @unique
+  targetType        String   @map("target_type") // user, guide
+  
+  // Requirements
+  diamondsRequired  BigInt   @map("diamonds_required")
+  
+  // Rewards
+  cashReward        Decimal  @map("cash_reward") @db.Decimal(10, 2)
+  bonusCoins        BigInt   @default(0) @map("bonus_coins")
+  bonusBadge        String?  @map("bonus_badge")
+  
+  isActive          Boolean  @default(true) @map("is_active")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+  
+  @@index([targetType])
+  @@map("earning_targets")
+}
+
+model CashoutRequest {
+  id                String   @id @default(uuid())
+  userId            String   @map("user_id")
+  
+  amount            Decimal  @db.Decimal(10, 2)
+  diamondsUsed      BigInt   @map("diamonds_used")
+  paymentMethod     String   @map("payment_method") // bank_transfer, paypal, etc
+  paymentDetails    Json     @map("payment_details")
+  
+  status            String   @default("pending") // pending, approved, rejected, paid
+  
+  // Clearance
+  requestedAt       DateTime @default(now()) @map("requested_at")
+  clearanceDate     DateTime @map("clearance_date") // 5 days from request
+  
+  // Approval
+  reviewedBy        String?  @map("reviewed_by")
+  reviewedAt        DateTime? @map("reviewed_at")
+  rejectionReason   String?  @map("rejection_reason")
+  
+  // Payment
+  paidAt            DateTime? @map("paid_at")
+  transactionRef    String?  @map("transaction_ref")
+  
+  @@index([userId])
+  @@index([status])
+  @@map("cashout_requests")
+}
+
+// ============================================
+// Support System
+// ============================================
+
+model SupportTicket {
+  id                String   @id @default(uuid())
+  userId            String   @map("user_id")
+  category          String   // account, payment, technical, report, general
+  subject           String
+  description       String
+  priority          String   @default("medium") // low, medium, high, urgent
+  status            String   @default("open") // open, in_progress, waiting, resolved, closed
+  
+  assignedTo        String?  @map("assigned_to")
+  assignedAt        DateTime? @map("assigned_at")
+  resolvedAt        DateTime? @map("resolved_at")
+  
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+  
+  messages          SupportMessage[]
+  
+  @@index([userId])
+  @@index([status])
+  @@index([category])
+  @@map("support_tickets")
+}
+
+model SupportMessage {
+  id                String   @id @default(uuid())
+  ticketId          String   @map("ticket_id")
+  senderId          String   @map("sender_id")
+  message           String
+  attachments       String[] // URLs to files
+  isStaffReply      Boolean  @default(false) @map("is_staff_reply")
+  isRead            Boolean  @default(false) @map("is_read")
+  
+  createdAt         DateTime @default(now()) @map("created_at")
+  
+  ticket            SupportTicket @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  
+  @@index([ticketId])
+  @@map("support_messages")
+}
+
+model FAQ {
+  id                String   @id @default(uuid())
+  category          String
+  question          String
+  answer            String
+  order             Int      @default(0)
+  isPublished       Boolean  @default(true) @map("is_published")
+  viewCount         Int      @default(0) @map("view_count")
+  
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+  
+  @@index([category])
+  @@map("faqs")
+}
+
+// ============================================
+// Cinema System
+// ============================================
+
+model CinemaSession {
+  id                String   @id @default(uuid())
+  roomId            String   @map("room_id")
+  videoUrl          String   @map("video_url")
+  videoTitle        String   @map("video_title")
+  hostId            String   @map("host_id")
+  
+  // Playback state
+  currentPosition   BigInt   @default(0) @map("current_position") // milliseconds
+  isPlaying         Boolean  @default(false) @map("is_playing")
+  
+  viewers           String[] // Array of user IDs
+  
+  startedAt         DateTime @default(now()) @map("started_at")
+  endedAt           DateTime? @map("ended_at")
+  
+  @@unique([roomId])
+  @@map("cinema_sessions")
+}
+
+// ============================================
+// Economy Configuration
+// ============================================
+
+model EconomyConfig {
+  id                String   @id @default(uuid())
+  key               String   @unique
+  
+  // Conversion rates
+  diamondToCashRate Decimal? @map("diamond_to_cash_rate") @db.Decimal(10, 6) // per 100K diamonds
+  diamondToCoinRate Decimal? @map("diamond_to_coin_rate") @db.Decimal(5, 2) // percentage
+  
+  // Limits
+  minCashout        Decimal? @map("min_cashout") @db.Decimal(10, 2)
+  maxCashout        Decimal? @map("max_cashout") @db.Decimal(10, 2)
+  clearanceDays     Int?     @map("clearance_days")
+  dailyDiamondLimit BigInt?  @map("daily_diamond_limit")
+  
+  value             Json?
+  
+  updatedAt         DateTime @updatedAt @map("updated_at")
+  
+  @@map("economy_configs")
+}

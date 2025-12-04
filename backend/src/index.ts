@@ -37,6 +37,9 @@ import notificationsRoutes from './routes/notifications';
 import guideRoutes from './routes/guide';
 import giftsRoutes from './routes/gifts';
 import moderationRoutes from './routes/moderation';
+import cinemaRoutes from './routes/cinema';
+import supportRoutes from './routes/support';
+import settingsRoutes from './routes/settings';
 
 const app = express();
 
@@ -92,6 +95,9 @@ app.use('/api/v1/notifications', notificationsRoutes);
 app.use('/api/v1/guide', guideRoutes);
 app.use('/api/v1/gifts', giftsRoutes);
 app.use('/api/v1/moderation', moderationRoutes);
+app.use('/api/v1/cinema', cinemaRoutes);
+app.use('/api/v1/support', supportRoutes);
+app.use('/api/v1/settings', settingsRoutes);
 
 // 404 handler
 app.use(notFoundHandler);
