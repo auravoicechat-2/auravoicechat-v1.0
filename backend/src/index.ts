@@ -40,6 +40,9 @@ import moderationRoutes from './routes/moderation';
 import cinemaRoutes from './routes/cinema';
 import supportRoutes from './routes/support';
 import settingsRoutes from './routes/settings';
+import ownerPanelRoutes from './routes/ownerPanel';
+import guideApplicationRoutes from './routes/guideApplication';
+import earningTargetsRoutes from './routes/earningTargets';
 
 const app = express();
 
@@ -98,6 +101,9 @@ app.use('/api/v1/moderation', moderationRoutes);
 app.use('/api/v1/cinema', cinemaRoutes);
 app.use('/api/v1/support', supportRoutes);
 app.use('/api/v1/settings', settingsRoutes);
+app.use('/api/v1/owner/panel', ownerPanelRoutes);
+app.use('/api/v1/guide/application', guideApplicationRoutes);
+app.use('/api/v1/earnings', earningTargetsRoutes);
 
 // 404 handler
 app.use(notFoundHandler);
