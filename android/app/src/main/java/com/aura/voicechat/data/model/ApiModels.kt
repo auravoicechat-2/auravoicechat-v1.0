@@ -2010,3 +2010,201 @@ data class GreedyBabyRankingDto(
     @SerializedName("gamesPlayed") val gamesPlayed: Int,
     @SerializedName("rank") val rank: Int
 )
+
+// ============================================
+// Cinema - Together Watch Mode
+// ============================================
+
+data class CinemaSession(
+    @SerializedName("id") val id: String,
+    @SerializedName("roomId") val roomId: String,
+    @SerializedName("videoUrl") val videoUrl: String,
+    @SerializedName("videoTitle") val videoTitle: String,
+    @SerializedName("videoDuration") val videoDuration: Long,
+    @SerializedName("hostId") val hostId: String,
+    @SerializedName("hostName") val hostName: String,
+    @SerializedName("currentPosition") val currentPosition: Long,
+    @SerializedName("isPlaying") val isPlaying: Boolean,
+    @SerializedName("viewers") val viewers: List<ViewerDto>,
+    @SerializedName("startedAt") val startedAt: Long
+)
+
+data class ViewerDto(
+    @SerializedName("userId") val userId: String,
+    @SerializedName("userName") val userName: String,
+    @SerializedName("userAvatar") val userAvatar: String?
+)
+
+data class StartCinemaRequest(
+    @SerializedName("videoUrl") val videoUrl: String,
+    @SerializedName("videoTitle") val videoTitle: String,
+    @SerializedName("videoDuration") val videoDuration: Long
+)
+
+data class SyncCinemaRequest(
+    @SerializedName("currentPosition") val currentPosition: Long,
+    @SerializedName("isPlaying") val isPlaying: Boolean
+)
+
+// ============================================
+// Medals - Enhanced
+// ============================================
+
+data class AllMedalsResponse(
+    @SerializedName("medals") val medals: List<MedalDetailDto>,
+    @SerializedName("categories") val categories: List<String>
+)
+
+data class MedalDetailDto(
+    @SerializedName("id") val id: String,
+    @SerializedName("name") val name: String,
+    @SerializedName("description") val description: String,
+    @SerializedName("iconUrl") val iconUrl: String,
+    @SerializedName("category") val category: String, // ACHIEVEMENT, LEVEL, VIP, EVENT, SPECIAL
+    @SerializedName("rarity") val rarity: String, // COMMON, RARE, EPIC, LEGENDARY
+    @SerializedName("isUnlocked") val isUnlocked: Boolean,
+    @SerializedName("progress") val progress: Float?,
+    @SerializedName("progressTarget") val progressTarget: Int?,
+    @SerializedName("unlockedAt") val unlockedAt: Long?,
+    @SerializedName("howToEarn") val howToEarn: String
+)
+
+data class EquipMedalRequest(
+    @SerializedName("medalId") val medalId: String
+)
+
+// ============================================
+// Events - Detailed
+// ============================================
+
+data class EventDetailResponse(
+    @SerializedName("id") val id: String,
+    @SerializedName("title") val title: String,
+    @SerializedName("description") val description: String,
+    @SerializedName("bannerUrl") val bannerUrl: String,
+    @SerializedName("startTime") val startTime: Long,
+    @SerializedName("endTime") val endTime: Long,
+    @SerializedName("type") val type: String, // "RECHARGE", "LUCKY_DRAW", "ROOM_SUPPORT", etc.
+    @SerializedName("status") val status: String, // "UPCOMING", "ACTIVE", "ENDED"
+    @SerializedName("rewards") val rewards: List<EventRewardDto>,
+    @SerializedName("rules") val rules: List<String>,
+    @SerializedName("userProgress") val userProgress: EventProgressDto?,
+    @SerializedName("isParticipating") val isParticipating: Boolean
+)
+
+data class EventRewardDto(
+    @SerializedName("id") val id: String,
+    @SerializedName("name") val name: String,
+    @SerializedName("iconUrl") val iconUrl: String,
+    @SerializedName("value") val value: Long,
+    @SerializedName("type") val type: String // "COINS", "DIAMONDS", "ITEM", "MEDAL"
+)
+
+data class EventProgressDto(
+    @SerializedName("currentValue") val currentValue: Int,
+    @SerializedName("targetValue") val targetValue: Int,
+    @SerializedName("rewardsEarned") val rewardsEarned: List<String>
+)
+
+data class ParticipateEventRequest(
+    @SerializedName("eventId") val eventId: String
+)
+
+data class ClaimEventRewardRequest(
+    @SerializedName("eventId") val eventId: String,
+    @SerializedName("rewardId") val rewardId: String
+)
+
+data class ClaimEventRewardResponse(
+    @SerializedName("success") val success: Boolean,
+    @SerializedName("reward") val reward: EventRewardDto
+)
+
+// Lucky Draw
+data class LuckyDrawRequest(
+    @SerializedName("tickets") val tickets: Int = 1
+)
+
+data class LuckyDrawResult(
+    @SerializedName("success") val success: Boolean,
+    @SerializedName("prizes") val prizes: List<PrizeDto>,
+    @SerializedName("remainingTickets") val remainingTickets: Int
+)
+
+data class PrizeDto(
+    @SerializedName("id") val id: String,
+    @SerializedName("name") val name: String,
+    @SerializedName("iconUrl") val iconUrl: String,
+    @SerializedName("value") val value: Long,
+    @SerializedName("type") val type: String
+)
+
+data class LuckyDrawHistoryResponse(
+    @SerializedName("draws") val draws: List<DrawHistoryDto>,
+    @SerializedName("pagination") val pagination: PaginationDto
+)
+
+data class DrawHistoryDto(
+    @SerializedName("id") val id: String,
+    @SerializedName("prize") val prize: PrizeDto,
+    @SerializedName("timestamp") val timestamp: Long
+)
+
+// Event Banners
+data class EventBannersResponse(
+    @SerializedName("banners") val banners: List<EventBannerDto>
+)
+
+data class EventBannerDto(
+    @SerializedName("id") val id: String,
+    @SerializedName("imageUrl") val imageUrl: String,
+    @SerializedName("title") val title: String,
+    @SerializedName("eventId") val eventId: String?,
+    @SerializedName("link") val link: String?,
+    @SerializedName("order") val order: Int
+)
+
+// ============================================
+// Settings - Help & Support
+// ============================================
+
+data class FaqResponse(
+    @SerializedName("faqs") val faqs: List<FaqDto>,
+    @SerializedName("categories") val categories: List<String>
+)
+
+data class FaqDto(
+    @SerializedName("id") val id: String,
+    @SerializedName("question") val question: String,
+    @SerializedName("answer") val answer: String,
+    @SerializedName("category") val category: String,
+    @SerializedName("order") val order: Int
+)
+
+data class SubmitFeedbackRequest(
+    @SerializedName("type") val type: String, // "BUG", "FEATURE", "GENERAL"
+    @SerializedName("subject") val subject: String,
+    @SerializedName("description") val description: String,
+    @SerializedName("screenshots") val screenshots: List<String>?
+)
+
+data class SubmitFeedbackResponse(
+    @SerializedName("success") val success: Boolean,
+    @SerializedName("ticketId") val ticketId: String
+)
+
+data class AppVersionResponse(
+    @SerializedName("version") val version: String,
+    @SerializedName("versionCode") val versionCode: Int,
+    @SerializedName("updateAvailable") val updateAvailable: Boolean,
+    @SerializedName("forceUpdate") val forceUpdate: Boolean,
+    @SerializedName("downloadUrl") val downloadUrl: String?,
+    @SerializedName("releaseNotes") val releaseNotes: List<String>
+)
+
+data class CacheSizeResponse(
+    @SerializedName("totalSizeBytes") val totalSizeBytes: Long,
+    @SerializedName("imageCacheBytes") val imageCacheBytes: Long,
+    @SerializedName("videoCacheBytes") val videoCacheBytes: Long,
+    @SerializedName("otherCacheBytes") val otherCacheBytes: Long
+)

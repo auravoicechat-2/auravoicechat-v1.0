@@ -946,6 +946,278 @@ interface ApiService {
     ): Response<GreedyBabyRankingsResponse>
     
     // ============================================
+    // Cinema - Together Watch Mode
+    // ============================================
+    
+    // Start cinema session
+    @POST("api/v1/rooms/{roomId}/cinema/start")
+    suspend fun startCinema(
+        @Path("roomId") roomId: String,
+        @Body request: StartCinemaRequest
+    ): Response<CinemaSession>
+    
+    // Get cinema session
+    @GET("api/v1/rooms/{roomId}/cinema")
+    suspend fun getCinemaSession(
+        @Path("roomId") roomId: String
+    ): Response<CinemaSession>
+    
+    // Sync cinema playback
+    @POST("api/v1/rooms/{roomId}/cinema/sync")
+    suspend fun syncCinema(
+        @Path("roomId") roomId: String,
+        @Body request: SyncCinemaRequest
+    ): Response<Unit>
+    
+    // Stop cinema session
+    @POST("api/v1/rooms/{roomId}/cinema/stop")
+    suspend fun stopCinema(
+        @Path("roomId") roomId: String
+    ): Response<Unit>
+    
+    // ============================================
+    // Medals - Enhanced
+    // ============================================
+    
+    // Get all available medals
+    @GET("api/v1/medals")
+    suspend fun getAllMedals(): Response<AllMedalsResponse>
+    
+    // Get my medals
+    @GET("api/v1/medals/my")
+    suspend fun getMyMedals(): Response<AllMedalsResponse>
+    
+    // Get medal details
+    @GET("api/v1/medals/{medalId}")
+    suspend fun getMedalDetails(
+        @Path("medalId") medalId: String
+    ): Response<MedalDetailDto>
+    
+    // Equip medal
+    @POST("api/v1/medals/{medalId}/equip")
+    suspend fun equipMedal(
+        @Path("medalId") medalId: String
+    ): Response<Unit>
+    
+    // Unequip medal
+    @POST("api/v1/medals/{medalId}/unequip")
+    suspend fun unequipMedal(
+        @Path("medalId") medalId: String
+    ): Response<Unit>
+    
+    // ============================================
+    // Events - Detailed
+    // ============================================
+    
+    // Get event details
+    @GET("api/v1/events/{eventId}")
+    suspend fun getEventDetails(
+        @Path("eventId") eventId: String
+    ): Response<EventDetailResponse>
+    
+    // Get active events
+    @GET("api/v1/events/active")
+    suspend fun getActiveEvents(): Response<List<EventDetailResponse>>
+    
+    // Participate in event
+    @POST("api/v1/events/{eventId}/participate")
+    suspend fun participateEvent(
+        @Path("eventId") eventId: String
+    ): Response<Unit>
+    
+    // Claim event reward
+    @POST("api/v1/events/{eventId}/rewards/claim")
+    suspend fun claimEventReward(
+        @Path("eventId") eventId: String,
+        @Body request: ClaimEventRewardRequest
+    ): Response<ClaimEventRewardResponse>
+    
+    // Lucky draw
+    @POST("api/v1/events/lucky-draw")
+    suspend fun luckyDraw(
+        @Body request: LuckyDrawRequest
+    ): Response<LuckyDrawResult>
+    
+    // Get lucky draw history
+    @GET("api/v1/events/lucky-draw/history")
+    suspend fun getLuckyDrawHistory(
+        @Query("page") page: Int = 1,
+        @Query("limit") limit: Int = 20
+    ): Response<LuckyDrawHistoryResponse>
+    
+    // Get event banners
+    @GET("api/v1/events/banners")
+    suspend fun getEventBanners(): Response<EventBannersResponse>
+    
+    // ============================================
+    // Settings - Help & Support
+    // ============================================
+    
+    // Get FAQs
+    @GET("api/v1/help/faqs")
+    suspend fun getFaqs(
+        @Query("category") category: String? = null
+    ): Response<FaqResponse>
+    
+    // Submit feedback
+    @POST("api/v1/feedback")
+    suspend fun submitFeedback(
+        @Body request: SubmitFeedbackRequest
+    ): Response<SubmitFeedbackResponse>
+    
+    // Check for app updates
+    @GET("api/v1/app/version")
+    suspend fun checkUpdate(): Response<AppVersionResponse>
+    
+    // Get cache size
+    @GET("api/v1/app/cache-size")
+    suspend fun getCacheSize(): Response<CacheSizeResponse>
+    
+    // Clear app cache (server-side tracking)
+    @POST("api/v1/app/clear-cache")
+    suspend fun clearCache(): Response<Unit>
+    
+    // ============================================
+    // Admin System
+    // ============================================
+    
+    // Get all admins
+    @GET("api/v1/admin/all")
+    suspend fun getAllAdmins(): Response<List<AdminUser>>
+    
+    // Get admins by level
+    @GET("api/v1/admin/level/{level}")
+    suspend fun getAdminsByLevel(
+        @Path("level") level: String
+    ): Response<List<AdminUser>>
+    
+    // Get admins by country
+    @GET("api/v1/admin/country/{country}")
+    suspend fun getAdminsByCountry(
+        @Path("country") country: String
+    ): Response<List<AdminUser>>
+    
+    // Assign admin
+    @POST("api/v1/admin/assign")
+    suspend fun assignAdmin(
+        @Body request: AssignAdminRequest
+    ): Response<AdminUser>
+    
+    // Remove admin
+    @POST("api/v1/admin/{userId}/remove")
+    suspend fun removeAdmin(
+        @Path("userId") userId: String
+    ): Response<Unit>
+    
+    // ============================================
+    // Guide System
+    // ============================================
+    
+    // Apply to be a guide
+    @POST("api/v1/guide/apply")
+    suspend fun applyForGuide(
+        @Body request: ApplyGuideRequest
+    ): Response<GuideApplication>
+    
+    // Get my guide application
+    @GET("api/v1/guide/application/my")
+    suspend fun getMyGuideApplication(): Response<GuideApplication>
+    
+    // Get pending guide applications (admin only)
+    @GET("api/v1/guide/applications")
+    suspend fun getGuideApplications(
+        @Query("status") status: String? = null
+    ): Response<List<GuideApplication>>
+    
+    // Review guide application (admin only)
+    @POST("api/v1/guide/applications/{applicationId}/review")
+    suspend fun reviewGuideApplication(
+        @Path("applicationId") applicationId: String,
+        @Body request: ReviewGuideApplicationRequest
+    ): Response<GuideApplication>
+    
+    // Get guide profile
+    @GET("api/v1/guide/profile/{userId}")
+    suspend fun getGuideProfile(
+        @Path("userId") userId: String
+    ): Response<GuideProfile>
+    
+    // Get my guide profile
+    @GET("api/v1/guide/profile/my")
+    suspend fun getMyGuideProfile(): Response<GuideProfile>
+    
+    // ============================================
+    // Earning System
+    // ============================================
+    
+    // Get earning targets
+    @GET("api/v1/earning/targets")
+    suspend fun getEarningTargets(
+        @Query("isGuide") isGuide: Boolean = false
+    ): Response<EarningTargetSheet>
+    
+    // Get my earning status
+    @GET("api/v1/earning/status")
+    suspend fun getMyEarningStatus(): Response<UserEarningStatus>
+    
+    // Request cashout
+    @POST("api/v1/earning/cashout/request")
+    suspend fun requestCashout(
+        @Body request: RequestCashoutRequest
+    ): Response<CashoutRequest>
+    
+    // Get my cashout requests
+    @GET("api/v1/earning/cashout/my")
+    suspend fun getMyCashoutRequests(): Response<List<CashoutRequest>>
+    
+    // Get pending cashouts (owner/admin only)
+    @GET("api/v1/earning/cashout/pending")
+    suspend fun getPendingCashouts(): Response<List<CashoutRequest>>
+    
+    // Approve/reject cashout (owner only)
+    @POST("api/v1/earning/cashout/{requestId}/review")
+    suspend fun reviewCashout(
+        @Path("requestId") requestId: String,
+        @Body request: ApproveCashoutRequest
+    ): Response<CashoutRequest>
+    
+    // ============================================
+    // Customer Support Room
+    // ============================================
+    
+    // Get customer support room
+    @GET("api/v1/support/room")
+    suspend fun getCustomerSupportRoom(): Response<CustomerSupportRoom>
+    
+    // ============================================
+    // Owner Panel - Economy Configuration
+    // ============================================
+    
+    // Get current economy config
+    @GET("api/v1/owner/economy/config")
+    suspend fun getEconomyConfig(): Response<EconomyConfig>
+    
+    // Update earning targets
+    @POST("api/v1/owner/economy/targets")
+    suspend fun updateEarningTargets(
+        @Body targets: List<TargetConfig>
+    ): Response<Unit>
+    
+    // Update conversion rates
+    @POST("api/v1/owner/economy/conversions")
+    suspend fun updateConversionRates(
+        @Body request: ConversionRatesRequest
+    ): Response<Unit>
+    
+    // Update system limits
+    @POST("api/v1/owner/economy/limits")
+    suspend fun updateSystemLimits(
+        @Body request: SystemLimitsRequest
+    ): Response<Unit>
+    
+    // Get owner panel stats
+    @GET("api/v1/owner/stats")
+    suspend fun getOwnerStats(): Response<OwnerStats>
     // Week 4: Advanced Features
     // ============================================
     
@@ -1028,3 +1300,46 @@ interface ApiService {
     @DELETE("api/v1/account/delete")
     suspend fun deleteAccount(): Response<Unit>
 }
+
+// Request Models for new endpoints
+data class AssignAdminRequest(
+    val userId: String,
+    val adminLevel: String,
+    val country: String?
+)
+
+data class EconomyConfig(
+    val userTargets: List<TargetConfig>,
+    val guideTargets: List<TargetConfig>,
+    val conversionRates: ConversionRates,
+    val systemLimits: SystemLimits
+)
+
+data class ConversionRates(
+    val diamondToCashRate: Double,
+    val diamondToCoinRate: Int,
+    val coinValue: Double
+)
+
+data class SystemLimits(
+    val minCashout: Double,
+    val maxCashout: Double,
+    val clearanceDays: Int,
+    val maxGiftQuantity: Int,
+    val dailyDiamondLimit: Long
+)
+
+data class ConversionRatesRequest(
+    val diamondToCashRate: Double,
+    val diamondToCoinRate: Int,
+    val coinValue: Double
+)
+
+data class SystemLimitsRequest(
+    val minCashout: Double,
+    val maxCashout: Double,
+    val clearanceDays: Int,
+    val maxGiftQuantity: Int,
+    val dailyDiamondLimit: Long
+)
+

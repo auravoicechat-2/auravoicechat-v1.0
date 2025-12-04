@@ -114,6 +114,41 @@ sealed class Screen(val route: String) {
     object RoomSupport : Screen("events/room_support/{roomId}") {
         fun createRoute(roomId: String) = "events/room_support/$roomId"
     }
+    object EventDetail : Screen("events/{eventId}") {
+        fun createRoute(eventId: String) = "events/$eventId"
+    }
+    object LuckyDraw : Screen("events/lucky_draw")
+    
+    // Cinema
+    object Cinema : Screen("room/{roomId}/cinema") {
+        fun createRoute(roomId: String) = "room/$roomId/cinema"
+    }
+    
+    // Settings - Extended
+    object HelpCenter : Screen("settings/help")
+    object Feedback : Screen("settings/feedback")
+    object UpdateCheck : Screen("settings/update")
+    
+    // Guide System
+    object GuideApplication : Screen("guide/apply")
+    
+    // Earning System
+    object EarningTargets : Screen("earning/targets")
+    object EarningTargetsGuide : Screen("earning/targets/guide")
+    
+    // Owner Panel
+    object OwnerPanel : Screen("owner/panel")
+    object EconomySetup : Screen("owner/economy")
+    
+    // Guide Panel
+    object GuidePanel : Screen("guide/panel")
+    
+    // Support System
+    object SupportTickets : Screen("support/tickets")
+    object LiveChat : Screen("support/chat")
+    object LiveChatWithTicket : Screen("support/chat/{ticketId}") {
+        fun createRoute(ticketId: String) = "support/chat/$ticketId"
+    }
     
     // Utility
     object Search : Screen("search")
@@ -431,6 +466,8 @@ fun AuraNavHost(
                 onNavigateToPrivacy = { /* Navigate to privacy */ },
                 onNavigateToBlocked = { /* Navigate to blocked users */ },
                 onNavigateToAbout = { /* Navigate to about */ },
+                onNavigateToHelp = { navController.navigate(Screen.HelpCenter.route) },
+                onNavigateToFeedback = { navController.navigate(Screen.Feedback.route) },
                 onLogout = {
                     navController.navigate(Screen.Login.route) {
                         popUpTo(0) { inclusive = true }
@@ -443,6 +480,137 @@ fun AuraNavHost(
             KycScreen(
                 onNavigateBack = { navController.popBackStack() },
                 onKycComplete = { navController.popBackStack() }
+            )
+        }
+        
+        // ===== CINEMA =====
+        composable(
+            route = Screen.Cinema.route,
+            arguments = listOf(navArgument("roomId") { type = NavType.StringType })
+        ) { backStackEntry ->
+            val roomId = backStackEntry.arguments?.getString("roomId") ?: ""
+            com.aura.voicechat.ui.room.cinema.CinemaScreen(
+                roomId = roomId,
+                onNavigateBack = { navController.popBackStack() }
+            )
+        }
+        
+        // ===== EVENT DETAILS =====
+        composable(
+            route = Screen.EventDetail.route,
+            arguments = listOf(navArgument("eventId") { type = NavType.StringType })
+        ) { backStackEntry ->
+            val eventId = backStackEntry.arguments?.getString("eventId") ?: ""
+            com.aura.voicechat.ui.events.EventDetailScreen(
+                eventId = eventId,
+                onNavigateBack = { navController.popBackStack() }
+            )
+        }
+        
+        // ===== LUCKY DRAW =====
+        composable(Screen.LuckyDraw.route) {
+            com.aura.voicechat.ui.events.LuckyDrawScreen(
+                onNavigateBack = { navController.popBackStack() }
+            )
+        }
+        
+        // ===== SETTINGS - EXTENDED =====
+        composable(Screen.HelpCenter.route) {
+            com.aura.voicechat.ui.settings.HelpCenterScreen(
+                onNavigateBack = { navController.popBackStack() },
+                onContactSupport = { navController.navigate(Screen.Feedback.route) }
+            )
+        }
+        
+        composable(Screen.Feedback.route) {
+            com.aura.voicechat.ui.settings.FeedbackScreen(
+                onNavigateBack = { navController.popBackStack() }
+            )
+        }
+        
+        composable(Screen.UpdateCheck.route) {
+            com.aura.voicechat.ui.settings.UpdateCheckScreen(
+                onNavigateBack = { navController.popBackStack() }
+            )
+        }
+        
+        // ===== GUIDE SYSTEM =====
+        composable(Screen.GuideApplication.route) {
+            com.aura.voicechat.ui.guide.GuideApplicationScreen(
+                onNavigateBack = { navController.popBackStack() }
+            )
+        }
+        
+        // ===== EARNING SYSTEM =====
+        composable(Screen.EarningTargets.route) {
+            com.aura.voicechat.ui.earning.EarningTargetSheetScreen(
+                isGuide = false,
+                onNavigateBack = { navController.popBackStack() }
+            )
+        }
+        
+        composable(Screen.EarningTargetsGuide.route) {
+            com.aura.voicechat.ui.earning.EarningTargetSheetScreen(
+                isGuide = true,
+                onNavigateBack = { navController.popBackStack() }
+            )
+        }
+        
+        // ===== OWNER PANEL =====
+        composable(Screen.OwnerPanel.route) {
+            com.aura.voicechat.ui.owner.OwnerPanelScreen(
+                onNavigateBack = { navController.popBackStack() },
+                onNavigateToEconomy = { navController.navigate(Screen.EconomySetup.route) },
+                onNavigateToAdmins = { /* TODO: Admin management */ },
+                onNavigateToCashouts = { /* TODO: Cashout approvals */ },
+                onNavigateToGuides = { /* TODO: Guide management */ },
+                onNavigateToAnalytics = { /* TODO: Analytics */ }
+            )
+        }
+        
+        composable(Screen.EconomySetup.route) {
+            com.aura.voicechat.ui.owner.EconomySetupScreen(
+                onNavigateBack = { navController.popBackStack() }
+            )
+        }
+        
+        // ===== GUIDE PANEL =====
+        composable(Screen.GuidePanel.route) {
+            com.aura.voicechat.ui.guide.GuidePanelScreen(
+                onNavigateBack = { navController.popBackStack() },
+                onNavigateToEarnings = { navController.navigate(Screen.EarningTargetsGuide.route) },
+                onNavigateToSessions = { /* TODO: Session history */ },
+                onNavigateToTargets = { navController.navigate(Screen.EarningTargetsGuide.route) }
+            )
+        }
+        
+        // ===== SUPPORT SYSTEM =====
+        composable(Screen.SupportTickets.route) {
+            com.aura.voicechat.ui.support.SupportTicketsScreen(
+                onNavigateBack = { navController.popBackStack() },
+                onNavigateToTicket = { ticketId -> 
+                    navController.navigate(Screen.LiveChatWithTicket.createRoute(ticketId))
+                },
+                onNavigateToNewTicket = { /* TODO: New ticket form */ },
+                onNavigateToLiveChat = { navController.navigate(Screen.LiveChat.route) }
+            )
+        }
+        
+        composable(Screen.LiveChat.route) {
+            com.aura.voicechat.ui.support.LiveChatScreen(
+                ticketId = null,
+                onNavigateBack = { navController.popBackStack() }
+            )
+        }
+        
+        composable(
+            route = Screen.LiveChatWithTicket.route,
+            arguments = listOf(navArgument("ticketId") { type = NavType.StringType })
+        ) { backStackEntry ->
+            val ticketId = backStackEntry.arguments?.getString("ticketId")
+            com.aura.voicechat.ui.support.LiveChatScreen(
+                ticketId = ticketId,
+                onNavigateBack = { navController.popBackStack() }
             )
         }
     }

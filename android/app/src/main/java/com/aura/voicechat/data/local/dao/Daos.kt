@@ -219,6 +219,108 @@ interface VisitorDao {
     suspend fun deleteOldVisitors(timestamp: Long)
 }
 
+@Dao
+interface MedalDao {
+    @Query("SELECT * FROM medals ORDER BY category, rarity, name")
+    fun getAllMedals(): Flow<List<MedalEntity>>
+    
+    @Query("SELECT * FROM medals WHERE isUnlocked = 1 ORDER BY unlockedAt DESC")
+    fun getUnlockedMedals(): Flow<List<MedalEntity>>
+    
+    @Query("SELECT * FROM medals WHERE category = :category ORDER BY rarity, name")
+    fun getMedalsByCategory(category: String): Flow<List<MedalEntity>>
+    
+    @Query("SELECT * FROM medals WHERE id = :medalId")
+    suspend fun getMedal(medalId: String): MedalEntity?
+    
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertMedal(medal: MedalEntity)
+    
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertMedals(medals: List<MedalEntity>)
+    
+    @Update
+    suspend fun updateMedal(medal: MedalEntity)
+    
+    @Query("DELETE FROM medals WHERE cachedAt < :timestamp")
+    suspend fun deleteOldCache(timestamp: Long)
+}
+
+@Dao
+interface EventDao {
+    @Query("SELECT * FROM events ORDER BY startTime DESC")
+    fun getAllEvents(): Flow<List<EventEntity>>
+    
+    @Query("SELECT * FROM events WHERE status = 'ACTIVE' ORDER BY endTime ASC")
+    fun getActiveEvents(): Flow<List<EventEntity>>
+    
+    @Query("SELECT * FROM events WHERE id = :eventId")
+    suspend fun getEvent(eventId: String): EventEntity?
+    
+    @Query("SELECT * FROM events WHERE type = :type ORDER BY startTime DESC")
+    fun getEventsByType(type: String): Flow<List<EventEntity>>
+    
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertEvent(event: EventEntity)
+    
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertEvents(events: List<EventEntity>)
+    
+    @Update
+    suspend fun updateEvent(event: EventEntity)
+    
+    @Query("DELETE FROM events WHERE cachedAt < :timestamp")
+    suspend fun deleteOldCache(timestamp: Long)
+}
+
+@Dao
+interface FaqDao {
+    @Query("SELECT * FROM faqs ORDER BY category, `order`")
+    fun getAllFaqs(): Flow<List<FaqEntity>>
+    
+    @Query("SELECT * FROM faqs WHERE category = :category ORDER BY `order`")
+    fun getFaqsByCategory(category: String): Flow<List<FaqEntity>>
+    
+    @Query("SELECT * FROM faqs WHERE id = :faqId")
+    suspend fun getFaq(faqId: String): FaqEntity?
+    
+    @Query("SELECT * FROM faqs WHERE question LIKE '%' || :query || '%' OR answer LIKE '%' || :query || '%'")
+    fun searchFaqs(query: String): Flow<List<FaqEntity>>
+    
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertFaq(faq: FaqEntity)
+    
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertFaqs(faqs: List<FaqEntity>)
+    
+    @Query("DELETE FROM faqs WHERE cachedAt < :timestamp")
+    suspend fun deleteOldCache(timestamp: Long)
+}
+
+@Dao
+interface AdminDao {
+    @Query("SELECT * FROM admins WHERE isActive = 1 ORDER BY adminLevel")
+    fun getAllActiveAdmins(): Flow<List<AdminEntity>>
+    
+    @Query("SELECT * FROM admins WHERE userId = :userId")
+    suspend fun getAdmin(userId: String): AdminEntity?
+    
+    @Query("SELECT * FROM admins WHERE adminLevel = :level AND isActive = 1")
+    fun getAdminsByLevel(level: String): Flow<List<AdminEntity>>
+    
+    @Query("SELECT * FROM admins WHERE country = :country AND isActive = 1")
+    fun getAdminsByCountry(country: String): Flow<List<AdminEntity>>
+    
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAdmin(admin: AdminEntity)
+    
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAdmins(admins: List<AdminEntity>)
+    
+    @Update
+    suspend fun updateAdmin(admin: AdminEntity)
+    
+    @Query("DELETE FROM admins WHERE cachedAt < :timestamp")
 // ============================================
 // Week 4: Advanced Features DAOs
 // ============================================
@@ -287,6 +389,66 @@ interface SongDao {
 }
 
 @Dao
+interface GuideApplicationDao {
+    @Query("SELECT * FROM guide_applications WHERE userId = :userId")
+    suspend fun getApplication(userId: String): GuideApplicationEntity?
+    
+    @Query("SELECT * FROM guide_applications WHERE status = :status ORDER BY appliedAt DESC")
+    fun getApplicationsByStatus(status: String): Flow<List<GuideApplicationEntity>>
+    
+    @Query("SELECT * FROM guide_applications ORDER BY appliedAt DESC LIMIT :limit")
+    fun getRecentApplications(limit: Int = 50): Flow<List<GuideApplicationEntity>>
+    
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertApplication(application: GuideApplicationEntity)
+    
+    @Update
+    suspend fun updateApplication(application: GuideApplicationEntity)
+    
+    @Query("DELETE FROM guide_applications WHERE cachedAt < :timestamp")
+    suspend fun deleteOldCache(timestamp: Long)
+}
+
+@Dao
+interface EarningTargetDao {
+    @Query("SELECT * FROM earning_targets WHERE isActive = 1 ORDER BY requiredDiamonds ASC")
+    fun getActiveTargets(): Flow<List<EarningTargetEntity>>
+    
+    @Query("SELECT * FROM earning_targets WHERE targetId = :targetId")
+    suspend fun getTarget(targetId: String): EarningTargetEntity?
+    
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertTarget(target: EarningTargetEntity)
+    
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertTargets(targets: List<EarningTargetEntity>)
+    
+    @Query("DELETE FROM earning_targets WHERE cachedAt < :timestamp")
+    suspend fun deleteOldCache(timestamp: Long)
+}
+
+@Dao
+interface CashoutRequestDao {
+    @Query("SELECT * FROM cashout_requests WHERE userId = :userId ORDER BY requestedAt DESC")
+    fun getUserCashouts(userId: String): Flow<List<CashoutRequestEntity>>
+    
+    @Query("SELECT * FROM cashout_requests WHERE status = :status ORDER BY requestedAt DESC")
+    fun getCashoutsByStatus(status: String): Flow<List<CashoutRequestEntity>>
+    
+    @Query("SELECT * FROM cashout_requests WHERE status = 'PENDING_APPROVAL' AND clearanceDate <= :currentTime ORDER BY clearanceDate ASC")
+    fun getPendingApprovalCashouts(currentTime: Long): Flow<List<CashoutRequestEntity>>
+    
+    @Query("SELECT * FROM cashout_requests WHERE requestId = :requestId")
+    suspend fun getCashout(requestId: String): CashoutRequestEntity?
+    
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertCashout(cashout: CashoutRequestEntity)
+    
+    @Update
+    suspend fun updateCashout(cashout: CashoutRequestEntity)
+    
+    @Query("DELETE FROM cashout_requests WHERE cachedAt < :timestamp")
+    suspend fun deleteOldCache(timestamp: Long)
 interface PlaylistDao {
     @Query("SELECT * FROM playlists WHERE createdBy = :userId ORDER BY createdAt DESC")
     fun getUserPlaylists(userId: String): Flow<List<PlaylistEntity>>

@@ -11,6 +11,7 @@ import com.aura.voicechat.data.local.entity.*
  * Developer: Hawkaye Visions LTD — Pakistan
  * 
  * Local database for caching and offline support
+ * Version 3 - Added admin hierarchy, guide system, and earning system
  * Version 2 - Added Week 4 features: Notifications, Music, Playlists
  */
 @Database(
@@ -25,6 +26,15 @@ import com.aura.voicechat.data.local.entity.*
         FamilyMemberEntity::class,
         CpPartnershipEntity::class,
         ProfileVisitorEntity::class,
+        MedalEntity::class,
+        EventEntity::class,
+        FaqEntity::class,
+        AdminEntity::class,
+        GuideApplicationEntity::class,
+        EarningTargetEntity::class,
+        CashoutRequestEntity::class
+    ],
+    version = 3,
         // Week 4 entities
         NotificationEntity::class,
         SongEntity::class,
@@ -46,6 +56,13 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun familyDao(): FamilyDao
     abstract fun cpDao(): CpDao
     abstract fun visitorDao(): VisitorDao
+    abstract fun medalDao(): MedalDao
+    abstract fun eventDao(): EventDao
+    abstract fun faqDao(): FaqDao
+    abstract fun adminDao(): AdminDao
+    abstract fun guideApplicationDao(): GuideApplicationDao
+    abstract fun earningTargetDao(): EarningTargetDao
+    abstract fun cashoutRequestDao(): CashoutRequestDao
     
     // Week 4 DAOs
     abstract fun notificationDao(): NotificationDao
