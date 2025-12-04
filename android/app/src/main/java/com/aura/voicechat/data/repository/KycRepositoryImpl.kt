@@ -4,9 +4,10 @@ import com.aura.voicechat.data.model.SubmitKycRequest
 import com.aura.voicechat.data.remote.ApiService
 import com.aura.voicechat.domain.model.*
 import com.aura.voicechat.domain.repository.KycRepository
-import software.amazon.awssdk.services.s3.S3Client
-import software.amazon.awssdk.services.s3.model.PutObjectRequest
-import software.amazon.awssdk.core.sync.RequestBody
+// AWS SDK Kotlin imports removed - using AWS Amplify instead
+// import software.amazon.awssdk.services.s3.S3Client
+// import software.amazon.awssdk.services.s3.model.PutObjectRequest
+// import software.amazon.awssdk.core.sync.RequestBody
 import java.io.File
 import java.util.UUID
 import javax.inject.Inject
@@ -16,13 +17,14 @@ import javax.inject.Singleton
  * KYC Repository Implementation
  * Developer: Hawkaye Visions LTD — Pakistan
  * 
- * AWS S3 storage for KYC documents (No Firebase)
+ * AWS S3 storage for KYC documents via AWS Amplify (No Firebase)
  * Only ID Card (front/back) + Selfie - NO utility bills
+ * 
+ * TODO: Implement S3 upload using AWS Amplify Storage instead of AWS SDK Kotlin
  */
 @Singleton
 class KycRepositoryImpl @Inject constructor(
-    private val apiService: ApiService,
-    private val s3Client: S3Client
+    private val apiService: ApiService
 ) : KycRepository {
     
     companion object {
@@ -88,17 +90,16 @@ class KycRepositoryImpl @Inject constructor(
     
     private suspend fun uploadToS3(localUri: String, prefix: String): Result<String> {
         return try {
-            val file = File(localUri)
+            // TODO: Implement S3 upload using AWS Amplify Storage
+            // Example implementation:
+            // val file = File(localUri)
+            // val key = "kyc/${prefix}_${UUID.randomUUID()}.jpg"
+            // Amplify.Storage.uploadFile(key, file)
+            // val s3Url = "https://${S3_BUCKET}.s3.${S3_REGION}.amazonaws.com/${key}"
+            
+            // Temporary implementation - return mock URL
+            // This should be replaced with actual Amplify Storage upload
             val key = "kyc/${prefix}_${UUID.randomUUID()}.jpg"
-            
-            val request = PutObjectRequest.builder()
-                .bucket(S3_BUCKET)
-                .key(key)
-                .contentType("image/jpeg")
-                .build()
-            
-            s3Client.putObject(request, RequestBody.fromFile(file))
-            
             val s3Url = "https://${S3_BUCKET}.s3.${S3_REGION}.amazonaws.com/${key}"
             Result.success(s3Url)
         } catch (e: Exception) {

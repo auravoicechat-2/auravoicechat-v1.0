@@ -14,11 +14,12 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider
-import software.amazon.awssdk.regions.Region
-import software.amazon.awssdk.services.cognitoidentityprovider.CognitoIdentityProviderClient
-import software.amazon.awssdk.services.s3.S3Client
-import software.amazon.awssdk.services.sns.SnsClient
+// AWS SDK Kotlin imports removed - using AWS Amplify instead
+// import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider
+// import software.amazon.awssdk.regions.Region
+// import software.amazon.awssdk.services.cognitoidentityprovider.CognitoIdentityProviderClient
+// import software.amazon.awssdk.services.s3.S3Client
+// import software.amazon.awssdk.services.sns.SnsClient
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
@@ -102,6 +103,10 @@ object NetworkModule {
         return retrofit.create(HealthApi::class.java)
     }
     
+    // AWS SDK Kotlin clients removed - using AWS Amplify instead
+    // These providers are commented out because AWS SDK Kotlin dependencies
+    // were removed from build.gradle to avoid conflicts with AWS Amplify
+    /*
     @Provides
     @Singleton
     fun provideCognitoClient(@ApplicationContext context: Context): CognitoIdentityProviderClient {
@@ -128,4 +133,5 @@ object NetworkModule {
             .credentialsProvider(DefaultCredentialsProvider.create())
             .build()
     }
+    */
 }
