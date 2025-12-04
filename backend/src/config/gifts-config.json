@@ -1,0 +1,136 @@
+{
+  "gifts": [
+    {
+      "id": "gift_aurora",
+      "name": "Aurora Northern Lights",
+      "description": "A mesmerizing display of dancing northern lights",
+      "category": "luxury",
+      "price_coins": 500,
+      "diamond_value": 50,
+      "is_premium": true,
+      "animation_file": "gift_aurora.json",
+      "rarity": "epic"
+    },
+    {
+      "id": "gift_castle",
+      "name": "Enchanted Castle",
+      "description": "A magical castle with mystical glows",
+      "category": "luxury",
+      "price_coins": 600,
+      "diamond_value": 60,
+      "is_premium": true,
+      "animation_file": "gift_castle.json",
+      "rarity": "epic"
+    },
+    {
+      "id": "gift_dragon",
+      "name": "Dragon of Power",
+      "description": "A fierce and powerful dragon animation",
+      "category": "celebration",
+      "price_coins": 750,
+      "diamond_value": 75,
+      "is_premium": true,
+      "animation_file": "gift_dragon.json",
+      "rarity": "legendary"
+    },
+    {
+      "id": "gift_fireworks",
+      "name": "Fireworks Burst",
+      "description": "Spectacular fireworks explosion",
+      "category": "celebration",
+      "price_coins": 400,
+      "diamond_value": 40,
+      "is_premium": false,
+      "animation_file": "gift_fireworks.json",
+      "rarity": "rare"
+    },
+    {
+      "id": "gift_galaxy",
+      "name": "Galaxy Wonders",
+      "description": "A swirling galaxy with cosmic beauty",
+      "category": "luxury",
+      "price_coins": 700,
+      "diamond_value": 70,
+      "is_premium": true,
+      "animation_file": "gift_galaxy. json",
+      "rarity": "epic"
+    },
+    {
+      "id": "gift_golden_rain",
+      "name": "Golden Rain",
+      "description": "A shower of golden coins and sparkles",
+      "category": "celebration",
+      "price_coins": 550,
+      "diamond_value": 55,
+      "is_premium": true,
+      "animation_file": "gift_golden_rain.json",
+      "rarity": "epic"
+    },
+    {
+      "id": "gift_heart_explosion",
+      "name": "Heart Explosion",
+      "description": "An explosion of love and hearts",
+      "category": "romance",
+      "price_coins": 300,
+      "diamond_value": 30,
+      "is_premium": false,
+      "animation_file": "gift_heart_explosion.json",
+      "rarity": "rare"
+    },
+    {
+      "id": "gift_kingdom",
+      "name": "Kingdom Lights",
+      "description": "A grand kingdom illuminated with magical lights",
+      "category": "luxury",
+      "price_coins": 650,
+      "diamond_value": 65,
+      "is_premium": true,
+      "animation_file": "gift_kingdom. json",
+      "rarity": "epic"
+    },
+    {
+      "id": "gift_love_story",
+      "name": "Love Story",
+      "description": "A romantic love story animation",
+      "category": "romance",
+      "price_coins": 450,
+      "diamond_value": 45,
+      "is_premium": false,
+      "animation_file": "gift_love_story.json",
+      "rarity": "rare"
+    },
+    {
+      "id": "gift_phoenix_rebirth",
+      "name": "Phoenix Rebirth",
+      "description": "A phoenix rising from the flames of rebirth",
+      "category": "celebration",
+      "price_coins": 800,
+      "diamond_value": 80,
+      "is_premium": true,
+      "animation_file": "gift_phoenix_rebirth.json",
+      "rarity": "legendary"
+    },
+    {
+      "id": "gift_rose_garden",
+      "name": "Rose Garden",
+      "description": "A beautiful garden filled with blooming roses",
+      "category": "romance",
+      "price_coins": 350,
+      "diamond_value": 35,
+      "is_premium": false,
+      "animation_file": "gift_rose_garden.json",
+      "rarity": "rare"
+    },
+    {
+      "id": "gift_universe",
+      "name": "Universe Infinite",
+      "description": "An infinite expanding universe of stars",
+      "category": "luxury",
+      "price_coins": 900,
+      "diamond_value": 90,
+      "is_premium": true,
+      "animation_file": "gift_universe.json",
+      "rarity": "legendary"
+    }
+  ]
+}
