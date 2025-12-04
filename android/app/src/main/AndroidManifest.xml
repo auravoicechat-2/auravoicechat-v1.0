@@ -13,31 +13,40 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <!-- Bluetooth permissions: BLUETOOTH deprecated in API 31+, use BLUETOOTH_CONNECT instead -->
-    <uses-permission android:name="android.permission.BLUETOOTH" 
+    <uses-permission android:name="android.permission.BLUETOOTH"
         android:maxSdkVersion="30"
         tools:ignore="DeprecatedSdkVersion" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <!-- Storage permissions: READ_EXTERNAL_STORAGE deprecated in API 33+, use READ_MEDIA_* instead -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" 
+
+    <!-- Storage permissions for different Android versions -->
+    <!-- Required for older Android versions to write to storage -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <!-- READ_EXTERNAL_STORAGE is needed up to API 32 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32"
         tools:ignore="ScopedStorage" />
+    <!-- Granular media permissions for Android 13+ -->
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <!-- Allows user to select specific media files on Android 14+ -->
     <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
-    
+
     <!-- Hardware features -->
     <uses-feature android:name="android.hardware.camera" android:required="false" />
     <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
     <uses-feature android:name="android.hardware.microphone" android:required="true" />
     <!-- Telephony not required - app works on tablets without phone capability -->
     <uses-feature android:name="android.hardware.telephony" android:required="false" />
-    
+
     <application
         android:name=".AuraApplication"
         android:allowBackup="true"
@@ -52,25 +61,28 @@
         android:localeConfig="@xml/locales_config"
         android:largeHeap="true"
         tools:targetApi="34">
-        
+
         <!-- Google Play Services version check -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-        
-        <!-- AWS Pinpoint Configuration -->
+
+        <!-- AWS Pinpoint -->
         <meta-data
-            android:name="aws_pinpoint_app_id"
-            android:value="@string/aws_pinpoint_app_id" />
-        
+            android:name="com.amazonaws.pinpoint.appId"
+            android:value="652e9457e8f14a798f735b8f853cc123" />
+        <meta-data
+            android:name="com.amazonaws.pinpoint.region"
+            android:value="ap-south-1" />
+
         <!-- Facebook Meta Data -->
-	<meta-data
-    		android:name="com.facebook.sdk.ApplicationId"
-    		android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
         <meta-data
             android:name="com.facebook.sdk.ClientToken"
             android:value="@string/facebook_client_token" />
-        
+
         <!-- Main Activity -->
         <activity
             android:name=".ui.MainActivity"
@@ -83,7 +95,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            
+
             <!-- Deep links - Room -->
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
@@ -94,7 +106,7 @@
                     android:host="auravoice.chat"
                     android:pathPrefix="/room" />
             </intent-filter>
-            
+
             <!-- Deep links - Invite -->
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
@@ -105,7 +117,7 @@
                     android:host="auravoice.chat"
                     android:pathPrefix="/invite" />
             </intent-filter>
-            
+
             <!-- Custom scheme deep link -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -114,20 +126,20 @@
                 <data android:scheme="auravoicechat" />
             </intent-filter>
         </activity>
-        
+
         <!-- Auth Activity -->
         <activity
             android:name=".ui.auth.AuthActivity"
             android:exported="false"
             android:screenOrientation="fullUser"
             android:windowSoftInputMode="adjustResize" />
-        
+
         <!-- KYC Activity -->
         <activity
             android:name=".ui.kyc.KycActivity"
             android:exported="false"
             android:screenOrientation="fullUser" />
-        
+
         <!-- Room Activity -->
         <activity
             android:name=".ui.room.RoomActivity"
@@ -135,7 +147,7 @@
             android:screenOrientation="fullUser"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode"
             android:launchMode="singleTop" />
-        
+
         <!-- Facebook CustomTabActivity for login redirect -->
         <activity
             android:name="com.facebook.CustomTabActivity"
@@ -147,38 +159,33 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        
+
         <!-- Voice Service -->
         <service
             android:name=".services.VoiceRoomService"
             android:exported="false"
             android:foregroundServiceType="microphone|camera" />
-        
+
         <!-- AWS Pinpoint Push Notification Service -->
         <service
             android:name=".services.AuraPushNotificationService"
-            android:exported="false" />
-        
+            android:exported="false"
+            android:foregroundServiceType="remoteMessaging">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
         <!-- Music Service -->
         <service
             android:name=".services.MusicService"
             android:exported="false"
             android:foregroundServiceType="mediaPlayback" />
-        
-        <!-- GCM Receiver for AWS Pinpoint -->
-        <receiver
-            android:name="com.amazonaws.mobileconnectors.pinpoint.targeting.notification.PinpointNotificationReceiver"
-            android:exported="true"
-            android:permission="com.google.android.c2dm.permission.SEND">
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <category android:name="${applicationId}" />
-            </intent-filter>
-        </receiver>
-        
+
         <!-- Work Manager Provider -->
 
-        
+
         <!-- File Provider for camera/gallery -->
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -189,7 +196,7 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
-        
+
     </application>
 
 </manifest>
