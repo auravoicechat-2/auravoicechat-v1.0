@@ -247,3 +247,67 @@ data class FaqEntity(
     val order: Int,
     val cachedAt: Long = System.currentTimeMillis()
 )
+
+@Entity(
+    tableName = "admins",
+    indices = [Index(value = ["adminLevel"]), Index(value = ["country"])]
+)
+data class AdminEntity(
+    @PrimaryKey val userId: String,
+    val email: String,
+    val name: String,
+    val adminLevel: String, // OWNER, COUNTRY_ADMIN, ADMIN_LEVEL_1, ADMIN_LEVEL_2, ADMIN_LEVEL_3, CUSTOMER_SUPPORT
+    val country: String?,
+    val reportsTo: String?,
+    val isActive: Boolean,
+    val assignedAt: Long,
+    val cachedAt: Long = System.currentTimeMillis()
+)
+
+@Entity(
+    tableName = "guide_applications",
+    indices = [Index(value = ["userId"]), Index(value = ["status"])]
+)
+data class GuideApplicationEntity(
+    @PrimaryKey val applicationId: String,
+    val userId: String,
+    val status: String, // NOT_APPLIED, PENDING, APPROVED, REJECTED, SUSPENDED
+    val appliedAt: Long,
+    val reviewedAt: Long?,
+    val rejectionReason: String?,
+    val cachedAt: Long = System.currentTimeMillis()
+)
+
+@Entity(
+    tableName = "earning_targets",
+    indices = [Index(value = ["isActive"])]
+)
+data class EarningTargetEntity(
+    @PrimaryKey val targetId: String,
+    val name: String,
+    val requiredDiamonds: Long,
+    val cashReward: Double,
+    val isActive: Boolean,
+    val validFrom: Long,
+    val validUntil: Long,
+    val cachedAt: Long = System.currentTimeMillis()
+)
+
+@Entity(
+    tableName = "cashout_requests",
+    indices = [Index(value = ["userId"]), Index(value = ["status"])]
+)
+data class CashoutRequestEntity(
+    @PrimaryKey val requestId: String,
+    val userId: String,
+    val amount: Double,
+    val diamonds: Long,
+    val status: String, // PENDING_CLEARANCE, PENDING_APPROVAL, APPROVED, PROCESSING, COMPLETED, REJECTED
+    val requestedAt: Long,
+    val clearanceDate: Long,
+    val approvedBy: String?,
+    val approvedAt: Long?,
+    val rejectionReason: String?,
+    val paymentMethod: String,
+    val cachedAt: Long = System.currentTimeMillis()
+)
