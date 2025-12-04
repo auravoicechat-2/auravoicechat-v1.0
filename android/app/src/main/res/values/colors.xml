@@ -41,4 +41,11 @@
     <!-- Currency Colors -->
     <color name="coin_gold">#FFD700</color>
     <color name="diamond_blue">#00BFFF</color>
+    
+    <!-- UCrop Colors -->
+    <color name="ucrop_color_active_controls_color">#8551C5</color>
+    <color name="ucrop_color_toolbar_widget">#FFFFFF</color>
+    
+    <!-- Facebook Button Colors -->
+    <color name="com_facebook_button_text_color">#FFFFFF</color>
 </resources>
