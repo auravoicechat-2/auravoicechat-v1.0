@@ -2,7 +2,6 @@ package com.aura.voicechat.utils
 
 import android.content.Context
 import android.content.res.Configuration
-import android.os.Build
 import android.os.LocaleList
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
@@ -25,7 +24,7 @@ private val Context.localeDataStore: DataStore<Preferences> by preferencesDataSt
 
 @Singleton
 class LocaleManager @Inject constructor(
-    @ApplicationContext private val context: Context
+    @param:ApplicationContext private val context: Context
 ) {
     
     private val languageKey = stringPreferencesKey("selected_language")

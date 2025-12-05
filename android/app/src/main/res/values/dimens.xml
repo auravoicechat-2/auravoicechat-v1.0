@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="ucrop_progress_size">50dp</dimen>
+<resources>    
+    <!-- Facebook Button Dimensions -->
+    <dimen name="com_facebook_button_corner_radius">4dp</dimen>
+    <dimen name="com_facebook_auth_dialog_corner_radius">8dp</dimen>
+    <dimen name="com_facebook_auth_dialog_corner_radius_oversized">16dp</dimen>
+    
+    <!-- Material Design Dimensions -->
+    <dimen name="design_navigation_icon_size">24dp</dimen>
+    <dimen name="design_snackbar_background_corner_radius">4dp</dimen>
+    <dimen name="mtrl_snackbar_background_corner_radius">4dp</dimen>
+    
+    <!-- Tooltip Dimensions -->
+    <dimen name="tooltip_corner_radius">2dp</dimen>
 </resources>

@@ -2,46 +2,25 @@
 <!-- Aura Voice Chat - Color Resources -->
 <resources>
     <!-- Primary Purple Palette -->
-    <color name="purple_80">#C9A8F1</color>
-    <color name="purple_60">#A77BDB</color>
-    <color name="purple_40">#8551C5</color>
-    <color name="purple_20">#6329AF</color>
-    
+    <color name="purple_80">#C9A8F1</color>    <color name="purple_40">#8551C5</color>    
     <!-- Accent Colors -->
     <color name="accent_magenta">#D958FF</color>
-    <color name="accent_cyan">#35E8FF</color>
-    <color name="accent_gold">#FFD700</color>
-    
+    <color name="accent_cyan">#35E8FF</color>    
     <!-- Dark Theme -->
     <color name="dark_canvas">#12141A</color>
     <color name="dark_surface">#1A1C24</color>
     <color name="dark_card">#22242E</color>
     
-    <!-- Light Theme -->
-    <color name="light_background">#FFFBFE</color>
-    <color name="light_surface">#F8F5FF</color>
-    
-    <!-- VIP Colors -->
-    <color name="vip_gold">#FFD700</color>
-    <color name="vip_platinum">#E5E4E2</color>
-    <color name="vip_diamond">#B9F2FF</color>
-    
+    <!-- Light Theme -->    
+    <!-- VIP Colors -->    
     <!-- Status Colors -->
     <color name="success_green">#4CAF50</color>
     <color name="warning_orange">#FF9800</color>
-    <color name="error_red">#F44336</color>
-    <color name="info_blue">#2196F3</color>
-    
+    <color name="error_red">#F44336</color>    
     <!-- Text Colors -->
     <color name="text_primary">#FFFFFF</color>
-    <color name="text_secondary">#B3FFFFFF</color>
-    <color name="text_tertiary">#80FFFFFF</color>
-    <color name="text_on_light">#1A1C24</color>
-    
-    <!-- Currency Colors -->
-    <color name="coin_gold">#FFD700</color>
-    <color name="diamond_blue">#00BFFF</color>
-    
+    <color name="text_secondary">#B3FFFFFF</color>    
+    <!-- Currency Colors -->    
     <!-- UCrop Colors -->
     <color name="ucrop_color_active_controls_color">#8551C5</color>
     <color name="ucrop_color_inactive_controls_color">#B3FFFFFF</color>
@@ -50,4 +29,78 @@
     
     <!-- Facebook Button Colors -->
     <color name="com_facebook_button_text_color">#FFFFFF</color>
+    <color name="com_facebook_button_send_background_color">#3b5998</color>
+    <color name="com_facebook_button_send_background_color_pressed">#2d4373</color>
+    
+    <!-- Common Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTransparent">#00000000</color>
+    
+    <!-- App Colors -->
+    <color name="app_theme_color">#8551C5</color>
+    <color name="appcolor_gray">#808080</color>
+    <color name="appcolor_transparent">#00000000</color>
+    <color name="appcolor_white">#FFFFFF</color>
+    
+    <!-- Shadow Colors -->
+    <color name="ayp_drop_shadow">#80000000</color>
+    
+    <!-- Gray Colors -->
+    <color name="gray_f6f6f6">#F6F6F6</color>
+    <color name="grey_616366">#616366</color>
+    <color name="grey_c2c4cb">#C2C4CB</color>
+    <color name="grey_e5e5e5">#E5E5E5</color>
+    
+    <!-- Green Colors -->
+    <color name="green_26BE42">#26BE42</color>
+    
+    <!-- Yellow Colors -->
+    <color name="yellow_ffc000">#FFC000</color>
+    
+    <!-- Various Named Colors -->
+    <color name="color_00091c_66">#66000091C</color>
+    <color name="color_171b1b_96">#96171B1B</color>
+    <color name="color_174D42_50">#50174D42</color>
+    <color name="color_1bd9b3">#1BD9B3</color>
+    <color name="color_b28c54">#B28C54</color>
+    <color name="color_black_40">#40000000</color>
+    <color name="color_black_70">#70000000</color>
+    <color name="color_c2ccc8">#C2CCC8</color>
+    <color name="color_d4dad8">#D4DAD8</color>
+    <color name="color_d7d7d7">#D7D7D7</color>
+    <color name="color_e24545">#E24545</color>
+    <color name="color_edf2f0">#EDF2F0</color>
+    <color name="color_ef4444">#EF4444</color>
+    <color name="color_ef5f34">#EF5F34</color>
+    <color name="color_f2f5f4">#F2F5F4</color>
+    <color name="color_fecc35">#FECC35</color>
+    <color name="color_ff5529">#FF5529</color>
+    <color name="color_ff5d35">#FF5D35</color>
+    <color name="color_ffeca2">#FFECA2</color>
+    <color name="color_ffeceb">#FFECEB</color>
+    <color name="color_fff2b0_32">#32FFF2B0</color>
+    <color name="color_fffbc5">#FFFBC5</color>
+    <color name="color_white_10">#10FFFFFF</color>
+    <color name="color_white_30">#30FFFFFF</color>
+    
+    <!-- Picker View Colors -->
+    <color name="pickerview_timebtn_nor">#CCCCCC</color>
+    <color name="pickerview_timebtn_pre">#8551C5</color>
+    
+    <!-- Facebook Button Additional Colors -->
+    <color name="com_facebook_button_background_color">#1877F2</color>
+    <color name="com_facebook_button_background_color_disabled">#8551C5</color>
+    <color name="com_facebook_button_background_color_pressed">#0C63D4</color>
+    
+    <!-- Material Design Colors -->
+    <color name="design_snackbar_background_color">#323232</color>
+    <color name="primary_dark_material_dark">#000000</color>
+    
+    <!-- Tooltip Colors -->
+    <color name="tooltip_background_dark">#E0323232</color>
+    <color name="tooltip_background_light">#E0FAFAFA</color>
+    
+    <!-- Notification Colors -->
+    <color name="notification_icon_bg_color">#8551C5</color>
 </resources>

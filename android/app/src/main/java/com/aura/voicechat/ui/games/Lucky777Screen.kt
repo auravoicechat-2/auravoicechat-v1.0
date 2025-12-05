@@ -582,9 +582,9 @@ private fun Lucky777Controls(
 private fun ControlButton(
     text: String,
     onClick: () -> Unit,
+    modifier: Modifier = Modifier,
     enabled: Boolean,
-    isActive: Boolean = false,
-    modifier: Modifier = Modifier
+    isActive: Boolean = false
 ) {
     Button(
         onClick = onClick,
