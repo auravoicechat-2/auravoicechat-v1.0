@@ -1,0 +1,716 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/EventsScreen.kt</file>
+  <line>690</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.events</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/EventsScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fM&quot;, number / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/EventsScreen.kt</file>
+  <line>691</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.events</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/EventsScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fK&quot;, number / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>27</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/family/FamilyScreen.kt</file>
+  <line>743</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.family</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/family/FamilyScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fM&quot;, number / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/family/FamilyScreen.kt</file>
+  <line>744</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.family</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/family/FamilyScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fK&quot;, number / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>27</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/games/GamesScreen.kt</file>
+  <line>301</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.games</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/games/GamesScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fM&quot;, number / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/games/GamesScreen.kt</file>
+  <line>302</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.games</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/games/GamesScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fK&quot;, number / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>27</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/games/GiftWheelScreen.kt</file>
+  <line>330</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.games</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/games/GiftWheelScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fM&quot;, number / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/games/GiftWheelScreen.kt</file>
+  <line>331</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.games</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/games/GiftWheelScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fK&quot;, number / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>27</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/gifts/GiftPanel.kt</file>
+  <line>537</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.gifts</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/gifts/GiftPanel.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fM&quot;, number / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/gifts/GiftPanel.kt</file>
+  <line>538</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.gifts</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/gifts/GiftPanel.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fK&quot;, number / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>27</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/level/LevelScreen.kt</file>
+  <line>389</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.level</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/level/LevelScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fM&quot;, number / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/level/LevelScreen.kt</file>
+  <line>390</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.level</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/level/LevelScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fK&quot;, number / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>27</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/medals/MedalsScreen.kt</file>
+  <line>411</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.medals</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/medals/MedalsScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fM&quot;, number / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/medals/MedalsScreen.kt</file>
+  <line>412</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.medals</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/medals/MedalsScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fK&quot;, number / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>27</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/music/MusicPlayerScreen.kt</file>
+  <line>340</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.music</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/music/MusicPlayerScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%d:%02d&quot;, minutes, seconds)</highlighted_element>
+  <language>kotlin</language>
+  <offset>11</offset>
+  <length>42</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/profile/ProfileScreen.kt</file>
+  <line>600</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.profile</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/profile/ProfileScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;$%.1fM&quot;, amount / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>45</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/profile/ProfileScreen.kt</file>
+  <line>601</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.profile</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/profile/ProfileScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;$%.1fK&quot;, amount / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>27</offset>
+  <length>41</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/profile/ProfileScreen.kt</file>
+  <line>890</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.profile</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/profile/ProfileScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fM&quot;, number / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/profile/ProfileScreen.kt</file>
+  <line>891</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.profile</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/profile/ProfileScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fK&quot;, number / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>27</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/ranking/RankingScreen.kt</file>
+  <line>421</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.ranking</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/ranking/RankingScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fM&quot;, number / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/ranking/RankingScreen.kt</file>
+  <line>422</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.ranking</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/ranking/RankingScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fK&quot;, number / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>27</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/referral/ReferralScreen.kt</file>
+  <line>331</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.referral</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/referral/ReferralScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.2f&quot;, uiState.totalCashEarned)</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>46</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/referral/ReferralScreen.kt</file>
+  <line>354</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.referral</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/referral/ReferralScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.2f&quot;, uiState.availableCash)</highlighted_element>
+  <language>kotlin</language>
+  <offset>43</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/referral/ReferralScreen.kt</file>
+  <line>375</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.referral</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/referral/ReferralScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.2f&quot;, uiState.minWithdrawCash)</highlighted_element>
+  <language>kotlin</language>
+  <offset>49</offset>
+  <length>46</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/referral/ReferralScreen.kt</file>
+  <line>558</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.referral</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/referral/ReferralScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fM&quot;, number / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/referral/ReferralScreen.kt</file>
+  <line>559</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.referral</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/referral/ReferralScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fK&quot;, number / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>27</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/RoomScreen.kt</file>
+  <line>1441</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/RoomScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fM&quot;, number / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/RoomScreen.kt</file>
+  <line>1442</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/RoomScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fK&quot;, number / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>27</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/cinema/VideoPlayer.kt</file>
+  <line>236</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.cinema</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/cinema/VideoPlayer.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%d:%02d:%02d&quot;, hours, minutes, seconds)</highlighted_element>
+  <language>kotlin</language>
+  <offset>8</offset>
+  <length>54</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/cinema/VideoPlayer.kt</file>
+  <line>238</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.cinema</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/cinema/VideoPlayer.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%02d:%02d&quot;, minutes, seconds)</highlighted_element>
+  <language>kotlin</language>
+  <offset>8</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/jar/JarSystem.kt</file>
+  <line>399</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.jar</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/jar/JarSystem.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fM&quot;, number / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/jar/JarSystem.kt</file>
+  <line>400</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.jar</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/jar/JarSystem.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fK&quot;, number / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>27</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/rocket/RocketSystem.kt</file>
+  <line>413</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.rocket</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/rocket/RocketSystem.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fM&quot;, number / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/rocket/RocketSystem.kt</file>
+  <line>414</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.rocket</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/rocket/RocketSystem.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fK&quot;, number / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>27</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/store/StoreScreen.kt</file>
+  <line>378</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.store</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/store/StoreScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fM&quot;, number / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/store/StoreScreen.kt</file>
+  <line>379</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.store</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/store/StoreScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fK&quot;, number / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>27</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt</file>
+  <line>14</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.theme</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.0fB&quot;, number / 1_000_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>48</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt</file>
+  <line>15</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.theme</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.0fM&quot;, number / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt</file>
+  <line>16</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.theme</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.0fK&quot;, number / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>27</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt</file>
+  <line>26</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.theme</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fB&quot;, number / 1_000_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>48</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt</file>
+  <line>27</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.theme</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fM&quot;, number / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt</file>
+  <line>28</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.theme</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fK&quot;, number / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>27</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt</file>
+  <line>38</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.theme</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1f&quot;, coins / 1_000_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>37</offset>
+  <length>46</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt</file>
+  <line>39</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.theme</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1f&quot;, coins / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>33</offset>
+  <length>42</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt</file>
+  <line>40</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.theme</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1f&quot;, coins / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>29</offset>
+  <length>38</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt</file>
+  <line>51</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.theme</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/theme/Formatters.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%02d:%02d&quot;, minutes, secs)</highlighted_element>
+  <language>kotlin</language>
+  <offset>11</offset>
+  <length>41</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/vip/VipPurchaseDialog.kt</file>
+  <line>332</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.vip</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/vip/VipPurchaseDialog.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.2f&quot;, package_.price / package_.days)</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>53</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/vip/VipScreen.kt</file>
+  <line>572</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.vip</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/vip/VipScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fM&quot;, number / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/vip/VipScreen.kt</file>
+  <line>573</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.vip</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/vip/VipScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fK&quot;, number / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>27</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/wallet/WalletScreen.kt</file>
+  <line>472</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.wallet</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/wallet/WalletScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fM&quot;, balance / 1_000_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>32</offset>
+  <length>45</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/wallet/WalletScreen.kt</file>
+  <line>473</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.wallet</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/wallet/WalletScreen.kt" />
+  <problem_class id="AndroidLintDefaultLocale" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Implied default locale in case conversion</problem_class>
+  <hints />
+  <description>&lt;html&gt;Implicitly using the default locale is a common source of bugs: Use &lt;code&gt;String.format(Locale, ...)&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>String.format(&quot;%.1fK&quot;, balance / 1_000.0)</highlighted_element>
+  <language>kotlin</language>
+  <offset>28</offset>
+  <length>41</length>
+</problem>
+</problems>

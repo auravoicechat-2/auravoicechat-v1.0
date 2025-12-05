@@ -1,0 +1,16 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/games/WebGameContainer.kt</file>
+  <line>69</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.games</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/games/WebGameContainer.kt" />
+  <problem_class id="AndroidLintSetJavaScriptEnabled" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using setJavaScriptEnabled</problem_class>
+  <hints />
+  <description>&lt;html&gt;Using &lt;code&gt;setJavaScriptEnabled&lt;/code&gt; can introduce XSS vulnerabilities into your application, review carefully&lt;/html&gt;</description>
+  <highlighted_element>javaScriptEnabled = true</highlighted_element>
+  <language>kotlin</language>
+  <offset>28</offset>
+  <length>24</length>
+</problem>
+</problems>

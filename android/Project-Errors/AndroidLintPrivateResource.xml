@@ -1,0 +1,184 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/design_fab_background.xml</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/design_fab_background.xml" />
+  <problem_class id="AndroidLintPrivateResource" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using private resources</problem_class>
+  <hints />
+  <description>&lt;html&gt;Overriding &lt;code&gt;@drawable/design_fab_background&lt;/code&gt; which is marked as private in com.google.android.material:material:1.12.0. If deliberate, use tools:override=&quot;true&quot;, otherwise pick a different name.&lt;/html&gt;</description>
+  <highlighted_element>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt; &lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/andr...</highlighted_element>
+  <language>XML</language>
+  <offset>0</offset>
+  <length>185</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/design_snackbar_background.xml</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/design_snackbar_background.xml" />
+  <problem_class id="AndroidLintPrivateResource" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using private resources</problem_class>
+  <hints />
+  <description>&lt;html&gt;Overriding &lt;code&gt;@drawable/design_snackbar_background&lt;/code&gt; which is marked as private in com.google.android.material:material:1.12.0. If deliberate, use tools:override=&quot;true&quot;, otherwise pick a different name.&lt;/html&gt;</description>
+  <highlighted_element>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt; &lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/andr...</highlighted_element>
+  <language>XML</language>
+  <offset>0</offset>
+  <length>289</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/design_snackbar_background.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/design_snackbar_background.xml" />
+  <problem_class id="AndroidLintPrivateResource" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using private resources</problem_class>
+  <hints />
+  <description>&lt;html&gt;The resource &lt;code&gt;@dimen/design_snackbar_background_corner_radius&lt;/code&gt; is marked as private in com.google.android.material:material:1.12.0&lt;/html&gt;</description>
+  <highlighted_element>@dimen/design_snackbar_background_corner_radius</highlighted_element>
+  <language>XML</language>
+  <offset>29</offset>
+  <length>47</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/design_snackbar_background.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/design_snackbar_background.xml" />
+  <problem_class id="AndroidLintPrivateResource" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using private resources</problem_class>
+  <hints />
+  <description>&lt;html&gt;The resource &lt;code&gt;@color/design_snackbar_background_color&lt;/code&gt; is marked as private in com.google.android.material:material:1.12.0&lt;/html&gt;</description>
+  <highlighted_element>@color/design_snackbar_background_color</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>39</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ic_mtrl_chip_checked_black.xml</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_mtrl_chip_checked_black.xml" />
+  <problem_class id="AndroidLintPrivateResource" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using private resources</problem_class>
+  <hints />
+  <description>&lt;html&gt;Overriding &lt;code&gt;@drawable/ic_mtrl_chip_checked_black&lt;/code&gt; which is marked as private in com.google.android.material:material:1.12.0. If deliberate, use tools:override=&quot;true&quot;, otherwise pick a different name.&lt;/html&gt;</description>
+  <highlighted_element>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt; &lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/and...</highlighted_element>
+  <language>XML</language>
+  <offset>0</offset>
+  <length>357</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ic_mtrl_chip_checked_circle.xml</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_mtrl_chip_checked_circle.xml" />
+  <problem_class id="AndroidLintPrivateResource" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using private resources</problem_class>
+  <hints />
+  <description>&lt;html&gt;Overriding &lt;code&gt;@drawable/ic_mtrl_chip_checked_circle&lt;/code&gt; which is marked as private in com.google.android.material:material:1.12.0. If deliberate, use tools:override=&quot;true&quot;, otherwise pick a different name.&lt;/html&gt;</description>
+  <highlighted_element>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt; &lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/and...</highlighted_element>
+  <language>XML</language>
+  <offset>0</offset>
+  <length>677</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ic_mtrl_chip_close_circle.xml</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_mtrl_chip_close_circle.xml" />
+  <problem_class id="AndroidLintPrivateResource" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using private resources</problem_class>
+  <hints />
+  <description>&lt;html&gt;Overriding &lt;code&gt;@drawable/ic_mtrl_chip_close_circle&lt;/code&gt; which is marked as private in com.google.android.material:material:1.12.0. If deliberate, use tools:override=&quot;true&quot;, otherwise pick a different name.&lt;/html&gt;</description>
+  <highlighted_element>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt; &lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/and...</highlighted_element>
+  <language>XML</language>
+  <offset>0</offset>
+  <length>553</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/mtrl_snackbar_background.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/mtrl_snackbar_background.xml" />
+  <problem_class id="AndroidLintPrivateResource" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using private resources</problem_class>
+  <hints />
+  <description>&lt;html&gt;The resource &lt;code&gt;@dimen/mtrl_snackbar_background_corner_radius&lt;/code&gt; is marked as private in com.google.android.material:material:1.12.0&lt;/html&gt;</description>
+  <highlighted_element>@dimen/mtrl_snackbar_background_corner_radius</highlighted_element>
+  <language>XML</language>
+  <offset>29</offset>
+  <length>45</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/mtrl_snackbar_background.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/mtrl_snackbar_background.xml" />
+  <problem_class id="AndroidLintPrivateResource" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using private resources</problem_class>
+  <hints />
+  <description>&lt;html&gt;The resource &lt;code&gt;@color/design_snackbar_background_color&lt;/code&gt; is marked as private in com.google.android.material:material:1.12.0&lt;/html&gt;</description>
+  <highlighted_element>@color/design_snackbar_background_color</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>39</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/mtrl_tabs_default_indicator.xml</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/mtrl_tabs_default_indicator.xml" />
+  <problem_class id="AndroidLintPrivateResource" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using private resources</problem_class>
+  <hints />
+  <description>&lt;html&gt;Overriding &lt;code&gt;@drawable/mtrl_tabs_default_indicator&lt;/code&gt; which is marked as private in com.google.android.material:material:1.12.0. If deliberate, use tools:override=&quot;true&quot;, otherwise pick a different name.&lt;/html&gt;</description>
+  <highlighted_element>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt; &lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/a...</highlighted_element>
+  <language>XML</language>
+  <offset>0</offset>
+  <length>301</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/navigation_empty_icon.xml</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/navigation_empty_icon.xml" />
+  <problem_class id="AndroidLintPrivateResource" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using private resources</problem_class>
+  <hints />
+  <description>&lt;html&gt;Overriding &lt;code&gt;@drawable/navigation_empty_icon&lt;/code&gt; which is marked as private in com.google.android.material:material:1.12.0. If deliberate, use tools:override=&quot;true&quot;, otherwise pick a different name.&lt;/html&gt;</description>
+  <highlighted_element>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt; &lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/andr...</highlighted_element>
+  <language>XML</language>
+  <offset>0</offset>
+  <length>327</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/navigation_empty_icon.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/navigation_empty_icon.xml" />
+  <problem_class id="AndroidLintPrivateResource" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using private resources</problem_class>
+  <hints />
+  <description>&lt;html&gt;The resource &lt;code&gt;@dimen/design_navigation_icon_size&lt;/code&gt; is marked as private in com.google.android.material:material:1.12.0&lt;/html&gt;</description>
+  <highlighted_element>@dimen/design_navigation_icon_size</highlighted_element>
+  <language>XML</language>
+  <offset>24</offset>
+  <length>34</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/navigation_empty_icon.xml</file>
+  <line>6</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/navigation_empty_icon.xml" />
+  <problem_class id="AndroidLintPrivateResource" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using private resources</problem_class>
+  <hints />
+  <description>&lt;html&gt;The resource &lt;code&gt;@dimen/design_navigation_icon_size&lt;/code&gt; is marked as private in com.google.android.material:material:1.12.0&lt;/html&gt;</description>
+  <highlighted_element>@dimen/design_navigation_icon_size</highlighted_element>
+  <language>XML</language>
+  <offset>23</offset>
+  <length>34</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/test_level_drawable.xml</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/test_level_drawable.xml" />
+  <problem_class id="AndroidLintPrivateResource" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using private resources</problem_class>
+  <hints />
+  <description>&lt;html&gt;Overriding &lt;code&gt;@drawable/test_level_drawable&lt;/code&gt; which is marked as private in androidx.appcompat:appcompat:1.7.0. If deliberate, use tools:override=&quot;true&quot;, otherwise pick a different name.&lt;/html&gt;</description>
+  <highlighted_element>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt; &lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/andr...</highlighted_element>
+  <language>XML</language>
+  <offset>0</offset>
+  <length>214</length>
+</problem>
+</problems>

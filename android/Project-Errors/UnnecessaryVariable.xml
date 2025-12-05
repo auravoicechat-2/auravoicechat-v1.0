@@ -1,0 +1,15 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/LuckyDrawScreen.kt</file>
+  <line>235</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.events</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.events.LuckyDrawScreenKt void LuckyWheel(boolean isSpinning, java.util.List&lt;com.aura.voicechat.ui.events.Prize&gt; prizes)" />
+  <problem_class id="UnnecessaryVariable" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Unnecessary local variable</problem_class>
+  <description>Variable is same as 'segmentAngle' and can be inlined</description>
+  <highlighted_element>sweepAngle</highlighted_element>
+  <language>kotlin</language>
+  <offset>20</offset>
+  <length>10</length>
+</problem>
+</problems>

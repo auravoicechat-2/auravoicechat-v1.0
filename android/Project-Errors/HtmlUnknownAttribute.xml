@@ -1,0 +1,98 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/assets/fe-game-crazy-fruit-yr/index.html</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/assets/fe-game-crazy-fruit-yr/index.html" />
+  <problem_class id="HtmlUnknownAttribute" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown attribute</problem_class>
+  <description>Attribute cc_exact_fit_screen is not allowed here</description>
+  <highlighted_element>cc_exact_fit_screen</highlighted_element>
+  <language>XML</language>
+  <offset>1729</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/assets/fe-game-greedy-yr/index.html</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/assets/fe-game-greedy-yr/index.html" />
+  <problem_class id="HtmlUnknownAttribute" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown attribute</problem_class>
+  <description>Attribute cc_exact_fit_screen is not allowed here</description>
+  <highlighted_element>cc_exact_fit_screen</highlighted_element>
+  <language>XML</language>
+  <offset>1724</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/assets/fe-game-lucky777-yr/index.html</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/assets/fe-game-lucky777-yr/index.html" />
+  <problem_class id="HtmlUnknownAttribute" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown attribute</problem_class>
+  <description>Attribute cc_exact_fit_screen is not allowed here</description>
+  <highlighted_element>cc_exact_fit_screen</highlighted_element>
+  <language>XML</language>
+  <offset>1726</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/assets/fe-game-super77-yr/index.html</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/assets/fe-game-super77-yr/index.html" />
+  <problem_class id="HtmlUnknownAttribute" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown attribute</problem_class>
+  <description>Attribute cc_exact_fit_screen is not allowed here</description>
+  <highlighted_element>cc_exact_fit_screen</highlighted_element>
+  <language>XML</language>
+  <offset>1725</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/assets/games/crazyfruit/fe-game-crazy-fruit-yr/index.html</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/assets/games/crazyfruit/fe-game-crazy-fruit-yr/index.html" />
+  <problem_class id="HtmlUnknownAttribute" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown attribute</problem_class>
+  <description>Attribute cc_exact_fit_screen is not allowed here</description>
+  <highlighted_element>cc_exact_fit_screen</highlighted_element>
+  <language>XML</language>
+  <offset>1729</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/assets/games/greedy/fe-game-greedy-yr/index.html</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/assets/games/greedy/fe-game-greedy-yr/index.html" />
+  <problem_class id="HtmlUnknownAttribute" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown attribute</problem_class>
+  <description>Attribute cc_exact_fit_screen is not allowed here</description>
+  <highlighted_element>cc_exact_fit_screen</highlighted_element>
+  <language>XML</language>
+  <offset>1724</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/assets/games/lucky777/fe-game-lucky777-yr/index.html</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/assets/games/lucky777/fe-game-lucky777-yr/index.html" />
+  <problem_class id="HtmlUnknownAttribute" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown attribute</problem_class>
+  <description>Attribute cc_exact_fit_screen is not allowed here</description>
+  <highlighted_element>cc_exact_fit_screen</highlighted_element>
+  <language>XML</language>
+  <offset>1726</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/assets/games/super77/fe-game-super77-yr/index.html</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/assets/games/super77/fe-game-super77-yr/index.html" />
+  <problem_class id="HtmlUnknownAttribute" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown attribute</problem_class>
+  <description>Attribute cc_exact_fit_screen is not allowed here</description>
+  <highlighted_element>cc_exact_fit_screen</highlighted_element>
+  <language>XML</language>
+  <offset>1725</offset>
+  <length>19</length>
+</problem>
+</problems>

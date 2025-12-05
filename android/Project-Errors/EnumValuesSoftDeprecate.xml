@@ -1,0 +1,41 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/home/HomeScreenWeek1.kt</file>
+  <line>66</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.home</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.home.HomeScreenWeek1Kt void HomeScreen(kotlin.jvm.functions.Function1&lt;? super java.lang.String,kotlin.Unit&gt; onNavigateToRoom, kotlin.jvm.functions.Function0&lt;kotlin.Unit&gt; onNavigateToMessages, kotlin.jvm.functions.Function0&lt;kotlin.Unit&gt; onNavigateToGames, kotlin.jvm.functions.Function0&lt;kotlin.Unit&gt; onNavigateToProfile, kotlin.jvm.functions.Function0&lt;kotlin.Unit&gt; onNavigateToSearch, com.aura.voicechat.ui.home.HomeViewModel viewModel)" />
+  <problem_class id="EnumValuesSoftDeprecate" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'Enum.values()' is recommended to be replaced by 'Enum.entries' since 1.9</problem_class>
+  <description>'Enum.values()' is recommended to be replaced by 'Enum.entries' since 1.9</description>
+  <highlighted_element>values()</highlighted_element>
+  <language>kotlin</language>
+  <offset>30</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/home/PopularTab.kt</file>
+  <line>37</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.home</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.home.PopularTabKt void PopularTab(java.util.List&lt;com.aura.voicechat.domain.model.RoomCard&gt; rooms, com.aura.voicechat.domain.model.RoomCategory selectedCategory, kotlin.jvm.functions.Function1&lt;? super com.aura.voicechat.domain.model.RoomCategory,kotlin.Unit&gt; onCategorySelected, kotlin.jvm.functions.Function1&lt;? super java.lang.String,kotlin.Unit&gt; onRoomClick, kotlin.jvm.functions.Function0&lt;kotlin.Unit&gt; onRefresh, boolean isRefreshing, androidx.compose.ui.Modifier modifier)" />
+  <problem_class id="EnumValuesSoftDeprecate" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'Enum.values()' is recommended to be replaced by 'Enum.entries' since 1.9</problem_class>
+  <description>'Enum.values()' is recommended to be replaced by 'Enum.entries' since 1.9</description>
+  <highlighted_element>values()</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/live/GoLiveScreen.kt</file>
+  <line>100</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.live</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.live.GoLiveScreenKt void GoLiveScreen(kotlin.jvm.functions.Function0&lt;kotlin.Unit&gt; onNavigateBack, kotlin.jvm.functions.Function1&lt;? super java.lang.String,kotlin.Unit&gt; onStreamStarted, com.aura.voicechat.ui.live.LiveStreamViewModel viewModel)" />
+  <problem_class id="EnumValuesSoftDeprecate" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'Enum.values()' is recommended to be replaced by 'Enum.entries' since 1.9</problem_class>
+  <description>'Enum.values()' is recommended to be replaced by 'Enum.entries' since 1.9</description>
+  <highlighted_element>values()</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>8</length>
+</problem>
+</problems>

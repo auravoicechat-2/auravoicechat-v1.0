@@ -1,0 +1,44 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/config/OwnerConfig.kt</file>
+  <line>125</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.config</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.config.OwnerConfig java.lang.String getOwnerDisplayName()" />
+  <problem_class id="SameReturnValue" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Method always returns the same value</problem_class>
+  <hints />
+  <description>Method &lt;code&gt;getOwnerDisplayName()&lt;/code&gt; always returns &lt;code&gt;Aura Admin&lt;/code&gt;</description>
+  <highlighted_element>getOwnerDisplayName</highlighted_element>
+  <language>kotlin</language>
+  <offset>8</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/config/OwnerConfig.kt</file>
+  <line>132</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.config</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.config.OwnerConfig java.lang.String getOwnerBadge()" />
+  <problem_class id="SameReturnValue" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Method always returns the same value</problem_class>
+  <hints />
+  <description>Method &lt;code&gt;getOwnerBadge()&lt;/code&gt; always returns &lt;code&gt;👑&lt;/code&gt;</description>
+  <highlighted_element>getOwnerBadge</highlighted_element>
+  <language>kotlin</language>
+  <offset>8</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/RoomViewModel.kt</file>
+  <line>754</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.RoomViewModel boolean isAdmin()" />
+  <problem_class id="SameReturnValue" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Method always returns the same value</problem_class>
+  <hints />
+  <description>Method &lt;code&gt;isAdmin()&lt;/code&gt; always returns &lt;code&gt;false&lt;/code&gt;</description>
+  <highlighted_element>isAdmin</highlighted_element>
+  <language>kotlin</language>
+  <offset>8</offset>
+  <length>7</length>
+</problem>
+</problems>

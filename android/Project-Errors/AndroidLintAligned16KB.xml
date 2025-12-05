@@ -1,0 +1,15 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/gradle/libs.versions.toml</file>
+  <line>221</line>
+  <module>AuraVoiceChat</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/gradle/libs.versions.toml" />
+  <problem_class id="AndroidLintAligned16KB" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Native library dependency not 16 KB aligned</problem_class>
+  <hints />
+  <description>&lt;html&gt;The native library &lt;code&gt;arm64-v8a/libagora-fdkaac.so&lt;/code&gt; (from &lt;code&gt;io.agora.rtc:full-sdk:4.2.6&lt;/code&gt;) is not 16 KB aligned&lt;/html&gt;</description>
+  <highlighted_element>group = &quot;io.agora.rtc&quot;, name = &quot;full-sdk&quot;, version.ref = &quot;agoraRtc&quot; }</highlighted_element>
+  <language>TOML</language>
+  <offset>22</offset>
+  <length>70</length>
+</problem>
+</problems>
