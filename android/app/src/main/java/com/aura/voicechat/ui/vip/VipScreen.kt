@@ -545,7 +545,7 @@ private fun PurchaseSection(
 }
 
 // Data classes
-data class VipBenefit(
+private data class VipBenefit(
     val name: String,
     val description: String
 )
@@ -556,7 +556,7 @@ data class VipExclusiveItemData(
     val type: String
 )
 
-data class VipPackage(
+private data class VipPackage(
     val id: String,
     val name: String,
     val description: String,

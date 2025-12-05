@@ -231,7 +231,7 @@ fun getVipColor(tier: Int): Color = when (tier) {
     else -> PurplePrimary
 }
 
-data class VipBenefit(
+private data class VipBenefit(
     val icon: ImageVector,
     val title: String,
     val description: String,

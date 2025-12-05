@@ -169,3 +169,19 @@ data class VipUiState(
     val message: String? = null,
     val error: String? = null
 )
+
+data class VipPackage(
+    val id: String,
+    val name: String,
+    val description: String,
+    val price: Double,
+    val originalPrice: Double,
+    val diamonds: Long,
+    val durationDays: Int,
+    val isBestValue: Boolean = false
+)
+
+data class VipBenefit(
+    val name: String,
+    val description: String
+)
