@@ -23,6 +23,10 @@ val Purple20 = Color(0xFF6329AF)
 val AccentMagenta = Color(0xFFD958FF)
 val AccentCyan = Color(0xFF35E8FF)
 val AccentGold = Color(0xFFFFD700)
+val AccentGreen = Color(0xFF4CAF50) // For success states
+
+// Primary Color Aliases (for backward compatibility)
+val PurplePrimary = Purple80
 
 // Dark Theme
 val DarkCanvas = Color(0xFF12141A)
