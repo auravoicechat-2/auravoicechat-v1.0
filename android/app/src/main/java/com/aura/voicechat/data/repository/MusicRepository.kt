@@ -5,7 +5,6 @@ import com.aura.voicechat.data.local.dao.PlaylistDao
 import com.aura.voicechat.data.local.dao.PlaylistSongDao
 import com.aura.voicechat.data.local.entity.SongEntity
 import com.aura.voicechat.data.local.entity.PlaylistEntity
-import com.aura.voicechat.data.local.entity.PlaylistSongEntity
 import com.aura.voicechat.data.model.Song
 import com.aura.voicechat.data.model.Playlist
 import com.aura.voicechat.data.model.CreatePlaylistRequest

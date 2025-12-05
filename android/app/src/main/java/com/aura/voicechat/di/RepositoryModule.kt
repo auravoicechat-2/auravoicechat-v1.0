@@ -4,7 +4,6 @@ import com.aura.voicechat.data.repository.*
 import com.aura.voicechat.domain.repository.*
 import dagger.Binds
 import dagger.Module
-import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton

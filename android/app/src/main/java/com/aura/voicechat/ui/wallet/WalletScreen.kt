@@ -17,7 +17,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.aura.voicechat.domain.model.Currency
 import com.aura.voicechat.domain.model.Transaction
 import com.aura.voicechat.domain.model.TransactionType
 import com.aura.voicechat.ui.theme.*

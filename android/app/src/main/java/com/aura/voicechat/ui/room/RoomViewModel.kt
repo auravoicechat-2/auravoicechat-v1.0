@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.aura.voicechat.data.model.*
 import com.aura.voicechat.data.remote.ApiService
-import com.aura.voicechat.data.repository.ModerationRepository
 import com.aura.voicechat.domain.model.Room
 import com.aura.voicechat.domain.model.RoomMode
 import com.aura.voicechat.domain.model.RoomType

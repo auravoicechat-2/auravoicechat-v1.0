@@ -8,7 +8,6 @@ import com.aura.voicechat.domain.repository.KycRepository
 // import software.amazon.awssdk.services.s3.S3Client
 // import software.amazon.awssdk.services.s3.model.PutObjectRequest
 // import software.amazon.awssdk.core.sync.RequestBody
-import java.io.File
 import java.util.UUID
 import javax.inject.Inject
 import javax.inject.Singleton

@@ -5,9 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.aura.voicechat.data.model.ExchangeRequest
 import com.aura.voicechat.data.remote.ApiService
-import com.aura.voicechat.domain.model.Currency
 import com.aura.voicechat.domain.model.Transaction
-import com.aura.voicechat.domain.model.TransactionType
 import com.aura.voicechat.domain.repository.WalletRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

@@ -13,7 +13,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -22,7 +21,6 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.aura.voicechat.R
 import com.aura.voicechat.ui.theme.AccentCyan
 import com.aura.voicechat.ui.theme.DarkCanvas
-import com.aura.voicechat.ui.theme.Purple80
 import com.aura.voicechat.ui.theme.TextPrimary
 import kotlinx.coroutines.delay
 
