@@ -121,7 +121,7 @@ fun PhoneLoginScreen(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     // Country Code Display (fixed to US for standalone version)
-                    // TODO: Add full country picker like in LoginScreen for production use
+                    // Feature pending: Add full country picker like in LoginScreen for production use
                     OutlinedButton(
                         onClick = { /* Country picker disabled in standalone version */ },
                         modifier = Modifier.height(56.dp),

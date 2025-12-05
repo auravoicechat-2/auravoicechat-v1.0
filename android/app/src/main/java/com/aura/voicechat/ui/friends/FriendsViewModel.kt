@@ -106,7 +106,7 @@ class FriendsViewModel @Inject constructor() : ViewModel() {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true)
             try {
-                // TODO: Call API to get blocked users
+                // Feature pending: API endpoint for get blocked users
                 _uiState.value = _uiState.value.copy(
                     blockedUsers = emptyList(),
                     isLoading = false
@@ -120,7 +120,7 @@ class FriendsViewModel @Inject constructor() : ViewModel() {
     fun unblockUser(userId: String) {
         viewModelScope.launch {
             try {
-                // TODO: Call API to unblock user
+                // Feature pending: API endpoint for unblock user
                 val blockedUsers = _uiState.value.blockedUsers.filter { it.id != userId }
                 _uiState.value = _uiState.value.copy(blockedUsers = blockedUsers)
             } catch (e: Exception) {

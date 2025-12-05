@@ -15,7 +15,7 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class TreasureBoxViewModel @Inject constructor(
-    // TODO: Inject repository when created
+    // Feature pending: Inject repository when created
 ) : ViewModel() {
     
     private val _uiState = MutableStateFlow(TreasureBoxUiState())
@@ -27,7 +27,7 @@ class TreasureBoxViewModel @Inject constructor(
     
     private fun loadBoxes() {
         viewModelScope.launch {
-            // TODO: Load from API
+            // Feature pending: API endpoint not yet implemented
             val mockBoxes = listOf(
                 TreasureBox(
                     id = "box_1",
@@ -67,7 +67,7 @@ class TreasureBoxViewModel @Inject constructor(
     
     fun openBox(boxId: String) {
         viewModelScope.launch {
-            // TODO: Call API to open box
+            // Feature pending: API endpoint for open box
             val reward = TreasureReward(
                 boxName = "Silver Treasure",
                 amount = (10..100).random(),

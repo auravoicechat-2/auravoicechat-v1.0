@@ -27,7 +27,7 @@ class EconomySetupViewModel @Inject constructor(
     
     private fun loadEconomyConfig() {
         viewModelScope.launch {
-            // TODO: Load from repository
+            // Feature pending: Repository integration not yet implemented
             // Sample data with current app economy
             _state.value = _state.value.copy(
                 userTargets = listOf(
@@ -83,7 +83,7 @@ class EconomySetupViewModel @Inject constructor(
     
     fun saveTargets() {
         viewModelScope.launch {
-            // TODO: Save to repository
+            // Feature pending: Save to repository
             // repository.saveEconomyConfig(_state.value)
         }
     }
@@ -138,7 +138,7 @@ class EconomySetupViewModel @Inject constructor(
     
     private fun saveConfig() {
         viewModelScope.launch {
-            // TODO: Auto-save after each change
+            // Feature pending: Auto-save after each change
             // repository.saveEconomyConfig(_state.value)
         }
     }

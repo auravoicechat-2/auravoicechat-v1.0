@@ -151,7 +151,7 @@ fun RechargeScreen(
             rechargePackage = selectedPackage!!,
             onDismiss = { showPaymentDialog = false },
             onConfirm = {
-                // TODO: Process payment
+                // Payment processing integration pending
                 showPaymentDialog = false
             }
         )

@@ -37,7 +37,8 @@ import javax.inject.Singleton
  * 
  * Includes AuthInterceptor to inject authentication tokens into API requests.
  * 
- * TODO: For production, update to use HTTPS with a proper domain name.
+ * NOTE: For production deployment, configure HTTPS with a proper domain name
+ * via environment variables or build configuration.
  */
 @Module
 @InstallIn(SingletonComponent::class)

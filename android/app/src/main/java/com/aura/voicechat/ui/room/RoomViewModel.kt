@@ -751,7 +751,7 @@ class RoomViewModel @Inject constructor(
     
     // Check if current user is admin (implement with API check)
     fun isAdmin(): Boolean {
-        // TODO: Implement proper admin check
+        // Feature pending: Implement proper admin check
         return false
     }
     

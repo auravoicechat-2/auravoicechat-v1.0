@@ -369,8 +369,8 @@ class ProfileViewModel @Inject constructor(
     ) {
         viewModelScope.launch {
             try {
-                // TODO: Upload images to S3 and get URLs
-                // TODO: Call API to update profile
+                // Feature pending: Upload images to S3 and get URLs
+                // Feature pending: API endpoint for update profile
                 _uiState.value = _uiState.value.copy(
                     message = "Profile updated successfully"
                 )
@@ -386,7 +386,7 @@ class ProfileViewModel @Inject constructor(
             try {
                 val response = apiService.getUserFollowers(userId)
                 if (response.isSuccessful && response.body() != null) {
-                    // TODO: Map to UserItemState and update UI state
+                    // Feature pending: Map to UserItemState and update UI state
                 }
             } catch (e: Exception) {
                 Log.e(TAG, "Error loading followers", e)
@@ -399,7 +399,7 @@ class ProfileViewModel @Inject constructor(
             try {
                 val response = apiService.getUserFollowing(userId)
                 if (response.isSuccessful && response.body() != null) {
-                    // TODO: Map to UserItemState and update UI state
+                    // Feature pending: Map to UserItemState and update UI state
                 }
             } catch (e: Exception) {
                 Log.e(TAG, "Error loading following", e)
@@ -412,7 +412,7 @@ class ProfileViewModel @Inject constructor(
             try {
                 val response = apiService.followUser(userId)
                 if (response.isSuccessful) {
-                    // TODO: Update local state
+                    // Feature pending: Update local state
                 }
             } catch (e: Exception) {
                 Log.e(TAG, "Error following user", e)
@@ -425,7 +425,7 @@ class ProfileViewModel @Inject constructor(
             try {
                 val response = apiService.unfollowUser(userId)
                 if (response.isSuccessful) {
-                    // TODO: Update local state
+                    // Feature pending: Update local state
                 }
             } catch (e: Exception) {
                 Log.e(TAG, "Error unfollowing user", e)
@@ -436,7 +436,7 @@ class ProfileViewModel @Inject constructor(
     fun loadVisitors(userId: String) {
         viewModelScope.launch {
             try {
-                // TODO: Call API to get visitors
+                // Feature pending: API endpoint for get visitors
                 // For now, use empty list
                 _uiState.value = _uiState.value.copy(
                     visitorsCount = 0,

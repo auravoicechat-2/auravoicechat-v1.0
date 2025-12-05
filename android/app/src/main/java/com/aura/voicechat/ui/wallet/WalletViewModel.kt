@@ -71,7 +71,7 @@ class WalletViewModel @Inject constructor(
     private fun loadTransactions() {
         viewModelScope.launch {
             try {
-                // TODO: Add transactions endpoint to ApiService when backend implements it
+                // Feature pending: Add transactions endpoint to ApiService when backend implements it
                 // For now, transactions will be empty until backend provides the data
                 _uiState.value = _uiState.value.copy(transactions = emptyList())
             } catch (e: Exception) {

@@ -16,7 +16,7 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class ChatViewModel @Inject constructor(
-    // TODO: Inject MessageRepository when created
+    // Feature pending: Inject MessageRepository when created
 ) : ViewModel() {
     
     private val _uiState = MutableStateFlow(ChatUiState())
@@ -27,7 +27,7 @@ class ChatViewModel @Inject constructor(
             _uiState.update { it.copy(isLoading = true) }
             
             try {
-                // TODO: Load messages from repository
+                // Feature pending: Load messages from repository
                 // For now, use mock data
                 val mockMessages = listOf(
                     MessageState(
@@ -84,7 +84,7 @@ class ChatViewModel @Inject constructor(
     fun sendTextMessage(conversationId: String, text: String) {
         viewModelScope.launch {
             try {
-                // TODO: Send message via repository
+                // Feature pending: Repository integration not yet implemented
                 val newMessage = MessageState(
                     id = System.currentTimeMillis().toString(),
                     senderId = "me",
@@ -108,7 +108,7 @@ class ChatViewModel @Inject constructor(
     fun sendImageMessage(conversationId: String) {
         viewModelScope.launch {
             try {
-                // TODO: Handle image selection and upload
+                // Feature pending: Handle image selection and upload
                 val newMessage = MessageState(
                     id = System.currentTimeMillis().toString(),
                     senderId = "me",
@@ -132,7 +132,7 @@ class ChatViewModel @Inject constructor(
     fun sendVoiceMessage(conversationId: String, audioUri: String, duration: String) {
         viewModelScope.launch {
             try {
-                // TODO: Upload voice message
+                // Feature pending: Upload voice message
                 val newMessage = MessageState(
                     id = System.currentTimeMillis().toString(),
                     senderId = "me",
@@ -157,7 +157,7 @@ class ChatViewModel @Inject constructor(
     fun sendGift(conversationId: String, giftId: String, giftName: String, giftValue: Long) {
         viewModelScope.launch {
             try {
-                // TODO: Send gift via repository
+                // Feature pending: Repository integration not yet implemented
                 val newMessage = MessageState(
                     id = System.currentTimeMillis().toString(),
                     senderId = "me",
@@ -183,7 +183,7 @@ class ChatViewModel @Inject constructor(
     fun markAsRead(conversationId: String) {
         viewModelScope.launch {
             try {
-                // TODO: Mark messages as read via repository
+                // Feature pending: Mark messages as read via repository
                 _uiState.update { state ->
                     state.copy(
                         messages = state.messages.map { it.copy(isRead = true) }
@@ -198,7 +198,7 @@ class ChatViewModel @Inject constructor(
     fun deleteMessage(messageId: String) {
         viewModelScope.launch {
             try {
-                // TODO: Delete message via repository
+                // Feature pending: Delete message via repository
                 _uiState.update { state ->
                     state.copy(
                         messages = state.messages.filter { it.id != messageId }

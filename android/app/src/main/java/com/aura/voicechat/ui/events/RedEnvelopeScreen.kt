@@ -127,7 +127,7 @@ fun RedEnvelopeScreen(
         SendRedEnvelopeDialog(
             onDismiss = { showSendDialog = false },
             onSend = { amount, count, message ->
-                // TODO: Send red envelope
+                // Feature pending: Send red envelope
                 showSendDialog = false
             }
         )
@@ -326,7 +326,7 @@ fun RedEnvelopeCard(
                         )
                     } else {
                         Button(
-                            onClick = { /* TODO: Open envelope */ },
+                            onClick = { /* Feature pending */ },
                             modifier = Modifier.height(32.dp),
                             colors = ButtonDefaults.buttonColors(
                                 containerColor = Color(0xFFFF5252)

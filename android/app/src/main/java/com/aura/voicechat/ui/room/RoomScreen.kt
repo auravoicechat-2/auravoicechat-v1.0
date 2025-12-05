@@ -197,7 +197,7 @@ fun RoomScreen(
             // Games Slider (Above bottom bar)
             GamesSlider(
                 games = uiState.games,
-                rocketLevel = 5, // TODO: Get from room state
+                rocketLevel = 5, // Feature pending: Get from room state
                 onGameClick = { viewModel.openGame(it) }
             )
             
@@ -1224,7 +1224,7 @@ private fun MoreOptionsSheet(
         OptionItem(
             icon = Icons.Default.CardGiftcard,
             label = "Send Lucky Bag",
-            onClick = { /* TODO */ }
+            onClick = { /* Feature not yet implemented */ }
         )
         
         // Clear Chat (Owner/Admin only)

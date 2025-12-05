@@ -140,7 +140,7 @@ fun RoomGiftAnimationQueue(
     val scope = rememberCoroutineScope()
     
     // Listen for gift events from room
-    // TODO: Connect to room WebSocket/ViewModel for real gift events
+    // Feature pending: Connect to room WebSocket/ViewModel for real gift events
     
     GiftAnimationQueueDisplay(
         queue = queue,

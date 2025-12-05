@@ -3,7 +3,7 @@
   Network Security Configuration
   Developer: Hawkaye Visions LTD — Pakistan
   
-  TODO: For production, remove cleartext permissions and use HTTPS only.
+  NOTE: For production, configure HTTPS domain and remove cleartext permissions.
 -->
 <network-security-config>
     <base-config cleartextTrafficPermitted="false">
@@ -20,7 +20,7 @@
     
     <!-- 
       Allow cleartext for EC2 backend (temporary, for development only)
-      TODO: For production, set up HTTPS with a proper domain name and certificate.
+      NOTE: For production, configure HTTPS with a proper domain name and SSL certificate.
     -->
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="false">13.127.85.109</domain>

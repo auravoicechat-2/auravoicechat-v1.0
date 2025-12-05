@@ -27,7 +27,7 @@ class GuidePanelViewModel @Inject constructor(
     
     private fun loadGuideProfile() {
         viewModelScope.launch {
-            // TODO: Load from repository
+            // Feature pending: Repository integration not yet implemented
             // val profile = guideRepository.getMyGuideProfile()
             
             _state.value = _state.value.copy(

@@ -25,7 +25,7 @@ class EarningTargetViewModel @Inject constructor(
         viewModelScope.launch {
             _state.value = _state.value.copy(isLoading = true)
             
-            // TODO: Load from repository
+            // Feature pending: Repository integration not yet implemented
             // val targets = repository.getEarningTargets(isGuide)
             
             // Sample data

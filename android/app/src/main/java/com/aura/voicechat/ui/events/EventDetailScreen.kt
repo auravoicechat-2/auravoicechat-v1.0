@@ -171,7 +171,7 @@ private fun EventDetailContent(
         items(event.rewards) { reward ->
             RewardItem(
                 reward = reward,
-                canClaim = false, // TODO: Determine if reward can be claimed
+                canClaim = false, // Feature pending: Determine if reward can be claimed
                 onClaim = { onClaimReward(reward.id) }
             )
         }

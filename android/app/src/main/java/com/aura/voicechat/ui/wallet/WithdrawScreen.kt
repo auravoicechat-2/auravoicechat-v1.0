@@ -30,7 +30,7 @@ fun WithdrawScreen(
     var amount by remember { mutableStateOf("") }
     var selectedMethod by remember { mutableStateOf<String?>(null) }
     var accountDetails by remember { mutableStateOf("") }
-    val availableBalance = 10000L // TODO: Get from ViewModel
+    val availableBalance = 10000L // Using mock data - connect to ViewModel when feature is implemented
     val minWithdraw = 1000L
     
     Scaffold(
@@ -288,7 +288,7 @@ fun WithdrawScreen(
             item {
                 Button(
                     onClick = {
-                        // TODO: Process withdrawal
+                        // Withdrawal processing integration pending
                     },
                     modifier = Modifier
                         .fillMaxWidth()

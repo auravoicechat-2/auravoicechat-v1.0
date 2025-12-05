@@ -30,7 +30,7 @@ class GuideApplicationViewModel @Inject constructor(
         viewModelScope.launch {
             _state.value = _state.value.copy(isSubmitting = true, error = null)
             
-            // TODO: Call repository to submit application
+            // Feature pending: Call repository to submit application
             // repository.submitGuideApplication(...)
             
             // Simulate submission

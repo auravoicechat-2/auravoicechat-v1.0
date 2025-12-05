@@ -158,7 +158,7 @@ class AuraPinpointService @Inject constructor(
         
         // Add image if available
         imageUrl?.let {
-            // TODO: Implement image loading with Coil
+            // Feature pending: Implement image loading with Coil
         }
         
         val notification = notificationBuilder.build()

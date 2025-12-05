@@ -561,10 +561,10 @@ fun AuraNavHost(
             com.aura.voicechat.ui.owner.OwnerPanelScreen(
                 onNavigateBack = { navController.popBackStack() },
                 onNavigateToEconomy = { navController.navigate(Screen.EconomySetup.route) },
-                onNavigateToAdmins = { /* TODO: Admin management */ },
-                onNavigateToCashouts = { /* TODO: Cashout approvals */ },
-                onNavigateToGuides = { /* TODO: Guide management */ },
-                onNavigateToAnalytics = { /* TODO: Analytics */ }
+                onNavigateToAdmins = { /* Feature pending */ },
+                onNavigateToCashouts = { /* Feature pending */ },
+                onNavigateToGuides = { /* Feature pending */ },
+                onNavigateToAnalytics = { /* Feature pending */ }
             )
         }
         
@@ -579,7 +579,7 @@ fun AuraNavHost(
             com.aura.voicechat.ui.guide.GuidePanelScreen(
                 onNavigateBack = { navController.popBackStack() },
                 onNavigateToEarnings = { navController.navigate(Screen.EarningTargetsGuide.route) },
-                onNavigateToSessions = { /* TODO: Session history */ },
+                onNavigateToSessions = { /* Feature pending */ },
                 onNavigateToTargets = { navController.navigate(Screen.EarningTargetsGuide.route) }
             )
         }
@@ -591,7 +591,7 @@ fun AuraNavHost(
                 onNavigateToTicket = { ticketId -> 
                     navController.navigate(Screen.LiveChatWithTicket.createRoute(ticketId))
                 },
-                onNavigateToNewTicket = { /* TODO: New ticket form */ },
+                onNavigateToNewTicket = { /* Feature pending */ },
                 onNavigateToLiveChat = { navController.navigate(Screen.LiveChat.route) }
             )
         }

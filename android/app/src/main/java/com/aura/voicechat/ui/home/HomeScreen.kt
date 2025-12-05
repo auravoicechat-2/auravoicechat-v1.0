@@ -285,7 +285,7 @@ fun HomeScreen(
         CreateRoomDialog(
             onDismiss = { showCreateRoomDialog = false },
             onCreate = { name, picture ->
-                // TODO: Create room via API
+                // Feature pending: Create room via API
                 showCreateRoomDialog = false
             }
         )

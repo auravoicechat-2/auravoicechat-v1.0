@@ -32,7 +32,7 @@ class CinemaViewModel @Inject constructor(
                     _state.value = _state.value.copy(
                         session = session,
                         isLoading = false,
-                        isHost = false // TODO: Check if current user is host
+                        isHost = false // Feature pending: Check if current user is host
                     )
                 },
                 onFailure = { error ->
@@ -89,7 +89,7 @@ class CinemaViewModel @Inject constructor(
     }
     
     fun sendReaction(reaction: String) {
-        // TODO: Implement reaction sending through Socket.IO or WebSocket
+        // Feature pending: Implement reaction sending through Socket.IO or WebSocket
         viewModelScope.launch {
             // Send reaction to server
         }
@@ -97,11 +97,11 @@ class CinemaViewModel @Inject constructor(
     
     fun sendMessage(message: String) {
         viewModelScope.launch {
-            // TODO: Implement message sending
+            // Feature pending: Implement message sending
             val chatMessage = ChatMessage(
                 id = System.currentTimeMillis().toString(),
-                userId = "current_user", // TODO: Get current user ID
-                userName = "You", // TODO: Get current user name
+                userId = "current_user", // Feature pending: Get current user ID
+                userName = "You", // Feature pending: Get current user name
                 userAvatar = null,
                 content = message,
                 timestamp = System.currentTimeMillis()

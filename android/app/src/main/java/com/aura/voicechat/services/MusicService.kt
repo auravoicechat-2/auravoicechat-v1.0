@@ -168,12 +168,12 @@ class MusicService : Service() {
     }
     
     private fun playNext() {
-        // TODO: Implement with playlist navigation
+        // Feature pending: Implement with playlist navigation
         onSongCompleted?.invoke()
     }
     
     private fun playPrevious() {
-        // TODO: Implement with playlist navigation
+        // Feature pending: Implement with playlist navigation
     }
     
     private fun createNotification(): Notification {

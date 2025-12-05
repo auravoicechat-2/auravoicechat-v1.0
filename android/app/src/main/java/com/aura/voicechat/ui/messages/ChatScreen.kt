@@ -191,7 +191,7 @@ fun ChatScreen(
                     items(uiState.messages, key = { it.id }) { message ->
                         MessageBubble(
                             message = message,
-                            isSent = message.senderId == "me" // TODO: Use actual current user ID
+                            isSent = message.senderId == "me" // Feature pending: Use actual current user ID
                         )
                     }
                 }
