@@ -2,7 +2,6 @@ package com.aura.voicechat.utils
 
 import android.content.Context
 import android.content.res.Configuration
-import android.os.Build
 import android.os.LocaleList
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
