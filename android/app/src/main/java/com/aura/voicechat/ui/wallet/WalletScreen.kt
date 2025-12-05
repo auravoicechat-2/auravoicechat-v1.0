@@ -454,7 +454,7 @@ private fun ExchangeDialog(
         confirmButton = {
             Button(
                 onClick = { onExchange(amount) },
-                enabled = amount > 0 && amount <= diamonds,
+                enabled = amount in 1..diamonds,
                 colors = ButtonDefaults.buttonColors(containerColor = AccentMagenta)
             ) {
                 Text("Exchange")

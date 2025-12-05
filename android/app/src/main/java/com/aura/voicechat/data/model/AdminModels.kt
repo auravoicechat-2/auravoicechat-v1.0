@@ -158,7 +158,7 @@ data class CustomerSupportRoom(
     @SerializedName("isPermanent") val isPermanent: Boolean = true,
     @SerializedName("isOfficial") val isOfficial: Boolean = true,
     @SerializedName("supportStaff") val supportStaff: List<String>, // UserIDs of support staff
-    @SerializedName("isOpen24_7") val isOpen24_7: Boolean = true
+    @SerializedName("isOpen24_7") val isOpen247: Boolean = true
 )
 
 // API Request/Response Models
