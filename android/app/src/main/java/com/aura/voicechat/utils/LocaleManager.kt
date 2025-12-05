@@ -25,7 +25,7 @@ private val Context.localeDataStore: DataStore<Preferences> by preferencesDataSt
 
 @Singleton
 class LocaleManager @Inject constructor(
-    @ApplicationContext private val context: Context
+    @param:ApplicationContext private val context: Context
 ) {
     
     private val languageKey = stringPreferencesKey("selected_language")

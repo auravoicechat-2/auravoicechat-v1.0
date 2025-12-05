@@ -41,7 +41,7 @@ import kotlin.coroutines.resumeWithException
 @Singleton
 class AuthRepositoryImpl @Inject constructor(
     private val apiService: ApiService,
-    @ApplicationContext private val context: Context
+    @param:ApplicationContext private val context: Context
 ) : AuthRepository {
     
     private val prefs: SharedPreferences = context.getSharedPreferences("auth_prefs", Context.MODE_PRIVATE)
