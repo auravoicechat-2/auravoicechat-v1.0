@@ -201,7 +201,7 @@ fun SvgaPlayerFromFile(
     onAnimationStart: () -> Unit = {},
     onAnimationEnd: () -> Unit = {}
 ) {
-    val context = LocalContext.current
+        // Unused variable removed: val context = LocalContext.current
     
     AndroidView(
         modifier = modifier,

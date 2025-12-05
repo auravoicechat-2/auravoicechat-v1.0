@@ -92,7 +92,7 @@ class MusicPlayerViewModel @Inject constructor(
         viewModelScope.launch {
             musicRepository.createPlaylist(name, songIds).collect { result ->
                 result.onSuccess { newPlaylist ->
-                    _playlists.value = _playlists.value + newPlaylist
+                    _playlists.value += newPlaylist
                     _uiState.value = MusicUiState.PlaylistCreated
                 }.onFailure { error ->
                     _uiState.value = MusicUiState.Error(error.message ?: "Failed to create playlist")

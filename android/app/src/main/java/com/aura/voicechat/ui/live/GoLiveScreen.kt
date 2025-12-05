@@ -95,7 +95,7 @@ fun GoLiveScreen(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                StreamCategory.values().forEach { category ->
+                StreamCategory.entries.forEach { category ->
                     CategoryChip(
                         category = category,
                         isSelected = category == selectedCategory,

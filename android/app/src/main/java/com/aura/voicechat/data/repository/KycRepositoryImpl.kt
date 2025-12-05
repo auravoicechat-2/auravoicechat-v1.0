@@ -31,7 +31,7 @@ class KycRepositoryImpl @Inject constructor(
         private const val S3_REGION = "ap-south-1"
     }
     
-    override suspend fun getKycStatus(): Result<KycData> {
+    override fun getKycStatus(): Result<KycData> {
         return try {
             val response = apiService.getKycStatus()
             if (response.isSuccessful && response.body() != null) {

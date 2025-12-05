@@ -586,7 +586,7 @@ private fun SupportOptionItem(
                 onClick = onSupport,
                 colors = ButtonDefaults.buttonColors(containerColor = AccentMagenta)
             ) {
-                Text("${formatNumber(option.cost)}")
+                Text(formatNumber(option.cost))
             }
         }
     }
