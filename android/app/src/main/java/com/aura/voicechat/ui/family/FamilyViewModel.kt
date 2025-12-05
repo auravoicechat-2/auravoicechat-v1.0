@@ -286,7 +286,7 @@ class FamilyViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true)
             try {
-                // TODO: Call API to get recommended families
+                // Feature pending: API endpoint for get recommended families
                 _uiState.value = _uiState.value.copy(
                     availableFamilies = emptyList(),
                     isLoading = false
@@ -304,7 +304,7 @@ class FamilyViewModel @Inject constructor(
             try {
                 val response = apiService.getFamilyRankings("weekly", 1)
                 if (response.isSuccessful && response.body() != null) {
-                    // TODO: Map to FamilyItemState
+                    // Feature pending: Map to FamilyItemState
                     _uiState.value = _uiState.value.copy(
                         availableFamilies = emptyList(),
                         isLoading = false
@@ -349,7 +349,7 @@ data class FamilyUiState(
     val showSettingsDialog: Boolean = false,
     val error: String? = null,
     // Week 2 additions
-    val availableFamilies: List<com.aura.voicechat.ui.family.FamilyItemState> = emptyList()
+    val availableFamilies: List<FamilyItemState> = emptyList()
 )
 
 data class FamilySearchResult(

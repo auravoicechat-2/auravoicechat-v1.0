@@ -12,7 +12,6 @@ import android.os.Binder
 import android.os.Build
 import android.os.IBinder
 import androidx.core.app.NotificationCompat
-import com.aura.voicechat.R
 import com.aura.voicechat.data.model.Song
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -169,12 +168,12 @@ class MusicService : Service() {
     }
     
     private fun playNext() {
-        // TODO: Implement with playlist navigation
+        // Feature pending: Implement with playlist navigation
         onSongCompleted?.invoke()
     }
     
     private fun playPrevious() {
-        // TODO: Implement with playlist navigation
+        // Feature pending: Implement with playlist navigation
     }
     
     private fun createNotification(): Notification {

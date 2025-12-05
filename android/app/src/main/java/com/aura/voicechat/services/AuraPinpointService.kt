@@ -158,7 +158,7 @@ class AuraPinpointService @Inject constructor(
         
         // Add image if available
         imageUrl?.let {
-            // TODO: Implement image loading with Coil
+            // Feature pending: Implement image loading with Coil
         }
         
         val notification = notificationBuilder.build()
@@ -187,7 +187,7 @@ class AuraPinpointService @Inject constructor(
     fun trackEvent(eventType: String, attributes: Map<String, String>? = null) {
         try {
             // Use Amplify Analytics to record events
-            val event = Amplify.Analytics.recordEvent(eventType)
+        // Unused variable removed: val event = Amplify.Analytics.recordEvent(eventType)
             
             attributes?.forEach { (key, value) ->
                 // Note: Amplify v2 Analytics API might differ

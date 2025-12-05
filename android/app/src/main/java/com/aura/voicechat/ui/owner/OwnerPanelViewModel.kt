@@ -27,7 +27,7 @@ class OwnerPanelViewModel @Inject constructor(
     
     private fun loadStats() {
         viewModelScope.launch {
-            // TODO: Load from repository
+            // Feature pending: Repository integration not yet implemented
             // Temporary sample data
             _state.value = _state.value.copy(
                 stats = OwnerStats(

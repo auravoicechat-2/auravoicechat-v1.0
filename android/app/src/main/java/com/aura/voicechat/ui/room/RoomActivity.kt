@@ -2,6 +2,7 @@ package com.aura.voicechat.ui.room
 
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
@@ -69,7 +70,11 @@ class RoomActivity : ComponentActivity() {
             putExtra(VoiceRoomService.EXTRA_ROOM_ID, roomId)
             action = VoiceRoomService.ACTION_START
         }
-        startForegroundService(serviceIntent)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(serviceIntent)
+        } else {
+            startService(serviceIntent)
+        }
         Log.i(TAG, "Voice room service started for room: $roomId")
     }
     

@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
+import androidx.core.content.edit
 import com.amplifyframework.auth.AuthProvider
 import com.amplifyframework.core.Amplify
 import com.aura.voicechat.data.model.FacebookSignInRequest
@@ -150,7 +151,7 @@ class AuthRepositoryImpl @Inject constructor(
         return try {
             Log.d(TAG, "Starting Google Sign-In via Amplify")
             
-            val result = suspendCancellableCoroutine<Unit> { continuation ->
+            val result = suspendCancellableCoroutine { continuation ->
                 Amplify.Auth.signInWithSocialWebUI(
                     AuthProvider.google(),
                     activity,
@@ -192,7 +193,7 @@ class AuthRepositoryImpl @Inject constructor(
         return try {
             Log.d(TAG, "Starting Facebook Sign-In via Amplify")
             
-            val result = suspendCancellableCoroutine<Unit> { continuation ->
+            val result = suspendCancellableCoroutine { continuation ->
                 Amplify.Auth.signInWithSocialWebUI(
                     AuthProvider.facebook(),
                     activity,
@@ -323,7 +324,7 @@ class AuthRepositoryImpl @Inject constructor(
             
             // Try to sign out from Amplify
             try {
-                suspendCancellableCoroutine<Unit> { continuation ->
+                suspendCancellableCoroutine { continuation ->
                     Amplify.Auth.signOut { 
                         Log.d(TAG, "Amplify sign out completed")
                         continuation.resume(Unit)
@@ -406,9 +407,9 @@ class AuthRepositoryImpl @Inject constructor(
             val response = apiService.refreshToken(RefreshTokenRequest(refreshToken))
             if (response.isSuccessful) {
                 response.body()?.let { body ->
-                    prefs.edit()
-                        .putString(KEY_AUTH_TOKEN, body.token)
-                        .apply()
+                    prefs.edit {
+                        putString(KEY_AUTH_TOKEN, body.token)
+                    }
                     Log.d(TAG, "Token refreshed successfully")
                     return Result.success(body.token)
                 }
@@ -450,13 +451,13 @@ class AuthRepositoryImpl @Inject constructor(
      * Clear all authentication data from SharedPreferences.
      */
     private fun clearAuthData() {
-        prefs.edit()
-            .remove(KEY_USER_ID)
-            .remove(KEY_USER_NAME)
-            .remove(KEY_USER_ROLE)
-            .remove(KEY_AUTH_TOKEN)
-            .remove(KEY_REFRESH_TOKEN)
-            .remove(KEY_TOKEN_EXPIRY)
+        prefs.edit {
+            remove(KEY_USER_ID)
+            remove(KEY_USER_NAME)
+            remove(KEY_USER_ROLE)
+            remove(KEY_AUTH_TOKEN)
+            remove(KEY_REFRESH_TOKEN)
+            remove(KEY_TOKEN_EXPIRY)
             .remove(KEY_AUTH_PROVIDER)
             .apply()
     }
@@ -466,7 +467,7 @@ class AuthRepositoryImpl @Inject constructor(
      */
     private suspend fun fetchAndStoreAmplifyUserData(provider: String) {
         try {
-            suspendCancellableCoroutine<Unit> { continuation ->
+            suspendCancellableCoroutine { continuation ->
                 Amplify.Auth.fetchUserAttributes(
                     { attributes ->
                         val userId = attributes.find { it.key.keyString == "sub" }?.value ?: ""

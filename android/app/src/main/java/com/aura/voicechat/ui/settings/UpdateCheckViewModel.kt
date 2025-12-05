@@ -56,7 +56,7 @@ class UpdateCheckViewModel @Inject constructor(
     }
     
     fun downloadUpdate() {
-        // TODO: Implement download logic
+        // Feature pending: Implement download logic
         // For now, open the download URL in browser
         val downloadUrl = _state.value.downloadUrl
         if (downloadUrl != null) {

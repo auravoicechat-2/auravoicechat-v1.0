@@ -74,14 +74,8 @@ class LocaleManager @Inject constructor(
         Locale.setDefault(locale)
         
         val config = Configuration(context.resources.configuration)
-        
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            config.setLocale(locale)
-            config.setLocales(LocaleList(locale))
-        } else {
-            @Suppress("DEPRECATION")
-            config.locale = locale
-        }
+        config.setLocale(locale)
+        config.setLocales(LocaleList(locale))
         
         return context.createConfigurationContext(config)
     }

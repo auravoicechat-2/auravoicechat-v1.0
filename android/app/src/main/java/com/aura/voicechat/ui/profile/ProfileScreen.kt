@@ -1,5 +1,7 @@
 package com.aura.voicechat.ui.profile
 
+
+import java.util.Locale
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
@@ -18,7 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
+import Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -597,8 +599,8 @@ data class TargetData(
 
 private fun formatCurrency(amount: Long): String {
     return when {
-        amount >= 1_000_000 -> String.format("$%.1fM", amount / 1_000_000.0)
-        amount >= 1_000 -> String.format("$%.1fK", amount / 1_000.0)
+        amount >= 1_000_000 -> String.format(Locale.US, "$%.1fM", amount / 1_000_000.0)
+        amount >= 1_000 -> String.format(Locale.US, "$%.1fK", amount / 1_000.0)
         else -> "$$amount"
     }
 }
@@ -760,7 +762,7 @@ private fun StatItem(value: String, label: String) {
 
 @Composable
 private fun WalletItem(
-    icon: androidx.compose.ui.graphics.vector.ImageVector,
+    icon: ImageVector,
     value: String,
     label: String,
     color: Color
@@ -839,11 +841,11 @@ private fun MedalItem(medal: Medal) {
 
 @Composable
 private fun ProfileMenuItem(
-    icon: androidx.compose.ui.graphics.vector.ImageVector,
+    icon: ImageVector,
     title: String,
     subtitle: String,
     onClick: () -> Unit,
-    tint: androidx.compose.ui.graphics.Color = AccentMagenta
+    tint: Color = AccentMagenta
 ) {
     Card(
         onClick = onClick,
@@ -887,8 +889,8 @@ private fun ProfileMenuItem(
 
 private fun formatNumber(number: Long): String {
     return when {
-        number >= 1_000_000 -> String.format("%.1fM", number / 1_000_000.0)
-        number >= 1_000 -> String.format("%.1fK", number / 1_000.0)
+        number >= 1_000_000 -> String.format(Locale.US, "%.1fM", number / 1_000_000.0)
+        number >= 1_000 -> String.format(Locale.US, "%.1fK", number / 1_000.0)
         else -> number.toString()
     }
 }

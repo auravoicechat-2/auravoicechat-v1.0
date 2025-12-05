@@ -17,7 +17,6 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -192,7 +191,7 @@ fun ChatScreen(
                     items(uiState.messages, key = { it.id }) { message ->
                         MessageBubble(
                             message = message,
-                            isSent = message.senderId == "me" // TODO: Use actual current user ID
+                            isSent = message.senderId == "me" // Feature pending: Use actual current user ID
                         )
                     }
                 }

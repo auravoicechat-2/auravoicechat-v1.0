@@ -5,9 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.aura.voicechat.data.model.ExchangeRequest
 import com.aura.voicechat.data.remote.ApiService
-import com.aura.voicechat.domain.model.Currency
 import com.aura.voicechat.domain.model.Transaction
-import com.aura.voicechat.domain.model.TransactionType
 import com.aura.voicechat.domain.repository.WalletRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -73,7 +71,7 @@ class WalletViewModel @Inject constructor(
     private fun loadTransactions() {
         viewModelScope.launch {
             try {
-                // TODO: Add transactions endpoint to ApiService when backend implements it
+                // Feature pending: Add transactions endpoint to ApiService when backend implements it
                 // For now, transactions will be empty until backend provides the data
                 _uiState.value = _uiState.value.copy(transactions = emptyList())
             } catch (e: Exception) {

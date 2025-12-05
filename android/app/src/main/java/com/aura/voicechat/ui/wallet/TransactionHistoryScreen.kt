@@ -14,7 +14,6 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -36,7 +35,7 @@ fun TransactionHistoryScreen(
     viewModel: WalletViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    var selectedFilter by remember { mutableStateOf<TransactionFilter>(TransactionFilter.ALL) }
+    var selectedFilter by remember { mutableStateOf(TransactionFilter.ALL) }
     
     Scaffold(
         topBar = {

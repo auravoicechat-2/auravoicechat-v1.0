@@ -5,6 +5,7 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.app.Service
 import android.content.Intent
+import android.os.Build
 import android.os.IBinder
 import android.util.Log
 import androidx.core.app.NotificationCompat
@@ -171,42 +172,44 @@ class AuraPushNotificationService : Service() {
      * Creates notification channels for Android O+
      */
     private fun createNotificationChannels() {
-        val notificationManager = getSystemService(NotificationManager::class.java)
-        
-        val channels = listOf(
-            NotificationChannel(
-                CHANNEL_MESSAGES, "Messages",
-                NotificationManager.IMPORTANCE_HIGH
-            ).apply {
-                description = "Direct message notifications"
-            },
-            NotificationChannel(
-                CHANNEL_GIFTS, "Gifts",
-                NotificationManager.IMPORTANCE_DEFAULT
-            ).apply {
-                description = "Gift received notifications"
-            },
-            NotificationChannel(
-                CHANNEL_ROOMS, "Rooms",
-                NotificationManager.IMPORTANCE_DEFAULT
-            ).apply {
-                description = "Room invite notifications"
-            },
-            NotificationChannel(
-                CHANNEL_SOCIAL, "Social",
-                NotificationManager.IMPORTANCE_DEFAULT
-            ).apply {
-                description = "Follow, CP, and friend notifications"
-            },
-            NotificationChannel(
-                CHANNEL_SYSTEM, "System",
-                NotificationManager.IMPORTANCE_LOW
-            ).apply {
-                description = "System notifications and updates"
-            }
-        )
-        
-        channels.forEach { notificationManager.createNotificationChannel(it) }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val notificationManager = getSystemService(NotificationManager::class.java)
+            
+            val channels = listOf(
+                NotificationChannel(
+                    CHANNEL_MESSAGES, "Messages",
+                    NotificationManager.IMPORTANCE_HIGH
+                ).apply {
+                    description = "Direct message notifications"
+                },
+                NotificationChannel(
+                    CHANNEL_GIFTS, "Gifts",
+                    NotificationManager.IMPORTANCE_DEFAULT
+                ).apply {
+                    description = "Gift received notifications"
+                },
+                NotificationChannel(
+                    CHANNEL_ROOMS, "Rooms",
+                    NotificationManager.IMPORTANCE_DEFAULT
+                ).apply {
+                    description = "Room invite notifications"
+                },
+                NotificationChannel(
+                    CHANNEL_SOCIAL, "Social",
+                    NotificationManager.IMPORTANCE_DEFAULT
+                ).apply {
+                    description = "Follow, CP, and friend notifications"
+                },
+                NotificationChannel(
+                    CHANNEL_SYSTEM, "System",
+                    NotificationManager.IMPORTANCE_LOW
+                ).apply {
+                    description = "System notifications and updates"
+                }
+            )
+            
+            channels.forEach { notificationManager.createNotificationChannel(it) }
+        }
     }
     
     /**

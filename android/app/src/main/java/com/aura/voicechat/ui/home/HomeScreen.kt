@@ -3,12 +3,10 @@ package com.aura.voicechat.ui.home
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
@@ -287,7 +285,7 @@ fun HomeScreen(
         CreateRoomDialog(
             onDismiss = { showCreateRoomDialog = false },
             onCreate = { name, picture ->
-                // TODO: Create room via API
+                // Feature pending: Create room via API
                 showCreateRoomDialog = false
             }
         )

@@ -1,5 +1,7 @@
 package com.aura.voicechat.ui.games
 
+
+import java.util.Locale
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -18,7 +20,6 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.aura.voicechat.ui.theme.*
@@ -327,8 +328,8 @@ data class WheelPrize(
 
 private fun formatNumber(number: Long): String {
     return when {
-        number >= 1_000_000 -> String.format("%.1fM", number / 1_000_000.0)
-        number >= 1_000 -> String.format("%.1fK", number / 1_000.0)
+        number >= 1_000_000 -> String.format(Locale.US, "%.1fM", number / 1_000_000.0)
+        number >= 1_000 -> String.format(Locale.US, "%.1fK", number / 1_000.0)
         else -> number.toString()
     }
 }

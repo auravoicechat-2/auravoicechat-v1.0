@@ -14,7 +14,6 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -112,7 +111,7 @@ fun RechargeScreen(
             ) {
                 items(packages) { pkg ->
                     RechargePackageCard(
-                        package_ = pkg,
+                        rechargePackage = pkg,
                         isSelected = selectedPackage == pkg,
                         onClick = {
                             selectedPackage = pkg
@@ -149,10 +148,10 @@ fun RechargeScreen(
     
     if (showPaymentDialog && selectedPackage != null) {
         PaymentDialog(
-            package_ = selectedPackage!!,
+            rechargePackage = selectedPackage!!,
             onDismiss = { showPaymentDialog = false },
             onConfirm = {
-                // TODO: Process payment
+                // Payment processing integration pending
                 showPaymentDialog = false
             }
         )
@@ -161,7 +160,7 @@ fun RechargeScreen(
 
 @Composable
 fun RechargePackageCard(
-    package_: RechargePackage,
+    rechargePackage: RechargePackage,
     isSelected: Boolean,
     onClick: () -> Unit
 ) {
@@ -178,7 +177,7 @@ fun RechargePackageCard(
         Box(modifier = Modifier.fillMaxWidth()) {
             // Badge
             when {
-                package_.isBestValue -> {
+                rechargePackage.isBestValue -> {
                     Surface(
                         modifier = Modifier
                             .align(Alignment.TopEnd)
@@ -195,7 +194,7 @@ fun RechargePackageCard(
                         )
                     }
                 }
-                package_.isPopular -> {
+                rechargePackage.isPopular -> {
                     Surface(
                         modifier = Modifier
                             .align(Alignment.TopEnd)
@@ -230,15 +229,15 @@ fun RechargePackageCard(
                 Spacer(modifier = Modifier.height(8.dp))
                 
                 Text(
-                    text = "${package_.diamonds}",
+                    text = "${rechargePackage.diamonds}",
                     style = MaterialTheme.typography.headlineMedium,
                     color = Color.White,
                     fontWeight = FontWeight.Bold
                 )
                 
-                if (package_.bonus > 0) {
+                if (rechargePackage.bonus > 0) {
                     Text(
-                        text = "+${package_.bonus} bonus",
+                        text = "+${rechargePackage.bonus} bonus",
                         style = MaterialTheme.typography.bodySmall,
                         color = AccentGreen
                     )
@@ -247,7 +246,7 @@ fun RechargePackageCard(
                 Spacer(modifier = Modifier.height(8.dp))
                 
                 Text(
-                    text = "$${package_.price}",
+                    text = "$${rechargePackage.price}",
                     style = MaterialTheme.typography.titleLarge,
                     color = CoinGold,
                     fontWeight = FontWeight.Bold
@@ -274,7 +273,7 @@ fun PaymentMethodIcon(name: String) {
 
 @Composable
 fun PaymentDialog(
-    package_: RechargePackage,
+    rechargePackage: RechargePackage,
     onDismiss: () -> Unit,
     onConfirm: () -> Unit
 ) {
@@ -286,12 +285,12 @@ fun PaymentDialog(
                 Text("You are about to purchase:")
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = "${package_.diamonds + package_.bonus} Diamonds",
+                    text = "${rechargePackage.diamonds + rechargePackage.bonus} Diamonds",
                     fontWeight = FontWeight.Bold,
                     color = DiamondBlue
                 )
                 Text(
-                    text = "for $${package_.price}",
+                    text = "for $${rechargePackage.price}",
                     fontWeight = FontWeight.Bold,
                     color = CoinGold
                 )

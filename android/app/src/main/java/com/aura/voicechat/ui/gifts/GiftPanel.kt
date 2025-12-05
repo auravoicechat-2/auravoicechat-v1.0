@@ -1,10 +1,11 @@
 package com.aura.voicechat.ui.gifts
 
+
+import java.util.Locale
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -534,8 +535,8 @@ data class Gift(
 
 private fun formatNumber(number: Long): String {
     return when {
-        number >= 1_000_000 -> String.format("%.1fM", number / 1_000_000.0)
-        number >= 1_000 -> String.format("%.1fK", number / 1_000.0)
+        number >= 1_000_000 -> String.format(Locale.US, "%.1fM", number / 1_000_000.0)
+        number >= 1_000 -> String.format(Locale.US, "%.1fK", number / 1_000.0)
         else -> number.toString()
     }
 }

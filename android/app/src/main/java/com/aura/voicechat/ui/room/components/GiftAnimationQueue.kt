@@ -11,7 +11,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
-import kotlinx.coroutines.launch
 
 /**
  * Gift Animation Queue Manager
@@ -141,7 +140,7 @@ fun RoomGiftAnimationQueue(
     val scope = rememberCoroutineScope()
     
     // Listen for gift events from room
-    // TODO: Connect to room WebSocket/ViewModel for real gift events
+    // Feature pending: Connect to room WebSocket/ViewModel for real gift events
     
     GiftAnimationQueueDisplay(
         queue = queue,

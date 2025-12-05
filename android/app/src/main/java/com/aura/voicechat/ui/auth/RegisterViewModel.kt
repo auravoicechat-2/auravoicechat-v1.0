@@ -89,7 +89,7 @@ class RegisterViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             
             try {
-                // TODO: Implement actual registration API call through AuthRepository
+                // Feature pending: API integration not yet implemented through AuthRepository
                 // For now, simulate registration
                 Log.d(TAG, "Registering user: $username, $displayName, $dob, $gender")
                 

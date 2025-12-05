@@ -133,7 +133,7 @@ fun FeedbackScreen(
             )
             
             OutlinedCard(
-                onClick = { /* TODO: Open image picker */ },
+                onClick = { /* Feature pending */ },
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Row(

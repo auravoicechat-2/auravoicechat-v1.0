@@ -10,10 +10,4 @@
         android:angle="90"
         android:type="linear"/>
     <corners android:radius="13dp"/>
-    <item android:name="android:shadowColor">#40ffffff
-    </item>
-    <item android:name="android:shadowDx">0
-    </item>
-    <item android:name="android:shadowDy">-2
-    </item>
 </shape>

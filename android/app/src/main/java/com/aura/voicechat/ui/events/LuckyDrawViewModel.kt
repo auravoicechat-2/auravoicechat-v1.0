@@ -46,7 +46,7 @@ class LuckyDrawViewModel @Inject constructor(
             
             repository.getLuckyDrawHistory().fold(
                 onSuccess = { response ->
-                    val history = response.draws.map { dto ->
+        // Unused variable removed: val history = response.draws.map { dto ->
                         DrawHistory(
                             id = dto.id,
                             prize = Prize(

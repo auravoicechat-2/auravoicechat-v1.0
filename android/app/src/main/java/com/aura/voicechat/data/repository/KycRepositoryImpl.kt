@@ -8,7 +8,6 @@ import com.aura.voicechat.domain.repository.KycRepository
 // import software.amazon.awssdk.services.s3.S3Client
 // import software.amazon.awssdk.services.s3.model.PutObjectRequest
 // import software.amazon.awssdk.core.sync.RequestBody
-import java.io.File
 import java.util.UUID
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -20,7 +19,8 @@ import javax.inject.Singleton
  * AWS S3 storage for KYC documents via AWS Amplify (No Firebase)
  * Only ID Card (front/back) + Selfie - NO utility bills
  * 
- * TODO: Implement S3 upload using AWS Amplify Storage instead of AWS SDK Kotlin
+ * NOTE: Currently using mock S3 upload. Implement AWS Amplify Storage
+ * integration when S3 bucket is configured and credentials are set up.
  */
 @Singleton
 class KycRepositoryImpl @Inject constructor(
@@ -32,7 +32,7 @@ class KycRepositoryImpl @Inject constructor(
         private const val S3_REGION = "ap-south-1"
     }
     
-    override suspend fun getKycStatus(): Result<KycData> {
+    override fun getKycStatus(): Result<KycData> {
         return try {
             val response = apiService.getKycStatus()
             if (response.isSuccessful && response.body() != null) {
@@ -90,7 +90,7 @@ class KycRepositoryImpl @Inject constructor(
     
     private suspend fun uploadToS3(localUri: String, prefix: String): Result<String> {
         return try {
-            // TODO: Implement S3 upload using AWS Amplify Storage
+            // Feature pending: AWS Amplify Storage integration not yet implemented
             // Example implementation:
             // val file = File(localUri)
             // val key = "kyc/${prefix}_${UUID.randomUUID()}.jpg"

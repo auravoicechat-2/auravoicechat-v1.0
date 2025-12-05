@@ -1,5 +1,6 @@
 package com.aura.voicechat.ui.theme
 
+import java.util.Locale
 /**
  * Shared formatting utilities
  * Developer: Hawkaye Visions LTD — Pakistan
@@ -11,9 +12,9 @@ package com.aura.voicechat.ui.theme
  */
 fun formatNumber(number: Long): String {
     return when {
-        number >= 1_000_000_000 -> String.format("%.0fB", number / 1_000_000_000.0)
-        number >= 1_000_000 -> String.format("%.0fM", number / 1_000_000.0)
-        number >= 1_000 -> String.format("%.0fK", number / 1_000.0)
+        number >= 1_000_000_000 -> String.format(Locale.US, "%.0fB", number / 1_000_000_000.0)
+        number >= 1_000_000 -> String.format(Locale.US, "%.0fM", number / 1_000_000.0)
+        number >= 1_000 -> String.format(Locale.US, "%.0fK", number / 1_000.0)
         else -> number.toString()
     }
 }
@@ -23,9 +24,9 @@ fun formatNumber(number: Long): String {
  */
 fun formatNumberWithDecimals(number: Long): String {
     return when {
-        number >= 1_000_000_000 -> String.format("%.1fB", number / 1_000_000_000.0)
-        number >= 1_000_000 -> String.format("%.1fM", number / 1_000_000.0)
-        number >= 1_000 -> String.format("%.1fK", number / 1_000.0)
+        number >= 1_000_000_000 -> String.format(Locale.US, "%.1fB", number / 1_000_000_000.0)
+        number >= 1_000_000 -> String.format(Locale.US, "%.1fM", number / 1_000_000.0)
+        number >= 1_000 -> String.format(Locale.US, "%.1fK", number / 1_000.0)
         else -> number.toString()
     }
 }
@@ -35,9 +36,9 @@ fun formatNumberWithDecimals(number: Long): String {
  */
 fun formatCoins(coins: Long): String {
     return when {
-        coins >= 1_000_000_000 -> "${String.format("%.1f", coins / 1_000_000_000.0)}B"
-        coins >= 1_000_000 -> "${String.format("%.1f", coins / 1_000_000.0)}M"
-        coins >= 1_000 -> "${String.format("%.1f", coins / 1_000.0)}K"
+        coins >= 1_000_000_000 -> "${String.format(Locale.US, "%.1f", coins / 1_000_000_000.0)}B"
+        coins >= 1_000_000 -> "${String.format(Locale.US, "%.1f", coins / 1_000_000.0)}M"
+        coins >= 1_000 -> "${String.format(Locale.US, "%.1f", coins / 1_000.0)}K"
         else -> coins.toString()
     }
 }
@@ -48,7 +49,7 @@ fun formatCoins(coins: Long): String {
 fun formatDuration(seconds: Int): String {
     val minutes = seconds / 60
     val secs = seconds % 60
-    return String.format("%02d:%02d", minutes, secs)
+    return String.format(Locale.US, "%02d:%02d", minutes, secs)
 }
 
 /**

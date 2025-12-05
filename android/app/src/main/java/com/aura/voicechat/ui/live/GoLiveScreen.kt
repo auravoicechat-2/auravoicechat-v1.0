@@ -1,7 +1,5 @@
 package com.aura.voicechat.ui.live
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -97,7 +95,7 @@ fun GoLiveScreen(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                StreamCategory.values().forEach { category ->
+                StreamCategory.entries.forEach { category ->
                     CategoryChip(
                         category = category,
                         isSelected = category == selectedCategory,

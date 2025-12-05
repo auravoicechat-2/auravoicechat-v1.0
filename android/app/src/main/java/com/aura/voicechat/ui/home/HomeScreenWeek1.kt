@@ -63,7 +63,7 @@ fun HomeScreen(
                 containerColor = DarkSurface,
                 contentColor = AccentMagenta
             ) {
-                BottomNavItem.values().forEachIndexed { index, item ->
+                BottomNavItem.entries.forEachIndexed { index, item ->
                     NavigationBarItem(
                         icon = {
                             Icon(

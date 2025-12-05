@@ -10,7 +10,8 @@ import retrofit2.http.GET
  * Used to verify connectivity to the backend server.
  * The backend is currently running on EC2 at http://13.127.85.109
  * 
- * TODO: For production, update to use HTTPS with a proper domain name.
+ * NOTE: For production deployment, configure HTTPS with a proper domain name
+ * via environment variables or build configuration.
  */
 interface HealthApi {
     

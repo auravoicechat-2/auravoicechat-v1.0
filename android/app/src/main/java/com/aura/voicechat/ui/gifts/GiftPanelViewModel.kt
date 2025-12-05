@@ -137,7 +137,7 @@ class GiftPanelViewModel @Inject constructor(
                     )
                     
                     if (response.isSuccessful) {
-                        val data = response.body()
+        // Unused variable removed: val data = response.body()
                         _uiState.value = _uiState.value.copy(
                             coins = currentCoins - totalCost,
                             lastSentGift = gift,

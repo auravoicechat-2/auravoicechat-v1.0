@@ -1,9 +1,10 @@
 package com.aura.voicechat.ui.room
 
+
+import java.util.Locale
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
@@ -12,7 +13,6 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -197,7 +197,7 @@ fun RoomScreen(
             // Games Slider (Above bottom bar)
             GamesSlider(
                 games = uiState.games,
-                rocketLevel = 5, // TODO: Get from room state
+                rocketLevel = 5, // Feature pending: Get from room state
                 onGameClick = { viewModel.openGame(it) }
             )
             
@@ -1224,7 +1224,7 @@ private fun MoreOptionsSheet(
         OptionItem(
             icon = Icons.Default.CardGiftcard,
             label = "Send Lucky Bag",
-            onClick = { /* TODO */ }
+            onClick = { /* Feature not yet implemented */ }
         )
         
         // Clear Chat (Owner/Admin only)
@@ -1438,8 +1438,8 @@ private fun CinemaSeatItem(seat: Seat) {
 
 private fun formatNumber(number: Long): String {
     return when {
-        number >= 1_000_000 -> String.format("%.1fM", number / 1_000_000.0)
-        number >= 1_000 -> String.format("%.1fK", number / 1_000.0)
+        number >= 1_000_000 -> String.format(Locale.US, "%.1fM", number / 1_000_000.0)
+        number >= 1_000 -> String.format(Locale.US, "%.1fK", number / 1_000.0)
         else -> number.toString()
     }
 }

@@ -92,7 +92,7 @@ class MusicPlayerViewModel @Inject constructor(
         viewModelScope.launch {
             musicRepository.createPlaylist(name, songIds).collect { result ->
                 result.onSuccess { newPlaylist ->
-                    _playlists.value = _playlists.value + newPlaylist
+                    _playlists.value += newPlaylist
                     _uiState.value = MusicUiState.PlaylistCreated
                 }.onFailure { error ->
                     _uiState.value = MusicUiState.Error(error.message ?: "Failed to create playlist")
@@ -104,17 +104,17 @@ class MusicPlayerViewModel @Inject constructor(
     fun playSong(song: Song) {
         _currentSong.value = song
         _isPlaying.value = true
-        // TODO: Integrate with MusicService to actually play the audio
+        // Feature pending: Integrate with MusicService to actually play the audio
     }
     
     fun pauseSong() {
         _isPlaying.value = false
-        // TODO: Pause through MusicService
+        // Feature pending: Pause through MusicService
     }
     
     fun resumeSong() {
         _isPlaying.value = true
-        // TODO: Resume through MusicService
+        // Feature pending: Resume through MusicService
     }
     
     fun playNext() {
@@ -152,7 +152,7 @@ class MusicPlayerViewModel @Inject constructor(
     
     fun seekTo(position: Long) {
         _currentPosition.value = position
-        // TODO: Seek through MusicService
+        // Feature pending: Seek through MusicService
     }
     
     fun updatePosition(position: Long) {

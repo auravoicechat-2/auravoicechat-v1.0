@@ -6,7 +6,6 @@ import androidx.work.Configuration
 import com.amplifyframework.AmplifyException
 import com.amplifyframework.auth.cognito.AWSCognitoAuthPlugin
 import com.amplifyframework.core.Amplify
-import com.amplifyframework.notifications.pushnotifications.PushNotificationsCategoryBehavior
 import com.amplifyframework.notifications.pushnotifications.PushNotificationsException
 import com.amplifyframework.pushnotifications.pinpoint.AWSPinpointPushNotificationsPlugin
 import com.amplifyframework.storage.s3.AWSS3StoragePlugin
@@ -36,7 +35,7 @@ class AuraApplication : Application(), Configuration.Provider {
      */
     override val workManagerConfiguration: Configuration
         get() = Configuration.Builder()
-            .setMinimumLoggingLevel(android.util.Log.INFO)
+            .setMinimumLoggingLevel(Log.INFO)
             .build()
 
     private fun initializeAmplify() {

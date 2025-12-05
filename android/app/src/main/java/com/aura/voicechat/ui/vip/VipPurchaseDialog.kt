@@ -1,5 +1,7 @@
 package com.aura.voicechat.ui.vip
 
+
+import java.util.Locale
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -15,7 +17,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.aura.voicechat.ui.theme.*
@@ -144,7 +145,7 @@ fun VipPurchaseDialog(
                 ) {
                     items(packages) { pkg ->
                         VipPackageCard(
-                            package_ = pkg,
+                            vipPackage = pkg,
                             isSelected = selectedPackage == pkg,
                             onClick = { selectedPackage = pkg }
                         )
@@ -190,11 +191,11 @@ fun VipPurchaseDialog(
 
 @Composable
 fun VipPackageCard(
-    package_: VipPackage,
+    vipPackage: VipPackage,
     isSelected: Boolean,
     onClick: () -> Unit
 ) {
-    val vipColor = getVipColor(package_.tier)
+    val vipColor = getVipColor(vipPackage.tier)
     
     Card(
         modifier = Modifier
@@ -212,7 +213,7 @@ fun VipPackageCard(
         Box(modifier = Modifier.fillMaxWidth()) {
             // Badge
             when {
-                package_.isBestValue -> {
+                vipPackage.isBestValue -> {
                     Surface(
                         modifier = Modifier
                             .align(Alignment.TopEnd)
@@ -229,7 +230,7 @@ fun VipPackageCard(
                         )
                     }
                 }
-                package_.isPopular -> {
+                vipPackage.isPopular -> {
                     Surface(
                         modifier = Modifier
                             .align(Alignment.TopEnd)
@@ -274,7 +275,7 @@ fun VipPackageCard(
                             modifier = Modifier.size(28.dp)
                         )
                         Text(
-                            text = "VIP ${package_.tier}",
+                            text = "VIP ${vipPackage.tier}",
                             style = MaterialTheme.typography.labelSmall,
                             color = Color.White,
                             fontWeight = FontWeight.Bold
@@ -287,7 +288,7 @@ fun VipPackageCard(
                 // Package Details
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
-                        text = "${package_.days} Days",
+                        text = "${vipPackage.days} Days",
                         style = MaterialTheme.typography.titleMedium,
                         color = Color.White,
                         fontWeight = FontWeight.Bold
@@ -304,16 +305,16 @@ fun VipPackageCard(
                         )
                         Spacer(modifier = Modifier.width(4.dp))
                         Text(
-                            text = "${package_.diamonds} Diamonds",
+                            text = "${vipPackage.diamonds} Diamonds",
                             style = MaterialTheme.typography.bodyMedium,
                             color = DiamondBlue
                         )
                     }
                     
-                    if (package_.discount > 0) {
+                    if (vipPackage.discount > 0) {
                         Spacer(modifier = Modifier.height(4.dp))
                         Text(
-                            text = "${package_.discount}% Extra Bonus",
+                            text = "${vipPackage.discount}% Extra Bonus",
                             style = MaterialTheme.typography.bodySmall,
                             color = AccentGreen
                         )
@@ -323,13 +324,13 @@ fun VipPackageCard(
                 // Price
                 Column(horizontalAlignment = Alignment.End) {
                     Text(
-                        text = "$${package_.price}",
+                        text = "$${vipPackage.price}",
                         style = MaterialTheme.typography.titleLarge,
                         color = CoinGold,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
-                        text = "$${String.format("%.2f", package_.price / package_.days)}/day",
+                        text = "$${String.format(Locale.US, "%.2f", vipPackage.price / vipPackage.days)}/day",
                         style = MaterialTheme.typography.bodySmall,
                         color = TextSecondary
                     )

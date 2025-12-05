@@ -244,7 +244,7 @@ class GreedyBabyViewModel @Inject constructor(
     private fun processRoundResults(winner: WheelItem, specialResult: SpecialResult?) {
         val currentState = _uiState.value
         var totalWinnings = 0L
-        val topWinners = mutableListOf<TopWinner>()
+        // Unused variable removed: val topWinners = mutableListOf<TopWinner>()
         
         // Process user's bets
         currentState.betsOnItems.forEach { (itemId, bets) ->

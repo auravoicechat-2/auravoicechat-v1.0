@@ -34,7 +34,7 @@ fun PopularTab(
     isRefreshing: Boolean = false,
     modifier: Modifier = Modifier
 ) {
-    val categories = RoomCategory.values().toList()
+    val categories = RoomCategory.entries.toList()
     
     Column(modifier = modifier.fillMaxSize()) {
         // Category chips
