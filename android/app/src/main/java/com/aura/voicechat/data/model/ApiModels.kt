@@ -2208,3 +2208,26 @@ data class CacheSizeResponse(
     @SerializedName("videoCacheBytes") val videoCacheBytes: Long,
     @SerializedName("otherCacheBytes") val otherCacheBytes: Long
 )
+
+// ============================================
+// Owner Panel - Economy & Stats
+// ============================================
+
+data class TargetConfig(
+    @SerializedName("role") val role: String, // "USER" or "GUIDE"
+    @SerializedName("type") val type: String, // "DAILY", "WEEKLY", "MONTHLY"
+    @SerializedName("coins") val coins: Long,
+    @SerializedName("diamonds") val diamonds: Long
+)
+
+data class OwnerStats(
+    @SerializedName("totalRevenue") val totalRevenue: Double,
+    @SerializedName("totalUsers") val totalUsers: Int,
+    @SerializedName("activeUsers") val activeUsers: Int,
+    @SerializedName("totalRooms") val totalRooms: Int,
+    @SerializedName("activeRooms") val activeRooms: Int,
+    @SerializedName("totalTransactions") val totalTransactions: Int,
+    @SerializedName("dailyRevenue") val dailyRevenue: Double,
+    @SerializedName("weeklyRevenue") val weeklyRevenue: Double,
+    @SerializedName("monthlyRevenue") val monthlyRevenue: Double
+)

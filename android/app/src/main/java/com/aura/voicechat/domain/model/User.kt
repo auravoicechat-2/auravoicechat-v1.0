@@ -38,8 +38,3 @@ enum class KycStatus {
     REJECTED
 }
 
-enum class VipTier(val displayName: String) {
-    NONE(""),
-    VIP("VIP"),
-    SVIP("SVIP")
-}

@@ -156,7 +156,7 @@ class MusicService : Service() {
         return mediaPlayer?.duration?.toLong() ?: 0L
     }
     
-    fun isPlaying(): Boolean = isPlaying
+    fun getIsPlaying(): Boolean = isPlaying
     
     fun getCurrentSong(): Song? = currentSong
     
@@ -199,13 +199,13 @@ class MusicService : Service() {
         return NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle(song.title)
             .setContentText(song.artist)
-            .setSmallIcon(R.drawable.ic_music_note)
+            .setSmallIcon(android.R.drawable.ic_media_play)
             .addAction(
-                if (isPlaying) R.drawable.ic_pause else R.drawable.ic_play_arrow,
+                if (isPlaying) android.R.drawable.ic_media_pause else android.R.drawable.ic_media_play,
                 if (isPlaying) "Pause" else "Play",
                 playPauseIntent
             )
-            .addAction(R.drawable.ic_close, "Stop", stopIntent)
+            .addAction(android.R.drawable.ic_delete, "Stop", stopIntent)
             .setStyle(
                 androidx.media.app.NotificationCompat.MediaStyle()
                     .setShowActionsInCompactView(0, 1)
@@ -219,7 +219,7 @@ class MusicService : Service() {
         return NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle("Music Player")
             .setContentText("No song playing")
-            .setSmallIcon(R.drawable.ic_music_note)
+            .setSmallIcon(android.R.drawable.ic_media_play)
             .build()
     }
     

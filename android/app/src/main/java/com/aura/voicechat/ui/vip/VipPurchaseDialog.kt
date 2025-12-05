@@ -339,7 +339,7 @@ fun VipPackageCard(
     }
 }
 
-data class VipPackage(
+private data class VipPackage(
     val id: String,
     val tier: Int,
     val days: Int,

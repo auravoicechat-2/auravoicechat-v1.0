@@ -5,7 +5,14 @@
 
 pluginManagement {
     repositories {
-        google()
+        // Note: Google Maven repository is required for Android Gradle Plugin
+        // but dl.google.com may be blocked in some network environments.
+        // Using explicit maven.google.com URL as workaround
+        maven {
+            url = uri("https://maven.google.com")
+            // Fallback: some environments may need google() instead
+            // which tries dl.google.com/dl/android/maven2/
+        }
         mavenCentral()
         gradlePluginPortal()
     }
@@ -16,7 +23,12 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()
+        // Note: Google Maven repository is required for Android dependencies
+        // but dl.google.com may be blocked in some network environments.
+        // Using explicit maven.google.com URL as workaround
+        maven {
+            url = uri("https://maven.google.com")
+        }
         mavenCentral()
         maven { url = uri("https://jitpack.io") }
         maven { url = uri("https://s01.oss.sonatype.org/content/repositories/releases/") }

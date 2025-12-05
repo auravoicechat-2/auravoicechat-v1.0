@@ -1009,12 +1009,6 @@ interface ApiService {
     // Events - Detailed
     // ============================================
     
-    // Get event details
-    @GET("api/v1/events/{eventId}")
-    suspend fun getEventDetails(
-        @Path("eventId") eventId: String
-    ): Response<EventDetailResponse>
-    
     // Get active events
     @GET("api/v1/events/active")
     suspend fun getActiveEvents(): Response<List<EventDetailResponse>>
@@ -1125,7 +1119,7 @@ interface ApiService {
     
     // Get pending guide applications (admin only)
     @GET("api/v1/guide/applications")
-    suspend fun getGuideApplications(
+    suspend fun getGuideApplicationsList(
         @Query("status") status: String? = null
     ): Response<List<GuideApplication>>
     
@@ -1274,12 +1268,6 @@ interface ApiService {
     suspend fun getNotificationsList(
         @Query("type") type: String?
     ): Response<NotificationsListResponse>
-    
-    @POST("api/v1/notifications/{id}/read")
-    suspend fun markNotificationAsRead(@Path("id") notificationId: String): Response<Unit>
-    
-    @POST("api/v1/notifications/read-all")
-    suspend fun markAllNotificationsAsRead(): Response<Unit>
     
     @DELETE("api/v1/notifications/{id}")
     suspend fun deleteNotification(@Path("id") notificationId: String): Response<Unit>
