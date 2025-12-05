@@ -1,5 +1,7 @@
 package com.aura.voicechat.ui.music
 
+
+import java.util.Locale
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -336,5 +338,5 @@ fun MiniPlayer(
 private fun formatDuration(millis: Long): String {
     val seconds = (millis / 1000) % 60
     val minutes = (millis / (1000 * 60)) % 60
-    return String.format("%d:%02d", minutes, seconds)
+    return String.format(Locale.US, "%d:%02d", minutes, seconds)
 }

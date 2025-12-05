@@ -1,5 +1,7 @@
 package com.aura.voicechat.ui.referral
 
+
+import java.util.Locale
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -325,7 +327,7 @@ private fun GetCashTab(
                     )
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
-                        text = "$${String.format("%.2f", uiState.totalCashEarned)}",
+                        text = "$${String.format(Locale.US, "%.2f", uiState.totalCashEarned)}",
                         style = MaterialTheme.typography.headlineMedium,
                         fontWeight = FontWeight.Bold,
                         color = SuccessGreen
@@ -348,7 +350,7 @@ private fun GetCashTab(
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Text(
-                                text = "$${String.format("%.2f", uiState.availableCash)}",
+                                text = "$${String.format(Locale.US, "%.2f", uiState.availableCash)}",
                                 style = MaterialTheme.typography.titleLarge,
                                 fontWeight = FontWeight.Bold,
                                 color = SuccessGreen
@@ -369,7 +371,7 @@ private fun GetCashTab(
                     }
                     
                     Text(
-                        text = "Min withdraw: $${String.format("%.2f", uiState.minWithdrawCash)}",
+                        text = "Min withdraw: $${String.format(Locale.US, "%.2f", uiState.minWithdrawCash)}",
                         style = MaterialTheme.typography.labelSmall,
                         color = TextTertiary,
                         modifier = Modifier.padding(top = 4.dp)
@@ -552,8 +554,8 @@ data class InviteRecord(
 
 private fun formatNumber(number: Long): String {
     return when {
-        number >= 1_000_000 -> String.format("%.1fM", number / 1_000_000.0)
-        number >= 1_000 -> String.format("%.1fK", number / 1_000.0)
+        number >= 1_000_000 -> String.format(Locale.US, "%.1fM", number / 1_000_000.0)
+        number >= 1_000 -> String.format(Locale.US, "%.1fK", number / 1_000.0)
         else -> number.toString()
     }
 }

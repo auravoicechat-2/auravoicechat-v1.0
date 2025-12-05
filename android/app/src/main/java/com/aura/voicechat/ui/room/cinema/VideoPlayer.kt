@@ -1,5 +1,7 @@
 package com.aura.voicechat.ui.room.cinema
 
+
+import java.util.Locale
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.compose.foundation.background
@@ -233,8 +235,8 @@ private fun formatTime(milliseconds: Long): String {
     val hours = (milliseconds / (1000 * 60 * 60))
     
     return if (hours > 0) {
-        String.format("%d:%02d:%02d", hours, minutes, seconds)
+        String.format(Locale.US, "%d:%02d:%02d", hours, minutes, seconds)
     } else {
-        String.format("%02d:%02d", minutes, seconds)
+        String.format(Locale.US, "%02d:%02d", minutes, seconds)
     }
 }

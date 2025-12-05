@@ -1,5 +1,7 @@
 package com.aura.voicechat.ui.wallet
 
+
+import java.util.Locale
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -468,8 +470,8 @@ private fun ExchangeDialog(
 
 private fun formatBalance(balance: Long): String {
     return when {
-        balance >= 1_000_000 -> String.format("%.1fM", balance / 1_000_000.0)
-        balance >= 1_000 -> String.format("%.1fK", balance / 1_000.0)
+        balance >= 1_000_000 -> String.format(Locale.US, "%.1fM", balance / 1_000_000.0)
+        balance >= 1_000 -> String.format(Locale.US, "%.1fK", balance / 1_000.0)
         else -> balance.toString()
     }
 }
