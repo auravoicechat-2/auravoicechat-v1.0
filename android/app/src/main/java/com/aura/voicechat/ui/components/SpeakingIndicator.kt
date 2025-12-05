@@ -23,8 +23,8 @@ import com.aura.voicechat.ui.theme.AccentCyan
 @Composable
 fun SpeakingIndicator(
     isSpeaking: Boolean,
-    size: Dp = 60.dp,
     modifier: Modifier = Modifier,
+    size: Dp = 60.dp,
     content: @Composable () -> Unit
 ) {
     Box(

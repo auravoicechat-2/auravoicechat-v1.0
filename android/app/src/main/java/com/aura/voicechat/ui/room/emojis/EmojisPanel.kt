@@ -35,8 +35,8 @@ import com.aura.voicechat.ui.theme.*
 fun EmojisPanel(
     onEmojiSelected: (RoomEmoji) -> Unit,
     onDismiss: () -> Unit,
-    userVipLevel: Int = 0,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    userVipLevel: Int = 0
 ) {
     var selectedCategory by remember { mutableStateOf(EmojiCategory.RECENT) }
     

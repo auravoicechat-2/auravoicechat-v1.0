@@ -27,12 +27,12 @@ import com.aura.voicechat.ui.theme.TextPrimary
 @Composable
 fun PopularTab(
     rooms: List<RoomCard>,
+    modifier: Modifier = Modifier,
     selectedCategory: RoomCategory = RoomCategory.ALL,
     onCategorySelected: (RoomCategory) -> Unit,
     onRoomClick: (String) -> Unit,
     onRefresh: () -> Unit,
-    isRefreshing: Boolean = false,
-    modifier: Modifier = Modifier
+    isRefreshing: Boolean = false
 ) {
     val categories = RoomCategory.entries.toList()
     
