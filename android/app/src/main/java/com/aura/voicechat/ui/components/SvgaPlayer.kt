@@ -50,7 +50,9 @@ fun SvgaPlayer(
                 
                 // Set callback
                 callback = object : com.opensource.svgaplayer.SVGACallback {
-                    override fun onPause() {}
+                    override fun onPause() {
+                        // Intentionally empty - pause not handled
+                    }
                     
                     override fun onFinished() {
                         onAnimationEnd()
@@ -60,7 +62,9 @@ fun SvgaPlayer(
                         onAnimationRepeat()
                     }
                     
-                    override fun onStep(frame: Int, percentage: Double) {}
+                    override fun onStep(frame: Int, percentage: Double) {
+                        // Intentionally empty - frame updates not needed
+                    }
                 }
             }
         },
@@ -116,7 +120,9 @@ fun SvgaPlayerFromUrl(
                         onAnimationRepeat()
                     }
                     
-                    override fun onStep(frame: Int, percentage: Double) {}
+                    override fun onStep(frame: Int, percentage: Double) {
+                        // Intentionally empty - frame updates not needed
+                    }
                 }
             }
         },
@@ -226,7 +232,9 @@ fun SvgaPlayerFromFile(
                                 onAnimationStart()
                             }
                             
-                            override fun onError() {}
+                            override fun onError() {
+                            // Intentionally empty - error not handled
+                        }
                         }
                     )
                 } catch (e: Exception) {
@@ -239,7 +247,9 @@ fun SvgaPlayerFromFile(
                         onAnimationEnd()
                     }
                     override fun onRepeat() {}
-                    override fun onStep(frame: Int, percentage: Double) {}
+                    override fun onStep(frame: Int, percentage: Double) {
+                        // Intentionally empty - frame updates not needed
+                    }
                 }
             }
         }
