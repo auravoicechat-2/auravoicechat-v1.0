@@ -35,7 +35,7 @@ fun TransactionHistoryScreen(
     viewModel: WalletViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    var selectedFilter by remember { mutableStateOf<TransactionFilter>(TransactionFilter.ALL) }
+    var selectedFilter by remember { mutableStateOf(TransactionFilter.ALL) }
     
     Scaffold(
         topBar = {

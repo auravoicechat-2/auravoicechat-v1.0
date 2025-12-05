@@ -20,7 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
+import Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -762,7 +762,7 @@ private fun StatItem(value: String, label: String) {
 
 @Composable
 private fun WalletItem(
-    icon: androidx.compose.ui.graphics.vector.ImageVector,
+    icon: ImageVector,
     value: String,
     label: String,
     color: Color
@@ -841,11 +841,11 @@ private fun MedalItem(medal: Medal) {
 
 @Composable
 private fun ProfileMenuItem(
-    icon: androidx.compose.ui.graphics.vector.ImageVector,
+    icon: ImageVector,
     title: String,
     subtitle: String,
     onClick: () -> Unit,
-    tint: androidx.compose.ui.graphics.Color = AccentMagenta
+    tint: Color = AccentMagenta
 ) {
     Card(
         onClick = onClick,

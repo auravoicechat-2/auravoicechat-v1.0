@@ -349,7 +349,7 @@ data class FamilyUiState(
     val showSettingsDialog: Boolean = false,
     val error: String? = null,
     // Week 2 additions
-    val availableFamilies: List<com.aura.voicechat.ui.family.FamilyItemState> = emptyList()
+    val availableFamilies: List<FamilyItemState> = emptyList()
 )
 
 data class FamilySearchResult(

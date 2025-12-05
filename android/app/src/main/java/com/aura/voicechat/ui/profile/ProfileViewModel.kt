@@ -467,9 +467,9 @@ data class ProfileUiState(
     val message: String? = null,
     val error: String? = null,
     // Week 2 additions
-    val followers: List<com.aura.voicechat.ui.profile.UserItemState> = emptyList(),
-    val following: List<com.aura.voicechat.ui.profile.UserItemState> = emptyList(),
-    val visitors: List<com.aura.voicechat.ui.profile.VisitorState> = emptyList(),
+    val followers: List<UserItemState> = emptyList(),
+    val following: List<UserItemState> = emptyList(),
+    val visitors: List<VisitorState> = emptyList(),
     val visitorsCount: Int = 0,
     val todayVisitorsCount: Int = 0,
     // Admin/Owner status

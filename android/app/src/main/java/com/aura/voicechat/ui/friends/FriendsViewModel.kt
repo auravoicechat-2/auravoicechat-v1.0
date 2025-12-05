@@ -138,5 +138,5 @@ data class FriendsUiState(
     val requests: List<FriendRequest> = emptyList(),
     val sentRequests: List<FriendRequest> = emptyList(),
     // Week 2 additions
-    val blockedUsers: List<com.aura.voicechat.ui.friends.BlockedUser> = emptyList()
+    val blockedUsers: List<BlockedUser> = emptyList()
 )
