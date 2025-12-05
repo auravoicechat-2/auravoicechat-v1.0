@@ -108,4 +108,20 @@
     <!-- Picker View Colors -->
     <color name="pickerview_timebtn_nor">#CCCCCC</color>
     <color name="pickerview_timebtn_pre">#8551C5</color>
+    
+    <!-- Facebook Button Additional Colors -->
+    <color name="com_facebook_button_background_color">#1877F2</color>
+    <color name="com_facebook_button_background_color_disabled">#8551C5</color>
+    <color name="com_facebook_button_background_color_pressed">#0C63D4</color>
+    
+    <!-- Material Design Colors -->
+    <color name="design_snackbar_background_color">#323232</color>
+    <color name="primary_dark_material_dark">#000000</color>
+    
+    <!-- Tooltip Colors -->
+    <color name="tooltip_background_dark">#E0323232</color>
+    <color name="tooltip_background_light">#E0FAFAFA</color>
+    
+    <!-- Notification Colors -->
+    <color name="notification_icon_bg_color">#8551C5</color>
 </resources>
