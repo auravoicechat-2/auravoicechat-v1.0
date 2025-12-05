@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Aura Voice Chat - Theme Resources -->
+<!-- Aura Voice Chat - Theme Resources for API 27+ -->
 <resources>
-    <!-- Base Theme -->
+    <!-- Base Theme with navigation bar light mode -->
     <style name="Theme.AuraVoiceChat" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary colors -->
         <item name="colorPrimary">@color/purple_80</item>
@@ -34,24 +34,8 @@
         <item name="android:statusBarColor">@color/dark_canvas</item>
         <item name="android:windowLightStatusBar">false</item>
         
-        <!-- Navigation bar -->
+        <!-- Navigation bar (API 27+) -->
         <item name="android:navigationBarColor">@color/dark_surface</item>
-    </style>
-    
-    <!-- Splash Theme -->
-    <style name="Theme.AuraVoiceChat.Splash" parent="Theme.AuraVoiceChat">
-        <item name="android:windowBackground">@drawable/splash_background</item>
-    </style>
-    
-    <!-- Light Theme -->
-    <style name="Theme.AuraVoiceChat.Light" parent="Theme.Material3.Light.NoActionBar">
-        <item name="colorPrimary">@color/purple_40</item>
-        <item name="colorOnPrimary">@color/light_background</item>
-        <item name="colorSecondary">@color/accent_magenta</item>
-        <item name="colorTertiary">@color/accent_cyan</item>
-        <item name="android:colorBackground">@color/light_background</item>
-        <item name="colorSurface">@color/light_surface</item>
-        <item name="android:statusBarColor">@color/light_background</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">false</item>
     </style>
 </resources>
