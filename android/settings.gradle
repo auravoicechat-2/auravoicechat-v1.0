@@ -14,6 +14,8 @@ pluginManagement {
             // which tries dl.google.com/dl/android/maven2/
         }
         mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+        maven { url = uri("https://s01.oss.sonatype.org/content/repositories/releases/") }
         gradlePluginPortal()
     }
 }
