@@ -1,0 +1,58 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/components/SpeakingIndicator.kt</file>
+  <line>27</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.components</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/components/SpeakingIndicator.kt" />
+  <problem_class id="AndroidLintModifierParameter" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Guidelines for Modifier parameters in a Composable function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Modifier parameter should be the first optional parameter&lt;/html&gt;</description>
+  <highlighted_element>modifier</highlighted_element>
+  <language>kotlin</language>
+  <offset>4</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/games/Lucky777Screen.kt</file>
+  <line>587</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.games</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/games/Lucky777Screen.kt" />
+  <problem_class id="AndroidLintModifierParameter" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Guidelines for Modifier parameters in a Composable function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Modifier parameter should be the first optional parameter&lt;/html&gt;</description>
+  <highlighted_element>modifier</highlighted_element>
+  <language>kotlin</language>
+  <offset>4</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/home/PopularTab.kt</file>
+  <line>35</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.home</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/home/PopularTab.kt" />
+  <problem_class id="AndroidLintModifierParameter" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Guidelines for Modifier parameters in a Composable function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Modifier parameter should be the first optional parameter&lt;/html&gt;</description>
+  <highlighted_element>modifier</highlighted_element>
+  <language>kotlin</language>
+  <offset>4</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>39</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt" />
+  <problem_class id="AndroidLintModifierParameter" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Guidelines for Modifier parameters in a Composable function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Modifier parameter should be the first optional parameter&lt;/html&gt;</description>
+  <highlighted_element>modifier</highlighted_element>
+  <language>kotlin</language>
+  <offset>4</offset>
+  <length>8</length>
+</problem>
+</problems>

@@ -1,0 +1,128 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/data/repository/AuthRepositoryImpl.kt</file>
+  <line>517</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.data.repository</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/data/repository/AuthRepositoryImpl.kt" />
+  <problem_class id="Annotator" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Annotator</problem_class>
+  <hints />
+  <description>Missing '} #loc</description>
+  <highlighted_element />
+  <language>kotlin</language>
+  <offset>1</offset>
+  <length>0</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/LuckyDrawViewModel.kt</file>
+  <line>63</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.events</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/LuckyDrawViewModel.kt" />
+  <problem_class id="Annotator" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Annotator</problem_class>
+  <hints />
+  <description>Expecting an element #loc</description>
+  <highlighted_element>.</highlighted_element>
+  <language>kotlin</language>
+  <offset>26</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/LuckyDrawViewModel.kt</file>
+  <line>63</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.events</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/LuckyDrawViewModel.kt" />
+  <problem_class id="Annotator" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Annotator</problem_class>
+  <hints />
+  <description>Expecting an element #loc</description>
+  <highlighted_element>=</highlighted_element>
+  <language>kotlin</language>
+  <offset>33</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/LuckyDrawViewModel.kt</file>
+  <line>63</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.events</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/LuckyDrawViewModel.kt" />
+  <problem_class id="Annotator" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Annotator</problem_class>
+  <hints />
+  <description>Expecting an element #loc</description>
+  <highlighted_element>.</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/LuckyDrawViewModel.kt</file>
+  <line>63</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.events</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/LuckyDrawViewModel.kt" />
+  <problem_class id="Annotator" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Annotator</problem_class>
+  <hints />
+  <description>Expecting an element #loc</description>
+  <highlighted_element>.</highlighted_element>
+  <language>kotlin</language>
+  <offset>47</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/LuckyDrawViewModel.kt</file>
+  <line>64</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.events</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/LuckyDrawViewModel.kt" />
+  <problem_class id="Annotator" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Annotator</problem_class>
+  <hints />
+  <description>Expecting ')' #loc</description>
+  <highlighted_element>,</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/LuckyDrawViewModel.kt</file>
+  <line>67</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.events</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/LuckyDrawViewModel.kt" />
+  <problem_class id="Annotator" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Annotator</problem_class>
+  <hints />
+  <description>Unexpected tokens (use ';' to separate expressions on the same line) #loc</description>
+  <highlighted_element>,</highlighted_element>
+  <language>kotlin</language>
+  <offset>17</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/LuckyDrawViewModel.kt</file>
+  <line>74</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.events</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/LuckyDrawViewModel.kt" />
+  <problem_class id="Annotator" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Annotator</problem_class>
+  <hints />
+  <description>Expecting an element #loc</description>
+  <highlighted_element>)</highlighted_element>
+  <language>kotlin</language>
+  <offset>12</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/LuckyDrawViewModel.kt</file>
+  <line>119</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.events</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/LuckyDrawViewModel.kt" />
+  <problem_class id="Annotator" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Annotator</problem_class>
+  <hints />
+  <description>Expecting a top level declaration #loc</description>
+  <highlighted_element>}</highlighted_element>
+  <language>kotlin</language>
+  <offset>0</offset>
+  <length>1</length>
+</problem>
+</problems>

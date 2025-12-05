@@ -1,0 +1,1478 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ayp_drop_shadow_bottom.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ayp_drop_shadow_bottom.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/ayp_drop_shadow'</description>
+  <highlighted_element>@color/ayp_drop_shadow</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ayp_drop_shadow_top.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ayp_drop_shadow_top.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/ayp_drop_shadow'</description>
+  <highlighted_element>@color/ayp_drop_shadow</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/b_empty_color_btn.xml</file>
+  <line>6</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/b_empty_color_btn.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_fecc35'</description>
+  <highlighted_element>@color/color_fecc35</highlighted_element>
+  <language>XML</language>
+  <offset>23</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/b_music_seek_bar.xml</file>
+  <line>11</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/b_music_seek_bar.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/app_theme_color'</description>
+  <highlighted_element>@color/app_theme_color</highlighted_element>
+  <language>XML</language>
+  <offset>40</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/b_music_seek_bar.xml</file>
+  <line>12</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/b_music_seek_bar.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/app_theme_color'</description>
+  <highlighted_element>@color/app_theme_color</highlighted_element>
+  <language>XML</language>
+  <offset>38</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/b_request_lock_mic.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/b_request_lock_mic.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorTransparent'</description>
+  <highlighted_element>@color/colorTransparent</highlighted_element>
+  <language>XML</language>
+  <offset>28</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/b_request_lock_mic.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/b_request_lock_mic.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorTransparent'</description>
+  <highlighted_element>@color/colorTransparent</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/b_send.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/b_send.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/app_theme_color'</description>
+  <highlighted_element>@color/app_theme_color</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/b_sign_in_selected_item.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/b_sign_in_selected_item.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_174D42_50'</description>
+  <highlighted_element>@color/color_174D42_50</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/b_user_admin.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/b_user_admin.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/green_26BE42'</description>
+  <highlighted_element>@color/green_26BE42</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_bd_agree.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_bd_agree.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_fffbc5'</description>
+  <highlighted_element>@color/color_fffbc5</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_bd_reject.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_bd_reject.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_ffeceb'</description>
+  <highlighted_element>@color/color_ffeceb</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_cinema_controller_bg.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_cinema_controller_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_black_40'</description>
+  <highlighted_element>@color/color_black_40</highlighted_element>
+  <language>XML</language>
+  <offset>28</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_cinema_controller_bg.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_cinema_controller_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_black_40'</description>
+  <highlighted_element>@color/color_black_40</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_cinema_progress_bar.xml</file>
+  <line>9</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_cinema_progress_bar.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_white_30'</description>
+  <highlighted_element>@color/color_white_30</highlighted_element>
+  <language>XML</language>
+  <offset>34</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_follow.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_follow.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_1bd9b3'</description>
+  <highlighted_element>@color/color_1bd9b3</highlighted_element>
+  <language>XML</language>
+  <offset>23</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_friend_agreed.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_friend_agreed.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorTransparent'</description>
+  <highlighted_element>@color/colorTransparent</highlighted_element>
+  <language>XML</language>
+  <offset>28</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_friend_agreed.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_friend_agreed.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorTransparent'</description>
+  <highlighted_element>@color/colorTransparent</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_friend_reject.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_friend_reject.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorTransparent'</description>
+  <highlighted_element>@color/colorTransparent</highlighted_element>
+  <language>XML</language>
+  <offset>28</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_friend_reject.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_friend_reject.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorTransparent'</description>
+  <highlighted_element>@color/colorTransparent</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_friend_wait.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_friend_wait.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorTransparent'</description>
+  <highlighted_element>@color/colorTransparent</highlighted_element>
+  <language>XML</language>
+  <offset>28</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_friend_wait.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_friend_wait.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorTransparent'</description>
+  <highlighted_element>@color/colorTransparent</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_login_grey_next_selector.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_login_grey_next_selector.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/appcolor_gray'</description>
+  <highlighted_element>@color/appcolor_gray</highlighted_element>
+  <language>XML</language>
+  <offset>34</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_login_grey_next_selector.xml</file>
+  <line>11</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_login_grey_next_selector.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/appcolor_gray'</description>
+  <highlighted_element>@color/appcolor_gray</highlighted_element>
+  <language>XML</language>
+  <offset>34</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_login_grey_next_selector.xml</file>
+  <line>17</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_login_grey_next_selector.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_fecc35'</description>
+  <highlighted_element>@color/color_fecc35</highlighted_element>
+  <language>XML</language>
+  <offset>34</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_login_grey_next_selector.xml</file>
+  <line>23</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_login_grey_next_selector.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/appcolor_gray'</description>
+  <highlighted_element>@color/appcolor_gray</highlighted_element>
+  <language>XML</language>
+  <offset>34</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_login_grey_next_selector_22.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_login_grey_next_selector_22.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/appcolor_gray'</description>
+  <highlighted_element>@color/appcolor_gray</highlighted_element>
+  <language>XML</language>
+  <offset>34</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_login_grey_next_selector_22.xml</file>
+  <line>11</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_login_grey_next_selector_22.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/appcolor_gray'</description>
+  <highlighted_element>@color/appcolor_gray</highlighted_element>
+  <language>XML</language>
+  <offset>34</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_login_grey_next_selector_22.xml</file>
+  <line>28</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_login_grey_next_selector_22.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/appcolor_gray'</description>
+  <highlighted_element>@color/appcolor_gray</highlighted_element>
+  <language>XML</language>
+  <offset>34</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_message_count.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_message_count.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_ef4444'</description>
+  <highlighted_element>@color/color_ef4444</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_music_seek_bar.xml</file>
+  <line>20</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_music_seek_bar.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/app_theme_color'</description>
+  <highlighted_element>@color/app_theme_color</highlighted_element>
+  <language>XML</language>
+  <offset>40</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_music_seek_bar.xml</file>
+  <line>21</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_music_seek_bar.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/app_theme_color'</description>
+  <highlighted_element>@color/app_theme_color</highlighted_element>
+  <language>XML</language>
+  <offset>38</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_request_lock_mic.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_request_lock_mic.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/appcolor_transparent'</description>
+  <highlighted_element>@color/appcolor_transparent</highlighted_element>
+  <language>XML</language>
+  <offset>28</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_request_lock_mic.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_request_lock_mic.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/appcolor_transparent'</description>
+  <highlighted_element>@color/appcolor_transparent</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_svip_review_tag.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_svip_review_tag.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/appcolor_transparent'</description>
+  <highlighted_element>@color/appcolor_transparent</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_teen_patti_notice.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_teen_patti_notice.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/appcolor_transparent'</description>
+  <highlighted_element>@color/appcolor_transparent</highlighted_element>
+  <language>XML</language>
+  <offset>28</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bg_teen_patti_notice.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_teen_patti_notice.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/appcolor_transparent'</description>
+  <highlighted_element>@color/appcolor_transparent</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/com_facebook_button_send_background.xml</file>
+  <line>14</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/com_facebook_button_send_background.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/com_facebook_button_send_background_color_pressed'</description>
+  <highlighted_element>@color/com_facebook_button_send_background_color_pressed</highlighted_element>
+  <language>XML</language>
+  <offset>34</offset>
+  <length>56</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/com_facebook_button_send_background.xml</file>
+  <line>20</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/com_facebook_button_send_background.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/com_facebook_button_send_background_color'</description>
+  <highlighted_element>@color/com_facebook_button_send_background_color</highlighted_element>
+  <language>XML</language>
+  <offset>34</offset>
+  <length>48</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/d_daily_buy_exp_progress.xml</file>
+  <line>6</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/d_daily_buy_exp_progress.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/app_theme_color'</description>
+  <highlighted_element>@color/app_theme_color</highlighted_element>
+  <language>XML</language>
+  <offset>38</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/d_daily_buy_exp_progress.xml</file>
+  <line>20</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/d_daily_buy_exp_progress.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/app_theme_color'</description>
+  <highlighted_element>@color/app_theme_color</highlighted_element>
+  <language>XML</language>
+  <offset>38</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/e_text_cursor_color.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/e_text_cursor_color.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/app_theme_color'</description>
+  <highlighted_element>@color/app_theme_color</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/edit_text_cursor_color.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/edit_text_cursor_color.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/app_theme_color'</description>
+  <highlighted_element>@color/app_theme_color</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ic_app_s.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_app_s.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/white'</description>
+  <highlighted_element>@color/white</highlighted_element>
+  <language>XML</language>
+  <offset>28</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/label_lucky_numb_bg.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/label_lucky_numb_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/appcolor_transparent'</description>
+  <highlighted_element>@color/appcolor_transparent</highlighted_element>
+  <language>XML</language>
+  <offset>34</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/label_lucky_numb_bg.xml</file>
+  <line>8</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/label_lucky_numb_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/app_theme_color'</description>
+  <highlighted_element>@color/app_theme_color</highlighted_element>
+  <language>XML</language>
+  <offset>31</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/label_lucky_numb_bg.xml</file>
+  <line>14</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/label_lucky_numb_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/appcolor_transparent'</description>
+  <highlighted_element>@color/appcolor_transparent</highlighted_element>
+  <language>XML</language>
+  <offset>34</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/label_lucky_numb_bg.xml</file>
+  <line>17</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/label_lucky_numb_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/grey_616366'</description>
+  <highlighted_element>@color/grey_616366</highlighted_element>
+  <language>XML</language>
+  <offset>31</offset>
+  <length>18</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/label_lucky_numb_text_color.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/label_lucky_numb_text_color.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/app_theme_color'</description>
+  <highlighted_element>@color/app_theme_color</highlighted_element>
+  <language>XML</language>
+  <offset>23</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/label_lucky_numb_text_color.xml</file>
+  <line>6</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/label_lucky_numb_text_color.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/grey_616366'</description>
+  <highlighted_element>@color/grey_616366</highlighted_element>
+  <language>XML</language>
+  <offset>25</offset>
+  <length>18</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/load_progress.xml</file>
+  <line>10</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/load_progress.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorWhite'</description>
+  <highlighted_element>@color/colorWhite</highlighted_element>
+  <language>XML</language>
+  <offset>35</offset>
+  <length>17</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/load_progress.xml</file>
+  <line>20</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/load_progress.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorWhite'</description>
+  <highlighted_element>@color/colorWhite</highlighted_element>
+  <language>XML</language>
+  <offset>38</offset>
+  <length>17</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/load_progress.xml</file>
+  <line>29</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/load_progress.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/yellow_ffc000'</description>
+  <highlighted_element>@color/yellow_ffc000</highlighted_element>
+  <language>XML</language>
+  <offset>31</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/p_loading_style.xml</file>
+  <line>8</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/p_loading_style.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_fecc35'</description>
+  <highlighted_element>@color/color_fecc35</highlighted_element>
+  <language>XML</language>
+  <offset>40</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/p_loading_style.xml</file>
+  <line>9</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/p_loading_style.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_fecc35'</description>
+  <highlighted_element>@color/color_fecc35</highlighted_element>
+  <language>XML</language>
+  <offset>38</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/r_pk_switch_thum_on.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/r_pk_switch_thum_on.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorWhite'</description>
+  <highlighted_element>@color/colorWhite</highlighted_element>
+  <language>XML</language>
+  <offset>28</offset>
+  <length>17</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/r_pk_switch_thum_on.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/r_pk_switch_thum_on.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorWhite'</description>
+  <highlighted_element>@color/colorWhite</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>17</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/r_pk_switch_thum_on.xml</file>
+  <line>15</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/r_pk_switch_thum_on.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorTransparent'</description>
+  <highlighted_element>@color/colorTransparent</highlighted_element>
+  <language>XML</language>
+  <offset>23</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/rb_l_default_bg.xml</file>
+  <line>8</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/rb_l_default_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/appcolor_white'</description>
+  <highlighted_element>@color/appcolor_white</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/room_pk_switch_thum_on.xml</file>
+  <line>8</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/room_pk_switch_thum_on.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/appcolor_transparent'</description>
+  <highlighted_element>@color/appcolor_transparent</highlighted_element>
+  <language>XML</language>
+  <offset>23</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/room_pk_switch_thum_on.xml</file>
+  <line>10</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/room_pk_switch_thum_on.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorWhite'</description>
+  <highlighted_element>@color/colorWhite</highlighted_element>
+  <language>XML</language>
+  <offset>28</offset>
+  <length>17</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/room_pk_switch_thum_on.xml</file>
+  <line>11</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/room_pk_switch_thum_on.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorWhite'</description>
+  <highlighted_element>@color/colorWhite</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>17</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_add_room_submit_yellow.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_add_room_submit_yellow.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/yellow_ffc000'</description>
+  <highlighted_element>@color/yellow_ffc000</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_beans_line_bg_22.xml</file>
+  <line>6</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_beans_line_bg_22.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/grey_c2c4cb'</description>
+  <highlighted_element>@color/grey_c2c4cb</highlighted_element>
+  <language>XML</language>
+  <offset>23</offset>
+  <length>18</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_gradient_1bd9b3_19cc9d_20_bg.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_gradient_1bd9b3_19cc9d_20_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_fecc35'</description>
+  <highlighted_element>@color/color_fecc35</highlighted_element>
+  <language>XML</language>
+  <offset>28</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_gradient_1bd9b3_19cc9d_20_bg.xml</file>
+  <line>6</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_gradient_1bd9b3_19cc9d_20_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_fecc35'</description>
+  <highlighted_element>@color/color_fecc35</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_gradient_1bd9b3_19cc9d_22_bg.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_gradient_1bd9b3_19cc9d_22_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_fecc35'</description>
+  <highlighted_element>@color/color_fecc35</highlighted_element>
+  <language>XML</language>
+  <offset>28</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_gradient_1bd9b3_19cc9d_22_bg.xml</file>
+  <line>6</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_gradient_1bd9b3_19cc9d_22_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_fecc35'</description>
+  <highlighted_element>@color/color_fecc35</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_gradient_59dab8_19cc9d_22_bg.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_gradient_59dab8_19cc9d_22_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/white'</description>
+  <highlighted_element>@color/white</highlighted_element>
+  <language>XML</language>
+  <offset>23</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_gradient_ffcd7c_ffffff_bg.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_gradient_ffcd7c_ffffff_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorTransparent'</description>
+  <highlighted_element>@color/colorTransparent</highlighted_element>
+  <language>XML</language>
+  <offset>28</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_gradient_fff2b0_ffffff_10_bg.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_gradient_fff2b0_ffffff_10_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorTransparent'</description>
+  <highlighted_element>@color/colorTransparent</highlighted_element>
+  <language>XML</language>
+  <offset>28</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_gradient_fff2b0_ffffff_10_bg.xml</file>
+  <line>6</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_gradient_fff2b0_ffffff_10_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_fff2b0_32'</description>
+  <highlighted_element>@color/color_fff2b0_32</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_gradient_white_raduis_bg.xml</file>
+  <line>6</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_gradient_white_raduis_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/white'</description>
+  <highlighted_element>@color/white</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_gray_d4dad8_22_bg.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_gray_d4dad8_22_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_d4dad8'</description>
+  <highlighted_element>@color/color_d4dad8</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_main_tab_bg.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_main_tab_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/white'</description>
+  <highlighted_element>@color/white</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_black_bg_8_line_white_10.xml</file>
+  <line>6</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_black_bg_8_line_white_10.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_white_10'</description>
+  <highlighted_element>@color/color_white_10</highlighted_element>
+  <language>XML</language>
+  <offset>23</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_e24545_15_bg.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_e24545_15_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_e24545'</description>
+  <highlighted_element>@color/color_e24545</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_e24545_20_bg.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_e24545_20_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_e24545'</description>
+  <highlighted_element>@color/color_e24545</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_e5e5e5_10.xml</file>
+  <line>6</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_e5e5e5_10.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/grey_e5e5e5'</description>
+  <highlighted_element>@color/grey_e5e5e5</highlighted_element>
+  <language>XML</language>
+  <offset>23</offset>
+  <length>18</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_e5e5e5_10.xml</file>
+  <line>7</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_e5e5e5_10.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_f2f5f4'</description>
+  <highlighted_element>@color/color_f2f5f4</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_gray_bg_22.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_gray_bg_22.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/appcolor_gray'</description>
+  <highlighted_element>@color/appcolor_gray</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_gray_bg_40.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_gray_bg_40.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/appcolor_gray'</description>
+  <highlighted_element>@color/appcolor_gray</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_gray_bg_comments.xml</file>
+  <line>6</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_gray_bg_comments.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/white'</description>
+  <highlighted_element>@color/white</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_ring_bg_8.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_ring_bg_8.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorWhite'</description>
+  <highlighted_element>@color/colorWhite</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>17</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_ring_bg_8.xml</file>
+  <line>7</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_ring_bg_8.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/grey_e5e5e5'</description>
+  <highlighted_element>@color/grey_e5e5e5</highlighted_element>
+  <language>XML</language>
+  <offset>23</offset>
+  <length>18</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_split_line_bg.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_split_line_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/grey_e5e5e5'</description>
+  <highlighted_element>@color/grey_e5e5e5</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>18</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_top_red_bg_8.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_top_red_bg_8.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_ef5f34'</description>
+  <highlighted_element>@color/color_ef5f34</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_white_bg_14.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_rectangle_white_bg_14.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorWhite'</description>
+  <highlighted_element>@color/colorWhite</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>17</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_search_edf2f0_bg.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_search_edf2f0_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_edf2f0'</description>
+  <highlighted_element>@color/color_edf2f0</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_track_off.xml</file>
+  <line>6</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_track_off.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_d4dad8'</description>
+  <highlighted_element>@color/color_d4dad8</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_track_off.xml</file>
+  <line>9</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_track_off.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_d4dad8'</description>
+  <highlighted_element>@color/color_d4dad8</highlighted_element>
+  <language>XML</language>
+  <offset>23</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_track_on.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_track_on.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_fecc35'</description>
+  <highlighted_element>@color/color_fecc35</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/s_track_on.xml</file>
+  <line>9</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/s_track_on.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_fecc35'</description>
+  <highlighted_element>@color/color_fecc35</highlighted_element>
+  <language>XML</language>
+  <offset>23</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/selector_pickerview_btn.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/selector_pickerview_btn.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/pickerview_timebtn_pre'</description>
+  <highlighted_element>@color/pickerview_timebtn_pre</highlighted_element>
+  <language>XML</language>
+  <offset>23</offset>
+  <length>29</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/selector_pickerview_btn.xml</file>
+  <line>6</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/selector_pickerview_btn.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/pickerview_timebtn_nor'</description>
+  <highlighted_element>@color/pickerview_timebtn_nor</highlighted_element>
+  <language>XML</language>
+  <offset>25</offset>
+  <length>29</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_add_room_submit_yellow.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_add_room_submit_yellow.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/yellow_ffc000'</description>
+  <highlighted_element>@color/yellow_ffc000</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_bg_ff5d35_100.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_bg_ff5d35_100.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_ff5d35'</description>
+  <highlighted_element>@color/color_ff5d35</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_bg_ffeca2_100.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_bg_ffeca2_100.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_ffeca2'</description>
+  <highlighted_element>@color/color_ffeca2</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_c2cbc4_line_bg_20.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_c2cbc4_line_bg_20.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/grey_c2c4cb'</description>
+  <highlighted_element>@color/grey_c2c4cb</highlighted_element>
+  <language>XML</language>
+  <offset>23</offset>
+  <length>18</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_c2ccc8_4_bg.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_c2ccc8_4_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_c2ccc8'</description>
+  <highlighted_element>@color/color_c2ccc8</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_gradient_1bd9b3_defff8_4.xml</file>
+  <line>10</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_gradient_1bd9b3_defff8_4.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_1bd9b3'</description>
+  <highlighted_element>@color/color_1bd9b3</highlighted_element>
+  <language>XML</language>
+  <offset>31</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_gradient_1f1f1f_000000_16_bg.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_gradient_1f1f1f_000000_16_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/appcolor_transparent'</description>
+  <highlighted_element>@color/appcolor_transparent</highlighted_element>
+  <language>XML</language>
+  <offset>28</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_gradient_3809db_c191f8_27.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_gradient_3809db_c191f8_27.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/white'</description>
+  <highlighted_element>@color/white</highlighted_element>
+  <language>XML</language>
+  <offset>23</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_gradient_ffcd7c_ffffff_bg.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_gradient_ffcd7c_ffffff_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorTransparent'</description>
+  <highlighted_element>@color/colorTransparent</highlighted_element>
+  <language>XML</language>
+  <offset>28</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_gray_d4dad8_22_bg.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_gray_d4dad8_22_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_d4dad8'</description>
+  <highlighted_element>@color/color_d4dad8</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_gray_d7d7d7_22_bg.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_gray_d7d7d7_22_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_d7d7d7'</description>
+  <highlighted_element>@color/color_d7d7d7</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_gray_f6f6f6_22_bg.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_gray_f6f6f6_22_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/gray_f6f6f6'</description>
+  <highlighted_element>@color/gray_f6f6f6</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>18</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_indicator_focus.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_indicator_focus.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/app_theme_color'</description>
+  <highlighted_element>@color/app_theme_color</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_indicator_normal.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_indicator_normal.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/grey_616366'</description>
+  <highlighted_element>@color/grey_616366</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>18</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_line_b28c54_bg_6.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_line_b28c54_bg_6.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_b28c54'</description>
+  <highlighted_element>@color/color_b28c54</highlighted_element>
+  <language>XML</language>
+  <offset>23</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_main_tab_bg.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_main_tab_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/white'</description>
+  <highlighted_element>@color/white</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_rectangle_00091c_bg_2.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_rectangle_00091c_bg_2.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_00091c_66'</description>
+  <highlighted_element>@color/color_00091c_66</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_rectangle_black_70_2.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_rectangle_black_70_2.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_black_70'</description>
+  <highlighted_element>@color/color_black_70</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_rectangle_black_70_6.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_rectangle_black_70_6.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_black_70'</description>
+  <highlighted_element>@color/color_black_70</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_rectangle_black_70_6_6.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_rectangle_black_70_6_6.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_black_70'</description>
+  <highlighted_element>@color/color_black_70</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_rectangle_black_70_bg_23.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_rectangle_black_70_bg_23.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_black_70'</description>
+  <highlighted_element>@color/color_black_70</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_rectangle_black_bg_8_line_white_10.xml</file>
+  <line>5</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_rectangle_black_bg_8_line_white_10.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_white_10'</description>
+  <highlighted_element>@color/color_white_10</highlighted_element>
+  <language>XML</language>
+  <offset>23</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_rectangle_ff5529_6_4.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_rectangle_ff5529_6_4.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_ff5529'</description>
+  <highlighted_element>@color/color_ff5529</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_rectangle_ffc300_bg_14.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_rectangle_ffc300_bg_14.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_1bd9b3'</description>
+  <highlighted_element>@color/color_1bd9b3</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/shape_top_radius_white.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_top_radius_white.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/colorWhite'</description>
+  <highlighted_element>@color/colorWhite</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>17</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/t_radius_1e1e23_90_bg.xml</file>
+  <line>8</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/t_radius_1e1e23_90_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/color_171b1b_96'</description>
+  <highlighted_element>@color/color_171b1b_96</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/t_radius_white_bg.xml</file>
+  <line>8</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/t_radius_white_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/white'</description>
+  <highlighted_element>@color/white</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/top_radius_white_bg.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/top_radius_white_bg.xml" />
+  <problem_class id="AndroidDomInspection" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+  <description>Cannot resolve symbol '@color/white'</description>
+  <highlighted_element>@color/white</highlighted_element>
+  <language>XML</language>
+  <offset>26</offset>
+  <length>12</length>
+</problem>
+</problems>

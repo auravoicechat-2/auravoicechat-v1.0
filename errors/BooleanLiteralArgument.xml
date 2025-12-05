@@ -1,0 +1,2212 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>186</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>33</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>186</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>187</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>33</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>187</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>188</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>33</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>188</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>189</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>33</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>189</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>190</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>33</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>190</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>193</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>193</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>194</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>194</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>195</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>195</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>196</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>196</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>197</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>197</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>198</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>198</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>199</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>199</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>200</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>200</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>201</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>201</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>202</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>202</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>203</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>203</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>204</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>204</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>205</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>205</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>206</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>206</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>207</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>207</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>208</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>208</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>209</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>209</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>210</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>210</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>211</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>211</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>212</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>212</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>213</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>213</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>216</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>216</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>217</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>217</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>218</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>218</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>219</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>219</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>220</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>220</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>221</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>221</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>222</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>222</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>223</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>223</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>224</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>224</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>225</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>225</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>226</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>226</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>227</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>227</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>228</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>228</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>229</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>229</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>230</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>230</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>231</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>231</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>232</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>232</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>233</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>233</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>234</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>234</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>235</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>235</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>236</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>236</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>239</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>239</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>240</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>240</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>241</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>241</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>242</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>242</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>243</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>243</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>244</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>244</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>245</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>245</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>246</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>246</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>247</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>247</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>248</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>248</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>249</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>249</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>250</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>250</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>251</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>251</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>252</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>252</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>false</highlighted_element>
+  <language>kotlin</language>
+  <offset>42</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>255</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>255</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>256</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>256</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>257</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>257</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>258</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>33</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>258</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>39</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>259</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>259</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>260</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>260</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>261</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>261</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>262</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>262</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>263</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>263</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>264</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>264</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>265</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>265</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>266</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>266</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>267</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>267</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>268</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>268</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>271</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>271</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>272</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>272</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>273</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>273</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>274</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>274</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>275</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>275</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>276</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>276</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>277</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>277</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>278</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>278</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>279</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>279</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>280</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/emojis/EmojisPanel.kt</file>
+  <line>280</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.emojis</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.emojis.EmojisPanelKt java.util.List&lt;com.aura.voicechat.ui.room.emojis.RoomEmoji&gt; getEmojisForCategory(com.aura.voicechat.ui.room.emojis.EmojiCategory category)" />
+  <problem_class id="BooleanLiteralArgument" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean literal argument without parameter name</problem_class>
+  <description>Boolean literal argument without a parameter name</description>
+  <highlighted_element>true</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>4</length>
+</problem>
+</problems>

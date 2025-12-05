@@ -1,0 +1,74 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_loader_circle_path.xml</file>
+  <line>2</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_loader_circle_path.xml" />
+  <problem_class id="AndroidElementNotAllowed" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Android XML element is not allowed</problem_class>
+  <description>Element set is not allowed here</description>
+  <highlighted_element>set</highlighted_element>
+  <language>XML</language>
+  <offset>1</offset>
+  <length>3</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_loader_circle_path.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_loader_circle_path.xml" />
+  <problem_class id="AndroidElementNotAllowed" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Android XML element is not allowed</problem_class>
+  <description>Element rotate is not allowed here</description>
+  <highlighted_element>rotate</highlighted_element>
+  <language>XML</language>
+  <offset>5</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_loader_circle_path.xml</file>
+  <line>12</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_loader_circle_path.xml" />
+  <problem_class id="AndroidElementNotAllowed" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Android XML element is not allowed</problem_class>
+  <description>Element set is not allowed here</description>
+  <highlighted_element>set</highlighted_element>
+  <language>XML</language>
+  <offset>2</offset>
+  <length>3</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_loader_circle_scale.xml</file>
+  <line>2</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_loader_circle_scale.xml" />
+  <problem_class id="AndroidElementNotAllowed" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Android XML element is not allowed</problem_class>
+  <description>Element set is not allowed here</description>
+  <highlighted_element>set</highlighted_element>
+  <language>XML</language>
+  <offset>1</offset>
+  <length>3</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_loader_circle_scale.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_loader_circle_scale.xml" />
+  <problem_class id="AndroidElementNotAllowed" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Android XML element is not allowed</problem_class>
+  <description>Element scale is not allowed here</description>
+  <highlighted_element>scale</highlighted_element>
+  <language>XML</language>
+  <offset>5</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_loader_circle_scale.xml</file>
+  <line>14</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_loader_circle_scale.xml" />
+  <problem_class id="AndroidElementNotAllowed" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Android XML element is not allowed</problem_class>
+  <description>Element set is not allowed here</description>
+  <highlighted_element>set</highlighted_element>
+  <language>XML</language>
+  <offset>2</offset>
+  <length>3</length>
+</problem>
+</problems>

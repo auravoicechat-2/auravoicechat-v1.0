@@ -1,0 +1,54 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_ic_crop.xml</file>
+  <line>6</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_ic_crop.xml" />
+  <problem_class id="AndroidLintResourceCycle" severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Cycle in resource definitions</problem_class>
+  <hints />
+  <description>&lt;html&gt;Drawable &lt;code&gt;ucrop_ic_crop&lt;/code&gt; should not reference itself&lt;/html&gt;</description>
+  <highlighted_element>&lt;item android:state_selected=&quot;true&quot; android:drawable=&quot;@drawable/ucrop_ic_crop&quot;/&gt;</highlighted_element>
+  <language>XML</language>
+  <offset>4</offset>
+  <length>96</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_ic_crop.xml</file>
+  <line>8</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_ic_crop.xml" />
+  <problem_class id="AndroidLintResourceCycle" severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Cycle in resource definitions</problem_class>
+  <hints />
+  <description>&lt;html&gt;Drawable &lt;code&gt;ucrop_ic_crop&lt;/code&gt; should not reference itself&lt;/html&gt;</description>
+  <highlighted_element>android:drawable=&quot;@drawable/ucrop_ic_crop&quot;</highlighted_element>
+  <language>XML</language>
+  <offset>8</offset>
+  <length>42</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_ic_rotate.xml</file>
+  <line>6</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_ic_rotate.xml" />
+  <problem_class id="AndroidLintResourceCycle" severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Cycle in resource definitions</problem_class>
+  <hints />
+  <description>&lt;html&gt;Drawable &lt;code&gt;ucrop_ic_rotate&lt;/code&gt; should not reference itself&lt;/html&gt;</description>
+  <highlighted_element>&lt;item android:state_selected=&quot;true&quot; android:drawable=&quot;@drawable/ucrop_ic_rotate&quot;/&gt;</highlighted_element>
+  <language>XML</language>
+  <offset>4</offset>
+  <length>98</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_ic_rotate.xml</file>
+  <line>8</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ucrop_ic_rotate.xml" />
+  <problem_class id="AndroidLintResourceCycle" severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Cycle in resource definitions</problem_class>
+  <hints />
+  <description>&lt;html&gt;Drawable &lt;code&gt;ucrop_ic_rotate&lt;/code&gt; should not reference itself&lt;/html&gt;</description>
+  <highlighted_element>android:drawable=&quot;@drawable/ucrop_ic_rotate&quot;</highlighted_element>
+  <language>XML</language>
+  <offset>8</offset>
+  <length>44</length>
+</problem>
+</problems>

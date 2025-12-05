@@ -1,0 +1,41 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/data/repository/AuthRepositoryImpl.kt</file>
+  <line>153</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.data.repository</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.data.repository.AuthRepositoryImpl java.lang.Object signInWithGoogle(kotlin.coroutines.Continuation&lt;? super kotlin.Result&lt;? extends kotlin.Unit&gt;&gt; $completion)" />
+  <problem_class id="RemoveExplicitTypeArguments" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Unnecessary type argument</problem_class>
+  <description>Explicit type arguments can be inferred</description>
+  <highlighted_element>&lt;Unit&gt;</highlighted_element>
+  <language>kotlin</language>
+  <offset>52</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/data/repository/AuthRepositoryImpl.kt</file>
+  <line>195</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.data.repository</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.data.repository.AuthRepositoryImpl java.lang.Object signInWithFacebook(kotlin.coroutines.Continuation&lt;? super kotlin.Result&lt;? extends kotlin.Unit&gt;&gt; $completion)" />
+  <problem_class id="RemoveExplicitTypeArguments" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Unnecessary type argument</problem_class>
+  <description>Explicit type arguments can be inferred</description>
+  <highlighted_element>&lt;Unit&gt;</highlighted_element>
+  <language>kotlin</language>
+  <offset>52</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/wallet/TransactionHistoryScreen.kt</file>
+  <line>39</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.wallet</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.wallet.TransactionHistoryScreenKt void TransactionHistoryScreen(kotlin.jvm.functions.Function0&lt;kotlin.Unit&gt; onNavigateBack, com.aura.voicechat.ui.wallet.WalletViewModel viewModel)" />
+  <problem_class id="RemoveExplicitTypeArguments" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Unnecessary type argument</problem_class>
+  <description>Explicit type arguments can be inferred</description>
+  <highlighted_element>&lt;TransactionFilter&gt;</highlighted_element>
+  <language>kotlin</language>
+  <offset>51</offset>
+  <length>19</length>
+</problem>
+</problems>

@@ -1,0 +1,296 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/LuckyDrawScreen.kt</file>
+  <line>199</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.events</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/LuckyDrawScreen.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableFloatStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/RedEnvelopeScreen.kt</file>
+  <line>32</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.events</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/RedEnvelopeScreen.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableIntStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/family/FamilyScreen.kt</file>
+  <line>49</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.family</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/family/FamilyScreen.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableIntStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/family/JoinFamilyScreen.kt</file>
+  <line>38</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.family</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/family/JoinFamilyScreen.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableIntStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/friends/FriendsScreen.kt</file>
+  <line>42</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.friends</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/friends/FriendsScreen.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableIntStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/gifts/GiftPanel.kt</file>
+  <line>51</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.gifts</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/gifts/GiftPanel.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableIntStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>31</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/home/HomeScreen.kt</file>
+  <line>60</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.home</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/home/HomeScreen.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableIntStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>38</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/home/HomeScreen.kt</file>
+  <line>61</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.home</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/home/HomeScreen.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableIntStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>41</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/home/HomeScreen.kt</file>
+  <line>62</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.home</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/home/HomeScreen.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableIntStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>44</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/home/HomeScreenWeek1.kt</file>
+  <line>34</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.home</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/home/HomeScreenWeek1.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableIntStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/messages/MessagesScreen.kt</file>
+  <line>38</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.messages</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/messages/MessagesScreen.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableIntStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/notifications/NotificationScreen.kt</file>
+  <line>46</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.notifications</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/notifications/NotificationScreen.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableIntStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/owner/EconomySetupScreen.kt</file>
+  <line>36</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.owner</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/owner/EconomySetupScreen.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableIntStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/profile/FollowersScreen.kt</file>
+  <line>44</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.profile</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/profile/FollowersScreen.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableIntStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/referral/ReferralScreen.kt</file>
+  <line>44</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.referral</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/referral/ReferralScreen.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableIntStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/RoomScreen.kt</file>
+  <line>402</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/RoomScreen.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableIntStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/cinema/VideoPlayer.kt</file>
+  <line>144</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.cinema</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/cinema/VideoPlayer.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableFloatStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>45</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/components/GiftPanel.kt</file>
+  <line>40</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room.components</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/components/GiftPanel.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableIntStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>39</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/search/SearchScreen.kt</file>
+  <line>37</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.search</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/search/SearchScreen.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableIntStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/support/SupportTicketsScreen.kt</file>
+  <line>38</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.support</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/support/SupportTicketsScreen.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableIntStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>34</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/vip/VipScreen.kt</file>
+  <line>48</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.vip</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/vip/VipScreen.kt" />
+  <problem_class id="AndroidLintAutoboxingStateCreation" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">State&lt;T&gt; will autobox values assigned to this state. Use a specialized state type instead.</problem_class>
+  <hints />
+  <description>&lt;html&gt;Prefer &lt;code&gt;mutableIntStateOf&lt;/code&gt; instead of &lt;code&gt;mutableStateOf&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>mutableStateOf</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>14</length>
+</problem>
+</problems>

@@ -1,0 +1,15 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/data/repository/KycRepositoryImpl.kt</file>
+  <line>91</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.data.repository</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.data.repository.KycRepositoryImpl java.lang.Object uploadToS3(java.lang.String localUri, java.lang.String prefix, kotlin.coroutines.Continuation&lt;? super kotlin.Result&lt;? extends java.lang.String&gt;&gt; $completion)" />
+  <problem_class id="RedundantSuspendModifier" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant 'suspend' modifier</problem_class>
+  <description>Redundant 'suspend' modifier</description>
+  <highlighted_element>suspend</highlighted_element>
+  <language>kotlin</language>
+  <offset>12</offset>
+  <length>7</length>
+</problem>
+</problems>

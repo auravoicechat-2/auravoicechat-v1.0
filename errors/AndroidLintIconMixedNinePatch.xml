@@ -1,0 +1,112 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_store_buy_discount.9.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_store_buy_discount.9.png" />
+  <problem_class id="AndroidLintIconMixedNinePatch" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Clashing PNG and 9-PNG files</problem_class>
+  <hints />
+  <description>&lt;html&gt;The files &lt;code&gt;ic_store_buy_discount.png&lt;/code&gt; and &lt;code&gt;ic_store_buy_discount.9.png&lt;/code&gt; clash; both will map to &lt;code&gt;@drawable/ic_store_buy_discount&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_store_buy_discount.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_store_buy_discount.png" />
+  <problem_class id="AndroidLintIconMixedNinePatch" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Clashing PNG and 9-PNG files</problem_class>
+  <hints />
+  <description>&lt;html&gt;The files &lt;code&gt;ic_store_buy_discount.png&lt;/code&gt; and &lt;code&gt;ic_store_buy_discount.9.png&lt;/code&gt; clash; both will map to &lt;code&gt;@drawable/ic_store_buy_discount&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_teen_guide_entrance.9.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_teen_guide_entrance.9.png" />
+  <problem_class id="AndroidLintIconMixedNinePatch" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Clashing PNG and 9-PNG files</problem_class>
+  <hints />
+  <description>&lt;html&gt;The files &lt;code&gt;ic_teen_guide_entrance.png&lt;/code&gt; and &lt;code&gt;ic_teen_guide_entrance.9.png&lt;/code&gt; clash; both will map to &lt;code&gt;@drawable/ic_teen_guide_entrance&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_teen_guide_entrance.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_teen_guide_entrance.png" />
+  <problem_class id="AndroidLintIconMixedNinePatch" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Clashing PNG and 9-PNG files</problem_class>
+  <hints />
+  <description>&lt;html&gt;The files &lt;code&gt;ic_teen_guide_entrance.png&lt;/code&gt; and &lt;code&gt;ic_teen_guide_entrance.9.png&lt;/code&gt; clash; both will map to &lt;code&gt;@drawable/ic_teen_guide_entrance&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/short_cut_bg.9.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/short_cut_bg.9.png" />
+  <problem_class id="AndroidLintIconMixedNinePatch" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Clashing PNG and 9-PNG files</problem_class>
+  <hints />
+  <description>&lt;html&gt;The files &lt;code&gt;short_cut_bg.png&lt;/code&gt; and &lt;code&gt;short_cut_bg.9.png&lt;/code&gt; clash; both will map to &lt;code&gt;@drawable/short_cut_bg&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/short_cut_bg.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/short_cut_bg.png" />
+  <problem_class id="AndroidLintIconMixedNinePatch" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Clashing PNG and 9-PNG files</problem_class>
+  <hints />
+  <description>&lt;html&gt;The files &lt;code&gt;short_cut_bg.png&lt;/code&gt; and &lt;code&gt;short_cut_bg.9.png&lt;/code&gt; clash; both will map to &lt;code&gt;@drawable/short_cut_bg&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/user_info_frame_bg.9.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/user_info_frame_bg.9.png" />
+  <problem_class id="AndroidLintIconMixedNinePatch" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Clashing PNG and 9-PNG files</problem_class>
+  <hints />
+  <description>&lt;html&gt;The files &lt;code&gt;user_info_frame_bg.png&lt;/code&gt; and &lt;code&gt;user_info_frame_bg.9.png&lt;/code&gt; clash; both will map to &lt;code&gt;@drawable/user_info_frame_bg&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/user_info_frame_bg.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/user_info_frame_bg.png" />
+  <problem_class id="AndroidLintIconMixedNinePatch" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Clashing PNG and 9-PNG files</problem_class>
+  <hints />
+  <description>&lt;html&gt;The files &lt;code&gt;user_info_frame_bg.png&lt;/code&gt; and &lt;code&gt;user_info_frame_bg.9.png&lt;/code&gt; clash; both will map to &lt;code&gt;@drawable/user_info_frame_bg&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/you_message.9.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/you_message.9.png" />
+  <problem_class id="AndroidLintIconMixedNinePatch" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Clashing PNG and 9-PNG files</problem_class>
+  <hints />
+  <description>&lt;html&gt;The files &lt;code&gt;you_message.png&lt;/code&gt; and &lt;code&gt;you_message.9.png&lt;/code&gt; clash; both will map to &lt;code&gt;@drawable/you_message&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/you_message.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/you_message.png" />
+  <problem_class id="AndroidLintIconMixedNinePatch" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Clashing PNG and 9-PNG files</problem_class>
+  <hints />
+  <description>&lt;html&gt;The files &lt;code&gt;you_message.png&lt;/code&gt; and &lt;code&gt;you_message.9.png&lt;/code&gt; clash; both will map to &lt;code&gt;@drawable/you_message&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+</problems>

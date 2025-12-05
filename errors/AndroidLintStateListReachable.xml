@@ -1,0 +1,80 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/b_user_default.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/b_user_default.xml" />
+  <problem_class id="AndroidLintStateListReachable" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unreachable state in a &lt;selector&gt;</problem_class>
+  <hints />
+  <description>&lt;html&gt;This item is unreachable because a previous item (item #1) is a more general match than this one (Earlier item which masks item)&lt;/html&gt;</description>
+  <highlighted_element>&lt;item android:drawable=&quot;@drawable/ic_user_default&quot;/&gt;</highlighted_element>
+  <language>XML</language>
+  <offset>4</offset>
+  <length>52</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/b_user_default.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/b_user_default.xml" />
+  <problem_class id="AndroidLintStateListReachable" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unreachable state in a &lt;selector&gt;</problem_class>
+  <hints />
+  <description>&lt;html&gt;This item is unreachable because a previous item (item #1) is a more general match than this one&lt;/html&gt;</description>
+  <highlighted_element>&lt;item android:state_pressed=&quot;true&quot; android:drawable=&quot;@drawable/ic_user_default_press...</highlighted_element>
+  <language>XML</language>
+  <offset>4</offset>
+  <length>103</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/checkbox_style.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/checkbox_style.xml" />
+  <problem_class id="AndroidLintStateListReachable" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unreachable state in a &lt;selector&gt;</problem_class>
+  <hints />
+  <description>&lt;html&gt;This item is unreachable because a previous item (item #1) is a more general match than this one (Earlier item which masks item)&lt;/html&gt;</description>
+  <highlighted_element>&lt;item android:state_checked=&quot;true&quot; android:drawable=&quot;@drawable/box_selected&quot;/&gt;</highlighted_element>
+  <language>XML</language>
+  <offset>4</offset>
+  <length>94</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/checkbox_style.xml</file>
+  <line>12</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/checkbox_style.xml" />
+  <problem_class id="AndroidLintStateListReachable" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unreachable state in a &lt;selector&gt;</problem_class>
+  <hints />
+  <description>&lt;html&gt;This item is unreachable because a previous item (item #1) is a more general match than this one&lt;/html&gt;</description>
+  <highlighted_element>&lt;item android:state_checked=&quot;true&quot; android:drawable=&quot;@drawable/box_selected&quot;/&gt;</highlighted_element>
+  <language>XML</language>
+  <offset>4</offset>
+  <length>94</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/rb_l_checked.xml</file>
+  <line>3</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/rb_l_checked.xml" />
+  <problem_class id="AndroidLintStateListReachable" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unreachable state in a &lt;selector&gt;</problem_class>
+  <hints />
+  <description>&lt;html&gt;This item is unreachable because a previous item (item #1) is a more general match than this one (Earlier item which masks item)&lt;/html&gt;</description>
+  <highlighted_element>&lt;item android:drawable=&quot;@drawable/rb_l_default_bg&quot;/&gt;</highlighted_element>
+  <language>XML</language>
+  <offset>4</offset>
+  <length>52</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/rb_l_checked.xml</file>
+  <line>4</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/rb_l_checked.xml" />
+  <problem_class id="AndroidLintStateListReachable" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unreachable state in a &lt;selector&gt;</problem_class>
+  <hints />
+  <description>&lt;html&gt;This item is unreachable because a previous item (item #1) is a more general match than this one&lt;/html&gt;</description>
+  <highlighted_element>&lt;item android:state_checked=&quot;true&quot; android:drawable=&quot;@drawable/ic_list_selected&quot;/&gt;</highlighted_element>
+  <language>XML</language>
+  <offset>4</offset>
+  <length>98</length>
+</problem>
+</problems>

@@ -1,0 +1,706 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/bean.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/bean.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: bean.png, bean.png, ic_coin_bean.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/family_main_cup.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/family_main_cup.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: family_main_cup.png, me_main_family_award.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ic_btn_round_bg.9.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_btn_round_bg.9.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_btn_round_bg.9.png, ic_btn_round_bg.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ic_btn_round_bg.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_btn_round_bg.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_btn_round_bg.9.png, ic_btn_round_bg.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ic_coin_bean.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_coin_bean.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: bean.png, bean.png, ic_coin_bean.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ic_diamond_item.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_diamond_item.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_diamond_item.png, ic_money_icon.png, ic_diamond_item.png, ic_money_icon.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ic_money_icon.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_money_icon.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_diamond_item.png, ic_money_icon.png, ic_diamond_item.png, ic_money_icon.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ic_popup_bg.9.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_popup_bg.9.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_popup_bg.9.png, ic_popup_bg.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ic_popup_bg.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_popup_bg.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_popup_bg.9.png, ic_popup_bg.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ic_store_buy_discount.9.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_store_buy_discount.9.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_store_buy_discount.9.png, ic_store_buy_discount.png, ic_store_buy_discount.9.png, ic_store_buy_discount.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ic_store_buy_discount.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_store_buy_discount.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_store_buy_discount.9.png, ic_store_buy_discount.png, ic_store_buy_discount.9.png, ic_store_buy_discount.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ic_teen_guide_entrance.9.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_teen_guide_entrance.9.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_teen_guide_entrance.9.png, ic_teen_guide_entrance.png, ic_teen_guide_entrance.9.png, ic_teen_guide_entrance.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ic_teen_guide_entrance.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_teen_guide_entrance.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_teen_guide_entrance.9.png, ic_teen_guide_entrance.png, ic_teen_guide_entrance.9.png, ic_teen_guide_entrance.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ic_user_default.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_user_default.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_user_default.png, ic_user_default_press.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/ic_user_default_press.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_user_default_press.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_user_default.png, ic_user_default_press.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/leave_page_icon.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/leave_page_icon.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: net_error_icon.png, leave_page_icon.png, net_error_icon.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/me_main_family_award.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/me_main_family_award.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: family_main_cup.png, me_main_family_award.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/me_message.9.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/me_message.9.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: me_message.9.png, me_message.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/me_message.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/me_message.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: me_message.9.png, me_message.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/me_profile_relation_0.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/me_profile_relation_0.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: me_profile_relation_0.png, me_profile_relation_1.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/me_profile_relation_1.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/me_profile_relation_1.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: me_profile_relation_0.png, me_profile_relation_1.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/messdown.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/messdown.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: messdown.png, new_m.png, messdown.png, new_m.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/net_error_icon.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/net_error_icon.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: net_error_icon.png, leave_page_icon.png, net_error_icon.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/new_m.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/new_m.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: messdown.png, new_m.png, messdown.png, new_m.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/short_cut_bg.9.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/short_cut_bg.9.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: short_cut_bg.9.png, short_cut_bg.png, short_cut_bg.9.png, short_cut_bg.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/short_cut_bg.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/short_cut_bg.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: short_cut_bg.9.png, short_cut_bg.png, short_cut_bg.9.png, short_cut_bg.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/svip_level_up_left_icon.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/svip_level_up_left_icon.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: svip_level_up_left_icon.png, zk.png, svip_level_up_left_icon.png, zk.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/svip_level_up_right_icon.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/svip_level_up_right_icon.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: svip_level_up_right_icon.png, yk.png, svip_level_up_right_icon.png, yk.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/user_info_frame_bg.9.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/user_info_frame_bg.9.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: user_info_frame_bg.9.png, user_info_frame_bg.png, user_info_frame_bg.9.png, user_info_frame_bg.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/user_info_frame_bg.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/user_info_frame_bg.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: user_info_frame_bg.9.png, user_info_frame_bg.png, user_info_frame_bg.9.png, user_info_frame_bg.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/yk.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/yk.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: svip_level_up_right_icon.png, yk.png, svip_level_up_right_icon.png, yk.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/you_message.9.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/you_message.9.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: you_message.9.png, you_message.png, you_message.9.png, you_message.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/you_message.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/you_message.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: you_message.9.png, you_message.png, you_message.9.png, you_message.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/zk.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/zk.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: svip_level_up_left_icon.png, zk.png, svip_level_up_left_icon.png, zk.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/bean.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/bean.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: bean.png, bean.png, ic_coin_bean.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_diamond_item.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_diamond_item.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_diamond_item.png, ic_money_icon.png, ic_diamond_item.png, ic_money_icon.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_money_icon.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_money_icon.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_diamond_item.png, ic_money_icon.png, ic_diamond_item.png, ic_money_icon.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_store_buy_discount.9.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_store_buy_discount.9.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_store_buy_discount.9.png, ic_store_buy_discount.png, ic_store_buy_discount.9.png, ic_store_buy_discount.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_store_buy_discount.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_store_buy_discount.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_store_buy_discount.9.png, ic_store_buy_discount.png, ic_store_buy_discount.9.png, ic_store_buy_discount.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_teen_guide_entrance.9.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_teen_guide_entrance.9.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_teen_guide_entrance.9.png, ic_teen_guide_entrance.png, ic_teen_guide_entrance.9.png, ic_teen_guide_entrance.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_teen_guide_entrance.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_teen_guide_entrance.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_teen_guide_entrance.9.png, ic_teen_guide_entrance.png, ic_teen_guide_entrance.9.png, ic_teen_guide_entrance.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/messdown.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/messdown.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: messdown.png, new_m.png, messdown.png, new_m.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/net_error_icon.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/net_error_icon.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: net_error_icon.png, leave_page_icon.png, net_error_icon.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/new_m.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/new_m.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: messdown.png, new_m.png, messdown.png, new_m.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/short_cut_bg.9.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/short_cut_bg.9.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: short_cut_bg.9.png, short_cut_bg.png, short_cut_bg.9.png, short_cut_bg.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/short_cut_bg.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/short_cut_bg.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: short_cut_bg.9.png, short_cut_bg.png, short_cut_bg.9.png, short_cut_bg.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/svip_level_up_left_icon.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/svip_level_up_left_icon.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: svip_level_up_left_icon.png, zk.png, svip_level_up_left_icon.png, zk.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/svip_level_up_right_icon.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/svip_level_up_right_icon.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: svip_level_up_right_icon.png, yk.png, svip_level_up_right_icon.png, yk.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/user_info_frame_bg.9.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/user_info_frame_bg.9.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: user_info_frame_bg.9.png, user_info_frame_bg.png, user_info_frame_bg.9.png, user_info_frame_bg.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/user_info_frame_bg.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/user_info_frame_bg.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: user_info_frame_bg.9.png, user_info_frame_bg.png, user_info_frame_bg.9.png, user_info_frame_bg.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/yk.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/yk.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: svip_level_up_right_icon.png, yk.png, svip_level_up_right_icon.png, yk.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/you_message.9.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/you_message.9.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: you_message.9.png, you_message.png, you_message.9.png, you_message.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/you_message.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/you_message.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: you_message.9.png, you_message.png, you_message.9.png, you_message.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/zk.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/zk.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: svip_level_up_left_icon.png, zk.png, svip_level_up_left_icon.png, zk.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" />
+  <problem_class id="AndroidLintIconDuplicates" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+  <hints />
+  <description>&lt;html&gt;The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+</problems>

@@ -1,0 +1,184 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/AuraApplication.kt</file>
+  <line>39</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.AuraApplication androidx.work.Configuration getWorkManagerConfiguration()" />
+  <problem_class id="RemoveRedundantQualifierName" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant qualifier name</problem_class>
+  <description>Remove redundant qualifier name</description>
+  <highlighted_element>android.util</highlighted_element>
+  <language>kotlin</language>
+  <offset>36</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/auth/LoginScreen.kt</file>
+  <line>540</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.auth</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.auth.LoginScreenKt void LoginScreen(kotlin.jvm.functions.Function0&lt;kotlin.Unit&gt; onNavigateToHome, kotlin.jvm.functions.Function1&lt;? super java.lang.String,kotlin.Unit&gt; onNavigateToOtp, com.aura.voicechat.ui.auth.LoginViewModel viewModel)" />
+  <problem_class id="RemoveRedundantQualifierName" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant qualifier name</problem_class>
+  <description>Remove redundant qualifier name</description>
+  <highlighted_element>com.aura.voicechat.ui.theme</highlighted_element>
+  <language>kotlin</language>
+  <offset>45</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/auth/LoginScreen.kt</file>
+  <line>581</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.auth</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.auth.LoginScreenKt void LoginScreen(kotlin.jvm.functions.Function0&lt;kotlin.Unit&gt; onNavigateToHome, kotlin.jvm.functions.Function1&lt;? super java.lang.String,kotlin.Unit&gt; onNavigateToOtp, com.aura.voicechat.ui.auth.LoginViewModel viewModel)" />
+  <problem_class id="RemoveRedundantQualifierName" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant qualifier name</problem_class>
+  <description>Remove redundant qualifier name</description>
+  <highlighted_element>com.aura.voicechat.ui.theme</highlighted_element>
+  <language>kotlin</language>
+  <offset>45</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/auth/LoginScreen.kt</file>
+  <line>590</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.auth</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.auth.LoginScreenKt void LoginScreen(kotlin.jvm.functions.Function0&lt;kotlin.Unit&gt; onNavigateToHome, kotlin.jvm.functions.Function1&lt;? super java.lang.String,kotlin.Unit&gt; onNavigateToOtp, com.aura.voicechat.ui.auth.LoginViewModel viewModel)" />
+  <problem_class id="RemoveRedundantQualifierName" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant qualifier name</problem_class>
+  <description>Remove redundant qualifier name</description>
+  <highlighted_element>com.aura.voicechat.ui.theme</highlighted_element>
+  <language>kotlin</language>
+  <offset>35</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/auth/LoginScreen.kt</file>
+  <line>606</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.auth</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.auth.LoginScreenKt void LoginScreen(kotlin.jvm.functions.Function0&lt;kotlin.Unit&gt; onNavigateToHome, kotlin.jvm.functions.Function1&lt;? super java.lang.String,kotlin.Unit&gt; onNavigateToOtp, com.aura.voicechat.ui.auth.LoginViewModel viewModel)" />
+  <problem_class id="RemoveRedundantQualifierName" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant qualifier name</problem_class>
+  <description>Remove redundant qualifier name</description>
+  <highlighted_element>com.aura.voicechat.ui.theme</highlighted_element>
+  <language>kotlin</language>
+  <offset>32</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/EventDetailViewModel.kt</file>
+  <line>34</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.events</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.events.EventDetailViewModel void loadEventDetails(java.lang.String eventId)" />
+  <problem_class id="RemoveRedundantQualifierName" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant qualifier name</problem_class>
+  <description>Remove redundant qualifier name</description>
+  <highlighted_element>com.aura.voicechat.ui.events</highlighted_element>
+  <language>kotlin</language>
+  <offset>28</offset>
+  <length>28</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/events/EventDetailViewModel.kt</file>
+  <line>44</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.events</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.events.EventDetailViewModel void loadEventDetails(java.lang.String eventId)" />
+  <problem_class id="RemoveRedundantQualifierName" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant qualifier name</problem_class>
+  <description>Remove redundant qualifier name</description>
+  <highlighted_element>com.aura.voicechat.ui.events</highlighted_element>
+  <language>kotlin</language>
+  <offset>24</offset>
+  <length>28</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/family/FamilyViewModel.kt</file>
+  <line>352</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.family</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.family.FamilyUiState FamilyUiState(boolean isLoading, boolean isCreating, boolean hasFamily, java.lang.String familyId, java.lang.String familyName, java.lang.String familyBadge, int familyLevel, int membersCount, int maxMembers, long weeklyGifts, long totalGifts, int weeklyRanking, java.lang.String createdDate, java.lang.String ownerName, java.lang.String familyNotice, boolean isOwner, boolean isAdmin, java.util.List&lt;com.aura.voicechat.ui.family.FamilyMember&gt; members, java.util.List&lt;com.aura.voicechat.ui.family.FamilyActivity&gt; recentActivities, java.util.List&lt;com.aura.voicechat.ui.family.FamilyPerk&gt; perks, java.util.List&lt;com.aura.voicechat.ui.family.FamilySearchResult&gt; searchResults, boolean showCreateDialog, boolean showJoinDialog, boolean showSettingsDialog, java.lang.String error, java.util.List&lt;com.aura.voicechat.ui.family.FamilyItemState&gt; availableFamilies)" />
+  <problem_class id="RemoveRedundantQualifierName" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant qualifier name</problem_class>
+  <description>Remove redundant qualifier name</description>
+  <highlighted_element>com.aura.voicechat.ui.family</highlighted_element>
+  <language>kotlin</language>
+  <offset>32</offset>
+  <length>28</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/friends/FriendsViewModel.kt</file>
+  <line>141</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.friends</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.friends.FriendsUiState FriendsUiState(boolean isLoading, java.lang.String searchQuery, java.util.List&lt;com.aura.voicechat.ui.friends.Friend&gt; friends, java.util.List&lt;com.aura.voicechat.ui.friends.Friend&gt; filteredFriends, java.util.List&lt;com.aura.voicechat.ui.friends.FriendRequest&gt; requests, java.util.List&lt;com.aura.voicechat.ui.friends.FriendRequest&gt; sentRequests, java.util.List&lt;com.aura.voicechat.ui.friends.BlockedUser&gt; blockedUsers)" />
+  <problem_class id="RemoveRedundantQualifierName" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant qualifier name</problem_class>
+  <description>Remove redundant qualifier name</description>
+  <highlighted_element>com.aura.voicechat.ui.friends</highlighted_element>
+  <language>kotlin</language>
+  <offset>27</offset>
+  <length>29</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/profile/ProfileScreen.kt</file>
+  <line>846</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.profile</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.profile.ProfileScreenKt void ProfileMenuItem(androidx.compose.ui.graphics.vector.ImageVector icon, java.lang.String title, java.lang.String subtitle, kotlin.jvm.functions.Function0&lt;kotlin.Unit&gt; onClick, long tint)" />
+  <problem_class id="RemoveRedundantQualifierName" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant qualifier name</problem_class>
+  <description>Remove redundant qualifier name</description>
+  <highlighted_element>androidx.compose.ui.graphics</highlighted_element>
+  <language>kotlin</language>
+  <offset>10</offset>
+  <length>28</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/profile/ProfileViewModel.kt</file>
+  <line>470</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.profile</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.profile.ProfileUiState ProfileUiState(boolean isLoading, boolean isApplyingForGuide, com.aura.voicechat.domain.model.User user, java.util.List&lt;com.aura.voicechat.domain.model.Medal&gt; medals, int followersCount, int followingCount, int giftsReceivedCount, boolean isFollowing, com.aura.voicechat.ui.profile.EarningsData earnings, com.aura.voicechat.ui.profile.TargetData activeTarget, boolean isGuide, java.lang.String guideLevel, boolean isGuideApplied, boolean canApplyForGuide, java.lang.String message, java.lang.String error, java.util.List&lt;com.aura.voicechat.ui.profile.UserItemState&gt; followers, java.util.List&lt;com.aura.voicechat.ui.profile.UserItemState&gt; following, java.util.List&lt;com.aura.voicechat.ui.profile.VisitorState&gt; visitors, int visitorsCount, int todayVisitorsCount, boolean isOwner, boolean isCountryAdmin, boolean isAdmin, java.lang.String adminLevel, java.lang.String adminCountry, java.lang.String adminBadge)" />
+  <problem_class id="RemoveRedundantQualifierName" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant qualifier name</problem_class>
+  <description>Remove redundant qualifier name</description>
+  <highlighted_element>com.aura.voicechat.ui.profile</highlighted_element>
+  <language>kotlin</language>
+  <offset>24</offset>
+  <length>29</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/profile/ProfileViewModel.kt</file>
+  <line>471</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.profile</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.profile.ProfileUiState ProfileUiState(boolean isLoading, boolean isApplyingForGuide, com.aura.voicechat.domain.model.User user, java.util.List&lt;com.aura.voicechat.domain.model.Medal&gt; medals, int followersCount, int followingCount, int giftsReceivedCount, boolean isFollowing, com.aura.voicechat.ui.profile.EarningsData earnings, com.aura.voicechat.ui.profile.TargetData activeTarget, boolean isGuide, java.lang.String guideLevel, boolean isGuideApplied, boolean canApplyForGuide, java.lang.String message, java.lang.String error, java.util.List&lt;com.aura.voicechat.ui.profile.UserItemState&gt; followers, java.util.List&lt;com.aura.voicechat.ui.profile.UserItemState&gt; following, java.util.List&lt;com.aura.voicechat.ui.profile.VisitorState&gt; visitors, int visitorsCount, int todayVisitorsCount, boolean isOwner, boolean isCountryAdmin, boolean isAdmin, java.lang.String adminLevel, java.lang.String adminCountry, java.lang.String adminBadge)" />
+  <problem_class id="RemoveRedundantQualifierName" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant qualifier name</problem_class>
+  <description>Remove redundant qualifier name</description>
+  <highlighted_element>com.aura.voicechat.ui.profile</highlighted_element>
+  <language>kotlin</language>
+  <offset>24</offset>
+  <length>29</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/profile/ProfileViewModel.kt</file>
+  <line>472</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.profile</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.profile.ProfileUiState ProfileUiState(boolean isLoading, boolean isApplyingForGuide, com.aura.voicechat.domain.model.User user, java.util.List&lt;com.aura.voicechat.domain.model.Medal&gt; medals, int followersCount, int followingCount, int giftsReceivedCount, boolean isFollowing, com.aura.voicechat.ui.profile.EarningsData earnings, com.aura.voicechat.ui.profile.TargetData activeTarget, boolean isGuide, java.lang.String guideLevel, boolean isGuideApplied, boolean canApplyForGuide, java.lang.String message, java.lang.String error, java.util.List&lt;com.aura.voicechat.ui.profile.UserItemState&gt; followers, java.util.List&lt;com.aura.voicechat.ui.profile.UserItemState&gt; following, java.util.List&lt;com.aura.voicechat.ui.profile.VisitorState&gt; visitors, int visitorsCount, int todayVisitorsCount, boolean isOwner, boolean isCountryAdmin, boolean isAdmin, java.lang.String adminLevel, java.lang.String adminCountry, java.lang.String adminBadge)" />
+  <problem_class id="RemoveRedundantQualifierName" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant qualifier name</problem_class>
+  <description>Remove redundant qualifier name</description>
+  <highlighted_element>com.aura.voicechat.ui.profile</highlighted_element>
+  <language>kotlin</language>
+  <offset>23</offset>
+  <length>29</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/ui/room/RoomViewModel.kt</file>
+  <line>41</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.ui.room</package>
+  <entry_point TYPE="method" FQNAME="com.aura.voicechat.ui.room.RoomViewModel RoomViewModel(com.aura.voicechat.domain.repository.RoomRepository roomRepository, com.aura.voicechat.data.remote.ApiService apiService, com.aura.voicechat.data.repository.ModerationRepository moderationRepository)" />
+  <problem_class id="RemoveRedundantQualifierName" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant qualifier name</problem_class>
+  <description>Remove redundant qualifier name</description>
+  <highlighted_element>com.aura.voicechat.data.repository</highlighted_element>
+  <language>kotlin</language>
+  <offset>38</offset>
+  <length>34</length>
+</problem>
+</problems>

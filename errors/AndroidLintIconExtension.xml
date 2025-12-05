@@ -1,0 +1,244 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/cinema_add_list_icon.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/cinema_add_list_icon.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/cinema_voice_big.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/cinema_voice_big.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/cinema_voice_progress_icon.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/cinema_voice_progress_icon.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/cinema_voice_small.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/cinema_voice_small.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/cp_dialog_title_bg.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/cp_dialog_title_bg.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/red_bag_coin_icon.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/red_bag_coin_icon.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/red_bag_detail_top_bg.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/red_bag_detail_top_bg.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/red_bag_lucky_draw_item_icon.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/red_bag_lucky_draw_item_icon.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/red_bag_luckydraw_bg.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/red_bag_luckydraw_bg.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/red_bag_not_open_bg.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/red_bag_not_open_bg.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable/red_pag_settings_bg.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/red_pag_settings_bg.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cinema_add_list_icon.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cinema_add_list_icon.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cinema_voice_big.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cinema_voice_big.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cinema_voice_progress_icon.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cinema_voice_progress_icon.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cinema_voice_small.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cinema_voice_small.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cp_dialog_title_bg.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cp_dialog_title_bg.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/red_bag_coin_icon.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/red_bag_coin_icon.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/red_bag_detail_top_bg.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/red_bag_detail_top_bg.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/red_bag_lucky_draw_item_icon.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/red_bag_lucky_draw_item_icon.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/red_bag_luckydraw_bg.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/red_bag_luckydraw_bg.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/red_bag_not_open_bg.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/red_bag_not_open_bg.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/red_pag_settings_bg.webp</file>
+  <line>1</line>
+  <module>AuraVoiceChat.app.main</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/red_pag_settings_bg.webp" />
+  <problem_class id="AndroidLintIconExtension" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Icon format does not match the file extension</problem_class>
+  <hints />
+  <description>&lt;html&gt;Misleading file extension; named &lt;code&gt;.webp&lt;/code&gt; but the file format is &lt;code&gt;png&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element />
+  <language />
+</problem>
+</problems>

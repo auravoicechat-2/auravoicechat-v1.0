@@ -1,0 +1,218 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/proguard-rules.pro</file>
+  <line>24</line>
+  <module>AuraVoiceChat.app</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/proguard-rules.pro" />
+  <problem_class id="ExpensiveKeepRuleInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">An inspection that identifies expensive keep rules</problem_class>
+  <description>Overly broad keep rule affecting more than 100 classes. Scope rules using annotations, specific classes, or using specific field/method selectors</description>
+  <highlighted_element>-keep class com.aura.voicechat.data.model.** { *; }</highlighted_element>
+  <language>SHRINKER_CONFIG</language>
+  <offset>0</offset>
+  <length>51</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/proguard-rules.pro</file>
+  <line>36</line>
+  <module>AuraVoiceChat.app</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/proguard-rules.pro" />
+  <problem_class id="ExpensiveKeepRuleInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">An inspection that identifies expensive keep rules</problem_class>
+  <description>Overly broad keep rule affecting more than 100 classes. Scope rules using annotations, specific classes, or using specific field/method selectors</description>
+  <highlighted_element>-keep class com.amplifyframework.** { *; }</highlighted_element>
+  <language>SHRINKER_CONFIG</language>
+  <offset>0</offset>
+  <length>42</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/proguard-rules.pro</file>
+  <line>43</line>
+  <module>AuraVoiceChat.app</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/proguard-rules.pro" />
+  <problem_class id="ExpensiveKeepRuleInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">An inspection that identifies expensive keep rules</problem_class>
+  <description>Overly broad keep rule affecting more than 100 classes. Scope rules using annotations, specific classes, or using specific field/method selectors</description>
+  <highlighted_element>-keep class aws.sdk.kotlin.** { *; }</highlighted_element>
+  <language>SHRINKER_CONFIG</language>
+  <offset>0</offset>
+  <length>36</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/proguard-rules.pro</file>
+  <line>83</line>
+  <module>AuraVoiceChat.app</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/proguard-rules.pro" />
+  <problem_class id="ExpensiveKeepRuleInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">An inspection that identifies expensive keep rules</problem_class>
+  <description>Overly broad keep rule affecting more than 100 classes. Scope rules using annotations, specific classes, or using specific field/method selectors</description>
+  <highlighted_element>-keep class retrofit2.** { *; }</highlighted_element>
+  <language>SHRINKER_CONFIG</language>
+  <offset>0</offset>
+  <length>31</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/proguard-rules.pro</file>
+  <line>98</line>
+  <module>AuraVoiceChat.app</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/proguard-rules.pro" />
+  <problem_class id="ExpensiveKeepRuleInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">An inspection that identifies expensive keep rules</problem_class>
+  <description>Overly broad keep rule affecting more than 100 classes. Scope rules using annotations, specific classes, or using specific field/method selectors</description>
+  <highlighted_element>-keep class okhttp3.** { *; }</highlighted_element>
+  <language>SHRINKER_CONFIG</language>
+  <offset>0</offset>
+  <length>29</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/proguard-rules.pro</file>
+  <line>123</line>
+  <module>AuraVoiceChat.app</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/proguard-rules.pro" />
+  <problem_class id="ExpensiveKeepRuleInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">An inspection that identifies expensive keep rules</problem_class>
+  <description>Overly broad keep rule affecting more than 100 classes. Scope rules using annotations, specific classes, or using specific field/method selectors</description>
+  <highlighted_element>-keep class com.google.gson.** { *; }</highlighted_element>
+  <language>SHRINKER_CONFIG</language>
+  <offset>0</offset>
+  <length>37</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/proguard-rules.pro</file>
+  <line>147</line>
+  <module>AuraVoiceChat.app</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/proguard-rules.pro" />
+  <problem_class id="ExpensiveKeepRuleInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">An inspection that identifies expensive keep rules</problem_class>
+  <description>Overly broad keep rule affecting more than 100 classes. Scope rules using annotations, specific classes, or using specific field/method selectors</description>
+  <highlighted_element>-keep class kotlin.** { *; }</highlighted_element>
+  <language>SHRINKER_CONFIG</language>
+  <offset>0</offset>
+  <length>28</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/proguard-rules.pro</file>
+  <line>156</line>
+  <module>AuraVoiceChat.app</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/proguard-rules.pro" />
+  <problem_class id="ExpensiveKeepRuleInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">An inspection that identifies expensive keep rules</problem_class>
+  <description>Overly broad keep rule affecting more than 100 classes. Scope rules using annotations, specific classes, or using specific field/method selectors</description>
+  <highlighted_element>-keep class kotlin.reflect.jvm.internal.** { *; }</highlighted_element>
+  <language>SHRINKER_CONFIG</language>
+  <offset>0</offset>
+  <length>49</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/proguard-rules.pro</file>
+  <line>162</line>
+  <module>AuraVoiceChat.app</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/proguard-rules.pro" />
+  <problem_class id="ExpensiveKeepRuleInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">An inspection that identifies expensive keep rules</problem_class>
+  <description>Overly broad keep rule affecting more than 100 classes. Scope rules using annotations, specific classes, or using specific field/method selectors</description>
+  <highlighted_element>-keep class androidx.compose.** { *; }</highlighted_element>
+  <language>SHRINKER_CONFIG</language>
+  <offset>0</offset>
+  <length>38</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/proguard-rules.pro</file>
+  <line>164</line>
+  <module>AuraVoiceChat.app</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/proguard-rules.pro" />
+  <problem_class id="ExpensiveKeepRuleInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">An inspection that identifies expensive keep rules</problem_class>
+  <description>Overly broad keep rule affecting more than 100 classes. Scope rules using annotations, specific classes, or using specific field/method selectors</description>
+  <highlighted_element>-keep class androidx.lifecycle.** { *; }</highlighted_element>
+  <language>SHRINKER_CONFIG</language>
+  <offset>0</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/proguard-rules.pro</file>
+  <line>189</line>
+  <module>AuraVoiceChat.app</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/proguard-rules.pro" />
+  <problem_class id="ExpensiveKeepRuleInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">An inspection that identifies expensive keep rules</problem_class>
+  <description>Overly broad keep rule affecting more than 100 classes. Scope rules using annotations, specific classes, or using specific field/method selectors</description>
+  <highlighted_element>-keep class org.webrtc.** { *; }</highlighted_element>
+  <language>SHRINKER_CONFIG</language>
+  <offset>0</offset>
+  <length>32</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/proguard-rules.pro</file>
+  <line>196</line>
+  <module>AuraVoiceChat.app</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/proguard-rules.pro" />
+  <problem_class id="ExpensiveKeepRuleInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">An inspection that identifies expensive keep rules</problem_class>
+  <description>Overly broad keep rule affecting more than 100 classes. Scope rules using annotations, specific classes, or using specific field/method selectors</description>
+  <highlighted_element>-keep class androidx.media3.** { *; }</highlighted_element>
+  <language>SHRINKER_CONFIG</language>
+  <offset>0</offset>
+  <length>37</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/proguard-rules.pro</file>
+  <line>203</line>
+  <module>AuraVoiceChat.app</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/proguard-rules.pro" />
+  <problem_class id="ExpensiveKeepRuleInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">An inspection that identifies expensive keep rules</problem_class>
+  <description>Overly broad keep rule affecting more than 100 classes. Scope rules using annotations, specific classes, or using specific field/method selectors</description>
+  <highlighted_element>-keep class com.google.mlkit.** { *; }</highlighted_element>
+  <language>SHRINKER_CONFIG</language>
+  <offset>0</offset>
+  <length>38</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/proguard-rules.pro</file>
+  <line>210</line>
+  <module>AuraVoiceChat.app</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/proguard-rules.pro" />
+  <problem_class id="ExpensiveKeepRuleInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">An inspection that identifies expensive keep rules</problem_class>
+  <description>Overly broad keep rule affecting more than 100 classes. Scope rules using annotations, specific classes, or using specific field/method selectors</description>
+  <highlighted_element>-keep class androidx.camera.** { *; }</highlighted_element>
+  <language>SHRINKER_CONFIG</language>
+  <offset>0</offset>
+  <length>37</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/proguard-rules.pro</file>
+  <line>226</line>
+  <module>AuraVoiceChat.app</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/proguard-rules.pro" />
+  <problem_class id="ExpensiveKeepRuleInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">An inspection that identifies expensive keep rules</problem_class>
+  <description>Overly broad keep rule affecting more than 100 classes. Scope rules using annotations, specific classes, or using specific field/method selectors</description>
+  <highlighted_element>-keep class com.airbnb.lottie.** { *; }</highlighted_element>
+  <language>SHRINKER_CONFIG</language>
+  <offset>0</offset>
+  <length>39</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/proguard-rules.pro</file>
+  <line>232</line>
+  <module>AuraVoiceChat.app</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/proguard-rules.pro" />
+  <problem_class id="ExpensiveKeepRuleInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">An inspection that identifies expensive keep rules</problem_class>
+  <description>Overly broad keep rule affecting more than 100 classes. Scope rules using annotations, specific classes, or using specific field/method selectors</description>
+  <highlighted_element>-keep class coil3.** { *; }</highlighted_element>
+  <language>SHRINKER_CONFIG</language>
+  <offset>0</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/proguard-rules.pro</file>
+  <line>239</line>
+  <module>AuraVoiceChat.app</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/proguard-rules.pro" />
+  <problem_class id="ExpensiveKeepRuleInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">An inspection that identifies expensive keep rules</problem_class>
+  <description>Overly broad keep rule affecting more than 100 classes. Scope rules using annotations, specific classes, or using specific field/method selectors</description>
+  <highlighted_element>-keep class com.facebook.** { *; }</highlighted_element>
+  <language>SHRINKER_CONFIG</language>
+  <offset>0</offset>
+  <length>34</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/proguard-rules.pro</file>
+  <line>246</line>
+  <module>AuraVoiceChat.app</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/proguard-rules.pro" />
+  <problem_class id="ExpensiveKeepRuleInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">An inspection that identifies expensive keep rules</problem_class>
+  <description>Overly broad keep rule affecting more than 100 classes. Scope rules using annotations, specific classes, or using specific field/method selectors</description>
+  <highlighted_element>-keep class com.google.android.gms.** { *; }</highlighted_element>
+  <language>SHRINKER_CONFIG</language>
+  <offset>0</offset>
+  <length>44</length>
+</problem>
+</problems>

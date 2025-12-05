@@ -1,0 +1,30 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/services/VoiceRoomService.kt</file>
+  <line>93</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.services</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/services/VoiceRoomService.kt" />
+  <problem_class id="AndroidLintInlinedApi" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using inlined constants on older versions</problem_class>
+  <hints />
+  <description>&lt;html&gt;Field requires API level 30 (current min is 29): &lt;code&gt;android.content.pm.ServiceInfo#FOREGROUND_SERVICE_TYPE_MICROPHONE&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>ServiceInfo.FOREGROUND_SERVICE_TYPE_MICROPHONE</highlighted_element>
+  <language>kotlin</language>
+  <offset>16</offset>
+  <length>46</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/services/VoiceRoomService.kt</file>
+  <line>94</line>
+  <module>AuraVoiceChat.app.main</module>
+  <package>com.aura.voicechat.services</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/aura/voicechat/services/VoiceRoomService.kt" />
+  <problem_class id="AndroidLintInlinedApi" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using inlined constants on older versions</problem_class>
+  <hints />
+  <description>&lt;html&gt;Field requires API level 30 (current min is 29): &lt;code&gt;android.content.pm.ServiceInfo#FOREGROUND_SERVICE_TYPE_CAMERA&lt;/code&gt;&lt;/html&gt;</description>
+  <highlighted_element>ServiceInfo.FOREGROUND_SERVICE_TYPE_CAMERA</highlighted_element>
+  <language>kotlin</language>
+  <offset>16</offset>
+  <length>42</length>
+</problem>
+</problems>
