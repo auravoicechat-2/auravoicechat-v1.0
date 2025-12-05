@@ -529,7 +529,7 @@ fun LoginScreen(
                             .height(48.dp),
                         shape = RoundedCornerShape(12.dp),
                         colors = ButtonDefaults.outlinedButtonColors(
-                            containerColor = com.aura.voicechat.ui.theme.DarkCard,
+                            containerColor = DarkCard,
                             contentColor = TextPrimary
                         ),
                         border = BorderStroke(1.dp, Purple80),
@@ -570,7 +570,7 @@ fun LoginScreen(
                             .height(48.dp),
                         shape = RoundedCornerShape(12.dp),
                         colors = ButtonDefaults.outlinedButtonColors(
-                            containerColor = com.aura.voicechat.ui.theme.DarkCard,
+                            containerColor = DarkCard,
                             contentColor = TextPrimary
                         ),
                         border = BorderStroke(1.dp, Purple80),
@@ -579,7 +579,7 @@ fun LoginScreen(
                         Icon(
                             imageVector = Icons.Default.AccountCircle,
                             contentDescription = "Facebook",
-                            tint = com.aura.voicechat.ui.theme.AccentMagenta
+                            tint = AccentMagenta
                         )
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(

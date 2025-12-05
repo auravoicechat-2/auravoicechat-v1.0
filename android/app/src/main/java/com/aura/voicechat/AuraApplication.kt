@@ -35,7 +35,7 @@ class AuraApplication : Application(), Configuration.Provider {
      */
     override val workManagerConfiguration: Configuration
         get() = Configuration.Builder()
-            .setMinimumLoggingLevel(android.util.Log.INFO)
+            .setMinimumLoggingLevel(Log.INFO)
             .build()
 
     private fun initializeAmplify() {

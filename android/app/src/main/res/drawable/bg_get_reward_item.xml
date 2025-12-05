@@ -6,10 +6,4 @@
         android:topRightRadius="4dp"
         android:bottomLeftRadius="4dp"
         android:bottomRightRadius="4dp"/>
-    <item name="android:shadowColor">#420072a8
-    </item>
-    <item name="android:shadowDx">0
-    </item>
-    <item name="android:shadowDy">2
-    </item>
 </shape>
